@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="https://coding.emptinessboy.com/"/>
-  <updated>2020-10-15T09:25:24.000Z</updated>
+  <updated>2021-04-09T15:52:56.000Z</updated>
   <id>https://coding.emptinessboy.com/</id>
   
   <author>
@@ -17,6 +17,60 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>一个 TodoList 让你上手VUE</title>
+    <link href="https://coding.emptinessboy.com/2021/04/%E4%B8%80%E4%B8%AATodoList%E8%AE%A9%E4%BD%A0%E4%B8%8A%E6%89%8BVUE/"/>
+    <id>https://coding.emptinessboy.com/2021/04/%E4%B8%80%E4%B8%AATodoList%E8%AE%A9%E4%BD%A0%E4%B8%8A%E6%89%8BVUE/</id>
+    <published>2021-04-09T15:40:16.000Z</published>
+    <updated>2021-04-09T15:52:56.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- build time:Sat Apr 10 2021 00:31:01 GMT+0800 (中国标准时间) --&gt;&lt;h1 id=&quot;一个-TodoList-让你上手VUE&quot;&gt;&lt;a href=&quot;#一个-TodoList-让你上手VUE&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="https://coding.emptinessboy.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="vue,前端,demo" scheme="https://coding.emptinessboy.com/tags/vue-%E5%89%8D%E7%AB%AF-demo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WebStrom 构建 Vue 并与 bootstrap 集成</title>
+    <link href="https://coding.emptinessboy.com/2020/11/%E4%BD%BF%E7%94%A8-WebStrom-%E6%9E%84%E5%BB%BA-Vue3-x-%E9%A1%B9%E7%9B%AE/"/>
+    <id>https://coding.emptinessboy.com/2020/11/%E4%BD%BF%E7%94%A8-WebStrom-%E6%9E%84%E5%BB%BA-Vue3-x-%E9%A1%B9%E7%9B%AE/</id>
+    <published>2020-11-04T11:47:36.000Z</published>
+    <updated>2020-11-15T11:20:08.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- build time:Sat Apr 10 2021 00:31:01 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;最近因为一个项目需要使用 vue.js ，所以特地上来学习一波。&lt;/p&gt;&lt;p&gt;因为看到官方 vue,js 已经更行到了 3.x
+        
+      
+    
+    </summary>
+    
+    
+      <category term="WEB框架" scheme="https://coding.emptinessboy.com/categories/WEB%E6%A1%86%E6%9E%B6/"/>
+    
+    
+      <category term="vuejs" scheme="https://coding.emptinessboy.com/tags/vuejs/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux 的输入输出重定向（转）</title>
     <link href="https://coding.emptinessboy.com/2020/10/Linux-%E7%9A%84%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E9%87%8D%E5%AE%9A%E5%90%91%EF%BC%88%E8%BD%AC%EF%BC%89/"/>
     <id>https://coding.emptinessboy.com/2020/10/Linux-%E7%9A%84%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E9%87%8D%E5%AE%9A%E5%90%91%EF%BC%88%E8%BD%AC%EF%BC%89/</id>
@@ -25,7 +79,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Mon Nov 02 2020 22:46:18 GMT+0800 (中国标准时间) --&gt;&lt;blockquote&gt;&lt;p&gt;本文 &lt;strong&gt;转载&lt;/strong&gt; 编辑自大佬 &lt;a href=&quot;https://aimuke.github.io/linux/2019/05/29/redirect/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://aimuke.github.io/linux/2019/05/29/redirect/&lt;/a&gt; 的文章&lt;/p&gt;&lt;p&gt;因为这两天我按照学校课程进行 Linux 实验的时候，发现教科书上说的 Linux 输入输出重定向好像根本行不通。看了各种资料，越看越稀里糊涂。直到看到这一篇，秒懂（奥力给！！）&lt;/p&gt;&lt;/blockquote&gt;
+      &lt;!-- build time:Sat Apr 10 2021 00:31:01 GMT+0800 (中国标准时间) --&gt;&lt;blockquote&gt;&lt;p&gt;本文 &lt;strong&gt;转载&lt;/strong&gt; 编辑自大佬 &lt;a href=&quot;https://aimuke.github.io/linux/2019/05/29/redirect/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://aimuke.github.io/linux/2019/05/29/redirect/&lt;/a&gt; 的文章&lt;/p&gt;&lt;p&gt;因为这两天我按照学校课程进行 Linux 实验的时候，发现教科书上说的 Linux 输入输出重定向好像根本行不通。看了各种资料，越看越稀里糊涂。直到看到这一篇，秒懂（奥力给！！）&lt;/p&gt;&lt;/blockquote&gt;
     
     </summary>
     
@@ -50,7 +104,7 @@
       
         
         
-          &lt;!-- build time:Mon Nov 02 2020 22:46:18 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;上面我们已经完成了在Hyper-V中运行Ubuntu以及安装Hadoop，可以看我前面两篇文章：&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;a
+          &lt;!-- build time:Sat Apr 10 2021 00:31:01 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;上面我们已经完成了在Hyper-V中运行Ubuntu以及安装Hadoop，可以看我前面两篇文章：&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;a
         
       
     
@@ -77,7 +131,7 @@
       
         
         
-          &lt;!-- build time:Mon Nov 02 2020 22:46:18 GMT+0800 (中国标准时间) --&gt;&lt;h1 id=&quot;安装并运行-Hadoop&quot;&gt;&lt;a href=&quot;#安装并运行-Hadoop&quot; class=&quot;headerlink&quot; title=&quot;安装并运行
+          &lt;!-- build time:Sat Apr 10 2021 00:31:01 GMT+0800 (中国标准时间) --&gt;&lt;h1 id=&quot;安装并运行-Hadoop&quot;&gt;&lt;a href=&quot;#安装并运行-Hadoop&quot; class=&quot;headerlink&quot; title=&quot;安装并运行
         
       
     
@@ -104,7 +158,7 @@
       
         
         
-          &lt;!-- build time:Mon Nov 02 2020 22:46:18 GMT+0800 (中国标准时间) --&gt;&lt;h1 id=&quot;安装虚拟机&quot;&gt;&lt;a href=&quot;#安装虚拟机&quot; class=&quot;headerlink&quot;
+          &lt;!-- build time:Sat Apr 10 2021 00:31:01 GMT+0800 (中国标准时间) --&gt;&lt;h1 id=&quot;安装虚拟机&quot;&gt;&lt;a href=&quot;#安装虚拟机&quot; class=&quot;headerlink&quot;
         
       
     
@@ -123,7 +177,7 @@
     <link href="https://coding.emptinessboy.com/2020/09/JavaWeb%E5%88%9D%E8%AF%95-%E4%BD%BF%E7%94%A8IDEA%E5%B9%B3%E5%8F%B0/"/>
     <id>https://coding.emptinessboy.com/2020/09/JavaWeb%E5%88%9D%E8%AF%95-%E4%BD%BF%E7%94%A8IDEA%E5%B9%B3%E5%8F%B0/</id>
     <published>2020-09-16T11:42:33.000Z</published>
-    <updated>2020-10-15T06:40:14.000Z</updated>
+    <updated>2020-11-12T04:28:28.000Z</updated>
     
     <summary type="html">
     
@@ -131,7 +185,7 @@
       
         
         
-          &lt;!-- build time:Mon Nov 02 2020 22:46:18 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;不知道为啥自己选了这门课，好像 JSP
+          &lt;!-- build time:Sat Apr 10 2021 00:31:01 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;不知道为啥自己选了这门课，好像 JSP
         
       
     
@@ -158,7 +212,7 @@
       
         
         
-          &lt;!-- build time:Mon Nov 02 2020 22:46:18 GMT+0800 (中国标准时间) --&gt;&lt;blockquote&gt;&lt;p&gt;这是一个因 阑尾炎？ 泡在医院的暑假&lt;/p&gt;&lt;/blockquote&gt;&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot;
+          &lt;!-- build time:Sat Apr 10 2021 00:31:01 GMT+0800 (中国标准时间) --&gt;&lt;blockquote&gt;&lt;p&gt;这是一个因 阑尾炎？ 泡在医院的暑假&lt;/p&gt;&lt;/blockquote&gt;&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot;
         
       
     
@@ -185,7 +239,7 @@
       
         
         
-          &lt;!-- build time:Mon Nov 02 2020 22:46:18 GMT+0800 (中国标准时间) --&gt;&lt;h2 id=&quot;文件编码解码&quot;&gt;&lt;a href=&quot;#文件编码解码&quot; class=&quot;headerlink&quot;
+          &lt;!-- build time:Sat Apr 10 2021 00:31:01 GMT+0800 (中国标准时间) --&gt;&lt;h2 id=&quot;文件编码解码&quot;&gt;&lt;a href=&quot;#文件编码解码&quot; class=&quot;headerlink&quot;
         
       
     
@@ -212,7 +266,7 @@
       
         
         
-          &lt;!-- build time:Mon Nov 02 2020 22:46:18 GMT+0800 (中国标准时间)
+          &lt;!-- build time:Sat Apr 10 2021 00:31:01 GMT+0800 (中国标准时间)
         
       
     
@@ -235,7 +289,7 @@
     
     <summary type="html">
     
-      &lt;!-- build time:Mon Nov 02 2020 22:46:18 GMT+0800 (中国标准时间) --&gt;&lt;h2 id=&quot;序列&quot;&gt;&lt;a href=&quot;#序列&quot; class=&quot;headerlink&quot; title=&quot;序列&quot;&gt;&lt;/a&gt;序列&lt;/h2&gt;&lt;h3 id=&quot;列表-list&quot;&gt;&lt;a href=&quot;#列表-list&quot; class=&quot;headerlink&quot; title=&quot;列表 [] list&quot;&gt;&lt;/a&gt;列表 [] list&lt;/h3&gt;&lt;p&gt;列表内部可以存储多个元素，元素与元素之间逗号隔开，元素可以是任意数据类型&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;name_list = [111,11.11,&amp;#39;jason&amp;#39;,[12,3,4,5,6]]
+      &lt;!-- build time:Sat Apr 10 2021 00:31:01 GMT+0800 (中国标准时间) --&gt;&lt;h2 id=&quot;序列&quot;&gt;&lt;a href=&quot;#序列&quot; class=&quot;headerlink&quot; title=&quot;序列&quot;&gt;&lt;/a&gt;序列&lt;/h2&gt;&lt;h3 id=&quot;列表-list&quot;&gt;&lt;a href=&quot;#列表-list&quot; class=&quot;headerlink&quot; title=&quot;列表 [] list&quot;&gt;&lt;/a&gt;列表 [] list&lt;/h3&gt;&lt;p&gt;列表内部可以存储多个元素，元素与元素之间逗号隔开，元素可以是任意数据类型&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;name_list = [111,11.11,&amp;#39;jason&amp;#39;,[12,3,4,5,6]]
 name_list = [&amp;#39;jason&amp;#39;, &amp;#39;egon&amp;#39;, &amp;#39;tank&amp;#39;, &amp;#39;sean&amp;#39;, &amp;#39;oscar&amp;#39;]
 print(name_list[2])  # 索引取值  索引0开始&lt;/code&gt;&lt;/pre&gt;
     
@@ -258,7 +312,7 @@ print(name_list[2])  # 索引取值  索引0开始&lt;/code&gt;&lt;/pre&gt;
     
     <summary type="html">
     
-      &lt;!-- build time:Mon Nov 02 2020 22:46:18 GMT+0800 (中国标准时间) --&gt;&lt;h2 id=&quot;数据类型&quot;&gt;&lt;a href=&quot;#数据类型&quot; class=&quot;headerlink&quot; title=&quot;数据类型&quot;&gt;&lt;/a&gt;数据类型&lt;/h2&gt;&lt;h3 id=&quot;整数（int）&quot;&gt;&lt;a href=&quot;#整数（int）&quot; class=&quot;headerlink&quot; title=&quot;整数（int）&quot;&gt;&lt;/a&gt;整数（int）&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;与数学中整数概念一致&lt;/li&gt;&lt;li&gt;整数可正可负&lt;/li&gt;&lt;li&gt;默认情况下，整数采用十进制。其它进制需要&lt;/li&gt;&lt;li&gt;增加相应的引导符号&lt;/li&gt;&lt;/ul&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;进制&lt;/th&gt;&lt;th&gt;符号&lt;/th&gt;&lt;th&gt;示例&lt;/th&gt;&lt;th&gt;十进制&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;二进制 ：&lt;/td&gt;&lt;td&gt;0b或0B&lt;/td&gt;&lt;td&gt;0b10&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;八进制：&lt;/td&gt;&lt;td&gt;0o或0O&lt;/td&gt;&lt;td&gt;0o10&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;十六进制：&lt;/td&gt;&lt;td&gt;0x 或0X&lt;/td&gt;&lt;td&gt;0x10&lt;/td&gt;&lt;td&gt;16&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+      &lt;!-- build time:Sat Apr 10 2021 00:31:01 GMT+0800 (中国标准时间) --&gt;&lt;h2 id=&quot;数据类型&quot;&gt;&lt;a href=&quot;#数据类型&quot; class=&quot;headerlink&quot; title=&quot;数据类型&quot;&gt;&lt;/a&gt;数据类型&lt;/h2&gt;&lt;h3 id=&quot;整数（int）&quot;&gt;&lt;a href=&quot;#整数（int）&quot; class=&quot;headerlink&quot; title=&quot;整数（int）&quot;&gt;&lt;/a&gt;整数（int）&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;与数学中整数概念一致&lt;/li&gt;&lt;li&gt;整数可正可负&lt;/li&gt;&lt;li&gt;默认情况下，整数采用十进制。其它进制需要&lt;/li&gt;&lt;li&gt;增加相应的引导符号&lt;/li&gt;&lt;/ul&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;进制&lt;/th&gt;&lt;th&gt;符号&lt;/th&gt;&lt;th&gt;示例&lt;/th&gt;&lt;th&gt;十进制&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;二进制 ：&lt;/td&gt;&lt;td&gt;0b或0B&lt;/td&gt;&lt;td&gt;0b10&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;八进制：&lt;/td&gt;&lt;td&gt;0o或0O&lt;/td&gt;&lt;td&gt;0o10&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;十六进制：&lt;/td&gt;&lt;td&gt;0x 或0X&lt;/td&gt;&lt;td&gt;0x10&lt;/td&gt;&lt;td&gt;16&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
     
     </summary>
     
@@ -283,7 +337,7 @@ print(name_list[2])  # 索引取值  索引0开始&lt;/code&gt;&lt;/pre&gt;
       
         
         
-          &lt;!-- build time:Mon Nov 02 2020 22:46:18 GMT+0800 (中国标准时间) --&gt;&lt;h2 id=&quot;过滤器流&quot;&gt;&lt;a href=&quot;#过滤器流&quot; class=&quot;headerlink&quot;
+          &lt;!-- build time:Sat Apr 10 2021 00:31:01 GMT+0800 (中国标准时间) --&gt;&lt;h2 id=&quot;过滤器流&quot;&gt;&lt;a href=&quot;#过滤器流&quot; class=&quot;headerlink&quot;
         
       
     
@@ -310,7 +364,7 @@ print(name_list[2])  # 索引取值  索引0开始&lt;/code&gt;&lt;/pre&gt;
       
         
         
-          &lt;!-- build time:Mon Nov 02 2020 22:46:18 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;在 Java
+          &lt;!-- build time:Sat Apr 10 2021 00:31:01 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;在 Java
         
       
     
@@ -329,7 +383,7 @@ print(name_list[2])  # 索引取值  索引0开始&lt;/code&gt;&lt;/pre&gt;
     <link href="https://coding.emptinessboy.com/2020/05/Java-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%AD%A6%E4%B9%A0/"/>
     <id>https://coding.emptinessboy.com/2020/05/Java-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%AD%A6%E4%B9%A0/</id>
     <published>2020-05-25T06:23:44.000Z</published>
-    <updated>2020-05-25T16:32:31.000Z</updated>
+    <updated>2021-04-09T06:28:30.000Z</updated>
     
     <summary type="html">
     
@@ -337,7 +391,7 @@ print(name_list[2])  # 索引取值  索引0开始&lt;/code&gt;&lt;/pre&gt;
       
         
         
-          &lt;!-- build time:Mon Nov 02 2020 22:46:18 GMT+0800 (中国标准时间)
+          &lt;!-- build time:Sat Apr 10 2021 00:31:01 GMT+0800 (中国标准时间)
         
       
     
@@ -364,7 +418,7 @@ print(name_list[2])  # 索引取值  索引0开始&lt;/code&gt;&lt;/pre&gt;
       
         
         
-          &lt;!-- build time:Mon Nov 02 2020 22:46:18 GMT+0800 (中国标准时间)
+          &lt;!-- build time:Sat Apr 10 2021 00:31:01 GMT+0800 (中国标准时间)
         
       
     
@@ -383,7 +437,7 @@ print(name_list[2])  # 索引取值  索引0开始&lt;/code&gt;&lt;/pre&gt;
     <link href="https://coding.emptinessboy.com/2020/05/%E7%9C%9F%E9%A6%99%EF%BC%81PowerShell%E5%B0%B1%E5%BA%94%E8%AF%A5%E8%BF%99%E4%B9%88%E5%B8%85%E5%98%9B%EF%BC%81/"/>
     <id>https://coding.emptinessboy.com/2020/05/%E7%9C%9F%E9%A6%99%EF%BC%81PowerShell%E5%B0%B1%E5%BA%94%E8%AF%A5%E8%BF%99%E4%B9%88%E5%B8%85%E5%98%9B%EF%BC%81/</id>
     <published>2020-05-23T05:10:21.000Z</published>
-    <updated>2020-11-02T14:22:27.000Z</updated>
+    <updated>2020-11-02T14:22:27.243Z</updated>
     
     <summary type="html">
     
@@ -391,7 +445,7 @@ print(name_list[2])  # 索引取值  索引0开始&lt;/code&gt;&lt;/pre&gt;
       
         
         
-          &lt;!-- build time:Mon Nov 02 2020 22:46:18 GMT+0800 (中国标准时间)
+          &lt;!-- build time:Sat Apr 10 2021 00:31:01 GMT+0800 (中国标准时间)
         
       
     
@@ -418,7 +472,7 @@ print(name_list[2])  # 索引取值  索引0开始&lt;/code&gt;&lt;/pre&gt;
       
         
         
-          &lt;!-- build time:Mon Nov 02 2020 22:46:18 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;最近在听 NEU 的 JAVA 慕课，然后有两个简单的 GUI 课后练习：&lt;/p&gt;&lt;h2 id=&quot;菜单栏相关练习&quot;&gt;&lt;a
+          &lt;!-- build time:Sat Apr 10 2021 00:31:01 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;最近在听 NEU 的 JAVA 慕课，然后有两个简单的 GUI 课后练习：&lt;/p&gt;&lt;h2 id=&quot;菜单栏相关练习&quot;&gt;&lt;a
         
       
     
@@ -445,7 +499,7 @@ print(name_list[2])  # 索引取值  索引0开始&lt;/code&gt;&lt;/pre&gt;
       
         
         
-          &lt;!-- build time:Mon Nov 02 2020 22:46:18 GMT+0800 (中国标准时间) --&gt;&lt;blockquote&gt;&lt;p&gt;！Python 程序各行开头的空白区称为缩进，这在 Python 中非常重要，Python
+          &lt;!-- build time:Sat Apr 10 2021 00:31:01 GMT+0800 (中国标准时间) --&gt;&lt;blockquote&gt;&lt;p&gt;！Python 程序各行开头的空白区称为缩进，这在 Python 中非常重要，Python
         
       
     
@@ -468,7 +522,7 @@ print(name_list[2])  # 索引取值  索引0开始&lt;/code&gt;&lt;/pre&gt;
     
     <summary type="html">
     
-      &lt;!-- build time:Mon Nov 02 2020 22:46:18 GMT+0800 (中国标准时间) --&gt;&lt;h2 id=&quot;GUI-相关工具组件&quot;&gt;&lt;a href=&quot;#GUI-相关工具组件&quot; class=&quot;headerlink&quot; title=&quot;GUI 相关工具组件&quot;&gt;&lt;/a&gt;GUI 相关工具组件&lt;/h2&gt;&lt;h3 id=&quot;AWT&quot;&gt;&lt;a href=&quot;#AWT&quot; class=&quot;headerlink&quot; title=&quot;AWT&quot;&gt;&lt;/a&gt;AWT&lt;/h3&gt;&lt;p&gt;abstract window toolkit 抽象窗口工具包，提供了图形用户界面和图形，直接调用本地系统接口完成。&lt;/p&gt;&lt;h3 id=&quot;Swing&quot;&gt;&lt;a href=&quot;#Swing&quot; class=&quot;headerlink&quot; title=&quot;Swing&quot;&gt;&lt;/a&gt;Swing&lt;/h3&gt;&lt;p&gt;Swing 是建立在 AWT 基础之上的，它利用了 AWT 的底层组件，包括图形、颜色、字体等。增加了界面修饰，使界面更美观，在丌同的操作系统中的显示更为相似。&lt;/p&gt;
+      &lt;!-- build time:Sat Apr 10 2021 00:31:01 GMT+0800 (中国标准时间) --&gt;&lt;h2 id=&quot;GUI-相关工具组件&quot;&gt;&lt;a href=&quot;#GUI-相关工具组件&quot; class=&quot;headerlink&quot; title=&quot;GUI 相关工具组件&quot;&gt;&lt;/a&gt;GUI 相关工具组件&lt;/h2&gt;&lt;h3 id=&quot;AWT&quot;&gt;&lt;a href=&quot;#AWT&quot; class=&quot;headerlink&quot; title=&quot;AWT&quot;&gt;&lt;/a&gt;AWT&lt;/h3&gt;&lt;p&gt;abstract window toolkit 抽象窗口工具包，提供了图形用户界面和图形，直接调用本地系统接口完成。&lt;/p&gt;&lt;h3 id=&quot;Swing&quot;&gt;&lt;a href=&quot;#Swing&quot; class=&quot;headerlink&quot; title=&quot;Swing&quot;&gt;&lt;/a&gt;Swing&lt;/h3&gt;&lt;p&gt;Swing 是建立在 AWT 基础之上的，它利用了 AWT 的底层组件，包括图形、颜色、字体等。增加了界面修饰，使界面更美观，在丌同的操作系统中的显示更为相似。&lt;/p&gt;
     
     </summary>
     
@@ -477,60 +531,6 @@ print(name_list[2])  # 索引取值  索引0开始&lt;/code&gt;&lt;/pre&gt;
     
     
       <category term="java" scheme="https://coding.emptinessboy.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java 异常处理（转）</title>
-    <link href="https://coding.emptinessboy.com/2020/04/Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%EF%BC%88%E8%BD%AC%EF%BC%89/"/>
-    <id>https://coding.emptinessboy.com/2020/04/Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%EF%BC%88%E8%BD%AC%EF%BC%89/</id>
-    <published>2020-04-21T05:37:20.000Z</published>
-    <updated>2020-04-21T06:39:51.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;!-- build time:Mon Nov 02 2020 22:46:18 GMT+0800 (中国标准时间) --&gt;&lt;blockquote&gt;&lt;p&gt;本文转载自 CSDN 泰斗贤若如
-        
-      
-    
-    </summary>
-    
-    
-      <category term="JAVA学习" scheme="https://coding.emptinessboy.com/categories/JAVA%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="java" scheme="https://coding.emptinessboy.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android开发 Activity的详解（下）</title>
-    <link href="https://coding.emptinessboy.com/2020/04/Android%E5%BC%80%E5%8F%91-Activity%E7%9A%84%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%8B%EF%BC%89/"/>
-    <id>https://coding.emptinessboy.com/2020/04/Android%E5%BC%80%E5%8F%91-Activity%E7%9A%84%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%8B%EF%BC%89/</id>
-    <published>2020-04-19T04:46:09.000Z</published>
-    <updated>2020-04-19T18:18:41.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;!-- build time:Mon Nov 02 2020 22:46:17 GMT+0800 (中国标准时间) --&gt;&lt;h2 id=&quot;Activity-的启动模式&quot;&gt;&lt;a href=&quot;#Activity-的启动模式&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Android" scheme="https://coding.emptinessboy.com/categories/Android/"/>
-    
-    
-      <category term="安卓学习" scheme="https://coding.emptinessboy.com/tags/%E5%AE%89%E5%8D%93%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
