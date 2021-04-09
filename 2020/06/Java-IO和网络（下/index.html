@@ -1,0 +1,360 @@
+<!-- build time:Fri Apr 09 2021 23:55:18 GMT+0800 (中国标准时间) --><!DOCTYPE html><html style="display:none" lang="zh"><head><meta charset="utf-8"><script>window.materialVersion="1.5.6",window.oldVersion=["codestartv1","1.3.4","1.4.0","1.4.0b1","1.5.0","1.5.2","1.5.5"]</script><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn1.lncld.net"><link rel="dns-prefetch" href="https://cdn1.lncld.net"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta name="renderer" content="webkit"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><title>Java IO和网络（下 | EmptinessBoy - 后花园</title><link rel="icon shortcut" type="image/ico" href="/img/logo-32x32.jpg"><link rel="icon" href="/img/logo-192x192.jpg"><meta name="format-detection" content="telephone=no"><meta name="description" itemprop="description" content="晓帆的学习笔记"><meta name="keywords" content="博客,代码,学习,程序,大学,java"><meta name="theme-color" content="#1e69bf"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]--><script>!function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}},lsloader.removeLS=function(e){try{localStorage.removeItem(e)}catch(t){}},lsloader.setLS=function(e,t){try{localStorage.setItem(e,t)}catch(n){}},lsloader.getLS=function(e){var t="";try{t=localStorage.getItem(e)}catch(n){t=""}return t},versionString="/*"+(window.materialVersion||"unknownVersion")+"*/",lsloader.clean=function(){try{for(var e=[],t=0;t<localStorage.length;t++)e.push(localStorage.key(t));e.forEach(function(e){var t=lsloader.getLS(e);if(window.oldVersion){var n=window.oldVersion.reduce(function(e,n){return e||-1!==t.indexOf("/*"+n+"*/")},!1);n&&lsloader.removeLS(e)}})}catch(n){}},lsloader.clean(),lsloader.load=function(e,t,n,s){"boolean"==typeof n&&(s=n,n=void 0),s=s||!1,n=n||function(){};var a;if(a=this.getLS(e),a&&-1===a.indexOf(versionString))return this.removeLS(e),void this.requestResource(e,t,n,s);if(a){var o=a.split(versionString)[0];if(o!=t)return console.log("reload:"+t),this.removeLS(e),void this.requestResource(e,t,n,s);a=a.split(versionString)[1],s?(this.jsRunSequence.push({name:e,code:a}),this.runjs(t,e,a)):(document.getElementById(e).appendChild(document.createTextNode(a)),n())}else this.requestResource(e,t,n,s)},lsloader.requestResource=function(e,t,n,s){var a=this;s?this.iojs(t,e,function(e,t,n){a.setLS(t,e+versionString+n),a.runjs(e,t,n)}):this.iocss(t,e,function(n){document.getElementById(e).appendChild(document.createTextNode(n)),a.setLS(e,t+versionString+n)},n)},lsloader.iojs=function(e,t,n){var s=this;s.jsRunSequence.push({name:t,code:""});try{var a=new XMLHttpRequest;a.open("get",e,!0),a.onreadystatechange=function(){if(4==a.readyState){if((a.status>=200&&a.status<300||304==a.status)&&""!=a.response)return void n(e,t,a.response);s.jsfallback(e,t)}},a.send(null)}catch(o){s.jsfallback(e,t)}},lsloader.iocss=function(e,t,n,s){var a=this;try{var o=new XMLHttpRequest;o.open("get",e,!0),o.onreadystatechange=function(){if(4==o.readyState){if((o.status>=200&&o.status<300||304==o.status)&&""!=o.response)return n(o.response),void s();a.cssfallback(e,t,s)}},o.send(null)}catch(r){a.cssfallback(e,t,s)}},lsloader.iofonts=function(e,t,n,s){var a=this;try{var o=new XMLHttpRequest;o.open("get",e,!0),o.onreadystatechange=function(){if(4==o.readyState){if((o.status>=200&&o.status<300||304==o.status)&&""!=o.response)return n(o.response),void s();a.cssfallback(e,t,s)}},o.send(null)}catch(r){a.cssfallback(e,t,s)}},lsloader.runjs=function(e,t,n){if(t&&n)for(var s in this.jsRunSequence)this.jsRunSequence[s].name==t&&(this.jsRunSequence[s].code=n);if(this.jsRunSequence[0]&&this.jsRunSequence[0].code&&"failed"!=this.jsRunSequence[0].status){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code)),a.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(a),this.jsRunSequence.shift(),this.jsRunSequence.length>0&&this.runjs()}else if(this.jsRunSequence[0]&&"failed"==this.jsRunSequence[0].status){var o=this,a=document.createElement("script");a.src=this.jsRunSequence[0].path,a.type="text/javascript",this.jsRunSequence[0].status="loading",a.onload=function(){o.jsRunSequence.shift(),o.jsRunSequence.length>0&&o.runjs()},document.body.appendChild(a)}},lsloader.tagLoad=function(e,t){this.jsRunSequence.push({name:t,code:"",path:e,status:"failed"}),this.runjs()},lsloader.jsfallback=function(e,t){if(!this.jsnamemap[t]){this.jsnamemap[t]=t;for(var n in this.jsRunSequence)this.jsRunSequence[n].name==t&&(this.jsRunSequence[n].code="",this.jsRunSequence[n].status="failed",this.jsRunSequence[n].path=e);this.runjs()}},lsloader.cssfallback=function(e,t,n){if(!this.cssnamemap[t]){this.cssnamemap[t]=1;var s=document.createElement("link");s.type="text/css",s.href=e,s.rel="stylesheet",s.onload=s.onerror=n;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(s,a)}},lsloader.runInlineScript=function(e,t){var n=document.getElementById(t).innerText;this.jsRunSequence.push({name:e,code:n}),this.runjs()}}()</script><script>function Queue(){function e(e){this.debug&&console.log("Offered a Queued Function."),"function"==typeof e?this.dataStore.push(e):console.log("You must offer a function.")}function t(){return this.debug&&console.log("Polled a Queued Function."),this.dataStore.shift()}function o(){var e=this.poll();void 0!==e&&(this.debug&&console.log("Run a Queued Function."),e())}function u(){this.debug=!0}this.dataStore=[],this.offer=e,this.poll=t,this.execNext=o,this.debug=!1,this.startDebug=u}var queue=new Queue</script><style id="material_css"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("material_css","/css/material.min.css?lfwTSCk5dU0gSgC//hS81g==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style id="style_css"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("style_css","/css/style.min.css?vOFJu+pZl+0Eeqi7pGRHyw==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style id="prettify_css"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style id="prettify_theme"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("prettify_theme","/css/prettify/atelier-cave-dark.min.css?P8HZcYCbr9fq5dAvzZGnUQ==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style>body,html{font-family:Roboto,"Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;overflow-x:hidden!important}code{font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace}a{color:#0158bc}#scheme-Paradox .hot_tags-count,#scheme-Paradox .sidebar-colored .sidebar-badge,#scheme-Paradox .sidebar-colored .sidebar-header,#scheme-Paradox .sidebar_archives-count,#search-form-label:after,#search-label,.mdl-card__media{background-color:#1e69bf!important}#scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus,#scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover{color:#1e69bf!important}#ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a,#post_entry-right-info,.sidebar-colored .sidebar-nav li:hover>a,.sidebar-colored .sidebar-nav li:hover>a i,.sidebar-colored .sidebar-nav li>a:focus i,.sidebar-colored .sidebar-nav li>a:hover,.sidebar-colored .sidebar-nav li>a:hover i,.sidebar-colored .sidebar-nav>.open>a,.sidebar-colored .sidebar-nav>.open>a:focus,.sidebar-colored .sidebar-nav>.open>a:hover{color:#1e69bf!important}.toTop{background:#6baaf2!important}.material-layout .material-index>.material-nav,.material-layout .material-post>.material-nav,.material-nav a{color:#6baaf2}#scheme-Paradox .MD-burger-layer{background-color:#6baaf2}#scheme-Paradox #post-toc-trigger-btn{color:#6baaf2}.post-toc a:hover{color:#0158bc;text-decoration:underline}</style><style>body{background-image:url(/img/bg.jpg)}</style><style>.fade{transition:all .8s linear;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0);opacity:1}.fade.out{opacity:0}</style><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet"><style id="material_icons"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==",!0)</script><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="EmptinessBoy - 后花园"><meta name="msapplication-starturl" content="https://coding.emptinessboy.com/2020/06/Java-IO%E5%92%8C%E7%BD%91%E7%BB%9C%EF%BC%88%E4%B8%8B/"><meta name="msapplication-navbutton-color" content="#1e69bf"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="EmptinessBoy - 后花园"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="apple-touch-icon" href="/img/logo-180x180.jpg"><link rel="alternate" type="application/atom+xml" href="feed.xml"><meta property="og:url" content="https://coding.emptinessboy.com/2020/06/Java-IO%E5%92%8C%E7%BD%91%E7%BB%9C%EF%BC%88%E4%B8%8B/"><meta property="og:type" content="blog"><meta property="og:title" content="Java IO和网络（下 | EmptinessBoy - 后花园"><meta property="og:image" content="/img/logo-192x192.jpg"><meta property="og:description" content="晓帆的学习笔记"><meta property="og:article:tag" content="java"><meta property="article:published_time" content="Mon Jun 01 2020 23:25:35 GMT+0800"><meta property="article:modified_time" content="Tue Jun 02 2020 20:09:46 GMT+0800"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="https://coding.emptinessboy.com/2020/06/Java-IO%E5%92%8C%E7%BD%91%E7%BB%9C%EF%BC%88%E4%B8%8B/index.html"><script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://coding.emptinessboy.com/2020/06/Java-IO%E5%92%8C%E7%BD%91%E7%BB%9C%EF%BC%88%E4%B8%8B/index.html",
+    "headline": "Java IO和网络（下",
+    "datePublished": "Mon Jun 01 2020 23:25:35 GMT+0800",
+    "dateModified": "Tue Jun 02 2020 20:09:46 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "EmptinessBoy",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/fav_300.png"
+        },
+        "description": "啥都不会，<br>专业制造BUG的<br>学渣一枚<br><br>"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "EmptinessBoy - 后花园",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/logo-192x192.jpg"
+        }
+    },
+    "keywords": ",java博客,代码,学习,程序,大学",
+    "description": "晓帆的学习笔记",
+}</script><script>!function(e,t,a,n,c,s,o){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,s=t.createElement(a),o=t.getElementsByTagName(a)[0],s.async=1,s.src=n,o.parentNode.insertBefore(s,o)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-85449259-2","auto"),ga("send","pageview")</script><meta name="generator" content="Hexo 4.2.0"></head><body id="scheme-Paradox" class="lazy"><div class="material-layout mdl-js-layout has-drawer is-upgraded"><main class="material-layout__content" id="main"><div id="top"></div><button class="MD-burger-icon sidebar-toggle"><span id="MD-burger-id" class="MD-burger-layer"></span></button> <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons">format_list_numbered</i></button><ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh;overflow-y:scroll"><ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#过滤器流"><span class="post-toc-number">1.</span> <span class="post-toc-text">过滤器流</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据输入输出流"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">数据输入输出流</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#对象I-O"><span class="post-toc-number">2.</span> <span class="post-toc-text">对象I&#x2F;O</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DEMO"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">DEMO</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#随机文件操作"><span class="post-toc-number">3.</span> <span class="post-toc-text">随机文件操作</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#构造方法"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">构造方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#四种模式"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">四种模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#方法"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DEMO-1"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">DEMO</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#网络-IO"><span class="post-toc-number">4.</span> <span class="post-toc-text">网络 IO</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JAVA-socket模型"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">JAVA socket模型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#简单服务器客户机-DEMO"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">简单服务器客户机 DEMO</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#简单文件传输-DEMO"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">简单文件传输 DEMO</span></a></li></ol></li></ol></ul><div class="material-post_container"><div class="material-post mdl-grid"><div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col"><div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://media.everdo.cn/tank/pic-bed/2020/06/01/JAVA-IO-HXF.png)"><p class="article-headline-p">Java IO和网络（下</p></div><div class="mdl-color-text--grey-700 mdl-card__supporting-text meta"><div id="author-avatar"><img src="/img/fav_300.png" width="44px" height="44px" alt="Author Avatar"></div><div><strong>EmptinessBoy</strong> <span>6月 01, 2020</span></div><div class="section-spacer"></div><button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">devices other</i> <span class="visuallyhidden">devices other</span></button><ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button"><li class="mdl-menu__item">在其它设备中阅读本文章</li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAADhElEQVR42u3aS47bMBAFQN//0sk2wMSe97rJiRAUVwJsyWRp0e7P65f1x3ohwIEDBw4cOHDgwIHjwRyveP3lQR8//fwr+R5OPeftXThw4MCB4wJHcpjZp/snfD3G59fT7gQHDhw4cNzjeBeQkuvkAHkI3+8nuRcHDhw4cDyH41361KZ2yR4+PxkHDhw4cPwfHPvvt0nX5pXgwIEDB45/xdEGwllCdaqB9IhaKQ4cOHDgWA80PP/6R+c7cODAgQPHF452RUnRqDWVBPg2rEYnwoEDBw4cRzlmYwd5oygn2w/DDccmcODAgQPHBY42aLWlvfyulm+T8uHAgQMHjnsc7RDArEGVvIZ9ipgHexw4cODAcYNjU27L06SzydsszNe1Uhw4cODAMeLI06HZgWdhdTZCN2xu4cCBAweOaxynAuQm/WsD7T4dxYEDBw4cZznygNcOtyUc+1Cav6qiOIgDBw4cOBYcefqUFAfbA2wC9qxlhQMHDhw4fpLj8yHzNtUsGdsU+1o4HDhw4MBxm6NtCOVwbeCsE7C4IPh2hzhw4MCB4wLH2aCbX58qDm7CLQ4cOHDguM2RHCBPw/JkLA/5yYELRBw4cODAcZQjf3ReHGyfmaeFLWLEigMHDhw4jnLkR23LiLNBhFmieKU4iAMHDhw4Rhx5crW5a9ZMOrWTOoXDgQMHDhxrjvzm9odnpcbZDmfjfThw4MCB4yzHPuC11/tkrE04v3lhOHDgwIHjKMcmUL3Wq21izYYq6i4cDhw4cOA4xJEU9c4OLswgNu2xYa0UBw4cOHAsODZFuqLZMxrUztO8gg8HDhw4cBzlmBXp8hBbFOni0eq2aPgNKw4cOHDguMCxCVSbMYjZuHZSNCxSOxw4cODAcYGjpckH4G6MU+fh/MD/Dhw4cODAseBoy4KbBlU7PJGH7eRV4cCBAweOn+Foi4P7ImBbIjw7JIcDBw4cOG5wzEp7bfhstzj79eHfBRw4cODAcZTjFa82uM4+3Zcm878IOHDgwIHjHkce3l7lmiVj7RDD4UCLAwcOHDgOccyCX/7pnjsvTSbBGAcOHDhwPIdj1gRKWlx5ibA48OdkEgcOHDhwPIBjdrBNgW8WniNcHDhw4MBxjWMzRtC2fHLWTdMrekk4cODAgeMCxyz1aq83xcEkhLd34cCBAweOGxwWDhw4cODAgQMHDhw4HrZ+AwXDSeKAzL0CAAAAAElFTkSuQmCC"></ul><button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">bookmark</i> <span class="visuallyhidden">bookmark</span></button><ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button"><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/java/" rel="tag">java</a></li></ul><button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">share</i> <span class="visuallyhidden">share</span></button><ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button"><a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Java IO和网络（下&url=https://coding.emptinessboy.com/2020/06/Java-IO%E5%92%8C%E7%BD%91%E7%BB%9C%EF%BC%88%E4%B8%8B/index.html&pic=https://coding.emptinessboy.com/img/logo-32x32.jpg&searchPic=false&style=simple" target="_blank"><li class="mdl-menu__item">分享到微博</li></a><a class="post_share-link" href="https://twitter.com/intent/tweet?text=Java IO和网络（下&url=https://coding.emptinessboy.com/2020/06/Java-IO%E5%92%8C%E7%BD%91%E7%BB%9C%EF%BC%88%E4%B8%8B/index.html&via=EmptinessBoy" target="_blank"><li class="mdl-menu__item">分享到 Twitter</li></a><a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://coding.emptinessboy.com/2020/06/Java-IO%E5%92%8C%E7%BD%91%E7%BB%9C%EF%BC%88%E4%B8%8B/index.html" target="_blank"><li class="mdl-menu__item">分享到 Facebook</li></a><a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=EmptinessBoy - 后花园&title=Java IO和网络（下&summary=晓帆的学习笔记&pics=https://coding.emptinessboy.com/img/logo-32x32.jpg&url=https://coding.emptinessboy.com/2020/06/Java-IO%E5%92%8C%E7%BD%91%E7%BB%9C%EF%BC%88%E4%B8%8B/index.html" target="_blank"><li class="mdl-menu__item">分享到 QQ</li></a><a class="post_share-link" href="https://telegram.me/share/url?url=https://coding.emptinessboy.com/2020/06/Java-IO%E5%92%8C%E7%BD%91%E7%BB%9C%EF%BC%88%E4%B8%8B/index.html&text=Java IO和网络（下" target="_blank"><li class="mdl-menu__item">分享到 Telegram</li></a></ul></div><div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out"><h2 id="过滤器流"><a href="#过滤器流" class="headerlink" title="过滤器流"></a>过滤器流</h2><p>通常情况下，为了提高数据的处理速度，或是能对诸如 int、double 之类的数据直接进行操作，会联合使用被称之为过滤器（Filter）类的流，以提高流的处理效率。</p><blockquote><p>过滤器流的不能单独使用，必须与相应的节点流一起使用，才能实现数据流的读写功能。</p></blockquote><p>上一篇文章中和大家提到了 BufferedInuputStream 类和 BufferedOutputStream 就是两个常用的带缓冲的过滤器流</p><h3 id="数据输入输出流"><a href="#数据输入输出流" class="headerlink" title="数据输入输出流"></a>数据输入输出流</h3><p>有时需要处理的数据不一定是字节数据。如读写 int型、float型、double型 的数据时，一次需要读写几个字节，需要专门的数据输入输出流来处理。</p><p><strong>DateInuputStream类 和 DateOutputStream类 能够直接读写 Java 基本类型的数据 和 Unicode 编码格式的字符串。</strong></p><table><thead><tr><th>DataInputStream 类的读方法</th><th>DataOutputStream 类的写方法</th></tr></thead><tbody><tr><td>int read(byte[] b)</td><td>void write(byte[] b, int off, int len)</td></tr><tr><td>int read(byte[] b, int off, int len)</td><td>void write(int b)</td></tr><tr><td>boolean readBoolean()</td><td>void writeBoolean(boolean v)</td></tr><tr><td>byte readByte()</td><td>void writeByte(int v)</td></tr><tr><td>char readChar()</td><td>void writeBytes(String s)</td></tr><tr><td>double readDouble()</td><td>void writeChar(int v)</td></tr><tr><td>float readFloat()</td><td>void writeChars(String s)</td></tr><tr><td>void readFully(byte[] b)</td><td>void writeDouble(double v)</td></tr><tr><td>void readFully(byte[] b, int off, int len)</td><td>void writeFloat(float v)</td></tr><tr><td>int readInt()</td><td>void writeInt(int v)</td></tr><tr><td>long readLong()</td><td>void writeLong(long v)</td></tr><tr><td>short readShort()</td><td>void writeShort(int v)</td></tr><tr><td>String readUTF()</td><td>void writeUTF(String str)</td></tr></tbody></table><p><strong>写入 DEMO：</strong></p><pre><code class="java">import java.io.*;
+
+public class DataInputOutput {
+    public static void main(String[] args) {
+        File f = new File(&quot;src/test-a.txt&quot;);
+        try {
+            OutputStream op = new FileOutputStream(f);
+            DataOutputStream dp = new DataOutputStream(op);
+            int a = 666;
+            String b = &quot;emptinessboy&quot;;
+            boolean c = true;
+            dp.writeInt(a);
+            dp.writeUTF(b);
+            dp.writeBoolean(c);
+            dp.close();
+            op.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+}</code></pre><p>运行后，程序输出了 test-a.txt。因为是字节流，所以显示乱码。</p><p><a href="https://up.media.everdo.cn/image/nOCy" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/06/02/dataopstream.png" alt="dataopstream.png"></a></p><p><strong>读取 DEMO：</strong></p><pre><code class="java">import java.io.*;
+
+public class DataInPutTest {
+    public static void main(String[] args) {
+        File f = new File(&quot;src/test-a.txt&quot;);
+        try {
+            InputStream in = new FileInputStream(f);
+            BufferedInputStream bi = new BufferedInputStream(in);
+            DataInputStream di = new DataInputStream(bi);
+            boolean flag = true;  //避免系统认为while下面的代码不可达
+            while (flag){
+                System.out.println(di.readInt());
+                System.out.println(di.readUTF());
+                System.out.println(di.readBoolean());
+            }
+            di.close(); //关闭流
+            bi.close();
+            in.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            System.out.println(&quot;文件结束&quot;);
+            //e.printStackTrace();
+        }
+
+    }
+}</code></pre><p>运行效果（可以看到所有的文件信息【基本数据类型】都被输出出来了）：</p><p><a href="https://up.media.everdo.cn/image/nZJd" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/06/02/dataipstream.png" alt="dataipstream.png"></a></p><h2 id="对象I-O"><a href="#对象I-O" class="headerlink" title="对象I/O"></a>对象I/O</h2><p>如果要对除了基本数据类型以外的内容进行 IO 操作，JAVA也是支持的。</p><p>Java 提供了一个 Serializable 的接口，只要类实现了该接口，就可以使用 <strong>ObjectInputStream类</strong> 和 <strong>ObjectOutputStream类</strong> 对该类的对象进行 I/O 处理了。</p><h3 id="DEMO"><a href="#DEMO" class="headerlink" title="DEMO"></a>DEMO</h3><p>这是一个简单的圆类：</p><pre><code class="java">package 学校课程527实验;
+import java.io.*;
+public class circleClass {
+    double x1,y1,x2,y2;
+
+    public circleClass(double x1,double y1,double x2,double y2) {
+        this.x1=x1;
+        this.x2=x2;
+        this.y1=y1;
+        this.x2=y2;
+    }
+
+    public double getArea(){
+        double r = Math.sqrt(Math.pow(x2-x1,2)+Math.pow(y2-y1,2));
+        return Math.PI*r*r;
+    }
+}</code></pre><p>我们给这个类实现 Serializable 接口：</p><pre><code class="java">public class circleClass implements Serializable { …… }</code></pre><p>创建对象并写入对象到文件：</p><pre><code class="java">class TestCircle{
+    public static void main(String[] args) {
+        //初始化两个对象
+        circleClass a = new circleClass(0,0,8.5,9);
+        System.out.printf(&quot;圆1的面积为：%.2f\n&quot;,a.getArea());
+        circleClass b = new circleClass(2,3.5,9,6);
+        System.out.printf(&quot;圆2的面积为：%.2f\n&quot;,b.getArea());
+
+        //将对象写入文件
+        File f = new File(&quot;src/test-c.dat&quot;);
+        try {
+            FileOutputStream fo = new FileOutputStream(f);
+            ObjectOutputStream op = new ObjectOutputStream(fo);
+            op.writeObject(a);
+            op.writeObject(b);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}</code></pre><p>再写一个类来读取刚才写入的对象：</p><pre><code class="java">import java.io.*;
+import 学校课程527实验.*;
+
+public class ReadCircle {
+    public static void main(String[] args) {
+        File f = new File(&quot;src/test-c.dat&quot;);
+        try {
+            FileInputStream fi = new FileInputStream(f);
+            ObjectInputStream oi = new ObjectInputStream(fi);
+            circleClass a = (circleClass) oi.readObject();
+            circleClass b = (circleClass) oi.readObject();
+            System.out.printf(&quot;圆1的面积为：%.2f\n&quot;,a.getArea());
+            System.out.printf(&quot;圆2的面积为：%.2f\n&quot;,b.getArea());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+    }
+}</code></pre><p>先运行 TestCircle 来创建对象并写入文件：</p><p><a href="https://up.media.everdo.cn/image/nKaD" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/06/02/RunObjectOutPutBuffer.png" alt="RunObjectOutPutBuffer.png"></a></p><p>可以看到输出的 test-c.dat 里面已经存入了对象（字节形式存储，因此 IDE 打开乱码）。接下来我们使用下面这段程序读取刚才的对象。</p><pre><code class="java">import java.io.*;
+import 学校课程527实验.*;
+
+public class ReadCircle {
+    public static void main(String[] args) {
+        File f = new File(&quot;src/test-c.dat&quot;);
+        try {
+            FileInputStream fi = new FileInputStream(f);
+            ObjectInputStream oi = new ObjectInputStream(fi);
+            //读取两个对象，并转化为circleClass
+            //因为.readObject()方法默认返回Object所以要转换
+            circleClass a = (circleClass) oi.readObject();
+            circleClass b = (circleClass) oi.readObject();
+            System.out.printf(&quot;圆1的面积为：%.2f\n&quot;,a.getArea());
+            System.out.printf(&quot;圆2的面积为：%.2f\n&quot;,b.getArea());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+}</code></pre><p><a href="https://up.media.everdo.cn/image/n83L" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/06/02/RunObjectInPutBuffer.png" alt="RunObjectInPutBuffer.png"></a></p><p>可以看到，对象已经成功被读取，对象的方法也都可以正常操作！</p><h2 id="随机文件操作"><a href="#随机文件操作" class="headerlink" title="随机文件操作"></a>随机文件操作</h2><p>RandomAccessFile 类直接继承自 Object 类，可以从文件的任何位置开始进行读或者写操作。</p><p>RandomAccessFile 类同时实现了 DataInput 接口和 DataOutput 接口，可以对常用数据类型直接操作。</p><h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><pre><code class="java">RandomAccessFile(String name, String mode)</code></pre><p>其中 mode 是访问模式。</p><h3 id="四种模式"><a href="#四种模式" class="headerlink" title="四种模式"></a>四种模式</h3><blockquote><p>四种模式：R RW RWD RWS</p></blockquote><table><thead><tr><th>模式</th><th>含义</th></tr></thead><tbody><tr><td>r</td><td>以只读的方式打开文本，也就意味着不能用write来操作文件</td></tr><tr><td>rw</td><td>读操作和写操作都是允许的</td></tr><tr><td>rws</td><td>每当进行写操作，同步的刷新到磁盘，刷新内容和元数据</td></tr><tr><td>rwd</td><td>每当进行写操作，同步的刷新到磁盘，刷新内容</td></tr></tbody></table><h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p><a href="https://up.media.everdo.cn/image/n5dl" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/06/02/randomAccessFile.png" alt="randomAccessFile.png"></a></p><p><strong>1、seek：</strong> 指定文件的光标位置，通俗点说就是指定你的光标位置然后下次读文件数据的时候从该位置读取。</p><p><strong>2、getFilePointer：</strong> 我们注意到这是一个 long 类型的返回值，字面意思就是返回当前的文件光标位置。这样方便我们后面读取插入。</p><p>=====================</p><p><strong>3、length：</strong> 文件的长度，返回long类型。注意它并不会受光标的影响。只会反应客观的文本长度。</p><p>=====================</p><p><strong>4、read()、read(byte[] b)、read(byte[] b,int off,int len) ：</strong> 这些方法跟 readstream 中的方法一样，例如最后一个：定义缓冲数组，从数组的 off 偏移量位置开始写，读取转换为数组数据达到 len 个字节。总之这是一个读文件内容的标准操作 api。</p><p><strong>5、readDouble() readFloat() readBoolean() readInt() readLong() readShort() readByte() readChar()：</strong> 这些方法都是去read每一个字符。比如readLong就是要求你的文本内容必须有八个字符，不然会报错。</p><p>伴随着也就是 <strong>writeDouble() writeFloat() writeBoolean() writeInt() writeLong() writeShort() writeByte() writeChar()</strong></p><p><strong>6、readFully(byte[] b)：</strong> 这个方法的作用就是将文本中的内容填满这个缓冲区b。如果缓冲b不能被填满，那么读取流的过程将被阻塞，如果发现是流的结尾，那么会抛出异常。这个过程就比较像“凑齐一车人在发车，不然不走”。</p><p>=====================</p><p><strong>7、getChannel：</strong> 它返回的就是 nio 通信中的 file 的唯一 channel</p><p>=====================</p><p><strong>8、skipBytes(int n)：</strong> 跳过n字节的位置，相对于当前的 point。</p><h3 id="DEMO-1"><a href="#DEMO-1" class="headerlink" title="DEMO"></a>DEMO</h3><p><strong>追加日志：</strong></p><pre><code class="java">import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.RandomAccessFile;
+
+public class RandomAccessFiletest1 {
+    public static void main(String[] args) {
+        File f = new File(&quot;src/test.log&quot;);
+        try {
+            RandomAccessFile rf = new RandomAccessFile(f, &quot;rws&quot;);
+            //获取文件长度并定位到文件结尾
+            rf.seek(rf.length());
+            //输入十个日期信息
+            for (int i=0;i&lt;10;i++) {
+                rf.writeBytes(new java.util.Date() + &quot;\r\n&quot;);
+            }
+            rf.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}</code></pre><p>连续两次运行程序后，可以看到，第二次的时候，程序在第一次书写的末尾继续书写日志文件。</p><p><a href="https://up.media.everdo.cn/image/nG10" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/06/02/RandomAccessFile.png" alt="RandomAccessFile.png"></a></p><h2 id="网络-IO"><a href="#网络-IO" class="headerlink" title="网络 IO"></a>网络 IO</h2><p>套接字（Socket）是Java支持网络通信的一种对象，程序间在网络上进行通信和程序对文件的操作是十分类似的。</p><blockquote><p>SeverSock 是用来监听，等待建立连接的。一旦建立连接，就会生成一个 Socket 对象进行实际的数据传输</p></blockquote><h3 id="JAVA-socket模型"><a href="#JAVA-socket模型" class="headerlink" title="JAVA socket模型"></a>JAVA socket模型</h3><p><a href="https://up.media.everdo.cn/image/naEc" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/06/02/Java-socket.png" alt="Java-socket.png"></a></p><h3 id="简单服务器客户机-DEMO"><a href="#简单服务器客户机-DEMO" class="headerlink" title="简单服务器客户机 DEMO"></a>简单服务器客户机 DEMO</h3><p>这段程序用来实现从服务器不断发文字到客户机，然后客户端读取并显示文字：</p><p><strong>服务器端程序：</strong></p><pre><code class="java">import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.Scanner;
+
+public class SimpleServer {
+    public static void main(String[] args) {
+        try {
+            //先使用ServerSocket监听端口
+            ServerSocket ss = new ServerSocket(6666);
+            //接受连接并获得Socket
+            Socket s = ss.accept();
+            OutputStream op = s.getOutputStream();
+            DataOutputStream dp = new DataOutputStream(op);
+            System.out.println(&quot;连接已建立，请输入发给客户端的消息（输入 quit 退出）：&quot;);
+            //基本输入输出流
+            Scanner sc = new Scanner(System.in);
+            String str;
+            while (!(str = sc.nextLine()).equals(&quot;quit&quot;)){
+                dp.writeUTF(str);
+            }
+            //关闭流
+            sc.close();
+            dp.close();
+            op.close();
+            s.close();
+            ss.close();
+            System.out.println(&quot;连接已经关闭&quot;);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}</code></pre><p><strong>客户端程序：</strong></p><pre><code class="java">import java.io.DataInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.Socket;
+
+public class SimpleClient {
+    public static void main(String[] args) {
+        try {
+            //建立一个连接到服务器的socket（IP地址+端口）
+            Socket s = new Socket(&quot;127.0.0.1&quot;, 6666);
+            InputStream is = s.getInputStream();
+            DataInputStream di = new DataInputStream(is);
+            System.out.println(&quot;连接已建立，正在接收服务端的消息：&quot;);
+            boolean flag = true;
+            while (flag)
+                System.out.println(di.readUTF());
+            //关闭流
+            di.close();
+            is.close();
+            s.close();
+            System.out.println(&quot;连接已经关闭&quot;);
+        } catch (IOException e) {
+            System.out.println(&quot;连接已经中断&quot;);
+            //e.printStackTrace();
+        }
+    }
+}</code></pre><p><strong>运行效果（服务器端）：</strong></p><p><a href="https://up.media.everdo.cn/image/ngZ2" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/06/02/SimpleServerdemo.png" alt="SimpleServerdemo.png"></a></p><p><strong>运行效果（客户端）：</strong></p><p><a href="https://up.media.everdo.cn/image/nuBZ" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/06/02/SimpleClientdemo.png" alt="SimpleClientdemo.png"></a></p><h3 id="简单文件传输-DEMO"><a href="#简单文件传输-DEMO" class="headerlink" title="简单文件传输 DEMO"></a>简单文件传输 DEMO</h3><blockquote><p>将客户机某文件传到服务器</p></blockquote><p><strong>服务器端程序：</strong></p><pre><code class="java">import java.io.*;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class FileUploadServer {
+    public static void main(String[] args) {
+        ServerSocket ss = null;
+        Socket s;
+        int temp = 0;  //记录文件长度
+        byte[] b = new byte[1024];  //字节流缓冲区
+        InputStream fi; //输入流
+        BufferedInputStream bi; //输入缓冲流
+        FileOutputStream fo;  //文件输出流
+        BufferedOutputStream bo;  //输出缓冲流
+        try {
+            ss = new ServerSocket(8888);  //尝试监听端口
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        while (true){   //服务端程序始终运行
+            try {
+                s = ss.accept();  //如有连接则建立连接并拿到 socket
+                System.out.println(&quot;已经建立连接&quot;);
+                fi = s.getInputStream();  //从socket拿到字节流
+                bi = new BufferedInputStream(fi);  //输入缓冲流初始化
+                File file;  //创建文件对象
+                fo = new FileOutputStream(&quot;src/file.txt&quot;);
+                bo = new BufferedOutputStream(fo);  //输出缓冲流初始化
+                try {
+                    //如果有连接且文件没有读取完毕则进行循环
+                    while (s.isConnected()&amp;&amp;(temp = bi.read(b))!=-1){
+                        //输出缓冲流写入
+                        bo.write(b,0,temp);
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                //按顺序关闭流
+                bo.close();
+                fo.close();
+                bi.close();
+                fi.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}</code></pre><p><strong>客户端程序：</strong></p><pre><code class="java">import java.io.*;
+import java.net.Socket;
+
+public class FileUploadClient {
+    public static void main(String[] args) {
+        //创建文件对象
+        File f = new File(&quot;src/test-d.txt&quot;);
+        try {
+            //尝试建立连接
+            Socket s = new Socket(&quot;127.0.0.1&quot;, 8888);
+            OutputStream so = s.getOutputStream();  //从socket拿到输出字节流
+            BufferedOutputStream bo = new BufferedOutputStream(so);  //输出缓冲流初始化
+            FileInputStream fin = new FileInputStream(f);  //文件输入流初始化
+            BufferedInputStream bi = new BufferedInputStream(fin);  //输入缓冲流初始化
+            byte[] b = new byte[1024];  //字节流缓冲区
+            int temp;  //记录当前读取的长度
+            while ((temp = bi.read(b))!= -1){
+                //当文件还没读完，就执行循环
+                bo.write(b,0,temp); //写入输出缓冲流
+            }
+            //按序关闭流
+            bo.close();
+            so.close();
+            bi.close();
+            fin.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}</code></pre><p>做完这一切，在 src 目录下创建 test-d.txt，然后启动服务端程序。最后运行客户端程序。</p><p><strong>运行效果：</strong></p><p><a href="https://up.media.everdo.cn/image/74Wk" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/06/02/fileuploadsuccess.png" alt="fileuploadsuccess.png"></a></p><p>可以看到，服务端成功接收了文件并保存为 src/file.txt。😁😉</p><blockquote style="margin:2em 0 0;padding:.5em 1em;border-left:3px solid #ebc43b;background-color:#191919;list-style:none"><p><strong>This blog is under a <a href="/creativecommons.html" target="_blank">CC BY-NC-ND 4.0 Unported License</a></strong><br><strong>本文链接：</strong><a href="https://coding.emptinessboy.com/2020/06/Java-IO%E5%92%8C%E7%BD%91%E7%BB%9C%EF%BC%88%E4%B8%8B/">https://coding.emptinessboy.com/2020/06/Java-IO%E5%92%8C%E7%BD%91%E7%BB%9C%EF%BC%88%E4%B8%8B/</a></p></blockquote></div><div id="comment" style="padding:10px" class="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js"></script><script>var GUEST_INFO=["nick","mail","link"],guest_info="nick,mail,link".split(",").filter(function(i){return GUEST_INFO.indexOf(i)>-1}),notify=!1,verify=!0;new Valine({el:".vcomment",notify:notify,verify:verify,appId:"91mhcw0WK44B90nptmxGcJol-gzGzoHsz",appKey:"Boi7za0ClwGyWRCYd8osdf5o",placeholder:"在这里写点什么吧！",pageSize:"10",avatar:"monsterid",lang:"zh-cn",guest_info:guest_info})</script></div><nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col"><a href="/2020/06/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B002%EF%BC%88%E6%95%B0%E6%8D%AE-%E6%B5%81%E7%A8%8B%EF%BC%89%E4%B8%8A/" id="post_nav-newer" class="prev-content"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation"><i class="material-icons">arrow_back</i></button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 新篇</a><div class="section-spacer"></div><a href="/2020/05/Java-IO%E5%A4%84%E7%90%86/" id="post_nav-older" class="next-content">旧篇 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation"><i class="material-icons">arrow_forward</i></button></a></nav></div></div><div class="sidebar-overlay"></div><aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation"><div id="sidebar-main"><div class="sidebar-header header-cover" style="background-image:url(/img/sidebar_header.jpg)"><div class="top-bar"></div><button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display:initial" data-upgraded=",MaterialButton,MaterialRipple"><i class="material-icons">clear_all</i> <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button><div class="sidebar-image"><img src="/img/fav_300.png" alt="EmptinessBoy's avatar"></div><a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">i@my.huxiaofan.com <b class="caret"></b></a></div><ul class="nav sidebar-nav"><li class="dropdown"><ul id="settings-dropdown" class="dropdown-menu"><li><a href="mailto:i@my.huxiaofan.com" target="_blank" title="Email 我"><i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i> Email 我</a></li></ul></li><li id="sidebar-first-li"><a href="/"><i class="material-icons sidebar-material-icons">home</i> 主页</a></li><li class="divider"></li><li class="dropdown"><a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown"><i class="material-icons sidebar-material-icons">inbox</i> 归档 <b class="caret"></b></a><ul class="dropdown-menu"><li><a class="sidebar_archives-link" href="/archives/2020/10/">十月 2020<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/09/">九月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/07/">七月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/06/">六月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/04/">四月 2020<span class="sidebar_archives-count">13</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/03/">三月 2020<span class="sidebar_archives-count">13</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/02/">二月 2020<span class="sidebar_archives-count">4</span></a></li></ul></li><li class="dropdown"><a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown"><i class="material-icons sidebar-material-icons">chrome_reader_mode</i> 分类 <b class="caret"></b></a><ul class="dropdown-menu"><li><a class="sidebar_archives-link" href="/categories/Android/">Android<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/CSS%E5%AD%A6%E4%B9%A0/">CSS学习<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/HTML%E5%AD%A6%E4%B9%A0/">HTML学习<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/Hadoop/">Hadoop<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/JAVAWEB/">JAVAWEB<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/JAVA%E5%AD%A6%E4%B9%A0/">JAVA学习<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/JS%E5%AD%A6%E4%B9%A0/">JS学习<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/Linux/">Linux<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/python%E5%85%A5%E9%97%A8/">python入门<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/">瞎折腾<span class="sidebar_archives-count">4</span></a></li></ul></li><li class="divider"></li><li><a href="https://huxiaofan.com" target="_blank" rel="noopener" title="生活博客"><i class="material-icons sidebar-material-icons">domain</i> 生活博客</a></li><li><a href="https://huxiaofan.com/about" target="_blank" rel="noopener" title="关于我"><i class="material-icons sidebar-material-icons">person</i> 关于我</a></li><li class="divider"></li><li><a href="/archives">文章总数 <span class="sidebar-badge">46</span></a></li></ul></div></aside><div id="back-to-top" class="toTop-wrap"><a href="#top" class="toTop"><i class="material-icons footer_top-i">expand_less</i></a></div><footer class="mdl-mini-footer" id="bottom"><div class="mdl-mini-footer--left-section sns-list"><a href="https://huxiaofan.com/go?url=https://twitter.com/huxiaofanhome/" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter"><span class="visuallyhidden">Twitter</span></button></a><a href="https://huxiaofan.com/go?url=https://www.facebook.com/profile.php?id=100013375578138" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook"><span class="visuallyhidden">Facebook</span></button></a><a href="https://git.huxiaofan.com/emptinessboy" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-github"><span class="visuallyhidden">Github</span></button></a><a href="https://huxiaofan.com/go/?url=aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL2F2NTc2MjgwMDQ=" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili"><span class="visuallyhidden">Bilibili</span></button></a><a href="https://huxiaofan.com/go/?url=https://t.me/emptinessboy" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-telegram"><span class="visuallyhidden">Telegram</span></button></a></div><div id="copyright">Copyright&nbsp;©&nbsp;<span year></span>&nbsp;EmptinessBoy - 后花园<br><a href="http://huxiaofan.com" target="_blank" rel="noopener">晓帆</a>&nbsp;/&nbsp;<a href="http://www.beian.miit.gov.cn/" target="_blank" rel="nofollow"> 浙ICP备20004121号</a></div><div class="mdl-mini-footer--right-section"><div><div class="footer-develop-div">Hexo Theme - <span class="footer-develop-a">Material</span></div></div></div></footer><script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==",!0)</script><script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==",!0)</script><script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==",!0)</script><script type="text/ls-javascript" id="NProgress-script">NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#82bcff'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #82bcff, 0 0 15px #82bcff'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#82bcff',
+        'border-left-color': '#82bcff'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);</script><script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==",!0)</script><script type="text/ls-javascript" id="window-load">$(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })</script><script type="text/ls-javascript" id="lazy-load">// Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });</script><script>var copyrightNow=(new Date).getFullYear(),textContent=document.querySelector("span[year]");copyrightSince=2019,copyrightSince===copyrightNow||0===copyrightSince?textContent.textContent=copyrightNow:textContent.textContent=copyrightSince+" - "+copyrightNow,function(){for(var t=document.querySelectorAll('script[type="text/ls-javascript"]'),e=0;e<t.length;++e){var o=t[e];lsloader.runInlineScript(o.id,o.id)}}(),console.log("\n %c 帆's Life | https://huxiaofan.com | Theme Material %c \n","color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;","color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;")</script></main></div></body></html><!-- rebuild by neat -->
