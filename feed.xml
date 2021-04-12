@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="https://coding.emptinessboy.com/"/>
-  <updated>2021-04-09T15:52:56.000Z</updated>
+  <updated>2021-04-12T14:13:38.000Z</updated>
   <id>https://coding.emptinessboy.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>一个 TodoList 让你上手VUE</title>
-    <link href="https://coding.emptinessboy.com/2021/04/%E4%B8%80%E4%B8%AATodoList%E8%AE%A9%E4%BD%A0%E4%B8%8A%E6%89%8BVUE/"/>
-    <id>https://coding.emptinessboy.com/2021/04/%E4%B8%80%E4%B8%AATodoList%E8%AE%A9%E4%BD%A0%E4%B8%8A%E6%89%8BVUE/</id>
-    <published>2021-04-09T15:40:16.000Z</published>
-    <updated>2021-04-09T15:52:56.000Z</updated>
+    <title>CSS居中傻傻搞不懂？教你！</title>
+    <link href="https://coding.emptinessboy.com/2021/04/CSS%E5%B1%85%E4%B8%AD%E5%82%BB%E5%82%BB%E6%90%9E%E4%B8%8D%E6%87%82%EF%BC%9F%E6%95%99%E4%BD%A0%EF%BC%81/"/>
+    <id>https://coding.emptinessboy.com/2021/04/CSS%E5%B1%85%E4%B8%AD%E5%82%BB%E5%82%BB%E6%90%9E%E4%B8%8D%E6%87%82%EF%BC%9F%E6%95%99%E4%BD%A0%EF%BC%81/</id>
+    <published>2021-04-12T14:12:13.000Z</published>
+    <updated>2021-04-12T14:13:38.000Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,34 @@
       
         
         
-          &lt;!-- build time:Sat Apr 10 2021 00:31:01 GMT+0800 (中国标准时间) --&gt;&lt;h1 id=&quot;一个-TodoList-让你上手VUE&quot;&gt;&lt;a href=&quot;#一个-TodoList-让你上手VUE&quot;
+          &lt;!-- build time:Mon Apr 12 2021 22:14:14 GMT+0800 (中国标准时间) --&gt;&lt;blockquote&gt;&lt;blockquote&gt;&lt;p&gt;不会吧，不会吧，不会有人 2021 年还在用百分比写 div
+        
+      
+    
+    </summary>
+    
+    
+      <category term="CSS学习" scheme="https://coding.emptinessboy.com/categories/CSS%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="CSS3" scheme="https://coding.emptinessboy.com/tags/CSS3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一个 TodoList 让你上手VUE</title>
+    <link href="https://coding.emptinessboy.com/2021/04/%E4%B8%80%E4%B8%AATodoList%E8%AE%A9%E4%BD%A0%E4%B8%8A%E6%89%8BVUE/"/>
+    <id>https://coding.emptinessboy.com/2021/04/%E4%B8%80%E4%B8%AATodoList%E8%AE%A9%E4%BD%A0%E4%B8%8A%E6%89%8BVUE/</id>
+    <published>2021-04-09T15:40:16.000Z</published>
+    <updated>2021-04-10T03:53:30.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- build time:Mon Apr 12 2021 22:13:50 GMT+0800 (中国标准时间) --&gt;&lt;blockquote&gt;&lt;p&gt;想当初，自己自学 VUE.js 的时候，很简单的看了官网的入门教程就直接上手写项目了。从自己最初接触 VUE.js
         
       
     
@@ -510,27 +537,6 @@ print(name_list[2])  # 索引取值  索引0开始&lt;/code&gt;&lt;/pre&gt;
     
     
       <category term="python" scheme="https://coding.emptinessboy.com/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>inteliJ 学习 SwingGui 记录</title>
-    <link href="https://coding.emptinessboy.com/2020/04/inteliJ-%E5%AD%A6%E4%B9%A0SwingGui%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/"/>
-    <id>https://coding.emptinessboy.com/2020/04/inteliJ-%E5%AD%A6%E4%B9%A0SwingGui%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</id>
-    <published>2020-04-21T06:57:49.000Z</published>
-    <updated>2020-05-19T16:21:18.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;!-- build time:Sat Apr 10 2021 00:31:01 GMT+0800 (中国标准时间) --&gt;&lt;h2 id=&quot;GUI-相关工具组件&quot;&gt;&lt;a href=&quot;#GUI-相关工具组件&quot; class=&quot;headerlink&quot; title=&quot;GUI 相关工具组件&quot;&gt;&lt;/a&gt;GUI 相关工具组件&lt;/h2&gt;&lt;h3 id=&quot;AWT&quot;&gt;&lt;a href=&quot;#AWT&quot; class=&quot;headerlink&quot; title=&quot;AWT&quot;&gt;&lt;/a&gt;AWT&lt;/h3&gt;&lt;p&gt;abstract window toolkit 抽象窗口工具包，提供了图形用户界面和图形，直接调用本地系统接口完成。&lt;/p&gt;&lt;h3 id=&quot;Swing&quot;&gt;&lt;a href=&quot;#Swing&quot; class=&quot;headerlink&quot; title=&quot;Swing&quot;&gt;&lt;/a&gt;Swing&lt;/h3&gt;&lt;p&gt;Swing 是建立在 AWT 基础之上的，它利用了 AWT 的底层组件，包括图形、颜色、字体等。增加了界面修饰，使界面更美观，在丌同的操作系统中的显示更为相似。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="JAVA学习" scheme="https://coding.emptinessboy.com/categories/JAVA%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="java" scheme="https://coding.emptinessboy.com/tags/java/"/>
     
   </entry>
   
