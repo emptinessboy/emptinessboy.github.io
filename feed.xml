@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="https://coding.emptinessboy.com/"/>
-  <updated>2021-04-12T14:21:03.000Z</updated>
+  <updated>2021-04-20T02:57:10.000Z</updated>
   <id>https://coding.emptinessboy.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VUE的生命周期是啥？</title>
+    <link href="https://coding.emptinessboy.com/2021/04/VUE%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%98%AF%E5%95%A5%EF%BC%9F/"/>
+    <id>https://coding.emptinessboy.com/2021/04/VUE%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%98%AF%E5%95%A5%EF%BC%9F/</id>
+    <published>2021-04-20T02:54:14.000Z</published>
+    <updated>2021-04-20T02:57:10.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- build time:Tue Apr 20 2021 11:00:43 GMT+0800 (中国标准时间) --&gt;&lt;blockquote&gt;&lt;p&gt;对于 VUE.js 的生命周期，VUE
+        
+      
+    
+    </summary>
+    
+    
+      <category term="WEB框架" scheme="https://coding.emptinessboy.com/categories/WEB%E6%A1%86%E6%9E%B6/"/>
+    
+    
+      <category term="vuejs" scheme="https://coding.emptinessboy.com/tags/vuejs/"/>
+    
+  </entry>
   
   <entry>
     <title>CSS居中傻傻搞不懂？教你！</title>
@@ -510,33 +537,6 @@ print(name_list[2])  # 索引取值  索引0开始&lt;/code&gt;&lt;/pre&gt;
     
     
       <category term="java" scheme="https://coding.emptinessboy.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python 学习笔记01（基本语法）</title>
-    <link href="https://coding.emptinessboy.com/2020/04/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B001%EF%BC%88%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%EF%BC%89/"/>
-    <id>https://coding.emptinessboy.com/2020/04/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B001%EF%BC%88%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%EF%BC%89/</id>
-    <published>2020-04-24T07:36:12.000Z</published>
-    <updated>2020-06-29T02:41:11.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;!-- build time:Sat Apr 10 2021 00:31:01 GMT+0800 (中国标准时间) --&gt;&lt;blockquote&gt;&lt;p&gt;！Python 程序各行开头的空白区称为缩进，这在 Python 中非常重要，Python
-        
-      
-    
-    </summary>
-    
-    
-      <category term="python入门" scheme="https://coding.emptinessboy.com/categories/python%E5%85%A5%E9%97%A8/"/>
-    
-    
-      <category term="python" scheme="https://coding.emptinessboy.com/tags/python/"/>
     
   </entry>
   
