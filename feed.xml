@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="https://coding.emptinessboy.com/"/>
-  <updated>2021-04-20T03:03:30.000Z</updated>
+  <updated>2021-04-26T03:21:06.000Z</updated>
   <id>https://coding.emptinessboy.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>搬砖小记：一个简单的加载中效果</title>
+    <link href="https://coding.emptinessboy.com/2021/04/%E6%90%AC%E7%A0%96%E5%B0%8F%E8%AE%B0%EF%BC%9A%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%8A%A0%E8%BD%BD%E4%B8%AD%E6%95%88%E6%9E%9C/"/>
+    <id>https://coding.emptinessboy.com/2021/04/%E6%90%AC%E7%A0%96%E5%B0%8F%E8%AE%B0%EF%BC%9A%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%8A%A0%E8%BD%BD%E4%B8%AD%E6%95%88%E6%9E%9C/</id>
+    <published>2021-04-26T03:11:10.000Z</published>
+    <updated>2021-04-26T03:21:06.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- build time:Mon Apr 26 2021 11:23:50 GMT+0800 (中国标准时间)
+        
+      
+    
+    </summary>
+    
+    
+      <category term="CSS学习" scheme="https://coding.emptinessboy.com/categories/CSS%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="CSS3" scheme="https://coding.emptinessboy.com/tags/CSS3/"/>
+    
+  </entry>
   
   <entry>
     <title>VUE的生命周期是啥？</title>
@@ -510,33 +537,6 @@ print(name_list[2])  # 索引取值  索引0开始&lt;/code&gt;&lt;/pre&gt;
     
     
       <category term="Powershell" scheme="https://coding.emptinessboy.com/tags/Powershell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>几个简单的JAVA GUI练习</title>
-    <link href="https://coding.emptinessboy.com/2020/05/%E5%87%A0%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84JAVA-GUI%E7%BB%83%E4%B9%A0/"/>
-    <id>https://coding.emptinessboy.com/2020/05/%E5%87%A0%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84JAVA-GUI%E7%BB%83%E4%B9%A0/</id>
-    <published>2020-05-19T14:58:59.000Z</published>
-    <updated>2020-05-29T13:14:36.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;!-- build time:Sat Apr 10 2021 00:31:01 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;最近在听 NEU 的 JAVA 慕课，然后有两个简单的 GUI 课后练习：&lt;/p&gt;&lt;h2 id=&quot;菜单栏相关练习&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="JAVA学习" scheme="https://coding.emptinessboy.com/categories/JAVA%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="java" scheme="https://coding.emptinessboy.com/tags/java/"/>
     
   </entry>
   
