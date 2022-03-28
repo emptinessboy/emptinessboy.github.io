@@ -1,0 +1,289 @@
+<!-- build time:Mon Mar 28 2022 11:43:53 GMT+0800 (中国标准时间) --><!DOCTYPE html><html style="display:none" lang="zh"><head><meta charset="utf-8"><script>window.materialVersion="1.5.6",window.oldVersion=["codestartv1","1.3.4","1.4.0","1.4.0b1","1.5.0","1.5.2","1.5.5"]</script><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn1.lncld.net"><link rel="dns-prefetch" href="https://cdn1.lncld.net"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta name="renderer" content="webkit"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><title>HTML文档整理 07-定位，离线和WEB存储 | 帆的自留地</title><link rel="icon shortcut" type="image/ico" href="/img/logo-32x32.jpg"><link rel="icon" href="/img/logo-192x192.jpg"><meta name="format-detection" content="telephone=no"><meta name="description" itemprop="description" content="晓帆的学习笔记"><meta name="keywords" content="博客,代码,学习,程序,大学,html"><meta name="theme-color" content="#1e69bf"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]--><script>!function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}},lsloader.removeLS=function(e){try{localStorage.removeItem(e)}catch(t){}},lsloader.setLS=function(e,t){try{localStorage.setItem(e,t)}catch(n){}},lsloader.getLS=function(e){var t="";try{t=localStorage.getItem(e)}catch(n){t=""}return t},versionString="/*"+(window.materialVersion||"unknownVersion")+"*/",lsloader.clean=function(){try{for(var e=[],t=0;t<localStorage.length;t++)e.push(localStorage.key(t));e.forEach(function(e){var t=lsloader.getLS(e);if(window.oldVersion){var n=window.oldVersion.reduce(function(e,n){return e||-1!==t.indexOf("/*"+n+"*/")},!1);n&&lsloader.removeLS(e)}})}catch(n){}},lsloader.clean(),lsloader.load=function(e,t,n,s){"boolean"==typeof n&&(s=n,n=void 0),s=s||!1,n=n||function(){};var a;if(a=this.getLS(e),a&&-1===a.indexOf(versionString))return this.removeLS(e),void this.requestResource(e,t,n,s);if(a){var o=a.split(versionString)[0];if(o!=t)return console.log("reload:"+t),this.removeLS(e),void this.requestResource(e,t,n,s);a=a.split(versionString)[1],s?(this.jsRunSequence.push({name:e,code:a}),this.runjs(t,e,a)):(document.getElementById(e).appendChild(document.createTextNode(a)),n())}else this.requestResource(e,t,n,s)},lsloader.requestResource=function(e,t,n,s){var a=this;s?this.iojs(t,e,function(e,t,n){a.setLS(t,e+versionString+n),a.runjs(e,t,n)}):this.iocss(t,e,function(n){document.getElementById(e).appendChild(document.createTextNode(n)),a.setLS(e,t+versionString+n)},n)},lsloader.iojs=function(e,t,n){var s=this;s.jsRunSequence.push({name:t,code:""});try{var a=new XMLHttpRequest;a.open("get",e,!0),a.onreadystatechange=function(){if(4==a.readyState){if((a.status>=200&&a.status<300||304==a.status)&&""!=a.response)return void n(e,t,a.response);s.jsfallback(e,t)}},a.send(null)}catch(o){s.jsfallback(e,t)}},lsloader.iocss=function(e,t,n,s){var a=this;try{var o=new XMLHttpRequest;o.open("get",e,!0),o.onreadystatechange=function(){if(4==o.readyState){if((o.status>=200&&o.status<300||304==o.status)&&""!=o.response)return n(o.response),void s();a.cssfallback(e,t,s)}},o.send(null)}catch(r){a.cssfallback(e,t,s)}},lsloader.iofonts=function(e,t,n,s){var a=this;try{var o=new XMLHttpRequest;o.open("get",e,!0),o.onreadystatechange=function(){if(4==o.readyState){if((o.status>=200&&o.status<300||304==o.status)&&""!=o.response)return n(o.response),void s();a.cssfallback(e,t,s)}},o.send(null)}catch(r){a.cssfallback(e,t,s)}},lsloader.runjs=function(e,t,n){if(t&&n)for(var s in this.jsRunSequence)this.jsRunSequence[s].name==t&&(this.jsRunSequence[s].code=n);if(this.jsRunSequence[0]&&this.jsRunSequence[0].code&&"failed"!=this.jsRunSequence[0].status){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code)),a.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(a),this.jsRunSequence.shift(),this.jsRunSequence.length>0&&this.runjs()}else if(this.jsRunSequence[0]&&"failed"==this.jsRunSequence[0].status){var o=this,a=document.createElement("script");a.src=this.jsRunSequence[0].path,a.type="text/javascript",this.jsRunSequence[0].status="loading",a.onload=function(){o.jsRunSequence.shift(),o.jsRunSequence.length>0&&o.runjs()},document.body.appendChild(a)}},lsloader.tagLoad=function(e,t){this.jsRunSequence.push({name:t,code:"",path:e,status:"failed"}),this.runjs()},lsloader.jsfallback=function(e,t){if(!this.jsnamemap[t]){this.jsnamemap[t]=t;for(var n in this.jsRunSequence)this.jsRunSequence[n].name==t&&(this.jsRunSequence[n].code="",this.jsRunSequence[n].status="failed",this.jsRunSequence[n].path=e);this.runjs()}},lsloader.cssfallback=function(e,t,n){if(!this.cssnamemap[t]){this.cssnamemap[t]=1;var s=document.createElement("link");s.type="text/css",s.href=e,s.rel="stylesheet",s.onload=s.onerror=n;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(s,a)}},lsloader.runInlineScript=function(e,t){var n=document.getElementById(t).innerText;this.jsRunSequence.push({name:e,code:n}),this.runjs()}}()</script><script>function Queue(){function e(e){this.debug&&console.log("Offered a Queued Function."),"function"==typeof e?this.dataStore.push(e):console.log("You must offer a function.")}function t(){return this.debug&&console.log("Polled a Queued Function."),this.dataStore.shift()}function o(){var e=this.poll();void 0!==e&&(this.debug&&console.log("Run a Queued Function."),e())}function u(){this.debug=!0}this.dataStore=[],this.offer=e,this.poll=t,this.execNext=o,this.debug=!1,this.startDebug=u}var queue=new Queue</script><style id="material_css"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("material_css","/css/material.min.css?lfwTSCk5dU0gSgC//hS81g==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style id="style_css"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("style_css","/css/style.min.css?vOFJu+pZl+0Eeqi7pGRHyw==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style id="prettify_css"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style id="prettify_theme"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("prettify_theme","/css/prettify/atelier-cave-dark.min.css?P8HZcYCbr9fq5dAvzZGnUQ==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style>body,html{font-family:Roboto,"Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;overflow-x:hidden!important}code{font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace}a{color:#0158bc}#scheme-Paradox .hot_tags-count,#scheme-Paradox .sidebar-colored .sidebar-badge,#scheme-Paradox .sidebar-colored .sidebar-header,#scheme-Paradox .sidebar_archives-count,#search-form-label:after,#search-label,.mdl-card__media{background-color:#1e69bf!important}#scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus,#scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover{color:#1e69bf!important}#ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a,#post_entry-right-info,.sidebar-colored .sidebar-nav li:hover>a,.sidebar-colored .sidebar-nav li:hover>a i,.sidebar-colored .sidebar-nav li>a:focus i,.sidebar-colored .sidebar-nav li>a:hover,.sidebar-colored .sidebar-nav li>a:hover i,.sidebar-colored .sidebar-nav>.open>a,.sidebar-colored .sidebar-nav>.open>a:focus,.sidebar-colored .sidebar-nav>.open>a:hover{color:#1e69bf!important}.toTop{background:#6baaf2!important}.material-layout .material-index>.material-nav,.material-layout .material-post>.material-nav,.material-nav a{color:#6baaf2}#scheme-Paradox .MD-burger-layer{background-color:#6baaf2}#scheme-Paradox #post-toc-trigger-btn{color:#6baaf2}.post-toc a:hover{color:#0158bc;text-decoration:underline}</style><style>body{background-image:url(/img/bg.jpg)}</style><style>.fade{transition:all .8s linear;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0);opacity:1}.fade.out{opacity:0}</style><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet"><style id="material_icons"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==",!0)</script><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="帆的自留地"><meta name="msapplication-starturl" content="https://coding.emptinessboy.com/2020/03/HTML%E6%96%87%E6%A1%A3%E6%95%B4%E7%90%86-07-%E5%AE%9A%E4%BD%8D%EF%BC%8C%E7%A6%BB%E7%BA%BF%E5%92%8CWEB%E5%AD%98%E5%82%A8/"><meta name="msapplication-navbutton-color" content="#1e69bf"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="帆的自留地"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="apple-touch-icon" href="/img/logo-180x180.jpg"><link rel="alternate" type="application/atom+xml" href="feed.xml"><meta property="og:url" content="https://coding.emptinessboy.com/2020/03/HTML%E6%96%87%E6%A1%A3%E6%95%B4%E7%90%86-07-%E5%AE%9A%E4%BD%8D%EF%BC%8C%E7%A6%BB%E7%BA%BF%E5%92%8CWEB%E5%AD%98%E5%82%A8/"><meta property="og:type" content="blog"><meta property="og:title" content="HTML文档整理 07-定位，离线和WEB存储 | 帆的自留地"><meta property="og:image" content="/img/logo-192x192.jpg"><meta property="og:description" content="晓帆的学习笔记"><meta property="og:article:tag" content="html"><meta property="article:published_time" content="Mon Mar 16 2020 19:01:26 GMT+0800"><meta property="article:modified_time" content="Sun May 23 2021 13:35:31 GMT+0800"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="https://coding.emptinessboy.com/2020/03/HTML%E6%96%87%E6%A1%A3%E6%95%B4%E7%90%86-07-%E5%AE%9A%E4%BD%8D%EF%BC%8C%E7%A6%BB%E7%BA%BF%E5%92%8CWEB%E5%AD%98%E5%82%A8/index.html"><script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://coding.emptinessboy.com/2020/03/HTML%E6%96%87%E6%A1%A3%E6%95%B4%E7%90%86-07-%E5%AE%9A%E4%BD%8D%EF%BC%8C%E7%A6%BB%E7%BA%BF%E5%92%8CWEB%E5%AD%98%E5%82%A8/index.html",
+    "headline": "HTML文档整理 07-定位，离线和WEB存储",
+    "datePublished": "Mon Mar 16 2020 19:01:26 GMT+0800",
+    "dateModified": "Sun May 23 2021 13:35:31 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "EmptinessBoy",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/fav_300.png"
+        },
+        "description": "啥都不会，<br>专业制造BUG的<br>学渣一枚<br><br>"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "帆的自留地",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/logo-192x192.jpg"
+        }
+    },
+    "keywords": ",html博客,代码,学习,程序,大学",
+    "description": "晓帆的学习笔记",
+}</script><script>!function(e,t,a,n,c,s,o){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,s=t.createElement(a),o=t.getElementsByTagName(a)[0],s.async=1,s.src=n,o.parentNode.insertBefore(s,o)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-85449259-2","auto"),ga("send","pageview")</script><meta name="generator" content="Hexo 4.2.0"></head><body id="scheme-Paradox" class="lazy"><div class="material-layout mdl-js-layout has-drawer is-upgraded"><main class="material-layout__content" id="main"><div id="top"></div><button class="MD-burger-icon sidebar-toggle"><span id="MD-burger-id" class="MD-burger-layer"></span></button> <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons">format_list_numbered</i></button><ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh;overflow-y:scroll"><ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#地理定位的函数"><span class="post-toc-number">1.</span> <span class="post-toc-text">地理定位的函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#successCallback"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">successCallback:</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#errorCallback"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">errorCallback:</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#PositionOptions"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">PositionOptions:</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用样例"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">使用样例</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#最基本使用"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">最基本使用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#使用按钮并检查浏览器"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">使用按钮并检查浏览器</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#输出报错"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">输出报错</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#其他有趣的方法"><span class="post-toc-number">1.4.4.</span> <span class="post-toc-text">其他有趣的方法</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用地图-API"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">使用地图 API</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么无法定位？"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">为什么无法定位？</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#H5-离线-Web-应用"><span class="post-toc-number">2.</span> <span class="post-toc-text">H5 离线 Web 应用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#应用程序缓存-manifest"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">应用程序缓存 manifest</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Manifest-基础"><span class="post-toc-number">2.1.1.</span> <span class="post-toc-text">Manifest 基础</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Manifest-语法"><span class="post-toc-number">2.1.2.</span> <span class="post-toc-text">Manifest 语法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#完整的-Manifest-文件"><span class="post-toc-number">2.1.3.</span> <span class="post-toc-text">完整的 Manifest 文件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#缓存管理"><span class="post-toc-number">2.1.4.</span> <span class="post-toc-text">缓存管理</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#演示"><span class="post-toc-number">2.1.5.</span> <span class="post-toc-text">演示</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Web-存储"><span class="post-toc-number">3.</span> <span class="post-toc-text">Web 存储</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#sessionStorage-函数"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">sessionStorage 函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#localStorage-函数"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">localStorage 函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#TIPS"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">TIPS</span></a></li></ol></li></ol></ul><div class="material-post_container"><div class="material-post mdl-grid"><div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col"><div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://media.everdo.cn/tank/pic-bed/2020/03/13/html5.png)"><p class="article-headline-p">HTML文档整理 07-定位，离线和WEB存储</p></div><div class="mdl-color-text--grey-700 mdl-card__supporting-text meta"><div id="author-avatar"><img src="/img/fav_300.png" width="44px" height="44px" alt="Author Avatar"></div><div><strong>EmptinessBoy</strong> <span>3月 16, 2020</span></div><div class="section-spacer"></div><button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">devices other</i> <span class="visuallyhidden">devices other</span></button><ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button"><li class="mdl-menu__item">在其它设备中阅读本文章</li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVYAAAFWCAAAAAAXxOpfAAAFiklEQVR42u3aQXLbQAwEQP//08kHInoGoGIt3XtyWRKX7OVhCsDXH+sN6wsBVqxYLaxYsVpYsWK1sB7F+hWv9lf/2PjFdV79/eo/17u82iv/ztAEK1asWLFiPZa13f56m2u+V3DXj3f9/xYieWlqE6xYsWLFivVw1oQpjzizKDMDTfbdxL7o1cGKFStWrFh/GeusjNJeJw9ebVHm+hmxYsWKFStWrDlQTvCOQsn+rj4iYGHFihUrVqw/ytoWLBKsvOTRFkTaws079sKKFStWrFifwdqGm9/w93+db8WKFStWrFh/iLVdSWmjHaqYtVL24xftEMk3MlixYsWKFeuBrHmwmKHnrG242YPOmkBYsWLFihXrU1nbAkTb/NjHrxnTJiYmrwtWrFixYsV6LmuyTTv4OKO53jEagLhp4GP4MmHFihUrVqyHs87CRx6q2pLK7D7bffNPv3khsGLFihUr1gNZ84HL9puz69w1MDG7z1XExIoVK1asWA9k3bc3Zg/TBqw2hM2aLu0LhxUrVqxYsZ7OuilwzFiTssVmICM/sE1jBitWrFixYn0S670Ps2l+tGWUPGbNcJP7wYoVK1asWM9lTba8txmzabpEj7dGb4s7WLFixYoV67msOU1efGnhku/vmy75eEf7qmHFihUrVqznsuatlHZwIQ9DsziVj2i0JaHhq4YVK1asWLEeyNo2S95xDLMiSF4QmZVR2lcHK1asWLFiPZ21HcWYlTBmLZai+VEeZPsC1QELK1asWLFiPYp1VkbZR6484txV7smjW3RXWLFixYoV64GsbeNhP7y4eYx2sLKNbu0BY8WKFStWrM9jnZVIkhHG5IFn4xGbV2QzroEVK1asWLGezprEo7tuazZIcdcum72iVxArVqxYsWI9kLUdcWgfLyletMWUYiRiEQTzQIkVK1asWLGezrqPQfuGSs59XaDJy0OzY355AFixYsWKFeuBrHcFjllbJblaWxzZt4La58WKFStWrFjPZb23LTG7zmZgIi8YvaPZgxUrVqxYsZ7OmhREkibNLKxcf78tdrQDpvkLET0FVqxYsWLFeiDrLBglBG0RZzYUkge19gjr+8SKFStWrFgPZL0OQ3lImpUz9oMXSWsn5561nbBixYoVK9ZzWfdDErP2SVtY2bR2knvOm0lYsWLFihXrb2NNmh/tMEQemPLw1LaOZmMiWLFixYoV65NYE6z84WcFlOQwknjUHsysNFMPYmLFihUrVqwfz5rHkTyIJNdpRy7qRkhcXskPrBi/wIoVK1asWD+edRNxZmMW+e6bsYx8kKJt/2DFihUrVqxPYq1bCzHx7HhmWMNIFJdgosITVqxYsWLFeixrXlJJiGclj33Amo1R7sc4sGLFihUr1mewbhDzX80OZhYKN+OVtw1iYsWKFStWrIew5iWJliYvsrSNkNloyGrMYlZqwYoVK1asWD+SdRaz2sZMPmaRj03kxPcWXKKAhRUrVqxYsR7Cuimg5A2VZNBhNvQwKxLNRknq3IoVK1asWLF+POvs1tvRipa1HRDJjye/fvIpVqxYsWLF+gzWfJu22JFfIW+ZtA2YTaEnb8xgxYoVK1asz2Bt2yR5KJn9dtOSmY1atrESK1asWLFiPZe1HWFMbn12GO2xFdEnHgO9rdSCFStWrFixHsV6V6jKw03b+NkEoNmrU7eRsGLFihUr1sNZk9iUf2c26NCuVXFksYqAhRUrVqxYsT6OddOGScJWG/jy68+GM6Jjw4oVK1asWH8Na9L2aMsueQCaxaOcL98FK1asWLFifRJrGzXy5kSCm7dPZjEoAZodP1asWLFixXo6ax5QNlEpKXzkAS6/Tt4KWt0DVqxYsWLFeiCrddfCihUrVgsrVqwWVqxYLawfv/4CxL4suLTAUvMAAAAASUVORK5CYII="></ul><button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">bookmark</i> <span class="visuallyhidden">bookmark</span></button><ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button"><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/html/" rel="tag">html</a></li></ul><button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">share</i> <span class="visuallyhidden">share</span></button><ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button"><a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=HTML文档整理 07-定位，离线和WEB存储&url=https://coding.emptinessboy.com/2020/03/HTML%E6%96%87%E6%A1%A3%E6%95%B4%E7%90%86-07-%E5%AE%9A%E4%BD%8D%EF%BC%8C%E7%A6%BB%E7%BA%BF%E5%92%8CWEB%E5%AD%98%E5%82%A8/index.html&pic=https://coding.emptinessboy.com/img/logo-32x32.jpg&searchPic=false&style=simple" target="_blank"><li class="mdl-menu__item">分享到微博</li></a><a class="post_share-link" href="https://twitter.com/intent/tweet?text=HTML文档整理 07-定位，离线和WEB存储&url=https://coding.emptinessboy.com/2020/03/HTML%E6%96%87%E6%A1%A3%E6%95%B4%E7%90%86-07-%E5%AE%9A%E4%BD%8D%EF%BC%8C%E7%A6%BB%E7%BA%BF%E5%92%8CWEB%E5%AD%98%E5%82%A8/index.html&via=EmptinessBoy" target="_blank"><li class="mdl-menu__item">分享到 Twitter</li></a><a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://coding.emptinessboy.com/2020/03/HTML%E6%96%87%E6%A1%A3%E6%95%B4%E7%90%86-07-%E5%AE%9A%E4%BD%8D%EF%BC%8C%E7%A6%BB%E7%BA%BF%E5%92%8CWEB%E5%AD%98%E5%82%A8/index.html" target="_blank"><li class="mdl-menu__item">分享到 Facebook</li></a><a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=帆的自留地&title=HTML文档整理 07-定位，离线和WEB存储&summary=晓帆的学习笔记&pics=https://coding.emptinessboy.com/img/logo-32x32.jpg&url=https://coding.emptinessboy.com/2020/03/HTML%E6%96%87%E6%A1%A3%E6%95%B4%E7%90%86-07-%E5%AE%9A%E4%BD%8D%EF%BC%8C%E7%A6%BB%E7%BA%BF%E5%92%8CWEB%E5%AD%98%E5%82%A8/index.html" target="_blank"><li class="mdl-menu__item">分享到 QQ</li></a><a class="post_share-link" href="https://telegram.me/share/url?url=https://coding.emptinessboy.com/2020/03/HTML%E6%96%87%E6%A1%A3%E6%95%B4%E7%90%86-07-%E5%AE%9A%E4%BD%8D%EF%BC%8C%E7%A6%BB%E7%BA%BF%E5%92%8CWEB%E5%AD%98%E5%82%A8/index.html&text=HTML文档整理 07-定位，离线和WEB存储" target="_blank"><li class="mdl-menu__item">分享到 Telegram</li></a></ul></div><div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out"><p>在HTML5网页代码中，通过一些有用的API，可以查找访问者当前的位置。若要体验本文里所有的案例，请务必在浏览器授权本站使用你的地理信息位置，否则将无法定位。</p><h2 id="地理定位的函数"><a href="#地理定位的函数" class="headerlink" title="地理定位的函数"></a>地理定位的函数</h2><p>通过地理定位可以确定用户的当前位置，并能获取用户地理位置的变化情况。其中，比较常用的就是 API 中的 getCurrentpositong() 函数。</p><blockquote><p>API 是应用程序的编程接口，是一些预先定义的函数，目的是提供应用程序与开发人员基于某软件或硬件以访问一组例程的能力。</p></blockquote><p>getCurrentpositong() 函数的语法格式如下：</p><pre><code class="javascript">navigator.geolocation.getCurrentPosition( successCallback, errorCallback, options)</code></pre><blockquote><p>Navigator 对象包含有关浏览器的信息。注释：没有应用于 navigator 对象的公开标准，不过所有浏览器都支持该对象。</p></blockquote><p>其中 successCallback 参数是指在位置成功获取时用户想要调用的函数名称；errorCallback 参数是指在位置获取失败时用户想要调用的函数名称；options 参数指出地理定位时的属性设置。访问用户位置是耗时的操作，同时出于隐私问题，还要取得用户的同意。</p><h3 id="successCallback"><a href="#successCallback" class="headerlink" title="successCallback:"></a>successCallback:</h3><p>该对象包含两个属性：coords 和 timestamp。</p><p>若成功，则 getCurrentPosition() 方法返回对象。始终会返回 latitude、longitude 以及 accuracy 属性。如果可用，则会返回其他下面的属性。</p><table><thead><tr><th>属性</th><th>描述</th></tr></thead><tbody><tr><td>coords.latitude</td><td>（始终）十进制数的纬度</td></tr><tr><td>coords.longitude</td><td>（始终）十进制数的经度</td></tr><tr><td>coords.accuracy</td><td>（始终）位置精度</td></tr><tr><td>coords.altitude</td><td>海拔，海平面以上以米计</td></tr><tr><td>coords.altitudeAccuracy</td><td>位置的海拔精度</td></tr><tr><td>coords.heading</td><td>方向，从正北开始以度计</td></tr><tr><td>coords.speed</td><td>速度，以米/每秒计</td></tr><tr><td>timestamp</td><td>响应的日期/时间</td></tr></tbody></table><h3 id="errorCallback"><a href="#errorCallback" class="headerlink" title="errorCallback:"></a>errorCallback:</h3><p>返回的错误代码包含两个属性：message：错误信息；code：错误代码</p><p>错误代码包含四个值：unknow_error: 表示不包括在其他错误代码中的错误，可以在 message 中查找信息。permission_denied: 表示用户拒绝浏览器获取位置信息的请求。position unavalablf: 表示网络不可用或者连接不到卫星。timeout: 表示获取超时时。必须在 options 中指定了 timeout 值时才有可能发生这种错误。</p><h3 id="PositionOptions"><a href="#PositionOptions" class="headerlink" title="PositionOptions:"></a>PositionOptions:</h3><p>数据格式为 json，有3个属性：</p><p>enableHighAcuracy：布尔值，表示是否启用高精确度模式，如果启用这个模式，浏览器在获取位置信息时可能需要耗费更多的时间。Timeout: 整数，表示浏览器需要在指定的时间内获取位置信息，否则触发 errorCallback。maximumAge: 整数/常量，表示浏览器重新获取位置信息的时间间隔。</p><h3 id="使用样例"><a href="#使用样例" class="headerlink" title="使用样例"></a>使用样例</h3><p>通过上面的 API 说明，就可以用下面的 <strong>displayOnMap函数</strong> 来调用经纬度坐标：</p><pre><code class="javascript">function displayOnMap(position){
+    var latitude=position.coords.latitude;    //经度
+    var longitude=position.coords.longitude;    //纬度
+}</code></pre><p>下面是定位 API 的一些具体使用案例：</p><h4 id="最基本使用"><a href="#最基本使用" class="headerlink" title="最基本使用"></a>最基本使用</h4><pre><code class="html">01 直接输出样例：
+
+&lt;p id=&quot;demo&quot;&gt;暂未获取地理位置&lt;/p&gt;
+&lt;script&gt;
+var x=document.getElementById(&quot;demo&quot;);
+navigator.geolocation.getCurrentPosition(
+    function showPosition(position)
+      {
+          x.innerHTML=&quot;Latitude: &quot; + position.coords.latitude + 
+          &quot;&lt;br /&gt;Longitude: &quot; + position.coords.longitude;    
+      }
+);
+&lt;/script&gt;</code></pre><p id="demo">暂未获取地理位置</p><script>var x=document.getElementById("demo");navigator.geolocation.getCurrentPosition(function(o){x.innerHTML="Latitude: "+o.coords.latitude+"<br />Longitude: "+o.coords.longitude})</script><blockquote><p>上面展示的是一个最基本的案例，我对此解读如下：首先创建一个 id 为 demo 的段落，然后编写 JavaScript 脚本。脚本中声明变量 x 指向 id 为 demo 的段落。</p><p>接下来调用 getCurrentPosition() 的 API，因为 API 需要配合回调的函数，因此这里新建了一个 showPosition 的函数，并新建一个名为 position 的变量。变量 position 的值会在 getCurrentPosition() 函数执行时，被传递参数，因此接下来只要输出 position 被传参后的的信息即可。</p></blockquote><p>因此，现在 position.coords.latitude 和 position.coords.longitude 里的值，就是精度纬度了。使用 x.innerHTML 就改变了前面段落 <code>&lt;p id=&quot;demo&quot;&gt; &lt;/p&gt;</code> 里的值了！</p><h4 id="使用按钮并检查浏览器"><a href="#使用按钮并检查浏览器" class="headerlink" title="使用按钮并检查浏览器"></a>使用按钮并检查浏览器</h4><pre><code class="html">02 按钮输出并执行浏览器兼容检查：
+
+&lt;p id=&quot;demoA&quot;&gt;点击这个按钮，获得您的坐标：&lt;/p&gt;
+&lt;button onclick=&quot;getLocationOne()&quot;&gt;试一下&lt;/button&gt;
+&lt;script&gt;
+var a=document.getElementById(&quot;demoA&quot;);
+function getLocationOne()
+  {
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.getCurrentPosition(showPositionOne);
+    }
+  else{a.innerHTML=&quot;Geolocation is not supported by this browser.&quot;;}
+  }
+function showPositionOne(positionA)
+  {
+  a.innerHTML=&quot;Latitude: &quot; + positionA.coords.latitude + 
+  &quot;&lt;br /&gt;Longitude: &quot; + positionA.coords.longitude;    
+  }
+&lt;/script&gt;</code></pre><p id="demoA">点击这个按钮，获得您的坐标：</p><button onclick="getLocationOne()">试一下</button><script>function getLocationOne(){navigator.geolocation?navigator.geolocation.getCurrentPosition(showPositionOne):a.innerHTML="Geolocation is not supported by this browser."}function showPositionOne(o){a.innerHTML="Latitude: "+o.coords.latitude+"<br />Longitude: "+o.coords.longitude}var a=document.getElementById("demoA")</script><blockquote><p>在这段代码中，为了实现点击按钮显示经纬度，因此为按钮点击添加了 onclick=”getLocationOne()” 事件。点击后触发 getLocationOne() 函数，该函数使用一个 if 语句对浏览器是否能对 navigator.geolocation 返回值进行了判断。如果有返回值，就执行后面的函数调用。</p><p>此处为 getLocationOne() 指定了回调函数 showPositionOne() 并使用 positionA 变量来传递参数。</p></blockquote><pre><code>判断浏览器是否支持地理位置服务：
+
+if (&quot;geolocation&quot; in navigator) {
+  /* 地理位置服务可用 */
+} else {
+  /* 地理位置服务不可用 */
+}</code></pre><p>在 mozilla 官方文档中,如果 geolocation 对象存在，那么地理位置服务可用。</p><h4 id="输出报错"><a href="#输出报错" class="headerlink" title="输出报错"></a>输出报错</h4><pre><code class="html">03 异常时输出错误信息：
+
+&lt;p id=&quot;demoB&quot;&gt;点击这个按钮，获得您的坐标：&lt;/p&gt;
+&lt;button onclick=&quot;getLocationTwo()&quot;&gt;试一下&lt;/button&gt;
+&lt;script&gt;
+var b=document.getElementById(&quot;demoB&quot;);
+function getLocationTwo()
+  {
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.getCurrentPosition(showPositionTwo,showError);
+    }
+  else{b.innerHTML=&quot;Geolocation is not supported by this browser.&quot;;}
+  }
+function showPositionTwo(positionB)
+  {
+  b.innerHTML=&quot;Latitude: &quot; + positionB.coords.latitude + 
+  &quot;&lt;br /&gt;Longitude: &quot; + positionB.coords.longitude;    
+  }
+function showError(error)
+  {
+  switch(error.code) 
+    {
+    case error.PERMISSION_DENIED:
+      b.innerHTML=&quot;User denied the request for Geolocation.&quot;
+      break;
+    case error.POSITION_UNAVAILABLE:
+      b.innerHTML=&quot;Location information is unavailable.&quot;
+      break;
+    case error.TIMEOUT:
+      b.innerHTML=&quot;The request to get user location timed out.&quot;
+      break;
+    case error.UNKNOWN_ERROR:
+      b.innerHTML=&quot;An unknown error occurred.&quot;
+      break;
+    }
+  }
+&lt;/script&gt;</code></pre><p id="demoB">点击这个按钮，获得您的坐标：</p><button onclick="getLocationTwo()">试一下</button><script>function getLocationTwo(){navigator.geolocation?navigator.geolocation.getCurrentPosition(showPositionTwo,showError):b.innerHTML="Geolocation is not supported by this browser."}function showPositionTwo(o){b.innerHTML="Latitude: "+o.coords.latitude+"<br />Longitude: "+o.coords.longitude}function showError(o){switch(o.code){case o.PERMISSION_DENIED:b.innerHTML="User denied the request for Geolocation.";break;case o.POSITION_UNAVAILABLE:b.innerHTML="Location information is unavailable.";break;case o.TIMEOUT:b.innerHTML="The request to get user location timed out.";break;case o.UNKNOWN_ERROR:b.innerHTML="An unknown error occurred."}}var b=document.getElementById("demoB")</script><blockquote><p>这里创建了一个 showError(error) 的函数作为 getCurrentPosition() 执行错误时的回调对象。 errorCallback 的参数传递到 error 变量中。</p></blockquote><h4 id="其他有趣的方法"><a href="#其他有趣的方法" class="headerlink" title="其他有趣的方法"></a>其他有趣的方法</h4><ul><li>watchPosition() - 返回用户的当前位置，并继续返回用户移动时的更新位置（就像汽车上的 GPS）。</li><li>clearWatch() - 停止 watchPosition() 方法</li></ul><p>下面的例子展示 watchPosition() 方法。您需要一台精确的 GPS 设备来测试该例（比如 iPhone）：</p><pre><code class="html">&lt;p id=&quot;demoC&quot;&gt;点击这个按钮，获得您的坐标：&lt;/p&gt;
+&lt;button onclick=&quot;getLocationThree()&quot;&gt;试一下&lt;/button&gt;
+&lt;script&gt;
+var c=document.getElementById(&quot;demoC&quot;);
+function getLocationThree()
+  {
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.watchPosition(showPositionThree);
+    }
+  else{c.innerHTML=&quot;Geolocation is not supported by this browser.&quot;;}
+  }
+function showPositionThree(positionC)
+  {
+  c.innerHTML=&quot;Latitude: &quot; + positionC.coords.latitude + 
+  &quot;&lt;br /&gt;Longitude: &quot; + positionC.coords.longitude;    
+  }
+&lt;/script&gt;</code></pre><p id="demoC">点击这个按钮，获得您的坐标：</p><button onclick="getLocationThree()">试一下</button><script>function getLocationThree(){navigator.geolocation?navigator.geolocation.watchPosition(showPositionThree):c.innerHTML="Geolocation is not supported by this browser."}function showPositionThree(o){c.innerHTML="Latitude: "+o.coords.latitude+"<br />Longitude: "+o.coords.longitude}var c=document.getElementById("demoC")</script><blockquote><p>watchPosition() 和 上面提到的 getCurrentPosition() 方法完全一致，可以直接套用。但却能实时跟踪位置变化。</p></blockquote><h3 id="使用地图-API"><a href="#使用地图-API" class="headerlink" title="使用地图 API"></a>使用地图 API</h3><p>为了在地图上显示用户的具体位置，可以利用地图网站的API。下面以使用百度地图为例，需要使用Baidu Maps Javascript API。</p><p>在使用此API前，需要在HTML5页面中添加一个引用，具体代码如下；</p><pre><code class="html">标准引入（适用于多数情况）：
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;//api.map.baidu.com/api?type=webgl&amp;v=1.0&amp;ak=您的密钥&quot;&gt;&lt;/script&gt;</code></pre><pre><code class="html">异步调用（进阶优化选项）：
+
+&lt;script type=&quot;text/javascript&quot;&gt; 
+//异步加载js返回callback函数
+function loadScript() { 
+    var script = document.createElement(&quot;script&quot;); 
+    script.src = &quot;https://api.map.baidu.com/api?v=1.0&amp;type=webgl&amp;ak=这个要自己申请哦&amp;callback=hxfmapint&quot;;
+    document.body.appendChild(script); 
+} 
+window.onload = loadScript;
+&lt;/script&gt;</code></pre><p>其中*号代码注册到 key。注册 key 的方法为：在 <a href="http://lbsyun.baidu.com/index.php?title=jspopular" target="_blank" rel="noopener">百度地图开放平台</a> 网页中注册百度地图API，然后输入需要内置百度地图页面的URL地址生成API密钥，最后将key文件复制保存。</p><p>其中百度地图的更细致的使用文档需要参考百度官方文档：<a href="http://lbs.baidu.com/" target="_blank" rel="noopener">lbs.baidu.com</a></p><pre><code class="html">完整的带定位的异步调用接口使用实例：
+
+&lt;style type=&quot;text/css&quot;&gt;
+    #hxfmap {width: 100%;height: 400px;overflow: hidden;margin:0;font-family:&quot;微软雅黑&quot;;}
+&lt;/style&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt; 
+//异步加载js返回callback函数
+function loadScript() { 
+    var script = document.createElement(&quot;script&quot;); 
+    script.src = &quot;https://api.map.baidu.com/api?v=1.0&amp;type=webgl&amp;ak=这个要自己申请哦&amp;callback=hxfmapint&quot;;
+    document.body.appendChild(script); 
+} 
+window.onload = loadScript; 
+&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+function hxfmapint() { 
+    // 按住鼠标右键，修改倾斜角和角度
+    // GL版命名空间为BMapGL
+    var map = new BMapGL.Map(&quot;allmap&quot;);    // 创建Map实例
+    var point = new BMapGL.Point(121.548899, 29.870192);
+    map.centerAndZoom(point,19);
+    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+    map.addEventListener(&#39;click&#39;, function(e) {
+        alert(&#39;点击的经纬度：&#39; + e.latlng.lng + &#39;, &#39; + e.latlng.lat);
+        var mercator = map.lnglatToMercator(e.latlng.lng, e.latlng.lat);
+        alert(&#39;点的墨卡托坐标：&#39; + mercator[0] + &#39;, &#39; + mercator[1]);
+    });
+    // 实现定位功能
+    var geolocation = new BMapGL.Geolocation();
+    geolocation.getCurrentPosition(function(r){
+        if(this.getStatus() == BMAP_STATUS_SUCCESS){
+            var mk = new BMapGL.Marker(r.point);
+            map.addOverlay(mk);
+            map.panTo(r.point);
+            alert(&#39;您的位置：&#39;+r.point.lng+&#39;,&#39;+r.point.lat);
+        }
+        else {
+            alert(&#39;failed&#39;+this.getStatus());
+        }        
+    },{enableHighAccuracy: true})
+}
+&lt;/script&gt;
+
+&lt;div id=&quot;hxfmap&quot;&gt;这里将显示地图&lt;/div&gt;</code></pre><style type="text/css">#hxfmap{width:100%;height:400px;overflow:hidden;margin:0;font-family:"微软雅黑"}</style><script type="text/javascript">function loadScript(){var a=document.createElement("script");a.src="https://api.map.baidu.com/api?v=1.0&type=webgl&ak=tegOOlMnipQTOgHLwFtzHukBKNjIHzUp&callback=hxfmapint",document.body.appendChild(a)}window.onload=loadScript</script><script type="text/javascript">function hxfmapint(t){var t,a=new BMapGL.Map("hxfmap"),e=new BMapGL.Point(121.548899,29.870192);a.centerAndZoom(e,19),a.enableScrollWheelZoom(!0),a.addEventListener("click",function(t){alert("点击的经纬度："+t.latlng.lng+", "+t.latlng.lat);var e=a.lnglatToMercator(t.latlng.lng,t.latlng.lat);alert("点的墨卡托坐标："+e[0]+", "+e[1])});var n=new BMapGL.ScaleControl;a.addControl(n);var l=new BMapGL.ZoomControl;a.addControl(l),a.setHeading(64.5),a.setTilt(40);var o={position:e,offset:new BMapGL.Size(30,-30)},i=new BMapGL.Label("喵喵喵，我是 Emptinessboy",o);if(i.setStyle({color:"#555",fontSize:"12px",height:"20px",lineHeight:"20px",fontFamily:"微软雅黑"}),a.addOverlay(i),1==t){var r=new BMapGL.Geolocation;r.getCurrentPosition(function(t){if(this.getStatus()==BMAP_STATUS_SUCCESS){var e=new BMapGL.Marker(t.point);a.addOverlay(e),a.panTo(t.point),alert("您的位置："+t.point.lng+","+t.point.lat)}else alert("failed"+this.getStatus())},{enableHighAccuracy:!0})}}</script><p><button onclick="hxfmapint(!0)">展示我的定位</button></p><div id="hxfmap"></div><p>哈哈哈，上述案例中，可以给地图设一个初始经纬度坐标点，比如我设置的我高中的坐标 (121.548899, 29.870192)</p><h3 id="为什么无法定位？"><a href="#为什么无法定位？" class="headerlink" title="为什么无法定位？"></a>为什么无法定位？</h3><blockquote><p>Secure context：This feature is available only in secure contexts (HTTPS), in some or all supporting browsers.（只有网站升级到 HTTPS 才能使用地理位置 API）</p></blockquote><blockquote><p>注意: 出于安全考虑，当网页请求获取用户位置信息时，用户会被提示进行授权。注意不同浏览器在请求权限时有不同的策略和方式。Windows10在未开启定位的情况下无法获取位置</p></blockquote><h2 id="H5-离线-Web-应用"><a href="#H5-离线-Web-应用" class="headerlink" title="H5 离线 Web 应用"></a>H5 离线 Web 应用</h2><p>为了能在离线的情况下访问网站，可以采用HTML5的离线Web功能。应用程序缓存为应用带来三个优势：</p><ol><li>离线浏览 - 用户可在应用离线时使用它们</li><li>速度 - 已缓存资源加载得更快</li><li>减少服务器负载 - 浏览器将只从服务器下载更新过或更改过的资源。</li></ol><p>在 HTML5 中新增了本地缓存（也就是 HTML 离线 Web 应用），主要是通过应用程序缓存整个离线网站的 HTML、CSS、Javascript、网站图像和资源。当服务器没有和 Internet 建立连接的时候，也可以利用本地缓存中的资源文件来正常运行Web应用程序。另外，如果网站发生了变化，则应用程序缓存将重新加载变化的数据文件。</p><h3 id="应用程序缓存-manifest"><a href="#应用程序缓存-manifest" class="headerlink" title="应用程序缓存 manifest"></a>应用程序缓存 manifest</h3><p>manifest 文件是一个简单文本文件，在该文件中以清单的形式列举了需要被缓存或不需要被缓存的资源文件的文件名称，以及这些资源文件的访问路径。</p><p>Manifest 文件把指定的资源文件类型分为三类，分别是 “CACHE” “NETWORK” 和 “FALLBACK”。这三类的含义分别如下：</p><p>（1）CACHE 类别：该类别指定需要被缓存在本地的资源文件。这里需要特别注意的是，在为某个页面指定需要本地缓存的资源文件时，不需要把这个页面本身指定在 CACHE 类型中，因为如果一个页面具有 manifest 文件，则浏览器会自动对这个页面进行本地缓存。</p><p>（2）NETWORK 类别：该类别为不进行本地缓存的资源文件，这些资源文件只有当客户端与服务器端建立连接的时候才能访问。</p><p>（3）FALLBACK 类别：该类别中指定两个资源文件，其中一个资源文件为能够在线访问时使用的资源文件，另一个资源文件为不能在线访问时使用的备用资源文件。</p><h4 id="Manifest-基础"><a href="#Manifest-基础" class="headerlink" title="Manifest 基础"></a>Manifest 基础</h4><p>如需启用应用程序缓存，需要在文档的 <code>&lt;html&gt;</code> 标签中包含 manifest 属性：</p><pre><code class="html">&lt;!DOCTYPE HTML&gt;
+&lt;html manifest=&quot;demo.appcache&quot;&gt;
+...
+&lt;/html&gt;</code></pre><p>每个指定了 manifest 的页面在用户对其访问时都会被缓存。如果未指定 manifest 属性，则页面不会被缓存（除非在 manifest 文件中直接指定了该页面）。</p><p>manifest 文件的建议的文件扩展名是：”.appcache”。</p><blockquote><p>注意，manifest 文件需要配置正确的 MIME-type，即 “text/cache-manifest”。必须在 web 服务器上进行配置。</p></blockquote><h4 id="Manifest-语法"><a href="#Manifest-语法" class="headerlink" title="Manifest 语法"></a>Manifest 语法</h4><p>manifest 文件是简单的文本文件，它告知浏览器被缓存的内容（以及不缓存的内容）。</p><p>文章的前面部分已经提及，manifest 文件可分为三个部分：</p><ul><li>CACHE MANIFEST</li><li>NETWORK</li><li>FALLBACK</li></ul><p><strong><em>CACHE MANIFEST</em></strong></p><p>第一行，CACHE MANIFEST，是必需的：</p><pre><code>CACHE MANIFEST
+/theme.css
+/logo.gif
+/main.js</code></pre><p>上面的 manifest 文件列出了三个资源：一个 CSS 文件，一个 GIF 图像，以及一个 JavaScript 文件。当 manifest 文件加载后，浏览器会从网站的根目录下载这三个文件。然后，无论用户何时与因特网断开连接，这些资源依然是可用的。</p><p><strong><em>NETWORK</em></strong></p><p>下面的 NETWORK 小节规定文件 “login.asp” 永远不会被缓存，且离线时是不可用的：</p><pre><code>NETWORK:
+login.asp</code></pre><p>可以使用星号来指示所有其他资源/文件都需要因特网连接：</p><pre><code>NETWORK:
+*</code></pre><p><strong><em>FALLBACK</em></strong><br>下面的 FALLBACK 小节规定如果无法建立因特网连接，则用 “offline.html” 替代 /html5/ 目录中的所有文件：</p><pre><code>FALLBACK:
+/html5/ /404.html</code></pre><p>其中第一个 URI 是资源，第二个是替补。</p><h4 id="完整的-Manifest-文件"><a href="#完整的-Manifest-文件" class="headerlink" title="完整的 Manifest 文件"></a>完整的 Manifest 文件</h4><pre><code>CACHE MANIFEST
+# 2012-02-21 v1.0.0
+/theme.css
+/logo.gif
+/main.js
+
+NETWORK:
+login.asp
+
+FALLBACK:
+/html5/ /404.html</code></pre><p>重要的提示：以 “#” 开头的是注释行，但也可满足其他用途。应用的缓存会在其 manifest 文件更改时被更新。如果您编辑了一幅图片，或者修改了一个 JavaScript 函数，这些改变都不会被重新缓存。更新注释行中的日期和版本号是一种使浏览器重新缓存文件的办法。</p><h4 id="缓存管理"><a href="#缓存管理" class="headerlink" title="缓存管理"></a>缓存管理</h4><p>用户可以为每一个页面单独指定一个mainifest文件，也可以对整个Web应用程序指定一个总的manifest文件。</p><p>一旦应用被缓存，它就会保持缓存直到发生下列情况：</p><ul><li>用户清空浏览器缓存</li><li>manifest 文件被修改（通过注释修改版本号）</li><li>由程序来更新应用缓存</li></ul><p>一旦文件被缓存，则浏览器会继续展示已缓存的版本，即使已经修改了服务器上的文件。为了确保浏览器更新缓存，则需要更新 manifest 文件。</p><blockquote><p>注释：浏览器对缓存数据的容量限制可能不太一样（某些浏览器设置的限制是每个站点 5MB）。</p></blockquote><h4 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h4><pre><code class="html">这里是样例的 HTML
+
+&lt;!DOCTYPE html&gt;
+&lt;html manifest=&quot;http-manifest.appcache&quot;&gt;
+&lt;meta charset=&quot;utf-8&quot;/&gt;
+&lt;body&gt;
+&lt;script src=&quot;demo_time.js&quot;&gt;&lt;/script&gt;
+&lt;p id=&quot;timePara&quot;&gt;&lt;button onclick=&quot;getDateTime()&quot;&gt;获得日期和事件&lt;/button&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;logo.png&quot;/&gt;&lt;/p&gt;
+&lt;p&gt;首次访问后尝试切断网络，此页面可以被离线访问&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href=&quot;https://coding.emptinessboy.com/&quot;&gt;回文章&lt;/a&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><pre><code>这里是样例的 manifest
+
+CACHE MANIFEST
+demo_time.js
+logo.png</code></pre><p><a href="https://huxiaofan.com/doc/http-manicache/" target="_blank" rel="noopener">演示地址-点我打开</a></p><blockquote><p>第一次访问演示地址后，脱机仍然可以访问</p></blockquote><p><a href="https://up.media.everdo.cn/image/HqR3" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/03/17/html-manifest.md.jpg" alt="html-manifest.md.jpg"></a></p><h2 id="Web-存储"><a href="#Web-存储" class="headerlink" title="Web 存储"></a>Web 存储</h2><p>HTML5 提供了两种在客户端存储数据的新方法：</p><ul><li>localStorage - 没有时间限制的数据存储</li><li>sessionStorage - 针对一个 session 的数据存储</li></ul><p>在 HTML5 中，数据不是由 HTTP 请求传递的，而是只有在请求时使用数据。它使在不影响网站性能的情况下存储大量数据成为可能。</p><p>之前，这些都是由 cookie 完成的。但是 cookie 不适合大量数据的存储，因为它们由每个对服务器的请求来传递，这使得 cookie 速度很慢而且效率也不高。本地存储和 Cookies 扮演着类似的角色，但是它们有以下的区别。</p><p>（1）本地存储是仅存储在用户的硬盘上并等待用户读取，而 Cookies 是在服务器上读取。</p><p>（2）本地存储仅供客户端使用，如果需要服务器端根据存储数值作出反映，就应该使用 Cookies。</p><p>（3）读取本地存储不会影响到网络带宽，但是使用 Cookies 将会发送到服务器，这样会影响到网络带宽，无形中增加了成本。</p><p>（4）从存储容量上看，本地存储可存储多达 5MB 的数据，而 Cookies 最多只能存储 4KB 的数据信息。</p><p>对于不同的网站，数据存储于不同的区域，并且一个网站只能访问其自身的数据。HTML5 使用 JavaScript 来存储和访问数据。</p><h3 id="sessionStorage-函数"><a href="#sessionStorage-函数" class="headerlink" title="sessionStorage 函数"></a>sessionStorage 函数</h3><p>sessionStorage 函数针对一个 session 进行数据存储。如果用户关闭浏览器窗口，则数据会被自动删除。创建一个 sessionStorage 函数的基本语法格式如下：</p><pre><code class="html">&lt;script type=&quot;text/javascript&quot;&gt;
+sessionStorage.abc=&quot; &quot;;
+&lt;/script&gt;</code></pre><p>一个最简单的使用 sessionStorage 存放并读取变量例子：</p><pre><code class="html">&lt;script type=&quot;text/javascript&quot;&gt;
+sessionStorage.name=&quot;HELLO，我是 Emptinessboy&quot;;
+document.write(sessionStorage.name);
+&lt;/script&gt;</code></pre><p><script type="text/javascript">sessionStorage.name="HELLO，我是 Emptinessboy",document.write(sessionStorage.name)</script></p><p>下面一个计数器案例，刷新页面会看到计数器在增长，关闭浏览器或标签页，然后再试一次，计数器会清零。</p><pre><code class="html">&lt;script type=&quot;text/javascript&quot;&gt;
+if (sessionStorage.pagecount)
+    {
+    sessionStorage.pagecount=Number(sessionStorage.pagecount) +1;
+    }
+else
+    {
+    sessionStorage.pagecount=1;
+    }
+document.write(&quot;当前页面会话访问了 &quot; + sessionStorage.pagecount + &quot; 次！&quot;);
+&lt;/script&gt; </code></pre><p><script type="text/javascript">sessionStorage.pagecount?sessionStorage.pagecount=Number(sessionStorage.pagecount)+1:sessionStorage.pagecount=1,document.write("当前页面会话访问了 "+sessionStorage.pagecount+" 次！")</script></p><h3 id="localStorage-函数"><a href="#localStorage-函数" class="headerlink" title="localStorage 函数"></a>localStorage 函数</h3><p>与 seessionStorage 函数不同，localStorage 函数存储的数据没有时间限制。也就是说网页浏览者关闭网页很长一段时间后，再次打开此网页时，数据依然可用。</p><pre><code class="html">&lt;script type=&quot;text/javascript&quot;&gt;
+localStorage.abc=&quot; &quot;;
+&lt;/script&gt;</code></pre><p>一个最简单的使用 localStorage 存放并读取变量例子：</p><pre><code class="html">&lt;script type=&quot;text/javascript&quot;&gt;
+sessionStorage.name=&quot;HELLO，我是 Emptinessboy&quot;;
+document.write(localStorage.name);
+&lt;/script&gt;</code></pre><p><script type="text/javascript">localStorage.name="HELLO，我是 Emptinessboy",document.write(localStorage.name)</script></p><p>下面一个计数器案例，刷新页面会看到计数器在增长，关闭浏览器窗口，然后再试一次，计数器会继续计数。</p><pre><code class="html">&lt;script type=&quot;text/javascript&quot;&gt;
+if (localStorage.pagecount)
+    {
+    localStorage.pagecount=Number(localStorage.pagecount) +1;
+    }
+else
+    {
+    localStorage.pagecount=1;
+    }
+document.write(&quot;你一共访问这个页面 &quot; + localStorage.pagecount + &quot; 次了！&quot;);
+&lt;/script&gt;</code></pre><p><script type="text/javascript">localStorage.pagecount?localStorage.pagecount=Number(localStorage.pagecount)+1:localStorage.pagecount=1,document.write("你一共访问这个页面 "+localStorage.pagecount+" 次了！")</script></p><h3 id="TIPS"><a href="#TIPS" class="headerlink" title="TIPS"></a>TIPS</h3><ol><li><p>不同的浏览器 Web 存储是独立的</p></li><li><p>主流浏览器都支持 localStorage 和 sessionStorage</p></li></ol><img src="https://media.everdo.cn/tank/pic-bed/2021/04/09/4.png" alt="尾图4" style="zoom:33%"><blockquote style="margin:2em 0 0;padding:.5em 1em;border-left:3px solid #ebc43b;background-color:#191919;list-style:none"><p><strong>This blog is under a <a href="/creativecommons.html" target="_blank">CC BY-NC-ND 4.0 Unported License</a></strong><br><strong>本文链接：</strong><a href="https://coding.emptinessboy.com/2020/03/HTML%E6%96%87%E6%A1%A3%E6%95%B4%E7%90%86-07-%E5%AE%9A%E4%BD%8D%EF%BC%8C%E7%A6%BB%E7%BA%BF%E5%92%8CWEB%E5%AD%98%E5%82%A8/">https://coding.emptinessboy.com/2020/03/HTML%E6%96%87%E6%A1%A3%E6%95%B4%E7%90%86-07-%E5%AE%9A%E4%BD%8D%EF%BC%8C%E7%A6%BB%E7%BA%BF%E5%92%8CWEB%E5%AD%98%E5%82%A8/</a></p></blockquote></div><div id="comment" style="padding:10px" class="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js"></script><script>var GUEST_INFO=["nick","mail","link"],guest_info="nick,mail,link".split(",").filter(function(i){return GUEST_INFO.indexOf(i)>-1}),notify=!1,verify=!0;new Valine({el:".vcomment",notify:notify,verify:verify,appId:"91mhcw0WK44B90nptmxGcJol-gzGzoHsz",appKey:"Boi7za0ClwGyWRCYd8osdf5o",placeholder:"在这里写点什么吧！",pageSize:"10",avatar:"monsterid",lang:"zh-cn",guest_info:guest_info})</script></div><nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col"><a href="/2020/03/JS%E7%AE%80%E5%8D%95%E5%85%A5%E9%97%A8-01%E5%9F%BA%E7%A1%80%E7%AF%87/" id="post_nav-newer" class="prev-content"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation"><i class="material-icons">arrow_back</i></button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 新篇</a><div class="section-spacer"></div><a href="/2020/03/HTML%E6%96%87%E6%A1%A3%E6%95%B4%E7%90%86-06-%E9%9F%B3%E9%A2%91%E5%92%8C%E8%A7%86%E9%A2%91/" id="post_nav-older" class="next-content">旧篇 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation"><i class="material-icons">arrow_forward</i></button></a></nav></div></div><div class="sidebar-overlay"></div><aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation"><div id="sidebar-main"><div class="sidebar-header header-cover" style="background-image:url(/img/sidebar_header.jpg)"><div class="top-bar"></div><button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display:initial" data-upgraded=",MaterialButton,MaterialRipple"><i class="material-icons">clear_all</i> <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button><div class="sidebar-image"><img src="/img/fav_300.png" alt="EmptinessBoy's avatar"></div><a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">i@my.huxiaofan.com <b class="caret"></b></a></div><ul class="nav sidebar-nav"><li class="dropdown"><ul id="settings-dropdown" class="dropdown-menu"><li><a href="mailto:i@my.huxiaofan.com" target="_blank" title="Email 我"><i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i> Email 我</a></li></ul></li><li id="sidebar-first-li"><a href="/"><i class="material-icons sidebar-material-icons">home</i> 主页</a></li><li class="divider"></li><li class="dropdown"><a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown"><i class="material-icons sidebar-material-icons">inbox</i> 归档 <b class="caret"></b></a><ul class="dropdown-menu"><li><a class="sidebar_archives-link" href="/archives/2021/05/">五月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/04/">四月 2021<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/11/">十一月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/10/">十月 2020<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/09/">九月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/07/">七月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/06/">六月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/04/">四月 2020<span class="sidebar_archives-count">13</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/03/">三月 2020<span class="sidebar_archives-count">13</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/02/">二月 2020<span class="sidebar_archives-count">4</span></a></li></ul></li><li class="dropdown"><a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown"><i class="material-icons sidebar-material-icons">chrome_reader_mode</i> 分类 <b class="caret"></b></a><ul class="dropdown-menu"><li><a class="sidebar_archives-link" href="/categories/Android/">Android<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/CSS%E5%AD%A6%E4%B9%A0/">CSS学习<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/HTML%E5%AD%A6%E4%B9%A0/">HTML学习<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/Hadoop/">Hadoop<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/JAVAWEB/">JAVAWEB<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/JAVA%E5%AD%A6%E4%B9%A0/">JAVA学习<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/JS%E5%AD%A6%E4%B9%A0/">JS学习<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/Linux/">Linux<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/WEB%E6%A1%86%E6%9E%B6/">WEB框架<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/python%E5%85%A5%E9%97%A8/">python入门<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/">瞎折腾<span class="sidebar_archives-count">4</span></a></li></ul></li><li class="divider"></li><li><a href="https://huxiaofan.com" target="_blank" rel="noopener" title="生活博客"><i class="material-icons sidebar-material-icons">domain</i> 生活博客</a></li><li><a href="https://huxiaofan.com/about" target="_blank" rel="noopener" title="关于我"><i class="material-icons sidebar-material-icons">person</i> 关于我</a></li><li class="divider"></li><li><a href="/archives">文章总数 <span class="sidebar-badge">53</span></a></li></ul></div></aside><div id="back-to-top" class="toTop-wrap"><a href="#top" class="toTop"><i class="material-icons footer_top-i">expand_less</i></a></div><footer class="mdl-mini-footer" id="bottom"><div class="mdl-mini-footer--left-section sns-list"><a href="https://huxiaofan.com/go?url=https://twitter.com/huxiaofanhome/" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter"><span class="visuallyhidden">Twitter</span></button></a><a href="https://huxiaofan.com/go?url=https://www.facebook.com/profile.php?id=100013375578138" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook"><span class="visuallyhidden">Facebook</span></button></a><a href="https://git.huxiaofan.com/emptinessboy" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-github"><span class="visuallyhidden">Github</span></button></a><a href="https://huxiaofan.com/go/?url=aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL2F2NTc2MjgwMDQ=" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili"><span class="visuallyhidden">Bilibili</span></button></a><a href="https://huxiaofan.com/go/?url=https://t.me/emptinessboy" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-telegram"><span class="visuallyhidden">Telegram</span></button></a></div><div id="copyright">Copyright&nbsp;©&nbsp;<span year></span>&nbsp;帆的自留地<br><a href="http://huxiaofan.com" target="_blank" rel="noopener">晓帆</a>&nbsp;/&nbsp;<a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow"> 浙ICP备20004121号</a></div><div class="mdl-mini-footer--right-section"><div><div class="footer-develop-div">Hexo Theme - <span class="footer-develop-a">Material</span></div></div></div></footer><script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==",!0)</script><script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==",!0)</script><script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==",!0)</script><script type="text/ls-javascript" id="NProgress-script">NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#82bcff'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #82bcff, 0 0 15px #82bcff'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#82bcff',
+        'border-left-color': '#82bcff'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);</script><script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==",!0)</script><script type="text/ls-javascript" id="window-load">$(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })</script><script type="text/ls-javascript" id="lazy-load">// Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });</script><script>var copyrightNow=(new Date).getFullYear(),textContent=document.querySelector("span[year]");copyrightSince=2019,copyrightSince===copyrightNow||0===copyrightSince?textContent.textContent=copyrightNow:textContent.textContent=copyrightSince+" - "+copyrightNow,function(){for(var t=document.querySelectorAll('script[type="text/ls-javascript"]'),e=0;e<t.length;++e){var o=t[e];lsloader.runInlineScript(o.id,o.id)}}(),console.log("\n %c 帆's Life | https://huxiaofan.com | Theme Material %c \n","color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;","color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;")</script></main></div></body></html><!-- rebuild by neat -->

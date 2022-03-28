@@ -1,0 +1,389 @@
+<!-- build time:Mon Mar 28 2022 11:43:47 GMT+0800 (中国标准时间) --><!DOCTYPE html><html style="display:none" lang="zh"><head><meta charset="utf-8"><script>window.materialVersion="1.5.6",window.oldVersion=["codestartv1","1.3.4","1.4.0","1.4.0b1","1.5.0","1.5.2","1.5.5"]</script><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn1.lncld.net"><link rel="dns-prefetch" href="https://cdn1.lncld.net"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta name="renderer" content="webkit"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><title>inteliJ 学习 SwingGui 记录 | 帆的自留地</title><link rel="icon shortcut" type="image/ico" href="/img/logo-32x32.jpg"><link rel="icon" href="/img/logo-192x192.jpg"><meta name="format-detection" content="telephone=no"><meta name="description" itemprop="description" content="GUI 相关工具组件AWTabstract window toolkit 抽象窗口工具包，提供了图形用户界面和图形，直接调用本地系统接口完成。SwingSwing 是建立在 AWT 基础之上的，它利用了 AWT 的底层组件，包括图形、颜色、字体等。增加了界面修饰，使界面更美观，在丌同的操作系统中的显示更为相似。"><meta name="keywords" content="博客,代码,学习,程序,大学,java"><meta name="theme-color" content="#1e69bf"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]--><script>!function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}},lsloader.removeLS=function(e){try{localStorage.removeItem(e)}catch(t){}},lsloader.setLS=function(e,t){try{localStorage.setItem(e,t)}catch(n){}},lsloader.getLS=function(e){var t="";try{t=localStorage.getItem(e)}catch(n){t=""}return t},versionString="/*"+(window.materialVersion||"unknownVersion")+"*/",lsloader.clean=function(){try{for(var e=[],t=0;t<localStorage.length;t++)e.push(localStorage.key(t));e.forEach(function(e){var t=lsloader.getLS(e);if(window.oldVersion){var n=window.oldVersion.reduce(function(e,n){return e||-1!==t.indexOf("/*"+n+"*/")},!1);n&&lsloader.removeLS(e)}})}catch(n){}},lsloader.clean(),lsloader.load=function(e,t,n,s){"boolean"==typeof n&&(s=n,n=void 0),s=s||!1,n=n||function(){};var a;if(a=this.getLS(e),a&&-1===a.indexOf(versionString))return this.removeLS(e),void this.requestResource(e,t,n,s);if(a){var o=a.split(versionString)[0];if(o!=t)return console.log("reload:"+t),this.removeLS(e),void this.requestResource(e,t,n,s);a=a.split(versionString)[1],s?(this.jsRunSequence.push({name:e,code:a}),this.runjs(t,e,a)):(document.getElementById(e).appendChild(document.createTextNode(a)),n())}else this.requestResource(e,t,n,s)},lsloader.requestResource=function(e,t,n,s){var a=this;s?this.iojs(t,e,function(e,t,n){a.setLS(t,e+versionString+n),a.runjs(e,t,n)}):this.iocss(t,e,function(n){document.getElementById(e).appendChild(document.createTextNode(n)),a.setLS(e,t+versionString+n)},n)},lsloader.iojs=function(e,t,n){var s=this;s.jsRunSequence.push({name:t,code:""});try{var a=new XMLHttpRequest;a.open("get",e,!0),a.onreadystatechange=function(){if(4==a.readyState){if((a.status>=200&&a.status<300||304==a.status)&&""!=a.response)return void n(e,t,a.response);s.jsfallback(e,t)}},a.send(null)}catch(o){s.jsfallback(e,t)}},lsloader.iocss=function(e,t,n,s){var a=this;try{var o=new XMLHttpRequest;o.open("get",e,!0),o.onreadystatechange=function(){if(4==o.readyState){if((o.status>=200&&o.status<300||304==o.status)&&""!=o.response)return n(o.response),void s();a.cssfallback(e,t,s)}},o.send(null)}catch(r){a.cssfallback(e,t,s)}},lsloader.iofonts=function(e,t,n,s){var a=this;try{var o=new XMLHttpRequest;o.open("get",e,!0),o.onreadystatechange=function(){if(4==o.readyState){if((o.status>=200&&o.status<300||304==o.status)&&""!=o.response)return n(o.response),void s();a.cssfallback(e,t,s)}},o.send(null)}catch(r){a.cssfallback(e,t,s)}},lsloader.runjs=function(e,t,n){if(t&&n)for(var s in this.jsRunSequence)this.jsRunSequence[s].name==t&&(this.jsRunSequence[s].code=n);if(this.jsRunSequence[0]&&this.jsRunSequence[0].code&&"failed"!=this.jsRunSequence[0].status){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code)),a.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(a),this.jsRunSequence.shift(),this.jsRunSequence.length>0&&this.runjs()}else if(this.jsRunSequence[0]&&"failed"==this.jsRunSequence[0].status){var o=this,a=document.createElement("script");a.src=this.jsRunSequence[0].path,a.type="text/javascript",this.jsRunSequence[0].status="loading",a.onload=function(){o.jsRunSequence.shift(),o.jsRunSequence.length>0&&o.runjs()},document.body.appendChild(a)}},lsloader.tagLoad=function(e,t){this.jsRunSequence.push({name:t,code:"",path:e,status:"failed"}),this.runjs()},lsloader.jsfallback=function(e,t){if(!this.jsnamemap[t]){this.jsnamemap[t]=t;for(var n in this.jsRunSequence)this.jsRunSequence[n].name==t&&(this.jsRunSequence[n].code="",this.jsRunSequence[n].status="failed",this.jsRunSequence[n].path=e);this.runjs()}},lsloader.cssfallback=function(e,t,n){if(!this.cssnamemap[t]){this.cssnamemap[t]=1;var s=document.createElement("link");s.type="text/css",s.href=e,s.rel="stylesheet",s.onload=s.onerror=n;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(s,a)}},lsloader.runInlineScript=function(e,t){var n=document.getElementById(t).innerText;this.jsRunSequence.push({name:e,code:n}),this.runjs()}}()</script><script>function Queue(){function e(e){this.debug&&console.log("Offered a Queued Function."),"function"==typeof e?this.dataStore.push(e):console.log("You must offer a function.")}function t(){return this.debug&&console.log("Polled a Queued Function."),this.dataStore.shift()}function o(){var e=this.poll();void 0!==e&&(this.debug&&console.log("Run a Queued Function."),e())}function u(){this.debug=!0}this.dataStore=[],this.offer=e,this.poll=t,this.execNext=o,this.debug=!1,this.startDebug=u}var queue=new Queue</script><style id="material_css"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("material_css","/css/material.min.css?lfwTSCk5dU0gSgC//hS81g==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style id="style_css"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("style_css","/css/style.min.css?vOFJu+pZl+0Eeqi7pGRHyw==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style id="prettify_css"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style id="prettify_theme"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("prettify_theme","/css/prettify/atelier-cave-dark.min.css?P8HZcYCbr9fq5dAvzZGnUQ==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style>body,html{font-family:Roboto,"Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;overflow-x:hidden!important}code{font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace}a{color:#0158bc}#scheme-Paradox .hot_tags-count,#scheme-Paradox .sidebar-colored .sidebar-badge,#scheme-Paradox .sidebar-colored .sidebar-header,#scheme-Paradox .sidebar_archives-count,#search-form-label:after,#search-label,.mdl-card__media{background-color:#1e69bf!important}#scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus,#scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover{color:#1e69bf!important}#ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a,#post_entry-right-info,.sidebar-colored .sidebar-nav li:hover>a,.sidebar-colored .sidebar-nav li:hover>a i,.sidebar-colored .sidebar-nav li>a:focus i,.sidebar-colored .sidebar-nav li>a:hover,.sidebar-colored .sidebar-nav li>a:hover i,.sidebar-colored .sidebar-nav>.open>a,.sidebar-colored .sidebar-nav>.open>a:focus,.sidebar-colored .sidebar-nav>.open>a:hover{color:#1e69bf!important}.toTop{background:#6baaf2!important}.material-layout .material-index>.material-nav,.material-layout .material-post>.material-nav,.material-nav a{color:#6baaf2}#scheme-Paradox .MD-burger-layer{background-color:#6baaf2}#scheme-Paradox #post-toc-trigger-btn{color:#6baaf2}.post-toc a:hover{color:#0158bc;text-decoration:underline}</style><style>body{background-image:url(/img/bg.jpg)}</style><style>.fade{transition:all .8s linear;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0);opacity:1}.fade.out{opacity:0}</style><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet"><style id="material_icons"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==",!0)</script><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="帆的自留地"><meta name="msapplication-starturl" content="https://coding.emptinessboy.com/2020/04/inteliJ-%E5%AD%A6%E4%B9%A0SwingGui%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/"><meta name="msapplication-navbutton-color" content="#1e69bf"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="帆的自留地"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="apple-touch-icon" href="/img/logo-180x180.jpg"><link rel="alternate" type="application/atom+xml" href="feed.xml"><meta property="og:url" content="https://coding.emptinessboy.com/2020/04/inteliJ-%E5%AD%A6%E4%B9%A0SwingGui%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/"><meta property="og:type" content="blog"><meta property="og:title" content="inteliJ 学习 SwingGui 记录 | 帆的自留地"><meta property="og:image" content="/img/logo-192x192.jpg"><meta property="og:description" content="GUI 相关工具组件AWTabstract window toolkit 抽象窗口工具包，提供了图形用户界面和图形，直接调用本地系统接口完成。SwingSwing 是建立在 AWT 基础之上的，它利用了 AWT 的底层组件，包括图形、颜色、字体等。增加了界面修饰，使界面更美观，在丌同的操作系统中的显示更为相似。"><meta property="og:article:tag" content="java"><meta property="article:published_time" content="Tue Apr 21 2020 14:57:49 GMT+0800"><meta property="article:modified_time" content="Sun May 23 2021 13:28:44 GMT+0800"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="https://coding.emptinessboy.com/2020/04/inteliJ-%E5%AD%A6%E4%B9%A0SwingGui%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/index.html"><script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://coding.emptinessboy.com/2020/04/inteliJ-%E5%AD%A6%E4%B9%A0SwingGui%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/index.html",
+    "headline": "inteliJ 学习 SwingGui 记录",
+    "datePublished": "Tue Apr 21 2020 14:57:49 GMT+0800",
+    "dateModified": "Sun May 23 2021 13:28:44 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "EmptinessBoy",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/fav_300.png"
+        },
+        "description": "啥都不会，<br>专业制造BUG的<br>学渣一枚<br><br>"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "帆的自留地",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/logo-192x192.jpg"
+        }
+    },
+    "keywords": ",java博客,代码,学习,程序,大学",
+    "description": "GUI 相关工具组件AWTabstract window toolkit 抽象窗口工具包，提供了图形用户界面和图形，直接调用本地系统接口完成。SwingSwing 是建立在 AWT 基础之上的，它利用了 AWT 的底层组件，包括图形、颜色、字体等。增加了界面修饰，使界面更美观，在丌同的操作系统中的显示更为相似。",
+}</script><script>!function(e,t,a,n,c,s,o){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,s=t.createElement(a),o=t.getElementsByTagName(a)[0],s.async=1,s.src=n,o.parentNode.insertBefore(s,o)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-85449259-2","auto"),ga("send","pageview")</script><meta name="generator" content="Hexo 4.2.0"></head><body id="scheme-Paradox" class="lazy"><div class="material-layout mdl-js-layout has-drawer is-upgraded"><main class="material-layout__content" id="main"><div id="top"></div><button class="MD-burger-icon sidebar-toggle"><span id="MD-burger-id" class="MD-burger-layer"></span></button> <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons">format_list_numbered</i></button><ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh;overflow-y:scroll"><ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#GUI-相关工具组件"><span class="post-toc-number">1.</span> <span class="post-toc-text">GUI 相关工具组件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#AWT"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">AWT</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Swing"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Swing</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#基本组件"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">基本组件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#公共属性"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">公共属性</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#布局管理器"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">布局管理器</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JAVA-事件"><span class="post-toc-number">2.</span> <span class="post-toc-text">JAVA 事件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件类型"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">事件类型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JAVA-事件监听器（难点）"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">JAVA 事件监听器（难点）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JDK-源码"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">JDK 源码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#实现监听的四种方法"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">实现监听的四种方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#自身类作为事件监听器"><span class="post-toc-number">2.4.1.</span> <span class="post-toc-text">自身类作为事件监听器</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#内部类处理"><span class="post-toc-number">2.4.2.</span> <span class="post-toc-text">内部类处理</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#匿名内部类处理（inteliJ-默认）"><span class="post-toc-number">2.4.3.</span> <span class="post-toc-text">匿名内部类处理（inteliJ 默认）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#外部类处理"><span class="post-toc-number">2.4.4.</span> <span class="post-toc-text">外部类处理</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安卓中实现"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">安卓中实现</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#常用属性之类"><span class="post-toc-number">3.</span> <span class="post-toc-text">常用属性之类</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#简单控件"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">简单控件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#单选按钮和复选框："><span class="post-toc-number">3.2.</span> <span class="post-toc-text">单选按钮和复选框：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#DEMO1"><span class="post-toc-number">3.2.1.</span> <span class="post-toc-text">DEMO1</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#组合框和列表"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">组合框和列表</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#对话框和菜单"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">对话框和菜单</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#DEMO2"><span class="post-toc-number">3.4.1.</span> <span class="post-toc-text">DEMO2</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JFormDesigner"><span class="post-toc-number">4.</span> <span class="post-toc-text">JFormDesigner</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#踩坑"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">踩坑</span></a></li></ol></li></ol></ul><div class="material-post_container"><div class="material-post mdl-grid"><div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col"><div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://media.everdo.cn/tank/pic-bed/2020/04/21/intelij.png)"><p class="article-headline-p">inteliJ 学习 SwingGui 记录</p></div><div class="mdl-color-text--grey-700 mdl-card__supporting-text meta"><div id="author-avatar"><img src="/img/fav_300.png" width="44px" height="44px" alt="Author Avatar"></div><div><strong>EmptinessBoy</strong> <span>4月 21, 2020</span></div><div class="section-spacer"></div><button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">devices other</i> <span class="visuallyhidden">devices other</span></button><ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button"><li class="mdl-menu__item">在其它设备中阅读本文章</li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASYAAAEmCAAAAADqr2IGAAAEK0lEQVR42u3aQXLjMAwEQP//09nrVu3GngGUlEW3TqlIpsjWAQSIx5cruB4IMGHChAkTJhcmTJgwvT3TI77+M9Bf///u+ecjfDvFp88nM3w+t2gETJgwYcJ0EFM76ecQG/Qc9N83JrMt1ogJEyZMmI5jeh7UkwnlwXj/MRKy2RoxYcKECROmPDDnd5NfzUbGhAkTJkyYrtoQJEXefVl5Q4AJEyZMmD6ZKS+nXhX42yR2c/z5q7VwTJgwYcL0Zkx5eL7v37/a34QJEyZMmN6Gqb3y1//cUWiyvcg3E9+uFBMmTJgwHcE0m1bbcNMG5qTI26bT9bowYcKECdMRTLNi7ixUz+iTQ9PN3Tr1xYQJEyZMt2LapK95GN6kvu1WI9lARDPBhAkTJkxHMLXp5XPcNsAnwb79hMkHiNp9MGHChAnTcUx5QE3Cbb7VqBcw+lVLhgkTJkyYzmNKhmuDehvyZwXofObF2jFhwoQJ0xFMeejdpJTJpmGWJOcF5fZgFRMmTJgwncGUh9icMiFoE9o83c3XggkTJkyYPoFp1oTaht48Sc5xryLDhAkTJkyfwJQnq7Mybl4gbsu7m7bUF6vAhAkTJkxHMOULu6oxtC3+ztqGkmfqFlVMmDBhwnRDpvaoL19A/nw7fruBSO7W+yZMmDBhwnQTpv3xZB50N+XjouGmfEuxb8KECRMmTMcx5SXX2YI3Sfi1I6w2BJgwYcKE6e2Z2taczaFjPv6s6JyPuaqFY8KECROmmzDl5d1ZQ097zJkH7D3xixliwoQJE6bjmPJSabLs2bFoS3NVWh6d+mLChAkTphsybRLF/AhzdsCZv3dYxp0VeTFhwoQJ062Ykh8nQT05Ip0Val+UYte4w9QXEyZMmDDdhClPLPPlJeO0C57dTYAwYcKECdMnMM2S0llpeP93vhFJ0u+6QoAJEyZMmG7IlMDl/9+UcfOP0dLUiTcmTJgwYTqUKT+ebCf9c4tvW4ui+WDChAkTpiOY8sDfNsFsWlrzMTftREWRFxMmTJgwHcG0aS3NC74tbttINHs7JkyYMGH6HKY2hH+Nrlkj7OZgtZ4hJkyYMGE6gmlfTr02Pd4cbSaNs3npGRMmTJgwncSUJ4qbBHi2LdgUi1dzw4QJEyZMRzBtjgM3G4g8oR0mruvxMWHChAnTGUyb4mx+N4Fu091Zwlw0AGHChAkTpiOYNkE6T2jbwm5bMt6MP2xRxYQJEyZMt2K69mizTZWTD9CO3DbORhsCTJgwYcJ0c6ar2nH2090kru0WBxMmTJgwYWoDcJ6mJgTtM8nGIhkNEyZMmDBhaou8OVB7YPkjpWpMmDBhwnQcU96Ok4Tk2QYioW+xhk1ImDBhwoTpIKbZwWSRRpZ3Z60/eRk3+jCYMGHChOkIJle0IXBhwoQJEyZMmFyYMGF6l+sPK8EWdTwqV6kAAAAASUVORK5CYII="></ul><button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">bookmark</i> <span class="visuallyhidden">bookmark</span></button><ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button"><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/java/" rel="tag">java</a></li></ul><button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">share</i> <span class="visuallyhidden">share</span></button><ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button"><a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=inteliJ 学习 SwingGui 记录&url=https://coding.emptinessboy.com/2020/04/inteliJ-%E5%AD%A6%E4%B9%A0SwingGui%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/index.html&pic=https://coding.emptinessboy.com/img/logo-32x32.jpg&searchPic=false&style=simple" target="_blank"><li class="mdl-menu__item">分享到微博</li></a><a class="post_share-link" href="https://twitter.com/intent/tweet?text=inteliJ 学习 SwingGui 记录&url=https://coding.emptinessboy.com/2020/04/inteliJ-%E5%AD%A6%E4%B9%A0SwingGui%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/index.html&via=EmptinessBoy" target="_blank"><li class="mdl-menu__item">分享到 Twitter</li></a><a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://coding.emptinessboy.com/2020/04/inteliJ-%E5%AD%A6%E4%B9%A0SwingGui%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/index.html" target="_blank"><li class="mdl-menu__item">分享到 Facebook</li></a><a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=帆的自留地&title=inteliJ 学习 SwingGui 记录&summary=晓帆的学习笔记&pics=https://coding.emptinessboy.com/img/logo-32x32.jpg&url=https://coding.emptinessboy.com/2020/04/inteliJ-%E5%AD%A6%E4%B9%A0SwingGui%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/index.html" target="_blank"><li class="mdl-menu__item">分享到 QQ</li></a><a class="post_share-link" href="https://telegram.me/share/url?url=https://coding.emptinessboy.com/2020/04/inteliJ-%E5%AD%A6%E4%B9%A0SwingGui%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/index.html&text=inteliJ 学习 SwingGui 记录" target="_blank"><li class="mdl-menu__item">分享到 Telegram</li></a></ul></div><div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out"><h2 id="GUI-相关工具组件"><a href="#GUI-相关工具组件" class="headerlink" title="GUI 相关工具组件"></a>GUI 相关工具组件</h2><h3 id="AWT"><a href="#AWT" class="headerlink" title="AWT"></a>AWT</h3><p>abstract window toolkit 抽象窗口工具包，提供了图形用户界面和图形，直接调用本地系统接口完成。</p><h3 id="Swing"><a href="#Swing" class="headerlink" title="Swing"></a>Swing</h3><p>Swing 是建立在 AWT 基础之上的，它利用了 AWT 的底层组件，包括图形、颜色、字体等。增加了界面修饰，使界面更美观，在丌同的操作系统中的显示更为相似。</p><a id="more"></a><h3 id="基本组件"><a href="#基本组件" class="headerlink" title="基本组件"></a>基本组件</h3><blockquote><p>组件是一个可以以图形化的方式显示在屏幕上并能与用户进行交互的对象，例如一个按钮，一个标签等。容器本身也是一个组件，具有组件的所有性质，但是它的主要功能是容纳其它组件和容器。</p></blockquote><table><thead><tr><th>基本组件</th><th>名称</th><th>功能</th></tr></thead><tbody><tr><td>Window类</td><td>窗口类</td><td>Window 类的实例没有边框和标题,并且不能附加或嵌入到另一个容器中</td></tr><tr><td>Frame类</td><td>框架类</td><td>Frame 类的实例可以有一个菜单条，否则它与 Window 类的对象非常相似</td></tr><tr><td>Dialog类</td><td>对话框类</td><td>Dialog 类的对象只有在一个相关的 Frame 类对象存在时才存在</td></tr><tr><td>Panel类</td><td>面板类</td><td>Panel 类的是实例提供一个可以加入组件的容器，是容器组件的通用容器</td></tr></tbody></table><p>AWT 中的基本控件：</p><p>Button按钮，Label标签，TextField文本框，TextArea多行文本框，Checkbox复选框，CheckboxGroup单选框，Choice下拉式列表，List列表，Menu菜单<br>，Scrollbar滚动条</p><blockquote><p>.pack() 方法可以使组件适应大小调整<br>setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 设置默认窗体关闭按钮动作</p></blockquote><p>添加组件非常简单，只需要使用容器的 add 方法，例如 awt 下：</p><pre><code class="java">Frame f = new Frame();
+f.setLayout(new FlowLayout);
+Button b = new Button(&quot;ok&quot;)
+f.add(b)</code></pre><p>容器 Container 是一个类，实际上是 Component 的子类。容器的各种的组件的大小和位置是由容器的布局管理器进行控制。</p><blockquote><p>getContentPane() 返回此窗体的 contentPane 对象</p></blockquote><p>Swing 下：</p><pre><code class="java">JFrame jf = new JFrame();
+Container jframe_content = jf.getContentPane();
+jframe_content.setLayout(new FlowLayout);
+Button b = new Button(&quot;ok&quot;);
+jframe_content.add(b);
+jframe_content.add(new Button(&quot;Cancel&quot;))</code></pre><h4 id="公共属性"><a href="#公共属性" class="headerlink" title="公共属性"></a>公共属性</h4><pre><code class="java">public int getWidth() //宽度
+public int getHeight() //高度
+public void setSize(int width, int height) //宽度和高度
+public int getX() //位置的X坐标值
+public int getY() //位置的Y坐标值
+public void setLocation(int x, int y) //坐标位置，x、y指定组件左上角相对于容器的坐标位置</code></pre><pre><code class="java">public void setBounds(int x, int y, int width, int height) //坐标位置和宽度、高度
+public Color getBackground() //获得组件的背景颜色
+public void setBackground(Color c) //设置组件的背景颜色
+public Font getFont() //获得组件字体
+public void setFont(Font f) //设置组件字体
+public void setVisible(boolean b) //设置组件是否显示</code></pre><h3 id="布局管理器"><a href="#布局管理器" class="headerlink" title="布局管理器"></a>布局管理器</h3><blockquote><p>JFrame 和 JWindow 默认布局管理器为 BorderLayout，而 JPanel 默认的布局管理器为 FlowLayout。</p></blockquote><ul><li><p>BorderLayout（边框布局管理器）是 Window、JFrame 和 JDialog 的默认布局管理器。边框布局管理器将窗口分为 5 个区域：North、South、East、West 和 Center。</p></li><li><p>FlowLayout（流式布局管理器）是 JPanel 和 JApplet 的默认布局管理器。FlowLayout 会将组件按照从从左到右、上到下的放置规律逐行进行定位。（与其他布局管理器不同的是，FlowLayout 布局管理器不限制它所管理组件的大小，而是允许它们有自己的最佳大小。）</p></li><li><p>CardLayout（卡片布局管理器）能够帮助用户实现多个成员共享同一个显示空间，并且一次只显示一个容器组件的内容。（CardLayout 布局管理器将容器分成许多层，每层的显示空间占据整个容器的大小，但是每层只允许放置一个组件。）</p></li><li><p>GridLayout（网格布局管理器）为组件的放置位置提供了更大的灵活性。它将区域分割成行数（rows）和列数（columns）的网格状布局，组件按照由左至右、由上而下的次序排列填充到各个单元格中。（提示：GridLayout 布局管理器总是忽略组件的最佳大小，而是根据提供的行和列进行平分。该布局管理的所有单元格的宽度和高度都是一样的。）</p></li><li><p>GridBagLayout（网格包布局管理器）是在网格基础上提供复杂的布局，是最灵活、 最复杂的布局管理器。GridBagLayout 不需要组件的尺寸一致，允许组件扩展到多行多列。每个 GridBagLayout 对象都维护了一组动态的矩形网格单元，每个组件占一个或多个单元，所占有的网格单元称为组件的显示区域。（GridBagLayout 所管理的每个组件都与一个 GridBagConstraints 约束类的对象相关。这个约束类对象指定了组件的显示区域在网格中的位置，以及在其显示区域中应该如何摆放组件。除了组件的约束对象，GridBagLayout 还要考虑每个组件的最小和首选尺寸，以确定组件的大小。）</p></li><li><p>BoxLayout（盒布局管理器）通常和 Box 容器联合使用。</p></li><li><p>SpringLayout 类实现的布局管理器称为弹簧布局管理器。利用该布局管理器管理组件，当改变窗体的大小时，能够在不改变组件间相对位置的前提下自动调整组件大小，使组件依旧布满整个窗体，从而保证了窗体的整体效果。</p></li><li><p>绝对布局，就是硬性指定组件在容 器中的位置和大小，可以使用绝对坐标的方式来指定组件的位置。（用户必须使用Java语言提供的setLocation(),setSize(),setBounds()等方法，为容器中的每个组件设置大小和显示位置，否则将无法看到这些组件。）</p></li></ul><h2 id="JAVA-事件"><a href="#JAVA-事件" class="headerlink" title="JAVA 事件"></a>JAVA 事件</h2><h3 id="事件类型"><a href="#事件类型" class="headerlink" title="事件类型"></a>事件类型</h3><table><thead><tr><th>事件类型</th><th>事件内容</th></tr></thead><tbody><tr><td>ComponentEvent（组件事件）</td><td>组件尺寸的变化、移动</td></tr><tr><td>ContainerEvent（容器事件）</td><td>容器内组件的增加、删除</td></tr><tr><td>WindowEvent（窗口事件）</td><td>关闭和打开窗口</td></tr><tr><td>FocusEvent（焦点事件）</td><td>焦点的获得和释放</td></tr><tr><td>KeyEvent（键盘事件）</td><td>按键的按下，松开</td></tr><tr><td>MouseEvent（鼠标事件）</td><td>单击鼠标，拖动鼠标</td></tr><tr><td>ActionEvent（动作事件）</td><td>按钮按下，TextField中按Enter键</td></tr><tr><td>ItemEvent（项目事件）</td><td>选中项目或放弃选中项目</td></tr><tr><td>TextEvent（文本事件）</td><td>文本内容改变。</td></tr></tbody></table><h3 id="JAVA-事件监听器（难点）"><a href="#JAVA-事件监听器（难点）" class="headerlink" title="JAVA 事件监听器（难点）"></a>JAVA 事件监听器（难点）</h3><p><strong>1.事件对象：</strong> 一般继承自java.util.EventObject对象,由开发者自行定义.</p><p><strong>2.事件源：</strong> 就是触发事件的源头,不同的事件源会触发不同的事件类型.</p><p><strong>3.事件监听器：</strong> 事件监听器负责监听事件源发出的事件.一个事件监听器通常实现 java.util.EventListener 这个标识接口.</p><p>其整个处理过程是这样的,事件源可以注册事件监听器对象,并可以向事件监听器对象发送事件对象.事件发生后,事件源将事件对象发给已经注册的所有事件监听器. 监听器对象随后会根据事件对象内的相应方法响应这个事件.</p><p><strong>上面的正式说明我看糊涂了，以下为个人粗浅的理解：</strong></p><p>先看一段一段简单的实现按钮点击执行事件的实例代码：</p><pre><code class="java">Button b = new Button(&quot;button&quot;); //创建按钮
+b.addActionListener(new ActionListener() {
+    //使用内部匿名事件处理
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        //点击后执行的代码
+    }
+});</code></pre><p>首先按钮等组件都会自带一个 addActionListener() 方法，这个方法需要传入一个参数（接口类ActionListener），并且这个类需要实现接口，其中必须写完整方法 actionPerformed(ActionEvent e)。</p><p>当 addActionListener() 方法被添加到按钮对象后，系统就会在后台监听事件发生，一旦触发事件（如按钮被点击），就会回调 ActionListener 接口中 actionPerformed() 这个方法，并传入参数 ActionEvent e。ActionEvent e 会包括发生事件的对象以及一些别的信息。</p><h3 id="JDK-源码"><a href="#JDK-源码" class="headerlink" title="JDK 源码"></a>JDK 源码</h3><p>官方源代码 JDK1.8：</p><p><strong><em>java\awt\event\ActionListener.java</em></strong></p><pre><code class="java">public interface ActionListener extends EventListener {
+    /**
+     * Invoked when an action occurs.
+     */
+    public void actionPerformed(ActionEvent e);
+}</code></pre><p><strong><em>java\awt\Button.java</em></strong></p><pre><code class="java">addActionListener(ActionListener l) {
+    if (l == null) {
+        return;
+    }
+    actionListener = AWTEventMulticaster.add(actionListener, l);
+    newEventsOnly = true;
+}</code></pre><p><strong><em>java\awt\AWTEventMulticaster.java</em></strong></p><pre><code class="java">public void processEvent(AWTEvent e) {
+    // when event occurs which causes &quot;action&quot; semantic
+    ActionListener listener = actionListener;
+    if (listener != null) {
+        listener.actionPerformed(new ActionEvent()); //这一步回调了！！！！
+    }
+}</code></pre><h3 id="实现监听的四种方法"><a href="#实现监听的四种方法" class="headerlink" title="实现监听的四种方法"></a>实现监听的四种方法</h3><h4 id="自身类作为事件监听器"><a href="#自身类作为事件监听器" class="headerlink" title="自身类作为事件监听器"></a>自身类作为事件监听器</h4><p>适合多个事件执行同一个方法，可以大大减少代码量，但东西多了就会很复杂</p><pre><code class="java">class EventListener extends JFrame implements ActionListener {
+    //继承JFrame，并继承接口
+    private JButton b1, b2;
+
+    public EventListener() {
+        //默认构造函数
+        ……定义窗体
+
+        b1 = new JButton(&quot;button&quot;);
+        b2 = new JButton(&quot;button&quot;);
+
+        // 将按钮添加事件监听器
+        //这一步就将自己所在的类传入
+        b1.addActionListener(this);
+        b2.addActionListener(this);
+
+        add(b1);add(b2);setVisible(true);
+    }
+
+    // ***********事件处理***********
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        //多个按钮时需要通过传入的参数区分
+        if (e.getSource() == b1) {
+            //点击b1后执行的代码
+        } else if (e.getSource() == b2) {
+            //点击b2后执行的代码
+        }
+    }
+}</code></pre><h4 id="内部类处理"><a href="#内部类处理" class="headerlink" title="内部类处理"></a>内部类处理</h4><pre><code class="java">class EventListener extends JFrame {
+    private JButton b1, b2;
+
+    // 构造方法
+    public EventListener() {
+        ……定义窗体
+
+        b1 = new JButton(&quot;button&quot;);
+        b2 = new JButton(&quot;button&quot;);
+
+        // 添加事件监听器对象(面向对象思想)
+        b1.addActionListener(new b1Listener());
+        b2.addActionListener(new b2Listener());
+
+        add(b1);add(b2);setVisible(true);
+    }
+
+    // 内部类b1Listener，实现ActionListener接口
+    class b1Listener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            //点击b1后执行的代码
+        }
+    }
+
+    // 内部类b2Listener，实现ActionListener接口
+    class b2Listener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            //点击b2后执行的代码
+        }
+    }
+
+}</code></pre><h4 id="匿名内部类处理（inteliJ-默认）"><a href="#匿名内部类处理（inteliJ-默认）" class="headerlink" title="匿名内部类处理（inteliJ 默认）"></a>匿名内部类处理（inteliJ 默认）</h4><pre><code class="java">Button b1 = new Button(&quot;button&quot;);
+Button b2 = new Button(&quot;button&quot;); 
+//创建按钮
+b1.addActionListener(new ActionListener() {
+    //使用内部匿名事件处理
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        //点击b1后执行的代码
+    }
+});
+b2.addActionListener(new ActionListener() {
+    //使用内部匿名事件处理
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        //点击b2后执行的代码
+    }
+});</code></pre><h4 id="外部类处理"><a href="#外部类处理" class="headerlink" title="外部类处理"></a>外部类处理</h4><pre><code class="java">class EventListener extends JFrame {
+    private JButton b1, b2;
+
+    public EventListener() {
+        ……定义窗体
+
+        b1 = new JButton(&quot;button&quot;);
+        b2 = new JButton(&quot;button&quot;);
+        // 将按钮添加事件监听器
+        b1.addActionListener(new b1Listener(this));
+        b2.addActionListener(new b2Listener());
+
+        add(b1);add(b2);setVisible(true);
+    }
+
+}
+
+// 外部类b1EventListener，实现ActionListener接口
+class b1Listener implements ActionListener {
+    private EventListener el;
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        //点击b1后执行的代码
+    }
+}
+
+
+// 外部类DialogEventListener，实现ActionListener接口
+class b2Listener implements ActionListener {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        //点击b1后执行的代码
+    }
+}
+
+public class ActionListenerTest {
+    public static void main(String args[]) {
+        new EventListener();
+    }
+}</code></pre><h3 id="安卓中实现"><a href="#安卓中实现" class="headerlink" title="安卓中实现"></a>安卓中实现</h3><pre><code class="java">Button Cal = findViewById(R.id.buttonCal);
+Cal.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+    //点击后执行的代码
+    }
+});</code></pre><h2 id="常用属性之类"><a href="#常用属性之类" class="headerlink" title="常用属性之类"></a>常用属性之类</h2><p>此处先随便整理些课上讲的：</p><h3 id="简单控件"><a href="#简单控件" class="headerlink" title="简单控件"></a>简单控件</h3><p>text 属性：控件显示的文本</p><p>Columns 属性：控件列宽</p><p>变量名称 fieldname 属性：设置组件ID</p><p>按钮的 action 事件：点击执行的函数</p><p>控件的 getText 和 setText 方法：显示和修改文字</p><pre><code class="java">jTextField.getText()    //返回 String</code></pre><p>System.exit方法：结束程序（窗体的三种关闭方式：Exit、Dispose、Hide）</p><pre><code class="java">//Exit
+System.exit(0);
+//Dispose &amp; hide
+this.dispose();
+this.hide();</code></pre><p>Lable 的 icon 属性：更改/显示标签的图片</p><pre><code class="java">//动态显示图片
+String s = System.getProperty(&quot;user.dir&quot;); //获取程序所在路径
+ImageIcon i = new ImageIcon(s+&quot;/hhh.jpg&quot;); //先设置ImageIcon
+jLable.setIcon(i);</code></pre><p>icon 按比例缩放（用于不确定大小的图片不溢出）</p><pre><code class="java">ImageIcon i = new ImageIcon(s);
+Image pic = i.getImage().getScaledInstance(200,200,Image.SCALE_DEFAULT);
+ImageIcon ico = new ImageIcon(pic);
+PicLable.setIcon(ico);</code></pre><h3 id="单选按钮和复选框："><a href="#单选按钮和复选框：" class="headerlink" title="单选按钮和复选框："></a>单选按钮和复选框：</h3><pre><code>JTextArea：文本区域
+JRadioButton：单选按钮
+ButtonGroup：按钮组
+JCheckBox：复选框</code></pre><p>单选按钮具有 text、selected 属性；ButtonGroup是按钮组，不显示</p><h4 id="DEMO1"><a href="#DEMO1" class="headerlink" title="DEMO1"></a>DEMO1</h4><p>编写如图所示应用程序，选择字体字号后按设置按钮，上面文字按选择的字体和字号进行设置显示，按关闭按钮结束程序。</p><p><a href="https://up.media.everdo.cn/image/ImMX" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/22/gui1.jpg" alt="gui1.jpg"></a></p><p>在 InteliJ 中，新建 Swing UI Designer，GUI Form</p><p><a href="https://up.media.everdo.cn/image/I9gi" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/22/hxfgui1.jpg" alt="hxfgui1.jpg"></a></p><p>输入类名后系统会自动创建两个文件，一个 form 文件和一个 java 文件。</p><p><a href="https://up.media.everdo.cn/image/IcD4" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/22/hxfgui2.jpg" alt="hxfgui2.jpg"></a></p><p>打开 form 文件，选定布局后即可在上面自由拖拽控件，此时应该将用到的控件添加 fieldname 也就是 ID 属性</p><p><a href="https://up.media.everdo.cn/image/IfcM" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/22/hxfgui3.jpg" alt="hxfgui3.jpg"></a></p><p>在可视化界面，右键控件可以自动生成监听器或快速跳转到监听器，这一步很方便</p><p><a href="https://up.media.everdo.cn/image/Is5Y" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/22/hxfgui4.jpg" alt="hxfgui4.jpg"></a></p><p>创建完布局后，不同于 NetBeans，Idea 不会生成任何关于布局的 java 代码，所有的布局是在编译中直接打包进 class 的，并不是先为我们添加到 java 类文件。（这个很坑，没法偷懒直接拷贝他的代码了</p><p>系统就生成了这些：</p><pre><code class="java">package com.emptinessboy.learngui1;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class MainForm {
+    private JPanel panel;
+    private JButton ButtonSetting;
+    private JButton ButtonClose;
+    private JTextField TextField;
+    private JRadioButton SongTiRadioButton;
+    private JRadioButton HeiTiRadioButton;
+    private JRadioButton a12RadioButton;
+    private JRadioButton a18RadioButton;
+}</code></pre><p>在我们添加监听器，并编写完整代码后：</p><pre><code class="java">public MainForm() {
+    HeiTiRadioButton.setSelected(true);
+    a12RadioButton.setSelected(true);
+    ButtonSetting.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            System.out.println(&quot;设置按钮被点击&quot;);
+            if (HeiTiRadioButton.isSelected()){
+                if (a12RadioButton.isSelected()){
+                    TextField.setFont(new Font(&quot;黑体&quot;,0,12));
+                    System.out.println(&quot;设置为黑体12号&quot;);
+                }
+                else{
+                    TextField.setFont(new Font(&quot;黑体&quot;,0,18));
+                    System.out.println(&quot;设置为黑体18号&quot;);
+                }
+            }
+            if (SongTiRadioButton.isSelected()){
+                if (a12RadioButton.isSelected()){
+                    TextField.setFont(new Font(&quot;宋体&quot;,0,12));
+                    System.out.println(&quot;设置为宋体12号&quot;);
+                }
+                else{
+                    TextField.setFont(new Font(&quot;宋体&quot;,0,18));
+                    System.out.println(&quot;设置为宋体18号&quot;);
+                }
+            }
+        }
+    });
+    ButtonClose.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            System.exit(0);
+        }
+    });
+    SongTiRadioButton.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (SongTiRadioButton.isSelected()){
+                HeiTiRadioButton.setSelected(false);//单选框互斥
+                System.out.println(&quot;选中宋体&quot;);
+            }
+        }
+    });
+    HeiTiRadioButton.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (HeiTiRadioButton.isSelected()){
+                SongTiRadioButton.setSelected(false);//单选框互斥
+                System.out.println(&quot;选中黑体&quot;);
+            }
+        }
+    });
+    a12RadioButton.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (a12RadioButton.isSelected()){
+                a18RadioButton.setSelected(false);//单选框互斥
+                System.out.println(&quot;选中12号&quot;);
+            }
+        }
+    });
+    a18RadioButton.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if (a18RadioButton.isSelected()){
+                a12RadioButton.setSelected(false);//单选框互斥
+                System.out.println(&quot;选中18号&quot;);
+            }
+        }
+    });
+}</code></pre><p>这里补充一波，<strong>设置字体和字号：</strong></p><pre><code class="java">TextField.setFont(new Font(&quot;宋体&quot;,0,18));</code></pre><p>最后到这里，程序没法运行。因为系统不会为我们生成 main 方法，手动生成很简单，直接右键即可：</p><p><a href="https://up.media.everdo.cn/image/I0Ra" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/22/hxfgui5.jpg" alt="hxfgui5.jpg"></a></p><p>最后，运行效果：</p><p><a href="https://up.media.everdo.cn/image/I16s" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/22/guidemo01.gif" alt="guidemo01.gif"></a></p><p>查看编译生成的文件和打包成的 jar 后都可以看到，除了我们些的类，还要自动打包进去的 intelij/uiDesigner/core 的代码。推测，系统很可能把我们定义的布局文件生成到这些 class 里。</p><p><a href="https://up.media.everdo.cn/image/IMp3" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/22/hxfgui6.jpg" alt="hxfgui6.jpg"></a></p><p><strong>补充二</strong></p><p>这个案例，我是写程序判断 RadioButton 选中情况来实现两个按钮互斥功能，其实 intelij 也有 RadioButtonGroup，只不过没有像 NetBeans 那样显示到右侧组件栏</p><blockquote><p>（PS，intelij自带的组件真的少的可怜</p></blockquote><p><a href="https://up.media.everdo.cn/image/IyPG" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/22/hxfgui7.jpg" alt="hxfgui7.jpg"></a></p><p>ButtonGroup 的开启方式被隐藏到了属性栏</p><h3 id="组合框和列表"><a href="#组合框和列表" class="headerlink" title="组合框和列表"></a>组合框和列表</h3><pre><code>JTextField：文本字段
+JComboBox：组合框
+JList：列表</code></pre><p>JComboBox组合框，设置静态选项的方法是设置 model 属性，一行一个：</p><p><a href="https://up.media.everdo.cn/image/ITi9" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/22/hxfgui8.jpg" alt="hxfgui8.jpg"></a></p><p>动态修改则使用 addIthem 方法</p><pre><code class="java">comboBox.addItem(&quot;字符串&quot;);</code></pre><p>设置默认选中项，同理可以 get</p><pre><code class="java">comboBox.setSelectedIndex(0);</code></pre><p>JList列表要增加内容比较复杂，需要使用 setModel 方法，传入一个类，父类是抽象类，需要完成 getSize 和 getElementAt 方法</p><pre><code class="java">list.setModel(new AbstractListModel() {
+    String[] strings = {&quot;aaa&quot;,&quot;bbb&quot;,&quot;ccc&quot;};
+    @Override
+    public int getSize() {
+        return strings.length;
+    }
+
+    @Override
+    public Object getElementAt(int index) {
+        return strings[index];
+    }
+});</code></pre><h3 id="对话框和菜单"><a href="#对话框和菜单" class="headerlink" title="对话框和菜单"></a>对话框和菜单</h3><p>新建方式和新建窗体类似</p><p><a href="https://up.media.everdo.cn/image/IXvj" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/22/hxf-gui9.png" alt="hxf-gui9.png"></a></p><p>打开对话框方式</p><pre><code class="java">new testDialog().setVisible(true);</code></pre><p>菜单：</p><pre><code class="java">JMenuBar：菜单条
+JMenu：菜单
+JMenuItem：菜单项</code></pre><p>通用对话框:</p><pre><code class="java">JFileChooser：文件选择对话框
+JOptionPane：消息对话框
+JColorChooser：颜色选择对话框</code></pre><p>文件选则的详细调用方法：</p><pre><code class="java">JFileChooser fc = new JFileChooser();
+int i = fc.showOpenDialog(ButtonChose);
+if(i==0){
+    s = fc.getSelectedFile().toString();
+    System.out.println(s);
+}
+else
+    System.out.println(&quot;被取消&quot;);</code></pre><p>JOptionPane：</p><pre><code class="java">JOptionPane.showConfirmDialog(null,&quot;yes or no&quot;,&quot;标题&quot;,JOptionPane.YES_NO_OPTION);</code></pre><h4 id="DEMO2"><a href="#DEMO2" class="headerlink" title="DEMO2"></a>DEMO2</h4><p>编写如图所示应用程序，单击选择图片文件按钮后，显示下面的打开文件对话框，选择要显示的图片，点击显示图片，显示刚刚选中的图片，按关闭按钮结束程序。</p><p><a href="https://up.media.everdo.cn/image/ICgO" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/22/tp2.th.png" alt="tp2.th.png"></a></p><p>先设计窗体：</p><p><a href="https://up.media.everdo.cn/image/IpD6" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/22/hxfgui10.jpg" alt="hxfgui10.jpg"></a></p><p>接下来添加按钮点击事件,</p><p>文件选则按钮代码:</p><pre><code class="java">ButtonChose.addActionListener(new ActionListener() {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        JFileChooser fc = new JFileChooser();
+        int i = fc.showOpenDialog(ButtonChose);
+        if(i==0){
+            s = fc.getSelectedFile().toString();
+            System.out.println(s);
+        }
+        else
+            System.out.println(&quot;被取消&quot;);
+    }
+});</code></pre><p>显示图片按钮代码：</p><pre><code class="java">ButtonShow.addActionListener(new ActionListener() {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        ImageIcon i = new ImageIcon(s);
+        Image pic = i.getImage().getScaledInstance(200,200,Image.SCALE_DEFAULT);
+        ImageIcon ico = new ImageIcon(pic);
+        PicLable.setIcon(ico);
+    }
+});</code></pre><p>退出程序按钮代码：</p><pre><code class="java">ButtonClose.addActionListener(new ActionListener() {
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        System.exit(0);
+    }
+});</code></pre><p>运行效果：</p><p><a href="https://up.media.everdo.cn/image/Iw5S" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/22/hxfgui12.jpg" alt="hxfgui12.jpg"></a></p><p><a href="https://up.media.everdo.cn/image/Itfn" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/22/hxfgui13.jpg" alt="hxfgui13.jpg"></a></p><h2 id="JFormDesigner"><a href="#JFormDesigner" class="headerlink" title="JFormDesigner"></a>JFormDesigner</h2><p>这是一款 idea 的增强 GUI 设计插件，设计的界面可以生成标准的 java 代码，而不是像 idea 自带的 Swing GUI Designer 一样没有代码生成。</p><p>同时这个插件还有更多的组件可以供选择！！！</p><p><a href="https://up.media.everdo.cn/image/IZNJ" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/22/hxfgui14.jpg" alt="hxfgui14.jpg"></a></p><h3 id="踩坑"><a href="#踩坑" class="headerlink" title="踩坑"></a>踩坑</h3><p>使用这个插件一定要手动编写 main 方法，系统生成的不管用。手动编写其实只要一句话：(新建时继承选择Jframe)</p><pre><code class="java">public static void main(String[] args) {
+    new form1().setVisible(true);
+}</code></pre><p><del>时间关系，JFormDesigner 我还没有深入使用，下次折腾了再补充！</del></p><hr><p>后来做了两个MOOC的练习，因为有些控件 IEDA 自带的设计器找不到，故使用了 JFD。</p><p>见链接： <a href="https://coding.emptinessboy.com/2020/05/%E4%B8%A4%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84JAVA-GUI%E7%BB%83%E4%B9%A0/">JFD使用的两个案例</a></p><img src="https://media.everdo.cn/tank/pic-bed/2021/04/09/4.png" alt="尾图4" style="zoom:33%"><blockquote style="margin:2em 0 0;padding:.5em 1em;border-left:3px solid #ebc43b;background-color:#191919;list-style:none"><p><strong>This blog is under a <a href="/creativecommons.html" target="_blank">CC BY-NC-ND 4.0 Unported License</a></strong><br><strong>本文链接：</strong><a href="https://coding.emptinessboy.com/2020/04/inteliJ-%E5%AD%A6%E4%B9%A0SwingGui%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/">https://coding.emptinessboy.com/2020/04/inteliJ-%E5%AD%A6%E4%B9%A0SwingGui%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/</a></p></blockquote></div><div id="comment" style="padding:10px" class="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js"></script><script>var GUEST_INFO=["nick","mail","link"],guest_info="nick,mail,link".split(",").filter(function(i){return GUEST_INFO.indexOf(i)>-1}),notify=!1,verify=!0;new Valine({el:".vcomment",notify:notify,verify:verify,appId:"91mhcw0WK44B90nptmxGcJol-gzGzoHsz",appKey:"Boi7za0ClwGyWRCYd8osdf5o",placeholder:"在这里写点什么吧！",pageSize:"10",avatar:"monsterid",lang:"zh-cn",guest_info:guest_info})</script></div><nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col"><a href="/2020/04/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B001%EF%BC%88%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%EF%BC%89/" id="post_nav-newer" class="prev-content"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation"><i class="material-icons">arrow_back</i></button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 新篇</a><div class="section-spacer"></div><a href="/2020/04/Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%EF%BC%88%E8%BD%AC%EF%BC%89/" id="post_nav-older" class="next-content">旧篇 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation"><i class="material-icons">arrow_forward</i></button></a></nav></div></div><div class="sidebar-overlay"></div><aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation"><div id="sidebar-main"><div class="sidebar-header header-cover" style="background-image:url(/img/sidebar_header.jpg)"><div class="top-bar"></div><button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display:initial" data-upgraded=",MaterialButton,MaterialRipple"><i class="material-icons">clear_all</i> <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button><div class="sidebar-image"><img src="/img/fav_300.png" alt="EmptinessBoy's avatar"></div><a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">i@my.huxiaofan.com <b class="caret"></b></a></div><ul class="nav sidebar-nav"><li class="dropdown"><ul id="settings-dropdown" class="dropdown-menu"><li><a href="mailto:i@my.huxiaofan.com" target="_blank" title="Email 我"><i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i> Email 我</a></li></ul></li><li id="sidebar-first-li"><a href="/"><i class="material-icons sidebar-material-icons">home</i> 主页</a></li><li class="divider"></li><li class="dropdown"><a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown"><i class="material-icons sidebar-material-icons">inbox</i> 归档 <b class="caret"></b></a><ul class="dropdown-menu"><li><a class="sidebar_archives-link" href="/archives/2021/05/">五月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/04/">四月 2021<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/11/">十一月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/10/">十月 2020<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/09/">九月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/07/">七月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/06/">六月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/04/">四月 2020<span class="sidebar_archives-count">13</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/03/">三月 2020<span class="sidebar_archives-count">13</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/02/">二月 2020<span class="sidebar_archives-count">4</span></a></li></ul></li><li class="dropdown"><a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown"><i class="material-icons sidebar-material-icons">chrome_reader_mode</i> 分类 <b class="caret"></b></a><ul class="dropdown-menu"><li><a class="sidebar_archives-link" href="/categories/Android/">Android<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/CSS%E5%AD%A6%E4%B9%A0/">CSS学习<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/HTML%E5%AD%A6%E4%B9%A0/">HTML学习<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/Hadoop/">Hadoop<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/JAVAWEB/">JAVAWEB<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/JAVA%E5%AD%A6%E4%B9%A0/">JAVA学习<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/JS%E5%AD%A6%E4%B9%A0/">JS学习<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/Linux/">Linux<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/WEB%E6%A1%86%E6%9E%B6/">WEB框架<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/python%E5%85%A5%E9%97%A8/">python入门<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/">瞎折腾<span class="sidebar_archives-count">4</span></a></li></ul></li><li class="divider"></li><li><a href="https://huxiaofan.com" target="_blank" rel="noopener" title="生活博客"><i class="material-icons sidebar-material-icons">domain</i> 生活博客</a></li><li><a href="https://huxiaofan.com/about" target="_blank" rel="noopener" title="关于我"><i class="material-icons sidebar-material-icons">person</i> 关于我</a></li><li class="divider"></li><li><a href="/archives">文章总数 <span class="sidebar-badge">53</span></a></li></ul></div></aside><div id="back-to-top" class="toTop-wrap"><a href="#top" class="toTop"><i class="material-icons footer_top-i">expand_less</i></a></div><footer class="mdl-mini-footer" id="bottom"><div class="mdl-mini-footer--left-section sns-list"><a href="https://huxiaofan.com/go?url=https://twitter.com/huxiaofanhome/" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter"><span class="visuallyhidden">Twitter</span></button></a><a href="https://huxiaofan.com/go?url=https://www.facebook.com/profile.php?id=100013375578138" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook"><span class="visuallyhidden">Facebook</span></button></a><a href="https://git.huxiaofan.com/emptinessboy" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-github"><span class="visuallyhidden">Github</span></button></a><a href="https://huxiaofan.com/go/?url=aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL2F2NTc2MjgwMDQ=" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili"><span class="visuallyhidden">Bilibili</span></button></a><a href="https://huxiaofan.com/go/?url=https://t.me/emptinessboy" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-telegram"><span class="visuallyhidden">Telegram</span></button></a></div><div id="copyright">Copyright&nbsp;©&nbsp;<span year></span>&nbsp;帆的自留地<br><a href="http://huxiaofan.com" target="_blank" rel="noopener">晓帆</a>&nbsp;/&nbsp;<a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow"> 浙ICP备20004121号</a></div><div class="mdl-mini-footer--right-section"><div><div class="footer-develop-div">Hexo Theme - <span class="footer-develop-a">Material</span></div></div></div></footer><script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==",!0)</script><script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==",!0)</script><script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==",!0)</script><script type="text/ls-javascript" id="NProgress-script">NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#82bcff'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #82bcff, 0 0 15px #82bcff'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#82bcff',
+        'border-left-color': '#82bcff'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);</script><script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==",!0)</script><script type="text/ls-javascript" id="window-load">$(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })</script><script type="text/ls-javascript" id="lazy-load">// Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });</script><script>var copyrightNow=(new Date).getFullYear(),textContent=document.querySelector("span[year]");copyrightSince=2019,copyrightSince===copyrightNow||0===copyrightSince?textContent.textContent=copyrightNow:textContent.textContent=copyrightSince+" - "+copyrightNow,function(){for(var t=document.querySelectorAll('script[type="text/ls-javascript"]'),e=0;e<t.length;++e){var o=t[e];lsloader.runInlineScript(o.id,o.id)}}(),console.log("\n %c 帆's Life | https://huxiaofan.com | Theme Material %c \n","color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;","color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;")</script></main></div></body></html><!-- rebuild by neat -->

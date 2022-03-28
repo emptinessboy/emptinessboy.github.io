@@ -1,0 +1,397 @@
+<!-- build time:Mon Mar 28 2022 11:43:47 GMT+0800 (中国标准时间) --><!DOCTYPE html><html style="display:none" lang="zh"><head><meta charset="utf-8"><script>window.materialVersion="1.5.6",window.oldVersion=["codestartv1","1.3.4","1.4.0","1.4.0b1","1.5.0","1.5.2","1.5.5"]</script><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn1.lncld.net"><link rel="dns-prefetch" href="https://cdn1.lncld.net"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta name="renderer" content="webkit"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><title>Java IO处理（上 | 帆的自留地</title><link rel="icon shortcut" type="image/ico" href="/img/logo-32x32.jpg"><link rel="icon" href="/img/logo-192x192.jpg"><meta name="format-detection" content="telephone=no"><meta name="description" itemprop="description" content="晓帆的学习笔记"><meta name="keywords" content="博客,代码,学习,程序,大学,java"><meta name="theme-color" content="#1e69bf"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]--><script>!function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}},lsloader.removeLS=function(e){try{localStorage.removeItem(e)}catch(t){}},lsloader.setLS=function(e,t){try{localStorage.setItem(e,t)}catch(n){}},lsloader.getLS=function(e){var t="";try{t=localStorage.getItem(e)}catch(n){t=""}return t},versionString="/*"+(window.materialVersion||"unknownVersion")+"*/",lsloader.clean=function(){try{for(var e=[],t=0;t<localStorage.length;t++)e.push(localStorage.key(t));e.forEach(function(e){var t=lsloader.getLS(e);if(window.oldVersion){var n=window.oldVersion.reduce(function(e,n){return e||-1!==t.indexOf("/*"+n+"*/")},!1);n&&lsloader.removeLS(e)}})}catch(n){}},lsloader.clean(),lsloader.load=function(e,t,n,s){"boolean"==typeof n&&(s=n,n=void 0),s=s||!1,n=n||function(){};var a;if(a=this.getLS(e),a&&-1===a.indexOf(versionString))return this.removeLS(e),void this.requestResource(e,t,n,s);if(a){var o=a.split(versionString)[0];if(o!=t)return console.log("reload:"+t),this.removeLS(e),void this.requestResource(e,t,n,s);a=a.split(versionString)[1],s?(this.jsRunSequence.push({name:e,code:a}),this.runjs(t,e,a)):(document.getElementById(e).appendChild(document.createTextNode(a)),n())}else this.requestResource(e,t,n,s)},lsloader.requestResource=function(e,t,n,s){var a=this;s?this.iojs(t,e,function(e,t,n){a.setLS(t,e+versionString+n),a.runjs(e,t,n)}):this.iocss(t,e,function(n){document.getElementById(e).appendChild(document.createTextNode(n)),a.setLS(e,t+versionString+n)},n)},lsloader.iojs=function(e,t,n){var s=this;s.jsRunSequence.push({name:t,code:""});try{var a=new XMLHttpRequest;a.open("get",e,!0),a.onreadystatechange=function(){if(4==a.readyState){if((a.status>=200&&a.status<300||304==a.status)&&""!=a.response)return void n(e,t,a.response);s.jsfallback(e,t)}},a.send(null)}catch(o){s.jsfallback(e,t)}},lsloader.iocss=function(e,t,n,s){var a=this;try{var o=new XMLHttpRequest;o.open("get",e,!0),o.onreadystatechange=function(){if(4==o.readyState){if((o.status>=200&&o.status<300||304==o.status)&&""!=o.response)return n(o.response),void s();a.cssfallback(e,t,s)}},o.send(null)}catch(r){a.cssfallback(e,t,s)}},lsloader.iofonts=function(e,t,n,s){var a=this;try{var o=new XMLHttpRequest;o.open("get",e,!0),o.onreadystatechange=function(){if(4==o.readyState){if((o.status>=200&&o.status<300||304==o.status)&&""!=o.response)return n(o.response),void s();a.cssfallback(e,t,s)}},o.send(null)}catch(r){a.cssfallback(e,t,s)}},lsloader.runjs=function(e,t,n){if(t&&n)for(var s in this.jsRunSequence)this.jsRunSequence[s].name==t&&(this.jsRunSequence[s].code=n);if(this.jsRunSequence[0]&&this.jsRunSequence[0].code&&"failed"!=this.jsRunSequence[0].status){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code)),a.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(a),this.jsRunSequence.shift(),this.jsRunSequence.length>0&&this.runjs()}else if(this.jsRunSequence[0]&&"failed"==this.jsRunSequence[0].status){var o=this,a=document.createElement("script");a.src=this.jsRunSequence[0].path,a.type="text/javascript",this.jsRunSequence[0].status="loading",a.onload=function(){o.jsRunSequence.shift(),o.jsRunSequence.length>0&&o.runjs()},document.body.appendChild(a)}},lsloader.tagLoad=function(e,t){this.jsRunSequence.push({name:t,code:"",path:e,status:"failed"}),this.runjs()},lsloader.jsfallback=function(e,t){if(!this.jsnamemap[t]){this.jsnamemap[t]=t;for(var n in this.jsRunSequence)this.jsRunSequence[n].name==t&&(this.jsRunSequence[n].code="",this.jsRunSequence[n].status="failed",this.jsRunSequence[n].path=e);this.runjs()}},lsloader.cssfallback=function(e,t,n){if(!this.cssnamemap[t]){this.cssnamemap[t]=1;var s=document.createElement("link");s.type="text/css",s.href=e,s.rel="stylesheet",s.onload=s.onerror=n;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(s,a)}},lsloader.runInlineScript=function(e,t){var n=document.getElementById(t).innerText;this.jsRunSequence.push({name:e,code:n}),this.runjs()}}()</script><script>function Queue(){function e(e){this.debug&&console.log("Offered a Queued Function."),"function"==typeof e?this.dataStore.push(e):console.log("You must offer a function.")}function t(){return this.debug&&console.log("Polled a Queued Function."),this.dataStore.shift()}function o(){var e=this.poll();void 0!==e&&(this.debug&&console.log("Run a Queued Function."),e())}function u(){this.debug=!0}this.dataStore=[],this.offer=e,this.poll=t,this.execNext=o,this.debug=!1,this.startDebug=u}var queue=new Queue</script><style id="material_css"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("material_css","/css/material.min.css?lfwTSCk5dU0gSgC//hS81g==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style id="style_css"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("style_css","/css/style.min.css?vOFJu+pZl+0Eeqi7pGRHyw==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style id="prettify_css"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style id="prettify_theme"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("prettify_theme","/css/prettify/atelier-cave-dark.min.css?P8HZcYCbr9fq5dAvzZGnUQ==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style>body,html{font-family:Roboto,"Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;overflow-x:hidden!important}code{font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace}a{color:#0158bc}#scheme-Paradox .hot_tags-count,#scheme-Paradox .sidebar-colored .sidebar-badge,#scheme-Paradox .sidebar-colored .sidebar-header,#scheme-Paradox .sidebar_archives-count,#search-form-label:after,#search-label,.mdl-card__media{background-color:#1e69bf!important}#scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus,#scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover{color:#1e69bf!important}#ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a,#post_entry-right-info,.sidebar-colored .sidebar-nav li:hover>a,.sidebar-colored .sidebar-nav li:hover>a i,.sidebar-colored .sidebar-nav li>a:focus i,.sidebar-colored .sidebar-nav li>a:hover,.sidebar-colored .sidebar-nav li>a:hover i,.sidebar-colored .sidebar-nav>.open>a,.sidebar-colored .sidebar-nav>.open>a:focus,.sidebar-colored .sidebar-nav>.open>a:hover{color:#1e69bf!important}.toTop{background:#6baaf2!important}.material-layout .material-index>.material-nav,.material-layout .material-post>.material-nav,.material-nav a{color:#6baaf2}#scheme-Paradox .MD-burger-layer{background-color:#6baaf2}#scheme-Paradox #post-toc-trigger-btn{color:#6baaf2}.post-toc a:hover{color:#0158bc;text-decoration:underline}</style><style>body{background-image:url(/img/bg.jpg)}</style><style>.fade{transition:all .8s linear;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0);opacity:1}.fade.out{opacity:0}</style><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet"><style id="material_icons"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==",!0)</script><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="帆的自留地"><meta name="msapplication-starturl" content="https://coding.emptinessboy.com/2020/05/Java-IO%E5%A4%84%E7%90%86/"><meta name="msapplication-navbutton-color" content="#1e69bf"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="帆的自留地"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="apple-touch-icon" href="/img/logo-180x180.jpg"><link rel="alternate" type="application/atom+xml" href="feed.xml"><meta property="og:url" content="https://coding.emptinessboy.com/2020/05/Java-IO%E5%A4%84%E7%90%86/"><meta property="og:type" content="blog"><meta property="og:title" content="Java IO处理（上 | 帆的自留地"><meta property="og:image" content="/img/logo-192x192.jpg"><meta property="og:description" content="晓帆的学习笔记"><meta property="og:article:tag" content="java"><meta property="article:published_time" content="Tue May 26 2020 18:09:22 GMT+0800"><meta property="article:modified_time" content="Sun May 23 2021 13:28:44 GMT+0800"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="https://coding.emptinessboy.com/2020/05/Java-IO%E5%A4%84%E7%90%86/index.html"><script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://coding.emptinessboy.com/2020/05/Java-IO%E5%A4%84%E7%90%86/index.html",
+    "headline": "Java IO处理（上",
+    "datePublished": "Tue May 26 2020 18:09:22 GMT+0800",
+    "dateModified": "Sun May 23 2021 13:28:44 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "EmptinessBoy",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/fav_300.png"
+        },
+        "description": "啥都不会，<br>专业制造BUG的<br>学渣一枚<br><br>"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "帆的自留地",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/logo-192x192.jpg"
+        }
+    },
+    "keywords": ",java博客,代码,学习,程序,大学",
+    "description": "晓帆的学习笔记",
+}</script><script>!function(e,t,a,n,c,s,o){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,s=t.createElement(a),o=t.getElementsByTagName(a)[0],s.async=1,s.src=n,o.parentNode.insertBefore(s,o)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-85449259-2","auto"),ga("send","pageview")</script><meta name="generator" content="Hexo 4.2.0"></head><body id="scheme-Paradox" class="lazy"><div class="material-layout mdl-js-layout has-drawer is-upgraded"><main class="material-layout__content" id="main"><div id="top"></div><button class="MD-burger-icon sidebar-toggle"><span id="MD-burger-id" class="MD-burger-layer"></span></button> <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons">format_list_numbered</i></button><ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh;overflow-y:scroll"><ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#两类流（字节-字符）"><span class="post-toc-number">1.</span> <span class="post-toc-text">两类流（字节 &#x2F; 字符）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#字节流"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">字节流</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#InputStream-常用方法"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">InputStream 常用方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#OutputStream-常用方法"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">OutputStream 常用方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#子类继承关系"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">子类继承关系</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#字节流读写文件"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">字节流读写文件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#FilelnputStream"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">FilelnputStream</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#FileOutputStream"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">FileOutputStream</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#DEMO-文件拷贝"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">DEMO 文件拷贝</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#文件拷贝缓冲区效果"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">文件拷贝缓冲区效果</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#字节缓冲流"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">字节缓冲流</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#两者结合"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">两者结合</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#字符流"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">字符流</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#子类继承关系-1"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">子类继承关系</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#字符流操作文件"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">字符流操作文件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#FileReader"><span class="post-toc-number">1.5.1.</span> <span class="post-toc-text">FileReader</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#FileWriter"><span class="post-toc-number">1.5.2.</span> <span class="post-toc-text">FileWriter</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#字符缓冲流"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">字符缓冲流</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#转换流"><span class="post-toc-number">2.</span> <span class="post-toc-text">转换流</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#示意图"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">示意图</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DEMO"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">DEMO</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#File-类"><span class="post-toc-number">3.</span> <span class="post-toc-text">File 类</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常用方法"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">常用方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#DEMO-1"><span class="post-toc-number">3.1.1.</span> <span class="post-toc-text">DEMO</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#遍历目录下的文件"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">遍历目录下的文件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#过滤后缀名"><span class="post-toc-number">3.2.1.</span> <span class="post-toc-text">过滤后缀名</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#遍历目录树（原创代码）"><span class="post-toc-number">3.2.2.</span> <span class="post-toc-text">遍历目录树（原创代码）</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#删除文件及目录"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">删除文件及目录</span></a></li></ol></li></ol></ul><div class="material-post_container"><div class="material-post mdl-grid"><div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col"><div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://media.everdo.cn/tank/pic-bed/2020/06/01/JAVA-IO-HXF.png)"><p class="article-headline-p">Java IO处理（上</p></div><div class="mdl-color-text--grey-700 mdl-card__supporting-text meta"><div id="author-avatar"><img src="/img/fav_300.png" width="44px" height="44px" alt="Author Avatar"></div><div><strong>EmptinessBoy</strong> <span>5月 26, 2020</span></div><div class="section-spacer"></div><button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">devices other</i> <span class="visuallyhidden">devices other</span></button><ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button"><li class="mdl-menu__item">在其它设备中阅读本文章</li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC00lEQVR42u3ay07DQBAEwPz/T8MVCcXpnjXI2i2fImNilw8083h9HXm8sLGxsbGxsbGxsR/JfsXHu996d+bn+d+f25/e8MzY2NjYW7M//Om/vGb2CqLIecOYPTM2Njb2CezkNkmoXJ9pAy//ng9xiI2NjY19eU0eQtcvKC+EsLGxsbHvCrDrllNeSCQFDzY2Njb2elOpZSRRl7y49UYYNjY29t7svBh4zud/nW9jY2NjP5jdHnk7qR3ZzsYSxTNgY2Njb8rOgyEvHu4tdWYjB2xsbGzsHNY2g/Lx7XWwtU+IjY2NvSs7j4c88Gbf0xYw+RooNjY2NnYyRp1FVBt4eZsJGxsb+0x2gmwHsW3UtdFVFCrY2NjYm7Jn8ZCPgdsYy0cL9bAZGxsbe1N20uLJb7BSisyaSsUoGhsbG3trdtReHy1QrjT9V9aJsLGxsU9jv+Ijf0HtC10pZqIYxsbGxj6AnZcTs4jKA7ItiqLCBhsbG3trdnL7dlibNPTbM+3KJjY2NvYJ7DaiVgqJtsW/MorGxsbGPpn9d22m9YHxLDixsbGx92Yn//TnA932ZeUD4/VFTGxsbOwT2G2LP//dfAGoHV3kkYaNjY29Kztv7uQtp2RsnLeT2lF0UYFhY2Njb83OYyMvMPIyIy+EimUjbGxs7CPZeVtnZay7cseiQMLGxsbemt22ctrhbts2agubYYBhY2Njb8dOioo2ltrIyc/UxQw2Njb2YewcPBvQ/l1j620kY2NjY2/Kbo+VVZ6kdLlrtIyNjY19DnsWCe01SWHTNrnqmMTGxsbemj0b3ybIvImfFzbD+2JjY2MfwM6XKVcWKGcR1S4VYWNjY2MXX3fTYk3U4s9bSNjY2NjYy02cvJyYjRPq8QM2Njb2AeyVx03a/fWSzagEqgMMGxsbewt227hJzrQj4eT6lcVQbGxs7F3Z5xzY2NjY2NjY2NjYjzm+AfWZmt0x6s5TAAAAAElFTkSuQmCC"></ul><button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">bookmark</i> <span class="visuallyhidden">bookmark</span></button><ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button"><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/java/" rel="tag">java</a></li></ul><button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">share</i> <span class="visuallyhidden">share</span></button><ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button"><a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Java IO处理（上&url=https://coding.emptinessboy.com/2020/05/Java-IO%E5%A4%84%E7%90%86/index.html&pic=https://coding.emptinessboy.com/img/logo-32x32.jpg&searchPic=false&style=simple" target="_blank"><li class="mdl-menu__item">分享到微博</li></a><a class="post_share-link" href="https://twitter.com/intent/tweet?text=Java IO处理（上&url=https://coding.emptinessboy.com/2020/05/Java-IO%E5%A4%84%E7%90%86/index.html&via=EmptinessBoy" target="_blank"><li class="mdl-menu__item">分享到 Twitter</li></a><a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://coding.emptinessboy.com/2020/05/Java-IO%E5%A4%84%E7%90%86/index.html" target="_blank"><li class="mdl-menu__item">分享到 Facebook</li></a><a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=帆的自留地&title=Java IO处理（上&summary=晓帆的学习笔记&pics=https://coding.emptinessboy.com/img/logo-32x32.jpg&url=https://coding.emptinessboy.com/2020/05/Java-IO%E5%A4%84%E7%90%86/index.html" target="_blank"><li class="mdl-menu__item">分享到 QQ</li></a><a class="post_share-link" href="https://telegram.me/share/url?url=https://coding.emptinessboy.com/2020/05/Java-IO%E5%A4%84%E7%90%86/index.html&text=Java IO处理（上" target="_blank"><li class="mdl-menu__item">分享到 Telegram</li></a></ul></div><div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out"><p>在 Java 中，将通过不同输入输出设备（键盘、内存、显示器、网络等）之间的数据传输抽象表述为“流”，程序允许通过流的方式与输入输出设备进行数据传输。Java 中的“流”都位于 java.io 包中，称为 IO （输入输出）流。</p><p>IO 流有很多种，按照操作数据的不同，可以分为字节流和字符流，按照数据传输方向的不同又可分为输入流和输出流，程序从输入流中读取数据，向输出流中写入数据。</p><h2 id="两类流（字节-字符）"><a href="#两类流（字节-字符）" class="headerlink" title="两类流（字节 / 字符）"></a>两类流（字节 / 字符）</h2><p><strong>JAVA.IO 包定义了两类流：</strong></p><ul><li>字节流 (JDK1.0)：InputStream、OutputStream</li><li>字符流 (JDK1.1)：Reader、Writer</li></ul><p><a href="https://up.media.everdo.cn/image/nnmS" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/05/26/IO-stream.png" alt="IO-stream.png"></a></p><blockquote><p>如果要进行输入，输出操作一般都会按照如下的步骤进行（以文件操作为例）：</p><ol><li>通过 File 类定义一个要操作文件的路径 (不是文件就没有这一步)；</li><li>通过字节流或则字符流的子类对象为父类对象实例化；</li><li>进行数据的读（写入），写（输出）操作；</li><li>数据流属于资源操作，资源操作必须关闭；</li></ol></blockquote><h3 id="字节流"><a href="#字节流" class="headerlink" title="字节流"></a>字节流</h3><p>在计算机中，无论是文本、图片、音频还是视频，所有文件都是以二进制（字节） 形式存在的， IO 流中针对字节的输入输出提供了—系列的流，统称为字节流。字节流是程序中最常用的流，根据数据的传输方向可将其分为 字节输入流 InputStream 和 字节输出流 OutputStream。</p><p>字节输入流 InputStream 和 字节输出流 OutputStream 它们是字节流的顶级父类，所有的字节输入流都继承自 InputStream, 所有的字节输出流都继承自 Output Stream。</p><h4 id="InputStream-常用方法"><a href="#InputStream-常用方法" class="headerlink" title="InputStream 常用方法"></a>InputStream 常用方法</h4><table><thead><tr><th>方法声明</th><th>功能描述</th></tr></thead><tbody><tr><td>int read()</td><td>从输入流读取—个 8 位的字节，把它转换为 0-255 之间的整数，并返回这—整数.</td></tr><tr><td>int read(byte[] b)</td><td>从输入流读取若干字节，把它们保存到参数 b 指定的字节数组中，返回的整数表示读取字节的数目</td></tr><tr><td>int read(byte[] b,int off, int len)</td><td>从输入流读取若干字节，把它们保存到参数 b 指定的字节数组中， off 指定字节数组开始保存数据的起始下标， len 表示读取的字节数目</td></tr><tr><td>void close()</td><td>关闭此输入流并释放与该流关联的所有系统资源</td></tr></tbody></table><p>其中，第 1 个 read() 方法是从输入流中逐个读入字节，而第 2 个和第 3 个 read() 方法则将若干字节以字节数组的形式一次性读入，从而提高读数据的效率。</p><h4 id="OutputStream-常用方法"><a href="#OutputStream-常用方法" class="headerlink" title="OutputStream 常用方法"></a>OutputStream 常用方法</h4><table><thead><tr><th>方法名称</th><th>方法描述</th></tr></thead><tbody><tr><td>void write(int b)</td><td>向输出流写入一个字节</td></tr><tr><td>void write(byte[] b)</td><td>把参数 b 指定的字节数组的所有字节写到输出流</td></tr><tr><td>void write(byte[] b,int off,int len)</td><td>将指定 byte 数组中从偏移量 off 开始的 len 个字节写入输出流</td></tr><tr><td>void flush()</td><td>刷新此输出流并强制写出所有缓冲的输出字节</td></tr><tr><td>void close()</td><td>关闭此输出流并释放与此流相关的所有系统资源</td></tr></tbody></table><p>后两个方法是将若干个字节以字节数组的形式一次性写入，从而提高写数据的效率。 flush() 方法用来将当前输出流缓冲区（通常是字节数组）中的数据强制写入目标设备，此过程称为刷新。close() 方法是用来关闭流并释放与当前 IO 流相关的系统资源。</p><h4 id="子类继承关系"><a href="#子类继承关系" class="headerlink" title="子类继承关系"></a>子类继承关系</h4><p>InputStream 和 OutputStream 这两个类虽然提供了一系列和读写数据有关的方法，但是这两个类是抽象类，不能被实例化。因此，针对不同的功能， lnputStream 和 OutputStream 提供了不同的子类：</p><blockquote><p>lnputStream 和OutputStream 的子类有很多是大致对应的</p></blockquote><p><strong>InputStream：</strong></p><p><a href="https://up.media.everdo.cn/image/n7OQ" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/05/26/inputstream.png" alt="inputstream.png"></a></p><p><strong>OutputStream：</strong></p><p><a href="https://up.media.everdo.cn/image/nR7J" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/05/26/outputstream.png" alt="outputstream.png"></a></p><h3 id="字节流读写文件"><a href="#字节流读写文件" class="headerlink" title="字节流读写文件"></a>字节流读写文件</h3><h4 id="FilelnputStream"><a href="#FilelnputStream" class="headerlink" title="FilelnputStream"></a>FilelnputStream</h4><p>FileInputStream 是 InputStream 的子类，它是操作文件的字节输入流，专门用于读取文件中的数据。由于从文件读取数据是重复的操作，因此需要通过循环语句来实现数据的持续读取。</p><p><strong>DEMO：</strong></p><p>在 src 目录下 创建 test1.txt，并输入内容。</p><p><a href="https://up.media.everdo.cn/image/njqy" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/05/26/test1.txt.png" alt="test1.txt.png"></a></p><pre><code class="java">import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class FileIOStream {
+    public static void main(String[] args) {
+        File file;
+        try {
+            FileInputStream fin = new FileInputStream(&quot;src/test1.txt&quot;);
+            int r = 0;
+            while (r !=-1){
+                r = fin.read();
+                System.out.println(r);
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println(&quot;找不到文件&quot;);
+            e.printStackTrace();
+        } catch (IOException e){
+            System.out.println(&quot;IO错误&quot;);
+            e.printStackTrace();
+        }
+    }
+}</code></pre><p><strong>运行后输出如下：</strong></p><p><a href="https://up.media.everdo.cn/image/noXd" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/05/26/FileIOstream1.png" alt="FileIOstream1.png"></a></p><p>这段代码中 FileInputStream，在 while 循环中，每次从文件 test1.txt 中读取一字节（1B）也就是<strong>8比特</strong>的数据。然后打印出来。</p><p>因为是直接读取的字节，所以 abc 就以 ASCII 码的方式输出了，分别为 97 98 99。其中txt中另起一行的操作，在 Windows 下存为回车符’\r’换行符’\n’，分别输出为 13 和 10。接着 123 输出为 49 50 51。读取完毕后，字节流会返回 -1，这时退出循环。</p><h4 id="FileOutputStream"><a href="#FileOutputStream" class="headerlink" title="FileOutputStream"></a>FileOutputStream</h4><p>FileOutputStream 是 OutputStream 的子类，它是操作文件的字节输出流，专门用于把数据写入文件。</p><p><strong>DEMO：</strong></p><pre><code class="java">import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class FileIOoutStream {
+    public static void main(String[] args) {
+        File file;
+        try {
+            FileOutputStream fout = new FileOutputStream(&quot;src/test2.txt&quot;);
+            String s = &quot;Hi EmptinessBoy!&quot;;
+            try {
+                fout.write(s.getBytes());
+                fout.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println(&quot;文件找不到&quot;);
+            e.printStackTrace();
+        }
+    }
+}</code></pre><p><strong>运行后输出如下：</strong></p><p>src 目录下自动生成了 text2.txt,并成功写入了预设字符串的内容。</p><p><a href="https://up.media.everdo.cn/image/nF4l" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/05/26/test2.txt.png" alt="test2.txt.png"></a></p><h4 id="DEMO-文件拷贝"><a href="#DEMO-文件拷贝" class="headerlink" title="DEMO 文件拷贝"></a>DEMO 文件拷贝</h4><p><strong>代码：</strong></p><pre><code class="java">import java.io.*;
+
+public class FileIOStreamCopyFile {
+    public static void main(String[] args) {
+        try {
+            FileInputStream fin = new FileInputStream(&quot;src/logo.png&quot;);
+            FileOutputStream fout = new FileOutputStream(&quot;src/logo-cpoy.png&quot;);
+            byte[] b = fin.readAllBytes();
+            fout.write(b);
+            fin.close();
+            fout.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            System.out.println(&quot;文件打开异常&quot;);
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println(&quot;IO异常&quot;);
+        }
+    }
+}</code></pre><p>运行后的结果就是把当前 src 下面的 logo.png 拷贝了一份，并命名为 logo-copy.png。经过测试，这个新图片是可以打开的。</p><p><strong>注意：</strong></p><p>Files.readAllBytes(Path) 方法把整个文件读入内存，此方法返回一个字节数组，还可以把结果传递给String的构造器，以便创建字符串输出。</p><blockquote><p>要注意，此方法不适合读取很大的文件，因为可能存在内存空间不足的问题。</p></blockquote><h4 id="文件拷贝缓冲区效果"><a href="#文件拷贝缓冲区效果" class="headerlink" title="文件拷贝缓冲区效果"></a>文件拷贝缓冲区效果</h4><p>因此要拷贝大文件，还是多次分段读入写入比较合适（实现缓冲区效果）：</p><pre><code class="java">import java.io.*;
+
+public class FileIOStreamCopyFile {
+    public static void main(String[] args) {
+        try {
+            FileInputStream fin = new FileInputStream(&quot;src/logo.png&quot;);
+            FileOutputStream fout = new FileOutputStream(&quot;src/logo-cpoy.png&quot;);
+            int len;
+            byte[] buffer = new byte[4096];
+            while ((len = fin.read(buffer)) &gt; 0) {
+                fout.write(buffer, 0, len);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            System.out.println(&quot;文件打开异常&quot;);
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println(&quot;IO异常&quot;);
+        }
+    }
+}</code></pre><p>在拷贝过程中，通过 while 循环将字节逐个进行拷贝。每循环—次，就通过 FileInputStream 的 read() 方法读取小于4096字节的数据，并通过 FileOutputStream 的 write() 方法将该字节写入指定文件，循环往复，直到 len 的值为 -1 表示读取到了文件的末尾，结束循环，完成文件的拷贝。</p><h3 id="字节缓冲流"><a href="#字节缓冲流" class="headerlink" title="字节缓冲流"></a>字节缓冲流</h3><p>在 IO 包中提供两个带缓冲的字节流，分别是 BufferedInputStream 和 BufferedOutputStream,它们的构造方法中分别接收 InputStream 和 OutputStream 类型的参数作为对象，在读写数据时提供缓冲功能。</p><blockquote><p>源设备 – 字节流 – 字节缓冲流 – 应用程序</p></blockquote><p><strong>DEMO：(使用刚才的文件拷贝案例)</strong></p><pre><code class="java">import java.io.*;
+public class BufferIOStreamCopyFile2 {
+    public static void main(String[] args) throws Exception {
+        TimeClock t = new TimeClock();
+        //创建一个带缓冲区的输入流
+        BufferedInputStream bis = new BufferedInputStream(new FileInputStream(&quot;src/logo.png&quot;));
+        //创建一个带缓冲区的输出流
+        BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(&quot;src/logologo.png&quot;));
+        int len;
+        while ((len = bis.read()) != -1) {
+            bos.write(len);
+        }
+        bis.close();
+        bos.close();
+        t.end();
+    }
+}</code></pre><blockquote><p>BufferedInputStream 和 BufferedOutputStream 两个缓冲流对象内部都定义了一个大小为 8192 的字节数组。当调用 read() 或者 write() 方法读写数据时，首先将读写的数据存入定义好的字节数组，然后将字节数组的数据一次性读写到文件中。这种方式与之前的 <code>byte[] b = byte[4096]</code> 这样的字节流的缓冲区类似，都对数据进行了缓冲，从而有效地提高了数据的读写效率。</p></blockquote><p>这里，本质还是一个字节一个字节的把字节读取，然后存到 len 中，然后再把 len 拷贝到 outputstream，和之前不一样的是，这里会在把数据存到 len 的过程中，进行内部的缓存。这时，再一个一个读取 len 的时候，就会比直接从外部磁盘读取要快。这个和之前使用数组实现的缓冲区 byte[] b 实现的不一样。</p><h4 id="两者结合"><a href="#两者结合" class="headerlink" title="两者结合"></a>两者结合</h4><p>当然，手动开辟的缓冲数组可以和 Buffered(In/Out)putSteream 结合在一起使用：</p><pre><code class="java">import java.io.*;
+
+public class BufferIOStreamCopyFile1 {
+    public static void main(String[] args) {
+        try {
+            BufferedInputStream bin = new BufferedInputStream(new FileInputStream(&quot;src/logo.png&quot;));
+            BufferedOutputStream bout =  new BufferedOutputStream(new FileOutputStream(&quot;src/logo-copy-buffered.png&quot;));
+            byte[] buffer = new byte[4096];
+            int len;
+            while ((len = bin.read(buffer))!=-1){
+                bout.write(buffer,0,len);
+            }
+            bin.close();
+            bout.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}</code></pre><h3 id="字符流"><a href="#字符流" class="headerlink" title="字符流"></a>字符流</h3><p>前面已经讲解过 InputStream 类和 OutputStream 类在读写文件时操作的都是字节，如果希望在程序中操作字符，使用字符流会更加方便。</p><p>大体方法和之前字节流类似</p><h4 id="子类继承关系-1"><a href="#子类继承关系-1" class="headerlink" title="子类继承关系"></a>子类继承关系</h4><p>Reader</p><p><a href="https://up.media.everdo.cn/image/n3b0" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/05/27/ReaderClass.png" alt="ReaderClass.png"></a></p><p>Writer</p><p><a href="https://up.media.everdo.cn/image/nA0D" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/05/27/WriterClass.png" alt="WriterClass.png"></a></p><h3 id="字符流操作文件"><a href="#字符流操作文件" class="headerlink" title="字符流操作文件"></a>字符流操作文件</h3><p>之前我们使用字节流操作文件用到的是 FileInputStream 和 FileOutputStream。而要使用字符流，只需要改用 FileReader 和 FileWriter。</p><h4 id="FileReader"><a href="#FileReader" class="headerlink" title="FileReader"></a>FileReader</h4><blockquote><p>使用字符输入流 FileReader, 通过此流可以从关联的文件中读取—个或—组字符。</p></blockquote><p><strong>DEMO：</strong></p><pre><code class="java">import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class FileReaderTest {
+    public static void main(String[] args) {
+        try {
+            FileReader fr = new FileReader(&quot;src/test5.txt&quot;);
+            int c;
+            while((c=fr.read())!=-1){
+                System.out.print((char)c);
+            }
+            fr.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}</code></pre><p><strong>运行后输出如下：</strong></p><p><a href="https://up.media.everdo.cn/image/nDLL" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/05/27/FileReader.png" alt="FileReader.png"></a></p><blockquote><p>注意：字符输入流的 read() 方法返回的是 int 类型的值，如果想获得字符就需要进行强制类型转换。</p></blockquote><h4 id="FileWriter"><a href="#FileWriter" class="headerlink" title="FileWriter"></a>FileWriter</h4><p>要向文件中写入字符就需要使用 File Writer 类，该类是 Writer 的一个子类</p><p><strong>DEMO：</strong></p><pre><code class="java">import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class FileWriterTest {
+    public static void main(String[] args) {
+        File file;
+        try {
+            FileWriter fr = new FileWriter(&quot;src/test6.txt&quot;);
+            String s = &quot;Hi Emptinessboy!\n&quot;;
+            fr.write(s);
+            fr.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}</code></pre><p><strong>运行效果：</strong></p><p><a href="https://up.media.everdo.cn/image/nYFc" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/05/27/FileWriter.png" alt="FileWriter.png"></a></p><p>File Writer 同 FileOutputStream 一样，如果指定的文件不存在， 就会先创建文件，再写入数据，如果文件存在，则会首先清空文件中的内容，再进行写入。如果想在文件末尾追加数据，同样需要调用重载的构造方法，</p><p>修改之前代码的 FileWriter：</p><pre><code class="java">FileWriter fr = new FileWriter(&quot;src/test6.txt&quot;, true) ;</code></pre><p><strong>运行效果：</strong></p><p><a href="https://up.media.everdo.cn/image/nb92" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/05/27/FileWriterAppend.png" alt="FileWriterAppend.png"></a></p><h3 id="字符缓冲流"><a href="#字符缓冲流" class="headerlink" title="字符缓冲流"></a>字符缓冲流</h3><p>字符流同样提供了带缓冲区的包装流，分别是 BufferedReader 和 BufferedWriter 。</p><blockquote><p>需要注意的是，在 BufferedReader 中有一个重要的方法 readline()，该方法用于一次读取—行文本。</p></blockquote><p><strong>DEMO：</strong></p><pre><code class="java">import java.io.*;
+
+public class BufferedRWCpoyFile {
+    public static void main(String[] args) {
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(&quot;src/test7.txt&quot;));
+            BufferedWriter bw = new BufferedWriter(new FileWriter(&quot;src/test8.txt&quot;));
+            String s;
+            while (true){
+                s = br.readLine();
+                if(s==null)
+                    break;
+                bw.write(s);
+                bw.newLine();
+            }
+            bw.close();
+            br.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}</code></pre><p><strong>运行效果：</strong></p><p><a href="https://up.media.everdo.cn/image/ndOZ" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/05/27/BufferedRWCopyFilepng.png" alt="BufferedRWCopyFilepng.png"></a></p><p>上述案例使用了输入输出流缓冲区对象，并通过 while 循环实现了文本文件的拷贝。在拷贝过程中， 每次循环都使用 readline() 方法读取文件的—行，然后通过 write() 方法写入目标文件。其中， readline() 方法会逐个读取字符， 当读到回车符 ‘\r’ 或换行符 ‘\n’ 时会将读到的字符作为一行的内容返回。</p><blockquote><p>需要注意的是，由于字符缓冲流内部使用了缓冲区，在循环中调用 BufferedWriter 的 write() 方法写入字符时， 这些字符首先会被写入缓冲区， 当缓冲区写满时或调用close() 方法时，缓冲区中的字符才会被写入目标文件。</p><p><strong>因此在循环结束时一定要调用close() 方法，否则极有可能会导致部分存在缓冲区中的数据没有被写入目标文件。</strong>i</p></blockquote><h2 id="转换流"><a href="#转换流" class="headerlink" title="转换流"></a>转换流</h2><p>前面提到 IO 流可分为字节流和字符流，有时字节流和字符流之间也需要进行转换。在 JDK 中提供了两个类可以将字节流转换为字符流，它们分别是 InputStreamReader 和<br>OutputStreamWriter。</p><ul><li><p>InputStreamReader 是 Reader 的子类，它可以将一个字节输入流转换成字符输入流，方便直接读取字符。（读取字节流，最终读入字符流）</p></li><li><p>OutputStreamWriter 是 Writer 的子类，它可以将—个字节输出流转换成字符输出流，方便直接写入字符。（输入字符流，最终输出字节流）</p></li></ul><h3 id="示意图"><a href="#示意图" class="headerlink" title="示意图"></a>示意图</h3><p><a href="https://up.media.everdo.cn/image/ni7k" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/05/27/IOStreamReader.png" alt="IOStreamReader.png"></a></p><h3 id="DEMO"><a href="#DEMO" class="headerlink" title="DEMO"></a>DEMO</h3><p>准备 test9.txt ，里面随便写入两行话：</p><p><a href="https://up.media.everdo.cn/image/nrxB" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/05/28/test9.txt.png" alt="test9.txt.png"></a></p><pre><code class="java">import java.io.*;
+
+public class IOStreamRW {
+    public static void main(String[] args) {
+        try {
+            FileInputStream fin = new FileInputStream(&quot;src/test9.txt&quot;);
+            InputStreamReader ir = new InputStreamReader(fin); //转换为字符流
+            BufferedReader br = new BufferedReader(ir); //缓冲
+
+            FileOutputStream fout = new FileOutputStream(&quot;src/test10.txt&quot;); //写入字节流
+            OutputStreamWriter or = new OutputStreamWriter(fout); //转换为字符流
+            BufferedWriter bw = new BufferedWriter(or); //缓冲
+
+            String s;
+            while ((s=br.readLine())!=null){
+                bw.write(s);
+                bw.newLine();
+            }
+            bw.close();
+            br.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+</code></pre><p><strong>运行效果：</strong></p><p><a href="https://up.media.everdo.cn/image/nQXt" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/05/28/test10.txt.png" alt="test10.txt.png"></a></p><blockquote><p>字节流和字符流之间的转换，将字节流转换为字符流，从而实现直接对字符的读写。<strong>需要注意的是，在使用转换流时，只能针对操作文本文件的字节流进行转换</strong>，如果字节流操作的是一张图片，此时转换为字符流就会造成数据丢失。</p></blockquote><h2 id="File-类"><a href="#File-类" class="headerlink" title="File 类"></a>File 类</h2><p>File 类封装了一个路径，并提供了一系列的方法用于操作该路径所指向的文件。</p><h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><p><strong>构造方法：</strong></p><table><thead><tr><th>方法声明</th><th>功能描述r</th></tr></thead><tbody><tr><td>File(String pathname)</td><td>通过指定的一个字符串类型的文件路径来创建一个新的 File 对象</td></tr><tr><td>File(String parent,String child)</td><td>根据指定的—个字符串类型的父路径和—个字符串类型的子路径（包括文件名称）创建—个 File 对象</td></tr><tr><td>File(File parent,String child)</td><td>根据指定的 File 类的父路径和字符串类型的子路径（包括文件名称）创建一个 File 对象</td></tr></tbody></table><p>如果程序只处理—个目录或文件，并且知道该目录或文件的路径，使用第一个构造方法较方便。如果程序处理的是—个公共目录中的若干子目录或文件，那么使用第 2 个或者第 3 个构造方法会更方便。</p><p><strong>使用方法：</strong></p><table><thead><tr><th>方法声明</th><th>功能描述</th></tr></thead><tbody><tr><td>boolean exists()</td><td>判断 File 对象对应的文件或目录是否存在，若存在则返回 ture, 否则返回 false</td></tr><tr><td>boolean delete()</td><td>删除 File 对象对应的文件或目录，若成功删除则返回 true, 否则返回 false</td></tr><tr><td>boolean createNewFile()</td><td>当 File 对象对应的文件不存在时，该方法将新建—个此 File 对象所指定的新文件，若创建成功则返回 true, 否则返回 false</td></tr><tr><td>String getName()</td><td>返回File 对象表示的文件或文件夹的名称</td></tr><tr><td>String getPath()</td><td>返回File 对象对应的路径</td></tr><tr><td>String getAbsolutePath()</td><td>返回FIIe 对象对应的绝对路径（在 UNIX/Linux 等系统上，如果路径是以正斜线／开始的，则这个路径是绝对路径；在 Windows 等系统上，如果路径是从盘符开始的，则这个路径是绝对路径）</td></tr><tr><td>String getParent()</td><td>返回 File 对象对应目录的父目录（即返回的目录不包含最后一级子目录）</td></tr><tr><td>boolean canRead()</td><td>判断 File 对象对应的文件或目录是否可读，若可读则返回 true, 反之返回 false</td></tr><tr><td>boolean canWrite()</td><td>判断 File 对象对应的文件或目录是否可写，若可写则返回 true , 反之返回 false</td></tr><tr><td>boolean is File()</td><td>判断 File 对象对应的是否是文件（不是目录），若是文件则返回 true, 反之返回 false</td></tr><tr><td>boolean isDirectory()</td><td>判断 File 对象对应的是否是目录（不是文件）， 若是目录则返回 true , 反之返回 false</td></tr><tr><td>boolean isAbsolute()</td><td>判断 File 对象对应的文件或目录是否是绝对路径</td></tr><tr><td>long lastModfied()</td><td>返回 1970 年 1 月1 日 0 时 0 分 0 秒到文件最后修改时间的毫秒值</td></tr><tr><td>long length()</td><td>返回文件内容的长度</td></tr><tr><td>String[] List()</td><td>列出指定目录的全部内容，只是列出名称</td></tr><tr><td>File[] listFiles()</td><td>返回一个包含了 File 对象所有子文件和子目录的 File 数组</td></tr></tbody></table><h4 id="DEMO-1"><a href="#DEMO-1" class="headerlink" title="DEMO"></a>DEMO</h4><pre><code class="java">import java.io.File;
+
+public class FileClass {
+    public static void main(String[] args) {
+        File f = new File(&quot;src/test11.txt&quot;);
+        //获取文件名
+        System.out.println(&quot;文件名称：&quot;+f.getName());
+        //获取相对路径
+        System.out.println(&quot;相对路径：&quot;+f.getPath());
+        //获取绝对路径
+        System.out.println(&quot;绝对路径：&quot;+f.getAbsolutePath());
+        //获取父路径
+        System.out.println(&quot;父路径：&quot;+f.getParent());
+        //获取最后修改时间
+        System.out.println(&quot;最后修改时间：&quot;+f.lastModified());
+        //得到文件大小
+        System.out.println(&quot;文件大小为：&quot;+f.length()+&quot;Bytes&quot;);
+        //判断文件是否可读
+        System.out.println(f.canRead()?&quot;可读&quot;:&quot;不可读&quot;);
+        //判断是否可写
+        System.out.println(f.canWrite()?&quot;可写&quot;:&quot;不可写&quot;);
+        //判断是不是文件
+        System.out.println(f.isFile()?&quot;是文件&quot;:&quot;不是文件&quot;);
+        //判断是不是目录
+        System.out.println(f.isDirectory()?&quot;是目录&quot;:&quot;不是目录&quot;);
+        //判断是不是绝对路径
+        System.out.println(f.isAbsolute()?&quot;是绝对路径&quot;:&quot;不是绝对路径&quot;);
+        //是否成功删除文件
+        System.out.println(&quot;删除成功？&quot;+f.delete());
+    }
+}</code></pre><p><strong>运行效果：</strong></p><p>未创建目标文件 test11.txt 时：</p><p><a href="https://up.media.everdo.cn/image/nxHx" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/05/28/FileClass.png" alt="FileClass.png"></a></p><p>已存在目标文件 test11.txt 时：</p><p><a href="https://up.media.everdo.cn/image/nWdI" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/05/28/FileClass1.png" alt="FileClass1.png"></a></p><h3 id="遍历目录下的文件"><a href="#遍历目录下的文件" class="headerlink" title="遍历目录下的文件"></a>遍历目录下的文件</h3><p>File 方法中有—个list() 方法，该方法用于遍历某个指定目录下的所有文件的名称：</p><p><strong>DEMO：</strong></p><pre><code class="java">import java.io.File;
+
+public class ListFile {
+    public static void main(String[] args) {
+        File f = new File(&quot;src/自学IO操作&quot;);
+        String[] file = f.list();
+        int i=0;
+        for(String s:file){
+            if(i%4==0)
+                System.out.println();
+            System.out.print(s+&quot; &quot;);
+            i++;
+        }
+        System.out.println();
+    }
+}</code></pre><p><strong>运行后输出如下：</strong></p><p><a href="https://up.media.everdo.cn/image/n60X" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/05/28/FileList.png" alt="FileList.png"></a></p><p>有时程序只是需要得到指定类型的文件，如获取指定目录下所有的 “java” 文件。针对这种需求，File 类中提供了一个重载的 list(FilenameFilter filter) 方法，该方法接收—个 FilenameFilter 类型的参数。</p><h4 id="过滤后缀名"><a href="#过滤后缀名" class="headerlink" title="过滤后缀名"></a>过滤后缀名</h4><p>FilenameFilter 是一个接口，被称作文件过滤器，当中定义了一个抽象方法 accept(File dir,String name)。在调用 list() 方法时，需要实现文件过滤器 FilenameFilter, 并在 accept() 方法中做出判断，从而获得指定类型的文件。</p><p><strong>DEMO：</strong></p><pre><code class="java">import java.io.File;
+import java.io.FilenameFilter;
+
+public class ListFileFilter {
+    public static void main(String[] args) {
+        File f = new File(&quot;src&quot;);
+        FileFilter ff = new FileFilter();
+        if(f.exists()){
+            String[] s = f.list(ff);  //传入接口
+            int i=0;
+            for(String temp:s){
+                if(i%4==0)
+                    System.out.println();
+                System.out.print(temp+&quot; &quot;);
+                i++;
+            }
+            System.out.println();
+        }
+    }
+}
+
+class FileFilter implements FilenameFilter{ //实现接口方法
+    @Override
+    public boolean accept(File dir, String name) {
+        if(dir.exists()&amp;&amp;name.endsWith(&quot;.png&quot;))
+            return true;  //png结尾的返回true
+        return false;
+    }
+}</code></pre><p><a href="https://up.media.everdo.cn/image/nN8i" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/05/28/FileFilter.png" alt="FileFilter.png"></a></p><p>在接口 FilenameFilter 的 accept() 方法中， 对当前正在遍历的 dir 对象进行了判断，只有当 dir 对象代表文件，并且扩展名为 “.png” 时，才返回 true。在调用 File 对象的 list() 方法时， 将 filter 过滤器对象传入，就得到了包含所有 “.png” 文件名字的字符串数组</p><h4 id="遍历目录树（原创代码）"><a href="#遍历目录树（原创代码）" class="headerlink" title="遍历目录树（原创代码）"></a>遍历目录树（原创代码）</h4><p>在—个目录下，除了文件，还有子目录，如果想得到所有子目录下的 File 类型对象，list() 方法显然不能满足要求，这时需要使用 File 类提供的另一个方法 listFiles()</p><pre><code class="java">import java.io.File;
+
+public class ListFilesTest {
+    public static void main(String[] args) {
+        File f = new File(&quot;src&quot;);
+        ListFileTree tree = new ListFileTree();
+        tree.listTree(f);
+    }
+}</code></pre><p><strong>实现的类代码：</strong></p><pre><code class="java">//自个写了给列出文件树类
+class ListFileTree{
+    int i=0;
+    void listTree(File f){
+        File[] fl = f.listFiles();
+        for(File temp:fl){  //遍历文件序列
+            for(int j=0;j&lt;i;j++)
+                System.out.print(&quot;\t&quot;);  //打印缩进空格
+            if(temp.isDirectory()){
+                System.out.println(&quot;&gt;&gt; &quot;+temp.getName()); //是文件夹的话，就加两个箭头区分
+                i++;  //统计文件夹层级
+                listTree(temp); //递归列出子目录
+            }
+            else
+                System.out.println(temp.getName());
+        }
+        i=0;  //一个父文件夹列完后，将层级清零
+    }
+}</code></pre><p><strong>运行效果：</strong></p><p><a href="https://up.media.everdo.cn/image/nm34" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/05/28/ListFileTree.png" alt="ListFileTree.png"></a></p><p><strong>资源管理器的文件结构：</strong></p><p><a href="https://up.media.everdo.cn/image/n99M" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/05/28/ListFileTree1.png" alt="ListFileTree1.png"></a></p><p>可以看到，打印出来的树和系统资源管理器显示的完全一致！</p><h3 id="删除文件及目录"><a href="#删除文件及目录" class="headerlink" title="删除文件及目录"></a>删除文件及目录</h3><p>可以使用 File 类的 delete() 方法删除文件。</p><p>(基本的删除用法)[#DEMO-1]，会返回一个 boolean 值来反馈是否成功删除文件。但是对于文件夹（目录），无法使用简单的 delete 来一次性删除，必须一个个将文件夹内文件删除后，才能删除文件夹。</p><p><strong>DEMO：</strong></p><pre><code class="java">import java.io.File;
+
+public class DeleteFolder {
+    public static void main(String[] args) {
+        File f = new File(&quot;src/rubbish&quot;);
+        System.out.println(deleteDir(f));;
+    }
+
+    //递归删除函数
+    static boolean deleteDir(File f){
+        if(f.exists()){
+            File[] fl =f.listFiles();
+            for(File temp:fl){
+                if(temp.isDirectory())
+                    deleteDir(temp);
+                else
+                    temp.delete();
+            }
+            return f.delete();
+        }
+        else
+            return false;
+    }
+}</code></pre><p><strong>运行前目录：</strong></p><p><a href="https://up.media.everdo.cn/image/nEUY" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/05/28/rubbishFile.png" alt="rubbishFile.png"></a></p><p><strong>运行后效果：</strong></p><p><a href="https://up.media.everdo.cn/image/nf7a" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/05/28/deleteRubbishFile.png" alt="deleteRubbishFile.png"></a></p><p>可以看到文件被删除，并且返回了 true。</p><img src="https://media.everdo.cn/tank/pic-bed/2021/04/09/4.png" alt="尾图4" style="zoom:33%"><blockquote style="margin:2em 0 0;padding:.5em 1em;border-left:3px solid #ebc43b;background-color:#191919;list-style:none"><p><strong>This blog is under a <a href="/creativecommons.html" target="_blank">CC BY-NC-ND 4.0 Unported License</a></strong><br><strong>本文链接：</strong><a href="https://coding.emptinessboy.com/2020/05/Java-IO%E5%A4%84%E7%90%86/">https://coding.emptinessboy.com/2020/05/Java-IO%E5%A4%84%E7%90%86/</a></p></blockquote></div><div id="comment" style="padding:10px" class="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js"></script><script>var GUEST_INFO=["nick","mail","link"],guest_info="nick,mail,link".split(",").filter(function(i){return GUEST_INFO.indexOf(i)>-1}),notify=!1,verify=!0;new Valine({el:".vcomment",notify:notify,verify:verify,appId:"91mhcw0WK44B90nptmxGcJol-gzGzoHsz",appKey:"Boi7za0ClwGyWRCYd8osdf5o",placeholder:"在这里写点什么吧！",pageSize:"10",avatar:"monsterid",lang:"zh-cn",guest_info:guest_info})</script></div><nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col"><a href="/2020/06/Java-IO%E5%92%8C%E7%BD%91%E7%BB%9C%EF%BC%88%E4%B8%8B/" id="post_nav-newer" class="prev-content"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation"><i class="material-icons">arrow_back</i></button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 新篇</a><div class="section-spacer"></div><a href="/2020/05/Java-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%AD%A6%E4%B9%A0/" id="post_nav-older" class="next-content">旧篇 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation"><i class="material-icons">arrow_forward</i></button></a></nav></div></div><div class="sidebar-overlay"></div><aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation"><div id="sidebar-main"><div class="sidebar-header header-cover" style="background-image:url(/img/sidebar_header.jpg)"><div class="top-bar"></div><button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display:initial" data-upgraded=",MaterialButton,MaterialRipple"><i class="material-icons">clear_all</i> <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button><div class="sidebar-image"><img src="/img/fav_300.png" alt="EmptinessBoy's avatar"></div><a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">i@my.huxiaofan.com <b class="caret"></b></a></div><ul class="nav sidebar-nav"><li class="dropdown"><ul id="settings-dropdown" class="dropdown-menu"><li><a href="mailto:i@my.huxiaofan.com" target="_blank" title="Email 我"><i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i> Email 我</a></li></ul></li><li id="sidebar-first-li"><a href="/"><i class="material-icons sidebar-material-icons">home</i> 主页</a></li><li class="divider"></li><li class="dropdown"><a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown"><i class="material-icons sidebar-material-icons">inbox</i> 归档 <b class="caret"></b></a><ul class="dropdown-menu"><li><a class="sidebar_archives-link" href="/archives/2021/05/">五月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/04/">四月 2021<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/11/">十一月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/10/">十月 2020<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/09/">九月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/07/">七月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/06/">六月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/04/">四月 2020<span class="sidebar_archives-count">13</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/03/">三月 2020<span class="sidebar_archives-count">13</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/02/">二月 2020<span class="sidebar_archives-count">4</span></a></li></ul></li><li class="dropdown"><a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown"><i class="material-icons sidebar-material-icons">chrome_reader_mode</i> 分类 <b class="caret"></b></a><ul class="dropdown-menu"><li><a class="sidebar_archives-link" href="/categories/Android/">Android<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/CSS%E5%AD%A6%E4%B9%A0/">CSS学习<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/HTML%E5%AD%A6%E4%B9%A0/">HTML学习<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/Hadoop/">Hadoop<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/JAVAWEB/">JAVAWEB<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/JAVA%E5%AD%A6%E4%B9%A0/">JAVA学习<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/JS%E5%AD%A6%E4%B9%A0/">JS学习<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/Linux/">Linux<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/WEB%E6%A1%86%E6%9E%B6/">WEB框架<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/python%E5%85%A5%E9%97%A8/">python入门<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/">瞎折腾<span class="sidebar_archives-count">4</span></a></li></ul></li><li class="divider"></li><li><a href="https://huxiaofan.com" target="_blank" rel="noopener" title="生活博客"><i class="material-icons sidebar-material-icons">domain</i> 生活博客</a></li><li><a href="https://huxiaofan.com/about" target="_blank" rel="noopener" title="关于我"><i class="material-icons sidebar-material-icons">person</i> 关于我</a></li><li class="divider"></li><li><a href="/archives">文章总数 <span class="sidebar-badge">53</span></a></li></ul></div></aside><div id="back-to-top" class="toTop-wrap"><a href="#top" class="toTop"><i class="material-icons footer_top-i">expand_less</i></a></div><footer class="mdl-mini-footer" id="bottom"><div class="mdl-mini-footer--left-section sns-list"><a href="https://huxiaofan.com/go?url=https://twitter.com/huxiaofanhome/" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter"><span class="visuallyhidden">Twitter</span></button></a><a href="https://huxiaofan.com/go?url=https://www.facebook.com/profile.php?id=100013375578138" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook"><span class="visuallyhidden">Facebook</span></button></a><a href="https://git.huxiaofan.com/emptinessboy" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-github"><span class="visuallyhidden">Github</span></button></a><a href="https://huxiaofan.com/go/?url=aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL2F2NTc2MjgwMDQ=" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili"><span class="visuallyhidden">Bilibili</span></button></a><a href="https://huxiaofan.com/go/?url=https://t.me/emptinessboy" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-telegram"><span class="visuallyhidden">Telegram</span></button></a></div><div id="copyright">Copyright&nbsp;©&nbsp;<span year></span>&nbsp;帆的自留地<br><a href="http://huxiaofan.com" target="_blank" rel="noopener">晓帆</a>&nbsp;/&nbsp;<a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow"> 浙ICP备20004121号</a></div><div class="mdl-mini-footer--right-section"><div><div class="footer-develop-div">Hexo Theme - <span class="footer-develop-a">Material</span></div></div></div></footer><script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==",!0)</script><script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==",!0)</script><script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==",!0)</script><script type="text/ls-javascript" id="NProgress-script">NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#82bcff'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #82bcff, 0 0 15px #82bcff'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#82bcff',
+        'border-left-color': '#82bcff'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);</script><script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==",!0)</script><script type="text/ls-javascript" id="window-load">$(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })</script><script type="text/ls-javascript" id="lazy-load">// Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });</script><script>var copyrightNow=(new Date).getFullYear(),textContent=document.querySelector("span[year]");copyrightSince=2019,copyrightSince===copyrightNow||0===copyrightSince?textContent.textContent=copyrightNow:textContent.textContent=copyrightSince+" - "+copyrightNow,function(){for(var t=document.querySelectorAll('script[type="text/ls-javascript"]'),e=0;e<t.length;++e){var o=t[e];lsloader.runInlineScript(o.id,o.id)}}(),console.log("\n %c 帆's Life | https://huxiaofan.com | Theme Material %c \n","color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;","color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;")</script></main></div></body></html><!-- rebuild by neat -->

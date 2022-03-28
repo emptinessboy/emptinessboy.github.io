@@ -1,0 +1,337 @@
+<!-- build time:Mon Mar 28 2022 11:43:47 GMT+0800 (中国标准时间) --><!DOCTYPE html><html style="display:none" lang="zh"><head><meta charset="utf-8"><script>window.materialVersion="1.5.6",window.oldVersion=["codestartv1","1.3.4","1.4.0","1.4.0b1","1.5.0","1.5.2","1.5.5"]</script><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn1.lncld.net"><link rel="dns-prefetch" href="https://cdn1.lncld.net"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta name="renderer" content="webkit"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><title>Android 开发UI和布局（下） | 帆的自留地</title><link rel="icon shortcut" type="image/ico" href="/img/logo-32x32.jpg"><link rel="icon" href="/img/logo-192x192.jpg"><meta name="format-detection" content="telephone=no"><meta name="description" itemprop="description" content="Constraint Layout 布局Google I/O 2016 上发布了 Constraint Layout，Constraint 就是约束的意思。约束帮助保持控件对齐. 你可以使用锚点(约束手柄)来确定各控件之间的对齐规则。创建手工约束有一个像磁铁一样的小图标，打开和关闭用于切换自动/手动创建约束。"><meta name="keywords" content="博客,代码,学习,程序,大学,安卓学习"><meta name="theme-color" content="#1e69bf"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]--><script>!function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}},lsloader.removeLS=function(e){try{localStorage.removeItem(e)}catch(t){}},lsloader.setLS=function(e,t){try{localStorage.setItem(e,t)}catch(n){}},lsloader.getLS=function(e){var t="";try{t=localStorage.getItem(e)}catch(n){t=""}return t},versionString="/*"+(window.materialVersion||"unknownVersion")+"*/",lsloader.clean=function(){try{for(var e=[],t=0;t<localStorage.length;t++)e.push(localStorage.key(t));e.forEach(function(e){var t=lsloader.getLS(e);if(window.oldVersion){var n=window.oldVersion.reduce(function(e,n){return e||-1!==t.indexOf("/*"+n+"*/")},!1);n&&lsloader.removeLS(e)}})}catch(n){}},lsloader.clean(),lsloader.load=function(e,t,n,s){"boolean"==typeof n&&(s=n,n=void 0),s=s||!1,n=n||function(){};var a;if(a=this.getLS(e),a&&-1===a.indexOf(versionString))return this.removeLS(e),void this.requestResource(e,t,n,s);if(a){var o=a.split(versionString)[0];if(o!=t)return console.log("reload:"+t),this.removeLS(e),void this.requestResource(e,t,n,s);a=a.split(versionString)[1],s?(this.jsRunSequence.push({name:e,code:a}),this.runjs(t,e,a)):(document.getElementById(e).appendChild(document.createTextNode(a)),n())}else this.requestResource(e,t,n,s)},lsloader.requestResource=function(e,t,n,s){var a=this;s?this.iojs(t,e,function(e,t,n){a.setLS(t,e+versionString+n),a.runjs(e,t,n)}):this.iocss(t,e,function(n){document.getElementById(e).appendChild(document.createTextNode(n)),a.setLS(e,t+versionString+n)},n)},lsloader.iojs=function(e,t,n){var s=this;s.jsRunSequence.push({name:t,code:""});try{var a=new XMLHttpRequest;a.open("get",e,!0),a.onreadystatechange=function(){if(4==a.readyState){if((a.status>=200&&a.status<300||304==a.status)&&""!=a.response)return void n(e,t,a.response);s.jsfallback(e,t)}},a.send(null)}catch(o){s.jsfallback(e,t)}},lsloader.iocss=function(e,t,n,s){var a=this;try{var o=new XMLHttpRequest;o.open("get",e,!0),o.onreadystatechange=function(){if(4==o.readyState){if((o.status>=200&&o.status<300||304==o.status)&&""!=o.response)return n(o.response),void s();a.cssfallback(e,t,s)}},o.send(null)}catch(r){a.cssfallback(e,t,s)}},lsloader.iofonts=function(e,t,n,s){var a=this;try{var o=new XMLHttpRequest;o.open("get",e,!0),o.onreadystatechange=function(){if(4==o.readyState){if((o.status>=200&&o.status<300||304==o.status)&&""!=o.response)return n(o.response),void s();a.cssfallback(e,t,s)}},o.send(null)}catch(r){a.cssfallback(e,t,s)}},lsloader.runjs=function(e,t,n){if(t&&n)for(var s in this.jsRunSequence)this.jsRunSequence[s].name==t&&(this.jsRunSequence[s].code=n);if(this.jsRunSequence[0]&&this.jsRunSequence[0].code&&"failed"!=this.jsRunSequence[0].status){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code)),a.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(a),this.jsRunSequence.shift(),this.jsRunSequence.length>0&&this.runjs()}else if(this.jsRunSequence[0]&&"failed"==this.jsRunSequence[0].status){var o=this,a=document.createElement("script");a.src=this.jsRunSequence[0].path,a.type="text/javascript",this.jsRunSequence[0].status="loading",a.onload=function(){o.jsRunSequence.shift(),o.jsRunSequence.length>0&&o.runjs()},document.body.appendChild(a)}},lsloader.tagLoad=function(e,t){this.jsRunSequence.push({name:t,code:"",path:e,status:"failed"}),this.runjs()},lsloader.jsfallback=function(e,t){if(!this.jsnamemap[t]){this.jsnamemap[t]=t;for(var n in this.jsRunSequence)this.jsRunSequence[n].name==t&&(this.jsRunSequence[n].code="",this.jsRunSequence[n].status="failed",this.jsRunSequence[n].path=e);this.runjs()}},lsloader.cssfallback=function(e,t,n){if(!this.cssnamemap[t]){this.cssnamemap[t]=1;var s=document.createElement("link");s.type="text/css",s.href=e,s.rel="stylesheet",s.onload=s.onerror=n;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(s,a)}},lsloader.runInlineScript=function(e,t){var n=document.getElementById(t).innerText;this.jsRunSequence.push({name:e,code:n}),this.runjs()}}()</script><script>function Queue(){function e(e){this.debug&&console.log("Offered a Queued Function."),"function"==typeof e?this.dataStore.push(e):console.log("You must offer a function.")}function t(){return this.debug&&console.log("Polled a Queued Function."),this.dataStore.shift()}function o(){var e=this.poll();void 0!==e&&(this.debug&&console.log("Run a Queued Function."),e())}function u(){this.debug=!0}this.dataStore=[],this.offer=e,this.poll=t,this.execNext=o,this.debug=!1,this.startDebug=u}var queue=new Queue</script><style id="material_css"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("material_css","/css/material.min.css?lfwTSCk5dU0gSgC//hS81g==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style id="style_css"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("style_css","/css/style.min.css?vOFJu+pZl+0Eeqi7pGRHyw==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style id="prettify_css"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style id="prettify_theme"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("prettify_theme","/css/prettify/atelier-cave-dark.min.css?P8HZcYCbr9fq5dAvzZGnUQ==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style>body,html{font-family:Roboto,"Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;overflow-x:hidden!important}code{font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace}a{color:#0158bc}#scheme-Paradox .hot_tags-count,#scheme-Paradox .sidebar-colored .sidebar-badge,#scheme-Paradox .sidebar-colored .sidebar-header,#scheme-Paradox .sidebar_archives-count,#search-form-label:after,#search-label,.mdl-card__media{background-color:#1e69bf!important}#scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus,#scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover{color:#1e69bf!important}#ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a,#post_entry-right-info,.sidebar-colored .sidebar-nav li:hover>a,.sidebar-colored .sidebar-nav li:hover>a i,.sidebar-colored .sidebar-nav li>a:focus i,.sidebar-colored .sidebar-nav li>a:hover,.sidebar-colored .sidebar-nav li>a:hover i,.sidebar-colored .sidebar-nav>.open>a,.sidebar-colored .sidebar-nav>.open>a:focus,.sidebar-colored .sidebar-nav>.open>a:hover{color:#1e69bf!important}.toTop{background:#6baaf2!important}.material-layout .material-index>.material-nav,.material-layout .material-post>.material-nav,.material-nav a{color:#6baaf2}#scheme-Paradox .MD-burger-layer{background-color:#6baaf2}#scheme-Paradox #post-toc-trigger-btn{color:#6baaf2}.post-toc a:hover{color:#0158bc;text-decoration:underline}</style><style>body{background-image:url(/img/bg.jpg)}</style><style>.fade{transition:all .8s linear;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0);opacity:1}.fade.out{opacity:0}</style><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet"><style id="material_icons"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==",!0)</script><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="帆的自留地"><meta name="msapplication-starturl" content="https://coding.emptinessboy.com/2020/04/Android-%E5%BC%80%E5%8F%91UI%E5%92%8C%E5%B8%83%E5%B1%80%EF%BC%88%E4%B8%8B%EF%BC%89/"><meta name="msapplication-navbutton-color" content="#1e69bf"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="帆的自留地"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="apple-touch-icon" href="/img/logo-180x180.jpg"><link rel="alternate" type="application/atom+xml" href="feed.xml"><meta property="og:url" content="https://coding.emptinessboy.com/2020/04/Android-%E5%BC%80%E5%8F%91UI%E5%92%8C%E5%B8%83%E5%B1%80%EF%BC%88%E4%B8%8B%EF%BC%89/"><meta property="og:type" content="blog"><meta property="og:title" content="Android 开发UI和布局（下） | 帆的自留地"><meta property="og:image" content="/img/logo-192x192.jpg"><meta property="og:description" content="Constraint Layout 布局Google I/O 2016 上发布了 Constraint Layout，Constraint 就是约束的意思。约束帮助保持控件对齐. 你可以使用锚点(约束手柄)来确定各控件之间的对齐规则。创建手工约束有一个像磁铁一样的小图标，打开和关闭用于切换自动/手动创建约束。"><meta property="og:article:tag" content="安卓学习"><meta property="article:published_time" content="Sun Apr 05 2020 02:51:58 GMT+0800"><meta property="article:modified_time" content="Sun May 23 2021 13:35:31 GMT+0800"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="https://coding.emptinessboy.com/2020/04/Android-%E5%BC%80%E5%8F%91UI%E5%92%8C%E5%B8%83%E5%B1%80%EF%BC%88%E4%B8%8B%EF%BC%89/index.html"><script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://coding.emptinessboy.com/2020/04/Android-%E5%BC%80%E5%8F%91UI%E5%92%8C%E5%B8%83%E5%B1%80%EF%BC%88%E4%B8%8B%EF%BC%89/index.html",
+    "headline": "Android 开发UI和布局（下）",
+    "datePublished": "Sun Apr 05 2020 02:51:58 GMT+0800",
+    "dateModified": "Sun May 23 2021 13:35:31 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "EmptinessBoy",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/fav_300.png"
+        },
+        "description": "啥都不会，<br>专业制造BUG的<br>学渣一枚<br><br>"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "帆的自留地",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/logo-192x192.jpg"
+        }
+    },
+    "keywords": ",安卓学习博客,代码,学习,程序,大学",
+    "description": "Constraint Layout 布局Google I/O 2016 上发布了 Constraint Layout，Constraint 就是约束的意思。约束帮助保持控件对齐. 你可以使用锚点(约束手柄)来确定各控件之间的对齐规则。创建手工约束有一个像磁铁一样的小图标，打开和关闭用于切换自动/手动创建约束。",
+}</script><script>!function(e,t,a,n,c,s,o){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,s=t.createElement(a),o=t.getElementsByTagName(a)[0],s.async=1,s.src=n,o.parentNode.insertBefore(s,o)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-85449259-2","auto"),ga("send","pageview")</script><meta name="generator" content="Hexo 4.2.0"></head><body id="scheme-Paradox" class="lazy"><div class="material-layout mdl-js-layout has-drawer is-upgraded"><main class="material-layout__content" id="main"><div id="top"></div><button class="MD-burger-icon sidebar-toggle"><span id="MD-burger-id" class="MD-burger-layer"></span></button> <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons">format_list_numbered</i></button><ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh;overflow-y:scroll"><ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Constraint-Layout-布局"><span class="post-toc-number">1.</span> <span class="post-toc-text">Constraint Layout 布局</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建手工约束"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">创建手工约束</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#创建"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">创建</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#调整元素尺寸"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">调整元素尺寸</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#定位布局"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">定位布局</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#基线约束"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">基线约束</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Inspector-工具"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Inspector 工具</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Margins："><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">Margins：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#相对约束定位控件："><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">相对约束定位控件：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#控件内部尺寸"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">*控件内部尺寸: *</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#擅用辅助线"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">擅用辅助线</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#DEMO"><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text">DEMO</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#顶部透明状态栏"><span class="post-toc-number">1.2.5.1.</span> <span class="post-toc-text">顶部透明状态栏</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#自定义的按钮"><span class="post-toc-number">1.2.5.2.</span> <span class="post-toc-text">自定义的按钮</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#按钮触摸反馈动画"><span class="post-toc-number">1.2.5.3.</span> <span class="post-toc-text">按钮触摸反馈动画</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#字间距"><span class="post-toc-number">1.2.5.4.</span> <span class="post-toc-text">字间距</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Popup-Window-控件"><span class="post-toc-number">2.</span> <span class="post-toc-text">Popup Window 控件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#定义弹出的布局"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">定义弹出的布局</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#LayoutInflater-作用及使用"><span class="post-toc-number">2.1.1.</span> <span class="post-toc-text">LayoutInflater 作用及使用</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#设置允许触摸"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">设置允许触摸</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#设置弹出位置"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">设置弹出位置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#添加动画（参考网络）"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">添加动画（参考网络）</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#AlertDialog-控件"><span class="post-toc-number">3.</span> <span class="post-toc-text">AlertDialog 控件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#AlertDialog-窗体的常用方法"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">AlertDialog 窗体的常用方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#AlertDialog-Builder-构造器的常用方法"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">AlertDialog.Builder 构造器的常用方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DEMO-1"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">DEMO</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#自定义对话框-CustomDialog"><span class="post-toc-number">4.</span> <span class="post-toc-text">自定义对话框 CustomDialog</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常用方法"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">常用方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#添加布局设计"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">添加布局设计</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#新增自定义类"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">新增自定义类</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#生成方法"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">生成方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#禁用EditText（DEMO）"><span class="post-toc-number">4.4.1.</span> <span class="post-toc-text">禁用EditText（DEMO）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#回调参数（DEMO）"><span class="post-toc-number">4.4.2.</span> <span class="post-toc-text">回调参数（DEMO）</span></a></li></ol></li></ol></li></ol></ul><div class="material-post_container"><div class="material-post mdl-grid"><div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col"><div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://media.everdo.cn/tank/pic-bed/2020/04/04/android.png)"><p class="article-headline-p">Android 开发UI和布局（下）</p></div><div class="mdl-color-text--grey-700 mdl-card__supporting-text meta"><div id="author-avatar"><img src="/img/fav_300.png" width="44px" height="44px" alt="Author Avatar"></div><div><strong>EmptinessBoy</strong> <span>4月 05, 2020</span></div><div class="section-spacer"></div><button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">devices other</i> <span class="visuallyhidden">devices other</span></button><ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button"><li class="mdl-menu__item">在其它设备中阅读本文章</li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAAE+CAAAAAAxUyPsAAAEwklEQVR42u3aUXLbOBAEUN//0skBksjd05Tj7D5+qSQaIh5cpUEPPn64husDAT58+PC58OHDh8+FD98/wvcRX78Z6JdPf33djvCne5L3829c5o4PHz58+PDtfJ/8VP8BaHnohbiY6st72rnjw4cPHz58z/IlX/P6EZP7k8dNyG6FTruQ+PDhw4cP33fgezYsyFHy7X0EgQ8fPnz48H17vjwCyCOGG8ptw48PHz58+PB9H74isI7feR2j543wfVFbXHz48OHDh+99fG3p8F96/aXn+/Dhw4cP3/+er71uQfktpr9Nrz3EVgvgw4cPHz58A1+7bW7jg6cKiH1hoqIkWRh8+PDhw4fvUb586BtNHuW3f5uz3sbBhw8fPnz4nuJ7qhRYWtR7oz1/hulTfPjw4cOHb+B7TdZCv74/IcubBO0IT92PDx8+fPjwLXz5tPNYPxmhjebz8iXa9pdBCT58+PDhw/cUX1tkLKVDuwC3LX1blNRhBz58+PDhwzfzLQF9G/Qvzezb+HnYEY2GDx8+fPjwDXz7Fr2NCdqt/i1uyIODB04Z4MOHDx8+fOUJq1tJ0UbhS3t+uWc56HZMXPDhw4cPH76XhcutpLhNaRknD/T3Zy7qPnz48OHDhy/mawPx/XHbYH1vGOTlS9Skx4cPHz58+Aa+fMPcNrBvZVD+vTf024EAfPjw4cOH7x18eamx/9Xr1++LMNq2AT58+PDhw/cs37FVfIrU2xDh421XW9zgw4cPHz58X8O3lCBJCN6WR8t3LcuGDx8+fPjwPcu3HCNr4/5ni5slvj8eWcOHDx8+fPjezJdss9u2d7sYbXx/Gyf6B8KHDx8+fPgGvmToW/GRjPaOhndb4uTBPT58+PDhw7fz3cL65YjbU9FAHtbvR+7w4cOHDx++p/iK9vDp0xwi3+S3xVNSlBR34sOHDx8+fDPf/lht9JAHBG0j/0vb5Pjw4cOHD9+jJ6yWwD1vtLcLk2/y85Z8vtj48OHDhw/fwtf+/OfN8na7vsfxe0EWPQM+fPjw4cM38CUlyG2SbRv+NnLbEmjniA8fPnz48D3Ld9vAPxW4L5v5+mBZWcrgw4cPHz587+DLJ9AG4vuBtqVwacc5HlDDhw8fPnz4Br6EI2d6apxlkZJAoW3n48OHDx8+fE/xvSMOaJsBe6vg1jLHhw8fPnz4/hbfLUxftu5PfZo/f7Kcx8QFHz58+PDhm9vkSeu6bULfmui3QKGd1yfv48OHDx8+fANfXojkk89Lolujuo0G2pj+WPfhw4cPHz58Q2TQlhftNj7n+DFctyLmkyIJHz58+PDhG/j2A163+Ds/cJZ8b16a3C58+PDhw4fvKb69FFi23/n7eQF0axgUs8CHDx8+fPgGvtuP91JwJE3ufDO/L0m7VPjw4cOHD9/Ot4TmSxz/1FSTKKHlLgoXfPjw4cOH78S3RAC3B13a6seyI4488OHDhw8fvu/Dtxxiu5URSaS+tO2ThcGHDx8+fPj+Ll/eLE9KhLyAyN9vmwdRwYQPHz58+PA9xPfYT/sc2SfTThoG7XNG7+DDhw8fPnwzXx6a58XBEovnf9WWTXnDAB8+fPjw4XsHn6susBDgw4cPnwsfPnz4XPjwfd/rJzzqP9WdlWnnAAAAAElFTkSuQmCC"></ul><button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">bookmark</i> <span class="visuallyhidden">bookmark</span></button><ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button"><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/%E5%AE%89%E5%8D%93%E5%AD%A6%E4%B9%A0/" rel="tag">安卓学习</a></li></ul><button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">share</i> <span class="visuallyhidden">share</span></button><ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button"><a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Android 开发UI和布局（下）&url=https://coding.emptinessboy.com/2020/04/Android-%E5%BC%80%E5%8F%91UI%E5%92%8C%E5%B8%83%E5%B1%80%EF%BC%88%E4%B8%8B%EF%BC%89/index.html&pic=https://coding.emptinessboy.com/img/logo-32x32.jpg&searchPic=false&style=simple" target="_blank"><li class="mdl-menu__item">分享到微博</li></a><a class="post_share-link" href="https://twitter.com/intent/tweet?text=Android 开发UI和布局（下）&url=https://coding.emptinessboy.com/2020/04/Android-%E5%BC%80%E5%8F%91UI%E5%92%8C%E5%B8%83%E5%B1%80%EF%BC%88%E4%B8%8B%EF%BC%89/index.html&via=EmptinessBoy" target="_blank"><li class="mdl-menu__item">分享到 Twitter</li></a><a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://coding.emptinessboy.com/2020/04/Android-%E5%BC%80%E5%8F%91UI%E5%92%8C%E5%B8%83%E5%B1%80%EF%BC%88%E4%B8%8B%EF%BC%89/index.html" target="_blank"><li class="mdl-menu__item">分享到 Facebook</li></a><a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=帆的自留地&title=Android 开发UI和布局（下）&summary=晓帆的学习笔记&pics=https://coding.emptinessboy.com/img/logo-32x32.jpg&url=https://coding.emptinessboy.com/2020/04/Android-%E5%BC%80%E5%8F%91UI%E5%92%8C%E5%B8%83%E5%B1%80%EF%BC%88%E4%B8%8B%EF%BC%89/index.html" target="_blank"><li class="mdl-menu__item">分享到 QQ</li></a><a class="post_share-link" href="https://telegram.me/share/url?url=https://coding.emptinessboy.com/2020/04/Android-%E5%BC%80%E5%8F%91UI%E5%92%8C%E5%B8%83%E5%B1%80%EF%BC%88%E4%B8%8B%EF%BC%89/index.html&text=Android 开发UI和布局（下）" target="_blank"><li class="mdl-menu__item">分享到 Telegram</li></a></ul></div><div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out"><h2 id="Constraint-Layout-布局"><a href="#Constraint-Layout-布局" class="headerlink" title="Constraint Layout 布局"></a>Constraint Layout 布局</h2><p>Google I/O 2016 上发布了 Constraint Layout，Constraint 就是约束的意思。</p><p>约束帮助保持控件对齐. 你可以使用锚点(约束手柄)来确定各控件之间的对齐规则。</p><h3 id="创建手工约束"><a href="#创建手工约束" class="headerlink" title="创建手工约束"></a>创建手工约束</h3><blockquote><p>有一个像磁铁一样的小图标，打开和关闭用于切换自动/手动创建约束。</p></blockquote><a id="more"></a><p>要创建一个约束, 你需要在指定手柄上点击并按住鼠标, 然后拖到另一个控件的约束手柄. 一旦锚点变绿, 就可以松开鼠标完成约束创建.</p><p><a href="https://up.media.everdo.cn/image/JZKS" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/09/contraintLayOut.gif" alt="contraintLayOut.gif"></a></p><h4 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h4><p>如下所示创建一个 TextView 上锚点和 ImageView 底锚点之间的约束。</p><p><a href="https://up.media.everdo.cn/image/JG2Q" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/09/contraintLayOut2.gif" alt="contraintLayOut2.gif"></a></p><h4 id="调整元素尺寸"><a href="#调整元素尺寸" class="headerlink" title="调整元素尺寸"></a>调整元素尺寸</h4><p>此外，约束模式支持点击拖动角以调整图片大小：</p><p><a href="https://up.media.everdo.cn/image/JKmJ" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/09/contraintLayOut1.gif" alt="contraintLayOut1.gif"></a></p><h4 id="定位布局"><a href="#定位布局" class="headerlink" title="定位布局"></a>定位布局</h4><p>我们还可以使用左和右侧边约束锚定 ImageView 在布局中间：</p><p><a href="https://up.media.everdo.cn/image/JLwy" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/09/contraintLayOut3.gif" alt="contraintLayOut3.gif"></a></p><h4 id="基线约束"><a href="#基线约束" class="headerlink" title="基线约束"></a>基线约束</h4><p>要连接控件的基线, 鼠标悬浮在空间上, 等几秒钟, 基线约束出现然后就可以连接了。</p><p><a href="https://up.media.everdo.cn/image/Jand" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/09/contraintLayOut4.gif" alt="contraintLayOut4.gif"></a></p><h3 id="Inspector-工具"><a href="#Inspector-工具" class="headerlink" title="Inspector 工具"></a>Inspector 工具</h3><p>ViewInspector.Inspector 在 UI 生成器上的右边. 除了列出所选控件的属性, 它还展示了 View 是如何对齐的以及所有的约束。</p><p><a href="https://up.media.everdo.cn/image/JgQl" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/09/Inspector.jpg" alt="Inspector.jpg"></a></p><p>Inspector 显示出控件控件所在的区域</p><h4 id="Margins："><a href="#Margins：" class="headerlink" title="Margins："></a><strong>Margins：</strong></h4><p>控件外部的左右上下就是 margin. 可以点击 margin 的值并设置成另一个值来改变它.</p><h4 id="相对约束定位控件："><a href="#相对约束定位控件：" class="headerlink" title="相对约束定位控件："></a><strong>相对约束定位控件：</strong></h4><p>当一个控件上有至少两个对立的连接时, 比如上和下, 或者左和右, 你可以看到一个可以让你沿着对立连接的轴调整控件位置的滑块. 这也被称为横向或纵向偏量. 调整纵向和横向偏量然后改变方向, 可以看到偏量依然保留. 另外也可以通过移动控件到目标目标位置实现这一点.</p><p><a href="https://up.media.everdo.cn/image/JlT0" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/09/aeb88b5a9ecddd7ed2da4a96effb3095.gif" alt="aeb88b5a9ecddd7ed2da4a96effb3095.gif"></a></p><h4 id="控件内部尺寸"><a href="#控件内部尺寸" class="headerlink" title="*控件内部尺寸: *"></a>*<em>控件内部尺寸: *</em></h4><p>控件内部的线允许你控制它的尺寸。</p><p><a href="https://up.media.everdo.cn/image/P44D" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/09/size.png" alt="size.png"></a></p><p>这是 Inspector 中一个控件的放大视图. 点击 Inspector 面板控件内部的线, 会循环切换以下选项</p><p><a href="https://up.media.everdo.cn/image/PPL2" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/09/size1.png" alt="size1.png"></a><strong>Fixed:</strong> 此选项允许你指定控件的高和宽.</p><p><a href="https://up.media.everdo.cn/image/PHYL" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/09/size2.png" alt="size2.png"></a><strong>AnySize:</strong> 此选项让控件占用所有可用空间以适应约束. 换句话说, 这更像是匹配约束. 与 match_parent 不同, 后者占用父 View 的所有可用空间.AnySize 与容器无关. 如果 ImageView 约束于一个 Button, 设置为 AnySize 只会扩展它适应 button.</p><p><a href="https://up.media.everdo.cn/image/PJzc" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/09/size3.png" alt="size3.png"></a><strong>Wrap Content:</strong> 此选项仅扩展至所含元素(如 text 或者 drawable)填充满 widget.</p><h4 id="擅用辅助线"><a href="#擅用辅助线" class="headerlink" title="擅用辅助线"></a>擅用辅助线</h4><p>单击辅助线位置上的标记，可以在 dp 和百分比之间切换。可以将控件基于辅助线创建约束。</p><h4 id="DEMO"><a href="#DEMO" class="headerlink" title="DEMO"></a>DEMO</h4><p>这里为了后面的学习，我使用 Constraint Layout 绘制了一个看起来还不错的登录界面。最终效果图如下：</p><p><a href="https://up.media.everdo.cn/image/Ph2Z" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/09/login.jpg" alt="login.jpg"></a></p><p>布局细节：（因为水平有限，外层 Constraint Layout，中间部分嵌套了 LinerLayout）</p><p><a href="https://up.media.everdo.cn/image/Pnmk" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/09/login1.jpg" alt="login1.jpg"></a></p><h5 id="顶部透明状态栏"><a href="#顶部透明状态栏" class="headerlink" title="顶部透明状态栏"></a>顶部透明状态栏</h5><p>通过修改 <code>res/values/styles.xml</code></p><pre><code class="xml">&lt;resources&gt;
+    &lt;!-- Base application theme. --&gt;
+    &lt;style name=&quot;AppTheme&quot; parent=&quot;Theme.AppCompat.Light.DarkActionBar&quot;&gt;
+        &lt;!-- Customize your theme here. --&gt;
+        &lt;item name=&quot;colorPrimary&quot;&gt;@color/colorPrimary&lt;/item&gt;
+        &lt;item name=&quot;colorPrimaryDark&quot;&gt;@color/colorPrimaryDark&lt;/item&gt;
+        &lt;item name=&quot;colorAccent&quot;&gt;@color/colorAccent&lt;/item&gt;
+         &lt;!-- 透明部分. --&gt;
+        &lt;item name=&quot;windowActionBar&quot;&gt;false&lt;/item&gt;
+        &lt;item name=&quot;windowNoTitle&quot;&gt;true&lt;/item&gt;
+        &lt;item name=&quot;android:windowTranslucentStatus&quot;&gt;true&lt;/item&gt;
+        &lt;item name=&quot;android:windowDrawsSystemBarBackgrounds&quot;&gt;true&lt;/item&gt;
+        &lt;item name=&quot;android:statusBarColor&quot;&gt;@android:color/transparent&lt;/item&gt;
+
+    &lt;/style&gt;
+
+&lt;/resources&gt;</code></pre><p>主题色 <code>res/values/colors.xml</code></p><pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;resources&gt;
+    &lt;color name=&quot;colorPrimary&quot;&gt;#505050&lt;/color&gt;
+    &lt;color name=&quot;colorPrimaryDark&quot;&gt;#303030&lt;/color&gt;
+    &lt;color name=&quot;colorAccent&quot;&gt;#FF9800&lt;/color&gt;
+&lt;/resources&gt;</code></pre><h5 id="自定义的按钮"><a href="#自定义的按钮" class="headerlink" title="自定义的按钮"></a>自定义的按钮</h5><p>顶部两个灰色按钮和下方的登录按钮使用了 imgButton 和 普通按钮的集合：</p><blockquote><p>使用 selector 改变 Button 点击时和非点击时的背景，实现点击按钮改变颜色的触摸反馈。</p></blockquote><ol><li>在 drawable 中新建两个 xml 文件，使用 shape 定义背景。（<code>shape_normal.xml</code> 和 <code>shape_pressed.xml</code>）</li><li>在 drawable 中新建 <code>button_selector.xml</code> 文件。</li><li>使用 item 中的 <code>android:state_pressed</code> 属性指定点击时和非点击时使用的效果文件。</li><li>在 Button 中添加 <code>android:background=&quot;@drawable/button_selector&quot;</code> 属性</li></ol><p>主布局文件处修改：</p><pre><code class="xml">&lt;ImageButton
+   android:id=&quot;@+id/buttonClose&quot;
+   android:layout_width=&quot;35dp&quot;
+   android:layout_height=&quot;35dp&quot;
+   android:background=&quot;@drawable/imgbutton_selector&quot;/&gt;
+&lt;!--按钮内部分代码省略，主要修改了background--&gt;
+&lt;Button
+   android:id=&quot;@+id/buttonReg&quot;
+   android:layout_width=&quot;58dp&quot;
+   android:layout_height=&quot;31dp&quot;
+   android:background=&quot;@drawable/button_selector&quot;
+   android:text=&quot;@string/reg&quot;
+   android:textColor=&quot;#FFFFFF&quot;
+   android:textColorHint=&quot;#505050&quot;/&gt;
+&lt;!--按钮内部分代码省略，主要修改了background--&gt;</code></pre><p>由于修改了默认的背景样式，导致按钮不能继承默认主题的样式，所以会失去点击触发效果。因此这里给按钮增加选择器：</p><pre><code class="xml">&lt;!--res/drawable/button_selector.xml--&gt;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;selector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
+    &lt;item android:state_pressed=&quot;true&quot;
+        android:drawable=&quot;@drawable/shape_pressed&quot;/&gt;
+    &lt;item android:state_pressed=&quot;false&quot;
+        android:drawable=&quot;@drawable/shape_normal&quot;/&gt;
+&lt;/selector&gt;
+
+&lt;!--res/drawable/imgbutton_selector.xml--&gt;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;selector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
+    &lt;item android:state_pressed=&quot;true&quot;
+        android:drawable=&quot;@drawable/imgbutton_circlepressed&quot;/&gt;
+    &lt;item android:state_pressed=&quot;false&quot;
+        android:drawable=&quot;@drawable/imgbutton_circlenormal&quot;/&gt;
+&lt;/selector&gt;</code></pre><p>创建上面所引用的四个 xml 文件：（由于另外三个代码部分基本相同就不再展示）</p><pre><code class="xml">&lt;!--res/drawable/imgbutton_circlenormal.xml--&gt;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;shape xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; android:shape=&quot;rectangle&quot; &gt;
+    &lt;solid android:color=&quot;#60000000&quot; /&gt;
+    &lt;!--    &lt;stroke android:width=&quot;1dip&quot; android:color=&quot;#3F3F3F&quot;/&gt;--&gt;
+    &lt;!--     圆角--&gt;
+    &lt;corners android:radius=&quot;100dp&quot; /&gt;
+    &lt;!--     边距--&gt;
+    &lt;padding
+        android:bottom=&quot;3dp&quot;
+        android:left=&quot;3dp&quot;
+        android:right=&quot;3dp&quot;
+        android:top=&quot;3dp&quot; /&gt;
+&lt;/shape&gt;</code></pre><h5 id="按钮触摸反馈动画"><a href="#按钮触摸反馈动画" class="headerlink" title="按钮触摸反馈动画"></a>按钮触摸反馈动画</h5><p>使用系统自带的两个 Ripple 波纹效果</p><pre><code class="java">//有边界
+?android:attr/selectableItemBackground
+//无边界 （要求API21以上）
+?android:attr/selectableItemBackgroundBorderless </code></pre><p>使用时只需要把上面这两个值作为 View 的 <code>android:background=&quot;&quot; 或 android:foreground=&quot;&quot;</code> 即可（如果已经有背景， 可以设置到前景属性中）。</p><p>想要效果显示出来要保证 View 的 <code>android:clickable=&quot;true&quot;</code>。<br>这里的颜色是系统默认的，可以在 theme 里更改默认的波纹颜色：</p><pre><code class="xml">&lt;style name=&quot;AppTheme&quot; parent=&quot;Theme.AppCompat.Light.NoActionBar&quot;&gt;
+    &lt;!-- API 21 theme customizations can go here. --&gt;
+    &lt;item name=&quot;android:colorControlHighlight&quot;&gt;#ff0000&lt;/item&gt;
+&lt;/style&gt;</code></pre><h5 id="字间距"><a href="#字间距" class="headerlink" title="字间距"></a>字间距</h5><p>通过设置 <code>android:letterSpacing</code> 这个属性就可以非常方便的设置水平方向文本的字间距。</p><pre><code class="java">// 在XML中：
+android:letterSpacing=&quot;0.05&quot;
+// 在代码中动态设置，如下：
+textView.setLetterSpacing(0.05);</code></pre><h2 id="Popup-Window-控件"><a href="#Popup-Window-控件" class="headerlink" title="Popup Window 控件"></a>Popup Window 控件</h2><p>PopupWindow 是一个可以在 Activity 之上显示任意 View 的控件。在 Android 经常使用，效果跟 Dialog 效果类似，不同点在于可以控制显示的位置，比如底部显示等。</p><p>特性：浮动弹出自定义窗体，并可设置弹出位置。</p><table><thead><tr><th>方法名称</th><th>描述</th></tr></thead><tbody><tr><td>PopupWindow</td><td>构造函数，常用参数表：contentView – 弹窗界面内容 width – 弹窗宽度 height – 弹窗高度 focusable – 能否聚焦</td></tr><tr><td>setTouchable</td><td>是否支持点击操作</td></tr><tr><td>showAtLocation</td><td>按指定位置弹出显示自定义视图</td></tr><tr><td>showAsDropDown</td><td>下拉弹出显示自定义视图</td></tr></tbody></table><h3 id="定义弹出的布局"><a href="#定义弹出的布局" class="headerlink" title="定义弹出的布局"></a>定义弹出的布局</h3><p>这里采用新建布局文件 XML 的形式添加弹出控件：（以登录界面 DEMO 为例）：</p><p>此处新建了一个 popup_content.xml 的布局文件：</p><p><a href="https://up.media.everdo.cn/image/P7OB" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/09/popupwindow.jpg" alt="popupwindow.jpg"></a></p><p>并在里面添加了两组按钮。</p><p><a href="https://up.media.everdo.cn/image/PRnt" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/09/popupwindow1.jpg" alt="popupwindow1.jpg"></a></p><pre><code class="java">PopupWindow regWindow = new PopupWindow(regView, LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT,true);</code></pre><p>上述代码设置了弹出 regView 的界面，宽高自适应父容器，允许聚焦。</p><h4 id="LayoutInflater-作用及使用"><a href="#LayoutInflater-作用及使用" class="headerlink" title="LayoutInflater 作用及使用"></a>LayoutInflater 作用及使用</h4><p>作用：</p><ol><li>对于一个没有被载入或者想要动态载入的界面, 都需要使用 inflate 来载入.</li><li>对于一个已经载入的 Activity，就可以使用实现了这个 Activiyt 的findViewById 方法来获得其中的界面元素。</li></ol><p>LayoutInflater 这个类的作用类似于 findViewById(),不同点是 LayoutInflater 是用来找 layout 下 xml 布局文件，并且实例化！而 findViewById() 是找具体 xml 下的具体 widget 控件。</p><p>最简单的使用方法：</p><pre><code class="java">View regView = LayoutInflater.from(MainActivity.this).inflate(R.layout.popup_content,null,false);</code></pre><p>LayoutInflater.from 从给定的上下文获取 LayoutInflater。</p><p>.inflate 方法从指定的 xml 资源中添加新的视图层次结构。InflateException 如果有错误则抛出。最后该方法会返回一个 View。</p><p>第一个参数 resource int：要加载的XML布局资源的 ID（例如，R.layout.main_page）。第二个参数 root ViewGroup：作为生成层次结构的父级的可选视图，此值可能是 null。第三个参数 boolean attachToRoot 控制是否将第一个参数所指定的 View 添加到 root 中。</p><h3 id="设置允许触摸"><a href="#设置允许触摸" class="headerlink" title="设置允许触摸"></a>设置允许触摸</h3><pre><code class="java">regWindow.setTouchable(true);</code></pre><h3 id="设置弹出位置"><a href="#设置弹出位置" class="headerlink" title="设置弹出位置"></a>设置弹出位置</h3><ul><li>showAsDropDown(View anchor)：相对某个控件的位置（正左下方），无偏移</li><li>showAsDropDown(View anchor,int xoff,int yoff)：相对某个控件的位置，有偏移</li><li>showAtLocation(View parent,int gravity,int x,int y)：相对于父控件的位置（例如正中央Gravity.CENTER，下方Gravity.BOTTOM等），可以设置偏移或无偏移</li></ul><pre><code class="java">regWindow.showAtLocation(v, Gravity.BOTTOM,0, 0);
+//regWindow.showAtLocation(getWindow().getDecorView(), Gravity.BOTTOM,0, 0);</code></pre><p>到这一步的时候，点击右上角注册按钮，已经可以正常弹出注册对话框了。</p><p><a href="https://up.media.everdo.cn/image/Pjqx" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/09/popupwindow2.jpg" alt="popupwindow2.jpg"></a></p><p>修改样式加以美化：</p><p><a href="https://up.media.everdo.cn/image/PoXI" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/09/popupwindow3.jpg" alt="popupwindow3.jpg"></a></p><h3 id="添加动画（参考网络）"><a href="#添加动画（参考网络）" class="headerlink" title="添加动画（参考网络）"></a>添加动画（参考网络）</h3><p>首先在 res/src 下创建 anim 文件夹</p><p>创建 pophide.xml 隐藏时的动画参数</p><pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;set xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
+
+     &lt;translate
+        android:duration=&quot;1000&quot;
+        android:fromYDelta=&quot;0&quot;
+        android:toYDelta=&quot;50%p&quot; /&gt;
+
+    &lt;alpha
+        android:duration=&quot;1000&quot;
+        android:fromAlpha=&quot;1.0&quot;
+        android:toAlpha=&quot;0.0&quot; /&gt;
+&lt;/set&gt;</code></pre><p>创建 popshow.xml 显示时的动画</p><pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;set xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
+     &lt;translate
+        android:duration=&quot;1000&quot;
+        android:fromYDelta=&quot;100%p&quot;
+        android:toYDelta=&quot;0&quot; /&gt;
+
+    &lt;alpha
+        android:duration=&quot;1000&quot;
+        android:fromAlpha=&quot;0.0&quot;
+        android:toAlpha=&quot;1.0&quot; /&gt;
+&lt;/set&gt;</code></pre><p>然后在主题配置文件 style.xml 里创建</p><style name="mypopwindow_anim_style"></style><p>最后在activity中调用</p><pre><code class="java">// 设置popWindow的显示和消失动画
+popupWindow.setAnimationStyle(R.style.mypopwindow_anim_style);</code></pre><p><a href="https://up.media.everdo.cn/image/PF4X" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/09/popupwinow.gif" alt="popupwinow.gif"></a></p><h2 id="AlertDialog-控件"><a href="#AlertDialog-控件" class="headerlink" title="AlertDialog 控件"></a>AlertDialog 控件</h2><p>AlertDialog 用于弹出警告窗体，提示重要信息，提示用户再次确认操作。可设置确认、取消按钮等事件。</p><h3 id="AlertDialog-窗体的常用方法"><a href="#AlertDialog-窗体的常用方法" class="headerlink" title="AlertDialog 窗体的常用方法"></a>AlertDialog 窗体的常用方法</h3><table><thead><tr><th>方法名称</th><th>描述</th></tr></thead><tbody><tr><td>show</td><td>显示警告窗体</td></tr><tr><td>isShowing</td><td>判断警告窗体是否处于显示状态</td></tr><tr><td>setTitle</td><td>设置警告窗体标题</td></tr><tr><td>setIcon</td><td>设置图标</td></tr><tr><td>setMessage</td><td>设置警告内容正文</td></tr><tr><td>setButton</td><td>设置操作按钮</td></tr></tbody></table><h3 id="AlertDialog-Builder-构造器的常用方法"><a href="#AlertDialog-Builder-构造器的常用方法" class="headerlink" title="AlertDialog.Builder 构造器的常用方法"></a>AlertDialog.Builder 构造器的常用方法</h3><table><thead><tr><th>方法名称</th><th>描述</th></tr></thead><tbody><tr><td>AlertDialog.Builder</td><td>警告窗体构造器的构造函数</td></tr><tr><td>builder.create</td><td>创建警告窗体</td></tr></tbody></table><h3 id="DEMO-1"><a href="#DEMO-1" class="headerlink" title="DEMO"></a>DEMO</h3><p>这里我们为登录案例的退出按钮添加一个警告对话框，在创建监听器后，编写警告窗体实例：</p><pre><code class="java">public void onClick(View v) {
+    //创建警告窗体实例
+    AlertDialog quitConfirm = new AlertDialog.Builder(MainActivity.this).create();
+    //设置内容
+    quitConfirm.setIcon(R.drawable.close);
+    quitConfirm.setMessage(&quot;您确定要离开么？&quot;);
+    quitConfirm.setButton(AlertDialog.BUTTON_POSITIVE, &quot;确认&quot;, new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+        //确认按钮后执行的内容
+            android.os.Process.killProcess(android.os.Process.myPid()); //退出程序代码
+        }
+    });
+    quitConfirm.setButton(AlertDialog.BUTTON_NEGATIVE, &quot;取消&quot;, new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            //点击取消后执行的代码
+        }
+    });
+    quitConfirm.show();
+}</code></pre><p>运行效果：</p><p><a href="https://up.media.everdo.cn/image/P3bi" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/09/AlertDialog.jpg" alt="AlertDialog.jpg"></a></p><p>点击退出后，整个 APP 退出。</p><h2 id="自定义对话框-CustomDialog"><a href="#自定义对话框-CustomDialog" class="headerlink" title="自定义对话框 CustomDialog"></a>自定义对话框 CustomDialog</h2><p>如果 AlertDialog 不能满足一些较为复杂的程序设计需求，那么可以使用 CustomDialog 进行高级的定制：</p><blockquote><p>开发者可以设计继承于 android.app.Dialog 的自定义对话框派生类（有时习惯命名为 CustomDialog）来弹出自定义界面的对话框，用户可在对话框进行下一步操作输入输出界面、操作按钮事件等均可自定义</p></blockquote><h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><table><thead><tr><th>方法</th><th>描述</th></tr></thead><tbody><tr><td>构造函数</td><td>实例化过程中的初始化程序，可自定义参数表传入用户自定义参数</td></tr><tr><td>onCreate</td><td>对话框初始化</td></tr><tr><td>show</td><td>显示对话框</td></tr></tbody></table><p>简单的自定义对话框类的成员结构 (类名：CustomDialog)：</p><pre><code class="java">//构造函数：
+
+CustomDialog(Context context, String content, CustomDialog.OnCustomDialogListener customDialogListener)</code></pre><pre><code class="java">//按钮事件功能的定义：
+
+interface OnCustomDialogListener {
+    public void func1(String data); //回调功能
+    public void func2(String data); //回调功能
+    //可以定义一个或多个回调功能…
+}</code></pre><pre><code class="java">//初始化：
+
+onCreate(Bundle savedInstanceState) {
+    …
+    setContentView(R.layout.custom_dialog);  //调用自定义对话框布局设置 
+    …    
+    //按钮1单击事件调用customDialogListener.func1功能
+    //按钮2单击事件调用customDialogListener.func2功能
+    …
+} </code></pre><p>对自定义对话框类的调用：</p><pre><code class="java">CustomDialog dialog = new CustomDialog(MainActivity.this,&quot;对话框提示内容&quot;,
+     new CustomDialog.OnCustomDialogListener() {
+        @Override
+        public void func1(String data) { … }  //编写按钮1的事件实现程序
+        @Override
+        public void func1(String data) { … }  //编写按钮2的事件实现程序
+    }
+);  //自定义对话框的实例化
+
+dialog.show();  //显示自定义对话框</code></pre><h3 id="添加布局设计"><a href="#添加布局设计" class="headerlink" title="添加布局设计"></a>添加布局设计</h3><p>在 res/layout 下新建 custom_dialog.xml</p><p><a href="https://up.media.everdo.cn/image/PA04" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/10/custom_dialog_layout.jpg" alt="custom_dialog_layout.jpg"></a></p><p>绘制用户协议的基本布局：</p><p><a href="https://up.media.everdo.cn/image/PDLM" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/10/custom_dialog_tos.jpg" alt="custom_dialog_tos.jpg"></a></p><h3 id="新增自定义类"><a href="#新增自定义类" class="headerlink" title="新增自定义类"></a>新增自定义类</h3><p>这里创建一个 CustomDialog 的派生类</p><p><a href="https://up.media.everdo.cn/image/PYFY" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/10/custom_dialog_class.jpg" alt="custom_dialog_class.jpg"></a></p><pre><code class="java">package com.emptinessboy.logindemo;
+
+import android.app.Dialog;
+
+public class customDialog extends Dialog {  //这里我们将这个自定义类继承于 android.app.Dialog
+
+}</code></pre><h3 id="生成方法"><a href="#生成方法" class="headerlink" title="生成方法"></a>生成方法</h3><p><a href="https://up.media.everdo.cn/image/Pbma" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/10/custom_dialog_constructor.jpg" alt="custom_dialog_constructor.jpg"></a></p><p>这里我们使用系统自带模板生成构造函数：</p><p><a href="https://up.media.everdo.cn/image/Pi73" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/10/custom_dialog_constructor1.jpg" alt="custom_dialog_constructor1.jpg"></a></p><p><a href="https://up.media.everdo.cn/image/PrqG" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/10/custom_dialog_constructor2.jpg" alt="custom_dialog_constructor2.jpg"></a></p><p>同时用生成器生成一个重载的方法 onCreat()</p><p><a href="https://up.media.everdo.cn/image/PQX9" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/10/custom_dialog_constructor3.jpg" alt="custom_dialog_constructor3.jpg"></a></p><pre><code class="java">package com.emptinessboy.logindemo;
+
+import android.app.Dialog;
+import android.content.Context;
+import android.os.Bundle;
+
+import androidx.annotation.NonNull;
+
+public class customDialog extends Dialog {
+
+    public customDialog(@NonNull Context context) {
+        super(context); //生成的构造函数
+    }
+
+    @Override
+    //onCreate()用作对话框的初始化
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState); //生成的方法重载
+
+        setContentView(R.layout.custom_dialog); //调用样式
+
+    }
+
+}</code></pre><p>最后完整的代码 custonDialog 类代码：</p><pre><code class="java">public class customDialog extends Dialog {
+
+    private onCustomDialogListener CustomDialogListener;    //将实例化的对象保存
+
+    public customDialog(@NonNull Context context,onCustomDialogListener CustomDialogListener) { //第二个参数用来传入已经实例化的对象
+        super(context); //生成的构造函数
+        this.CustomDialogListener = CustomDialogListener;
+    }
+
+    //用于调用的接口
+    public interface onCustomDialogListener {
+        //定义回调事件
+        //按钮点击事件
+        public void buttonConfirmTosClicked();
+
+    }
+
+    @Override
+    //onCreate()用作对话框的初始化
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState); //生成的方法重载
+
+        setContentView(R.layout.custom_dialog); //调用样式
+
+        Button buttonConfirmTos = findViewById(R.id.buttonConfirmTos);
+        buttonConfirmTos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CustomDialogListener.buttonConfirmTosClicked(); //此处回调接口的方法，具体触发的事件由接口在主函数中定义
+            }
+        });
+    }
+
+}</code></pre><h4 id="禁用EditText（DEMO）"><a href="#禁用EditText（DEMO）" class="headerlink" title="禁用EditText（DEMO）"></a>禁用EditText（DEMO）</h4><p>代码如下</p><pre><code class="java">editText.setEnabled(false);//简单粗暴
+
+editText.setFocusable(false);//不可编辑
+editText.setFocusableInTouchMode(false);//触摸不可编辑
+editText.setKeyListener(null);//不可粘贴，长按不会弹出粘贴框
+editText.setClickable(false);//不可点击，但是这个效果我这边没体现出来，不知道怎没用</code></pre><p>因此修改后增加下面的代码：(在自定义类的 onCreat方法中)：</p><pre><code class="java">//这段代码定义了宽度
+Window window = this.getWindow();
+WindowManager.LayoutParams lp = window.getAttributes();
+lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+lp.height = 1800;
+this.getWindow().setAttributes(lp);
+
+EditText tos = findViewById(R.id.Tos);
+tos.setFocusable(false);//不可编辑</code></pre><p>那么现在要做的就是从主函数调用接口了，在主函数中，使用 regTos 函数进行调用。调用过程中需要创建一个继承类：</p><pre><code class="java">void regTos(){
+    //调用customDialog
+    customDialog dialog = new customDialog(MainActivity.this, new tosConfirm());
+    dialog.show();
+}
+
+public class tosConfirm implements customDialog.onCustomDialogListener{
+    public void buttonConfirmTosClicked() {
+        Toast.makeText(MainActivity.this,&quot;需要先同意协议才能注册哦！&quot;,Toast.LENGTH_SHORT).show();
+    }
+}</code></pre><h4 id="回调参数（DEMO）"><a href="#回调参数（DEMO）" class="headerlink" title="回调参数（DEMO）"></a>回调参数（DEMO）</h4><p>这里还需要增加是否阅读协议的判断，可以为接口添加传入参数：</p><p>先修改接口</p><pre><code class="java">这里是 custonDialog 类 接口部分
+
+//用于调用的接口
+public interface onCustomDialogListener {
+    //定义回调事件
+    //按钮点击事件
+    public void buttonConfirmTosClicked(boolean isRead);
+}
+
+......
+
+下面是 custonDialog 类按钮监听事件下的 OnCreat 函数部分
+
+public void onClick(View v) {
+    CheckBox checkBoxConfirmTos = findViewById(R.id.checkBoxConfirmTos);
+    boolean isRead = false;
+    if(checkBoxConfirmTos.isChecked())
+        isRead = true;
+    CustomDialogListener.buttonConfirmTosClicked(isRead); //此处回调接口的方法，具体触发的事件由接口在主函数中定义
+}
+</code></pre><p>这里是 MainActivity 修改回调传入参数部分：</p><pre><code class="java">void regTos(){
+    //调用customDialog
+    customDialog dialog = new customDialog(MainActivity.this, new tosConfirm());
+    dialog.show();
+}
+
+public class tosConfirm implements customDialog.onCustomDialogListener{
+    @Override
+    public void buttonConfirmTosClicked(boolean isRead) {
+        if(isRead){
+            Toast.makeText(MainActivity.this,&quot;注册还没开放哦！&quot;,Toast.LENGTH_SHORT).show();
+        }
+        else{
+            Toast.makeText(MainActivity.this,&quot;需要先同意协议才能注册哦！&quot;,Toast.LENGTH_SHORT).show();
+        }
+    }
+}</code></pre><p>最终完成效果：</p><p><a href="https://up.media.everdo.cn/image/PxHj" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/10/loginfinish.gif" alt="loginfinish.gif"></a></p><img src="https://media.everdo.cn/tank/pic-bed/2021/04/09/4.png" alt="尾图4" style="zoom:33%"><blockquote style="margin:2em 0 0;padding:.5em 1em;border-left:3px solid #ebc43b;background-color:#191919;list-style:none"><p><strong>This blog is under a <a href="/creativecommons.html" target="_blank">CC BY-NC-ND 4.0 Unported License</a></strong><br><strong>本文链接：</strong><a href="https://coding.emptinessboy.com/2020/04/Android-%E5%BC%80%E5%8F%91UI%E5%92%8C%E5%B8%83%E5%B1%80%EF%BC%88%E4%B8%8B%EF%BC%89/">https://coding.emptinessboy.com/2020/04/Android-%E5%BC%80%E5%8F%91UI%E5%92%8C%E5%B8%83%E5%B1%80%EF%BC%88%E4%B8%8B%EF%BC%89/</a></p></blockquote></div><div id="comment" style="padding:10px" class="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js"></script><script>var GUEST_INFO=["nick","mail","link"],guest_info="nick,mail,link".split(",").filter(function(i){return GUEST_INFO.indexOf(i)>-1}),notify=!1,verify=!0;new Valine({el:".vcomment",notify:notify,verify:verify,appId:"91mhcw0WK44B90nptmxGcJol-gzGzoHsz",appKey:"Boi7za0ClwGyWRCYd8osdf5o",placeholder:"在这里写点什么吧！",pageSize:"10",avatar:"monsterid",lang:"zh-cn",guest_info:guest_info})</script></div><nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col"><a href="/2020/04/JAVA-%E5%9B%9E%E8%B0%83%E6%9C%BA%E5%88%B6%E7%9A%84%E8%A7%A3%E8%AF%BB%EF%BC%88%E8%BD%AC%EF%BC%89/" id="post_nav-newer" class="prev-content"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation"><i class="material-icons">arrow_back</i></button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 新篇</a><div class="section-spacer"></div><a href="/2020/04/Android-%E5%BC%80%E5%8F%91UI%E5%92%8C%E5%B8%83%E5%B1%80%EF%BC%88%E4%B8%8A%EF%BC%89/" id="post_nav-older" class="next-content">旧篇 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation"><i class="material-icons">arrow_forward</i></button></a></nav></div></div><div class="sidebar-overlay"></div><aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation"><div id="sidebar-main"><div class="sidebar-header header-cover" style="background-image:url(/img/sidebar_header.jpg)"><div class="top-bar"></div><button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display:initial" data-upgraded=",MaterialButton,MaterialRipple"><i class="material-icons">clear_all</i> <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button><div class="sidebar-image"><img src="/img/fav_300.png" alt="EmptinessBoy's avatar"></div><a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">i@my.huxiaofan.com <b class="caret"></b></a></div><ul class="nav sidebar-nav"><li class="dropdown"><ul id="settings-dropdown" class="dropdown-menu"><li><a href="mailto:i@my.huxiaofan.com" target="_blank" title="Email 我"><i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i> Email 我</a></li></ul></li><li id="sidebar-first-li"><a href="/"><i class="material-icons sidebar-material-icons">home</i> 主页</a></li><li class="divider"></li><li class="dropdown"><a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown"><i class="material-icons sidebar-material-icons">inbox</i> 归档 <b class="caret"></b></a><ul class="dropdown-menu"><li><a class="sidebar_archives-link" href="/archives/2021/05/">五月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/04/">四月 2021<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/11/">十一月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/10/">十月 2020<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/09/">九月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/07/">七月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/06/">六月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/04/">四月 2020<span class="sidebar_archives-count">13</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/03/">三月 2020<span class="sidebar_archives-count">13</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/02/">二月 2020<span class="sidebar_archives-count">4</span></a></li></ul></li><li class="dropdown"><a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown"><i class="material-icons sidebar-material-icons">chrome_reader_mode</i> 分类 <b class="caret"></b></a><ul class="dropdown-menu"><li><a class="sidebar_archives-link" href="/categories/Android/">Android<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/CSS%E5%AD%A6%E4%B9%A0/">CSS学习<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/HTML%E5%AD%A6%E4%B9%A0/">HTML学习<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/Hadoop/">Hadoop<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/JAVAWEB/">JAVAWEB<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/JAVA%E5%AD%A6%E4%B9%A0/">JAVA学习<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/JS%E5%AD%A6%E4%B9%A0/">JS学习<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/Linux/">Linux<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/WEB%E6%A1%86%E6%9E%B6/">WEB框架<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/python%E5%85%A5%E9%97%A8/">python入门<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/">瞎折腾<span class="sidebar_archives-count">4</span></a></li></ul></li><li class="divider"></li><li><a href="https://huxiaofan.com" target="_blank" rel="noopener" title="生活博客"><i class="material-icons sidebar-material-icons">domain</i> 生活博客</a></li><li><a href="https://huxiaofan.com/about" target="_blank" rel="noopener" title="关于我"><i class="material-icons sidebar-material-icons">person</i> 关于我</a></li><li class="divider"></li><li><a href="/archives">文章总数 <span class="sidebar-badge">53</span></a></li></ul></div></aside><div id="back-to-top" class="toTop-wrap"><a href="#top" class="toTop"><i class="material-icons footer_top-i">expand_less</i></a></div><footer class="mdl-mini-footer" id="bottom"><div class="mdl-mini-footer--left-section sns-list"><a href="https://huxiaofan.com/go?url=https://twitter.com/huxiaofanhome/" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter"><span class="visuallyhidden">Twitter</span></button></a><a href="https://huxiaofan.com/go?url=https://www.facebook.com/profile.php?id=100013375578138" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook"><span class="visuallyhidden">Facebook</span></button></a><a href="https://git.huxiaofan.com/emptinessboy" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-github"><span class="visuallyhidden">Github</span></button></a><a href="https://huxiaofan.com/go/?url=aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL2F2NTc2MjgwMDQ=" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili"><span class="visuallyhidden">Bilibili</span></button></a><a href="https://huxiaofan.com/go/?url=https://t.me/emptinessboy" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-telegram"><span class="visuallyhidden">Telegram</span></button></a></div><div id="copyright">Copyright&nbsp;©&nbsp;<span year></span>&nbsp;帆的自留地<br><a href="http://huxiaofan.com" target="_blank" rel="noopener">晓帆</a>&nbsp;/&nbsp;<a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow"> 浙ICP备20004121号</a></div><div class="mdl-mini-footer--right-section"><div><div class="footer-develop-div">Hexo Theme - <span class="footer-develop-a">Material</span></div></div></div></footer><script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==",!0)</script><script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==",!0)</script><script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==",!0)</script><script type="text/ls-javascript" id="NProgress-script">NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#82bcff'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #82bcff, 0 0 15px #82bcff'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#82bcff',
+        'border-left-color': '#82bcff'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);</script><script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==",!0)</script><script type="text/ls-javascript" id="window-load">$(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })</script><script type="text/ls-javascript" id="lazy-load">// Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });</script><script>var copyrightNow=(new Date).getFullYear(),textContent=document.querySelector("span[year]");copyrightSince=2019,copyrightSince===copyrightNow||0===copyrightSince?textContent.textContent=copyrightNow:textContent.textContent=copyrightSince+" - "+copyrightNow,function(){for(var t=document.querySelectorAll('script[type="text/ls-javascript"]'),e=0;e<t.length;++e){var o=t[e];lsloader.runInlineScript(o.id,o.id)}}(),console.log("\n %c 帆's Life | https://huxiaofan.com | Theme Material %c \n","color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;","color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;")</script></main></div></body></html><!-- rebuild by neat -->

@@ -1,0 +1,450 @@
+<!-- build time:Mon Mar 28 2022 11:43:47 GMT+0800 (中国标准时间) --><!DOCTYPE html><html style="display:none" lang="zh"><head><meta charset="utf-8"><script>window.materialVersion="1.5.6",window.oldVersion=["codestartv1","1.3.4","1.4.0","1.4.0b1","1.5.0","1.5.2","1.5.5"]</script><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn1.lncld.net"><link rel="dns-prefetch" href="https://cdn1.lncld.net"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta name="renderer" content="webkit"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><title>Python 学习笔记04（函数） | 帆的自留地</title><link rel="icon shortcut" type="image/ico" href="/img/logo-32x32.jpg"><link rel="icon" href="/img/logo-192x192.jpg"><meta name="format-detection" content="telephone=no"><meta name="description" itemprop="description" content="晓帆的学习笔记"><meta name="keywords" content="博客,代码,学习,程序,大学,python"><meta name="theme-color" content="#1e69bf"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]--><script>!function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}},lsloader.removeLS=function(e){try{localStorage.removeItem(e)}catch(t){}},lsloader.setLS=function(e,t){try{localStorage.setItem(e,t)}catch(n){}},lsloader.getLS=function(e){var t="";try{t=localStorage.getItem(e)}catch(n){t=""}return t},versionString="/*"+(window.materialVersion||"unknownVersion")+"*/",lsloader.clean=function(){try{for(var e=[],t=0;t<localStorage.length;t++)e.push(localStorage.key(t));e.forEach(function(e){var t=lsloader.getLS(e);if(window.oldVersion){var n=window.oldVersion.reduce(function(e,n){return e||-1!==t.indexOf("/*"+n+"*/")},!1);n&&lsloader.removeLS(e)}})}catch(n){}},lsloader.clean(),lsloader.load=function(e,t,n,s){"boolean"==typeof n&&(s=n,n=void 0),s=s||!1,n=n||function(){};var a;if(a=this.getLS(e),a&&-1===a.indexOf(versionString))return this.removeLS(e),void this.requestResource(e,t,n,s);if(a){var o=a.split(versionString)[0];if(o!=t)return console.log("reload:"+t),this.removeLS(e),void this.requestResource(e,t,n,s);a=a.split(versionString)[1],s?(this.jsRunSequence.push({name:e,code:a}),this.runjs(t,e,a)):(document.getElementById(e).appendChild(document.createTextNode(a)),n())}else this.requestResource(e,t,n,s)},lsloader.requestResource=function(e,t,n,s){var a=this;s?this.iojs(t,e,function(e,t,n){a.setLS(t,e+versionString+n),a.runjs(e,t,n)}):this.iocss(t,e,function(n){document.getElementById(e).appendChild(document.createTextNode(n)),a.setLS(e,t+versionString+n)},n)},lsloader.iojs=function(e,t,n){var s=this;s.jsRunSequence.push({name:t,code:""});try{var a=new XMLHttpRequest;a.open("get",e,!0),a.onreadystatechange=function(){if(4==a.readyState){if((a.status>=200&&a.status<300||304==a.status)&&""!=a.response)return void n(e,t,a.response);s.jsfallback(e,t)}},a.send(null)}catch(o){s.jsfallback(e,t)}},lsloader.iocss=function(e,t,n,s){var a=this;try{var o=new XMLHttpRequest;o.open("get",e,!0),o.onreadystatechange=function(){if(4==o.readyState){if((o.status>=200&&o.status<300||304==o.status)&&""!=o.response)return n(o.response),void s();a.cssfallback(e,t,s)}},o.send(null)}catch(r){a.cssfallback(e,t,s)}},lsloader.iofonts=function(e,t,n,s){var a=this;try{var o=new XMLHttpRequest;o.open("get",e,!0),o.onreadystatechange=function(){if(4==o.readyState){if((o.status>=200&&o.status<300||304==o.status)&&""!=o.response)return n(o.response),void s();a.cssfallback(e,t,s)}},o.send(null)}catch(r){a.cssfallback(e,t,s)}},lsloader.runjs=function(e,t,n){if(t&&n)for(var s in this.jsRunSequence)this.jsRunSequence[s].name==t&&(this.jsRunSequence[s].code=n);if(this.jsRunSequence[0]&&this.jsRunSequence[0].code&&"failed"!=this.jsRunSequence[0].status){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code)),a.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(a),this.jsRunSequence.shift(),this.jsRunSequence.length>0&&this.runjs()}else if(this.jsRunSequence[0]&&"failed"==this.jsRunSequence[0].status){var o=this,a=document.createElement("script");a.src=this.jsRunSequence[0].path,a.type="text/javascript",this.jsRunSequence[0].status="loading",a.onload=function(){o.jsRunSequence.shift(),o.jsRunSequence.length>0&&o.runjs()},document.body.appendChild(a)}},lsloader.tagLoad=function(e,t){this.jsRunSequence.push({name:t,code:"",path:e,status:"failed"}),this.runjs()},lsloader.jsfallback=function(e,t){if(!this.jsnamemap[t]){this.jsnamemap[t]=t;for(var n in this.jsRunSequence)this.jsRunSequence[n].name==t&&(this.jsRunSequence[n].code="",this.jsRunSequence[n].status="failed",this.jsRunSequence[n].path=e);this.runjs()}},lsloader.cssfallback=function(e,t,n){if(!this.cssnamemap[t]){this.cssnamemap[t]=1;var s=document.createElement("link");s.type="text/css",s.href=e,s.rel="stylesheet",s.onload=s.onerror=n;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(s,a)}},lsloader.runInlineScript=function(e,t){var n=document.getElementById(t).innerText;this.jsRunSequence.push({name:e,code:n}),this.runjs()}}()</script><script>function Queue(){function e(e){this.debug&&console.log("Offered a Queued Function."),"function"==typeof e?this.dataStore.push(e):console.log("You must offer a function.")}function t(){return this.debug&&console.log("Polled a Queued Function."),this.dataStore.shift()}function o(){var e=this.poll();void 0!==e&&(this.debug&&console.log("Run a Queued Function."),e())}function u(){this.debug=!0}this.dataStore=[],this.offer=e,this.poll=t,this.execNext=o,this.debug=!1,this.startDebug=u}var queue=new Queue</script><style id="material_css"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("material_css","/css/material.min.css?lfwTSCk5dU0gSgC//hS81g==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style id="style_css"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("style_css","/css/style.min.css?vOFJu+pZl+0Eeqi7pGRHyw==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style id="prettify_css"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style id="prettify_theme"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("prettify_theme","/css/prettify/atelier-cave-dark.min.css?P8HZcYCbr9fq5dAvzZGnUQ==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style>body,html{font-family:Roboto,"Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;overflow-x:hidden!important}code{font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace}a{color:#0158bc}#scheme-Paradox .hot_tags-count,#scheme-Paradox .sidebar-colored .sidebar-badge,#scheme-Paradox .sidebar-colored .sidebar-header,#scheme-Paradox .sidebar_archives-count,#search-form-label:after,#search-label,.mdl-card__media{background-color:#1e69bf!important}#scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus,#scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover{color:#1e69bf!important}#ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a,#post_entry-right-info,.sidebar-colored .sidebar-nav li:hover>a,.sidebar-colored .sidebar-nav li:hover>a i,.sidebar-colored .sidebar-nav li>a:focus i,.sidebar-colored .sidebar-nav li>a:hover,.sidebar-colored .sidebar-nav li>a:hover i,.sidebar-colored .sidebar-nav>.open>a,.sidebar-colored .sidebar-nav>.open>a:focus,.sidebar-colored .sidebar-nav>.open>a:hover{color:#1e69bf!important}.toTop{background:#6baaf2!important}.material-layout .material-index>.material-nav,.material-layout .material-post>.material-nav,.material-nav a{color:#6baaf2}#scheme-Paradox .MD-burger-layer{background-color:#6baaf2}#scheme-Paradox #post-toc-trigger-btn{color:#6baaf2}.post-toc a:hover{color:#0158bc;text-decoration:underline}</style><style>body{background-image:url(/img/bg.jpg)}</style><style>.fade{transition:all .8s linear;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0);opacity:1}.fade.out{opacity:0}</style><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet"><style id="material_icons"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==",!0)</script><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="帆的自留地"><meta name="msapplication-starturl" content="https://coding.emptinessboy.com/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B004%EF%BC%88%E5%87%BD%E6%95%B0%EF%BC%89/"><meta name="msapplication-navbutton-color" content="#1e69bf"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="帆的自留地"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="apple-touch-icon" href="/img/logo-180x180.jpg"><link rel="alternate" type="application/atom+xml" href="feed.xml"><meta property="og:url" content="https://coding.emptinessboy.com/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B004%EF%BC%88%E5%87%BD%E6%95%B0%EF%BC%89/"><meta property="og:type" content="blog"><meta property="og:title" content="Python 学习笔记04（函数） | 帆的自留地"><meta property="og:image" content="/img/logo-192x192.jpg"><meta property="og:description" content="晓帆的学习笔记"><meta property="og:article:tag" content="python"><meta property="article:published_time" content="Mon Jul 06 2020 23:56:16 GMT+0800"><meta property="article:modified_time" content="Sun May 23 2021 13:28:44 GMT+0800"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="https://coding.emptinessboy.com/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B004%EF%BC%88%E5%87%BD%E6%95%B0%EF%BC%89/index.html"><script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://coding.emptinessboy.com/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B004%EF%BC%88%E5%87%BD%E6%95%B0%EF%BC%89/index.html",
+    "headline": "Python 学习笔记04（函数）",
+    "datePublished": "Mon Jul 06 2020 23:56:16 GMT+0800",
+    "dateModified": "Sun May 23 2021 13:28:44 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "EmptinessBoy",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/fav_300.png"
+        },
+        "description": "啥都不会，<br>专业制造BUG的<br>学渣一枚<br><br>"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "帆的自留地",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/logo-192x192.jpg"
+        }
+    },
+    "keywords": ",python博客,代码,学习,程序,大学",
+    "description": "晓帆的学习笔记",
+}</script><script>!function(e,t,a,n,c,s,o){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,s=t.createElement(a),o=t.getElementsByTagName(a)[0],s.async=1,s.src=n,o.parentNode.insertBefore(s,o)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-85449259-2","auto"),ga("send","pageview")</script><meta name="generator" content="Hexo 4.2.0"></head><body id="scheme-Paradox" class="lazy"><div class="material-layout mdl-js-layout has-drawer is-upgraded"><main class="material-layout__content" id="main"><div id="top"></div><button class="MD-burger-icon sidebar-toggle"><span id="MD-burger-id" class="MD-burger-layer"></span></button> <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons">format_list_numbered</i></button><ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh;overflow-y:scroll"><ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#定义"><span class="post-toc-number">1.</span> <span class="post-toc-text">定义</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#lambda-表达式"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">lambda 表达式</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#函数的调用与返回值"><span class="post-toc-number">2.</span> <span class="post-toc-text">函数的调用与返回值</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#函数的参数"><span class="post-toc-number">3.</span> <span class="post-toc-text">函数的参数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#位置参数"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">位置参数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关键字参数"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">关键字参数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#位置参数和关键字参数混合："><span class="post-toc-number">3.3.</span> <span class="post-toc-text">位置参数和关键字参数混合：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#默认值参数"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">默认值参数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数量可变参数"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">数量可变参数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#实参拆包"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">实参拆包</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#注意"><span class="post-toc-number">3.7.</span> <span class="post-toc-text">注意</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#名称空间与作用域"><span class="post-toc-number">4.</span> <span class="post-toc-text">名称空间与作用域</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#名称空间"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">名称空间</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#作用域"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">作用域</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#对象的查找顺序"><span class="post-toc-number">4.2.1.</span> <span class="post-toc-text">对象的查找顺序</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#通过关键字互相访问"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">通过关键字互相访问</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#global-关键字"><span class="post-toc-number">4.3.1.</span> <span class="post-toc-text">global 关键字</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#nonlocal-关键字"><span class="post-toc-number">4.3.2.</span> <span class="post-toc-text">nonlocal 关键字</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#内置函数"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">内置函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#sorted-函数"><span class="post-toc-number">4.4.1.</span> <span class="post-toc-text">sorted 函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#map函数"><span class="post-toc-number">4.4.2.</span> <span class="post-toc-text">map函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#zip函数"><span class="post-toc-number">4.4.3.</span> <span class="post-toc-text">zip函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#eval-和-exec函数"><span class="post-toc-number">4.4.4.</span> <span class="post-toc-text">eval 和 exec函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#all-和-any-函数"><span class="post-toc-number">4.4.5.</span> <span class="post-toc-text">all 和 any 函数</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#函数对象"><span class="post-toc-number">5.</span> <span class="post-toc-text">函数对象</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#四种函数对象特性"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">四种函数对象特性</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#函数名被引用"><span class="post-toc-number">5.1.1.</span> <span class="post-toc-text">函数名被引用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#函数名作为容器类型的元素"><span class="post-toc-number">5.1.2.</span> <span class="post-toc-text">函数名作为容器类型的元素</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#函数名还当作函数的参数"><span class="post-toc-number">5.1.3.</span> <span class="post-toc-text">函数名还当作函数的参数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#函数名当作函数的返回值"><span class="post-toc-number">5.1.4.</span> <span class="post-toc-text">函数名当作函数的返回值</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#闭包函数"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">闭包函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#装饰器"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">装饰器</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#装饰器推导流程"><span class="post-toc-number">5.3.1.</span> <span class="post-toc-text">装饰器推导流程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#A-封装成函数："><span class="post-toc-number">5.3.1.1.</span> <span class="post-toc-text">A 封装成函数：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#B-利用闭包函数给函数传参-装饰器雏形："><span class="post-toc-number">5.3.1.2.</span> <span class="post-toc-text">B 利用闭包函数给函数传参 装饰器雏形：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#C-装饰的函数有参数（可变长参数）"><span class="post-toc-number">5.3.1.3.</span> <span class="post-toc-text">C 装饰的函数有参数（可变长参数）</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#装饰器语法糖"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">装饰器语法糖</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#多层装饰器-装饰器顺序"><span class="post-toc-number">5.5.</span> <span class="post-toc-text">多层装饰器 装饰器顺序</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#补充例子"><span class="post-toc-number">5.5.1.</span> <span class="post-toc-text">补充例子</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#装饰器模版"><span class="post-toc-number">5.6.</span> <span class="post-toc-text">装饰器模版</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#无参装饰器"><span class="post-toc-number">5.6.1.</span> <span class="post-toc-text">无参装饰器</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#有参装饰器"><span class="post-toc-number">5.6.2.</span> <span class="post-toc-text">有参装饰器</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#模块"><span class="post-toc-number">6.</span> <span class="post-toc-text">模块</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#import-模块名"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">import 模块名</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#from-…-import"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">from … import</span></a></li></ol></li></ol></ul><div class="material-post_container"><div class="material-post mdl-grid"><div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col"><div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://media.everdo.cn/tank/pic-bed/2020/04/24/python-pic.jpg)"><p class="article-headline-p">Python 学习笔记04（函数）</p></div><div class="mdl-color-text--grey-700 mdl-card__supporting-text meta"><div id="author-avatar"><img src="/img/fav_300.png" width="44px" height="44px" alt="Author Avatar"></div><div><strong>EmptinessBoy</strong> <span>7月 06, 2020</span></div><div class="section-spacer"></div><button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">devices other</i> <span class="visuallyhidden">devices other</span></button><ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button"><li class="mdl-menu__item">在其它设备中阅读本文章</li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAAE+CAAAAAAxUyPsAAAE2ElEQVR42u3aQY4bORAEwPn/p9dXA17LmZUt2d4NngatkZqMFqBkFb/+MYbxhQAfPnz4DHz48OEz8OH7S/i+4vGzd/14/fWVf5lQcJfvX03mmczwuHZ8+PDhw4dv5kuW93rZP04reUgJ5ev/b2f4ep7JJ+PDhw8fPnxP8bUcr/9OXs3n0IaP/MHUa8eHDx8+fPh+K18LmkSEFvF2HR8+fPjw4fu7+PKIkBcF2ibBrRCADx8+fPjw/Ql8+W1uhYM23LR8t8f80V4HPnz48OHDVx7S+u/9/dHzffjw4cOH73/Pdxvthv+p4sJTLfNp7fjw4cOHD9/AlzeP981/e4D7VpK4HXHDhw8fPnz4PsPXMuUxIpnc7TNv1/P2Q10ywIcPHz58+Aa+tnidTyiBu5UJkrUkwatuk+PDhw8fPnwD3/IDn5cbblFpWfYtptTBBR8+fPjw4XvohNWttH1rgSeLuY12nvjw4cOHD987+F6/ObnSbvuXon/bIG/DVlSSwIcPHz58+Ga+pGXeBpd20kswWuJUW8rHhw8fPnz4Fr48rCzhIClD5KBJ2MrLBHl0w4cPHz58+Ha+Z1vXt014fq/2YeQhrIg++PDhw4cP38CXh5hbaFgOnC3N76VM8IuvAj58+PDhwzfzLQX6vIhwaxK0bfgc8bZ2fPjw4cOHb+HLA8Etstzo28bArTxxK1Xgw4cPHz58C99tYa9vcwsfe7G+DVvtQQF8+PDhw4dv56s3zPFBrraUnzzCpTRwa+Tjw4cPHz58z/ItweW45T4VCPJWej6rPJzhw4cPHz58T/G1W/TkJ3+JMu3/tK8uxQJ8+PDhw4fvWb68iND+2N+Y8s+8BZF2Xfjw4cOHD99TfHn4WA6N5deTSLQchlvaCfjw4cOHD9/Odytntxy32HFrbOeH6uo14sOHDx8+fDPfrbx+KxYkKHtz/RaGjsV6fPjw4cOHb2iT5we/2lf32LG32PNQdSwZ4MOHDx8+fC/5bmGlXeqzgaNtNrSNf3z48OHDh+/dfO3Ub8X0W9H/FlPa5n1RvMCHDx8+fPhmvoRgueXtMeTh4zbD4yrw4cOHDx++ge+21d/LCi3NHl8ea+Tjw4cPHz58M18bXJISfwuXf/JTcG88oIYPHz58+PDFweW2sb+1q5MHcNvw3w4B1MV6fPjw4cOHb+jzJrfPC+ttlFmOprXvvYU2fPjw4cOH7ym+pLyelwZurfe2VfCOxkBUesCHDx8+fPgGvte3WciW427PPoa8MBF9afDhw4cPH76B74bVFgiW8n1y3/zYXNtQr3MfPnz48OHDF/O1BYJbQfxWkni2QJ/PoQgu+PDhw4cPX8C3LGNfcNs+X47KtXecivX48OHDhw9ffECtPb72bBs7jyAt6PLg8eHDhw8fvqf4jj/e5ZVbJFqa8cn1NvTgw4cPHz58T/HlYSUJIkmASNrkbRM9R2/XiA8fPnz48L2Dr/jxLo+L5dv+p8LTrUAfNdrx4cOHDx++D/IlpflkwW0Ayh9Y+zl1WR8fPnz48OH7IN/t2NmzLe1k/tHmP8bFhw8fPnz43sGXH0rLl5FMKD++9lR7IP8q4MOHDx8+fO/gawvZy5Z7KRPkD7WNRMVBN3z48OHDh2/gM9qBDx8+fPgMfPjw4TPw4fuDxzeIFIKglLr7LgAAAABJRU5ErkJggg=="></ul><button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">bookmark</i> <span class="visuallyhidden">bookmark</span></button><ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button"><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/python/" rel="tag">python</a></li></ul><button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">share</i> <span class="visuallyhidden">share</span></button><ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button"><a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Python 学习笔记04（函数）&url=https://coding.emptinessboy.com/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B004%EF%BC%88%E5%87%BD%E6%95%B0%EF%BC%89/index.html&pic=https://coding.emptinessboy.com/img/logo-32x32.jpg&searchPic=false&style=simple" target="_blank"><li class="mdl-menu__item">分享到微博</li></a><a class="post_share-link" href="https://twitter.com/intent/tweet?text=Python 学习笔记04（函数）&url=https://coding.emptinessboy.com/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B004%EF%BC%88%E5%87%BD%E6%95%B0%EF%BC%89/index.html&via=EmptinessBoy" target="_blank"><li class="mdl-menu__item">分享到 Twitter</li></a><a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://coding.emptinessboy.com/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B004%EF%BC%88%E5%87%BD%E6%95%B0%EF%BC%89/index.html" target="_blank"><li class="mdl-menu__item">分享到 Facebook</li></a><a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=帆的自留地&title=Python 学习笔记04（函数）&summary=晓帆的学习笔记&pics=https://coding.emptinessboy.com/img/logo-32x32.jpg&url=https://coding.emptinessboy.com/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B004%EF%BC%88%E5%87%BD%E6%95%B0%EF%BC%89/index.html" target="_blank"><li class="mdl-menu__item">分享到 QQ</li></a><a class="post_share-link" href="https://telegram.me/share/url?url=https://coding.emptinessboy.com/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B004%EF%BC%88%E5%87%BD%E6%95%B0%EF%BC%89/index.html&text=Python 学习笔记04（函数）" target="_blank"><li class="mdl-menu__item">分享到 Telegram</li></a></ul></div><div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out"><p>函数是重用的程序段。它们允许你给一段语句命名一个名字。<em>函数的使用必须遵循先定义后调用的原则</em></p><p>定义函数的语法结构：</p><pre><code class="python">def 函数名(参数1，参数2，参数3...):
+
+  &quot;&quot;&quot;函数注释&quot;&quot;&quot;
+  # 函数体代码(函数的功能)
+
+  return 返回值</code></pre><blockquote><p>1.def 定义函数的关键字<br><br>2.函数名 函数名指向函数内存地址 是对函数体代码的引用<br><br>3.括号 括号内定义参数 参数可有可无 且无需指定参数类型<br><br>4.冒号 括号后必须加冒号 然后在下一行开始需要缩进书写函数体代码<br><br>5.函数注释 描述函数的功能 参数介绍 非必要建议加上 增加代码的可读性<br><br>6.函数体代码 整个函数功能的核心代码<br><br>7.return 函数的返回值 可有可无<br></p></blockquote><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><pre><code class="python"># 1.无参函数
+def index():
+  print(123)
+
+# 2.有参函数
+def index(x,y):
+  print(123)
+
+# 3.空函数
+def index():
+    pass</code></pre><h3 id="lambda-表达式"><a href="#lambda-表达式" class="headerlink" title="lambda 表达式"></a>lambda 表达式</h3><p>函数定义的另一种方法是用 lambda 表达式，它定义了一个 <strong>匿名函数</strong>。lambda 的一般形式是关键字 lambda 后面跟一个或多个参数，紧跟一个冒号，后面是一个表达式。作为表达式，lambda 返回一个值。lambda 用来编写简单的函数，而def 用来处理更强大任务的函数。</p><pre><code class="python">#把lambda定义的匿名函数赋给函数g
+g = lambda x,y,z : x+y+z
+print（g(1,4,5)）
+
+&gt;&gt;&gt; 10</code></pre><h2 id="函数的调用与返回值"><a href="#函数的调用与返回值" class="headerlink" title="函数的调用与返回值"></a>函数的调用与返回值</h2><ol><li>函数没有return关键字的时候 默认返回的都是None</li><li>return 后面什么都不写 返回的还是None</li><li>return 后面写内容 写什么就返回什么<br><br></li><li>return 返回多个元素 会自动组成元组的形式返回</li><li>函数体代码一旦遇到 return 会立刻结束</li><li>return 可以返回多个任意类型的元素</li></ol><pre><code class="python">def index():
+    a = 123
+    b = &quot;456&quot;
+    c = [7,8,9]
+    d = (10,11,12)
+    return a,b,c,d
+print(index())
+
+&gt;&gt;&gt; (123, &#39;456&#39;, [7, 8, 9], (10, 11, 11))</code></pre><ol start="7"><li>return 返回值的解压赋值</li></ol><pre><code class="python">aa,bb,cc,dd = index()
+print(aa,bb,cc,dd)
+
+&gt;&gt;&gt; 123 456 [7, 8, 9] (10, 11, 12)</code></pre><h2 id="函数的参数"><a href="#函数的参数" class="headerlink" title="函数的参数"></a>函数的参数</h2><ul><li>参数在函数定义的圆括号内指定，用逗号分割</li><li>函数定义时的参数称为形参，这些参数就像变量一样</li><li>当我们调用函数的时候，函数中的参数值称为实参</li><li>函数形参取得的值是你调用函数时提供的实参</li></ul><h3 id="位置参数"><a href="#位置参数" class="headerlink" title="位置参数"></a>位置参数</h3><blockquote><p>位置参数是按照顺序定义的参数。</p></blockquote><p>定义阶段按照从左到右的顺序依次定义形参，叫位置形参，但凡是按照这种形式定义的形参都必须在调用的时候被传值</p><pre><code class="python">def index(x,y): 
+  print(x,y)
+
+index(111,222)
+
+&quot;&quot;&quot;
+会按照位置顺序依次给形参赋值
+x = 111
+y = 222
+&quot;&quot;&quot;
+
+&gt;&gt;&gt; 111 222</code></pre><h3 id="关键字参数"><a href="#关键字参数" class="headerlink" title="关键字参数"></a>关键字参数</h3><p>为了避免位置参数严格的位置要求，调用参数时可以指定对应形式参数的名字，这是关键字参数，它甚至可以采用与函数定义时不同的顺序。</p><pre><code class="python">def index(x,y): 
+  print(x,y)
+
+index(y=1,x=2)  # 指名道姓的传
+
+&gt;&gt;&gt; 2 1</code></pre><h3 id="位置参数和关键字参数混合："><a href="#位置参数和关键字参数混合：" class="headerlink" title="位置参数和关键字参数混合："></a>位置参数和关键字参数混合：</h3><p>如果同时出现两种参数形式， 首先应该写的是位置参数，然后是关键字参数</p><pre><code class="python">def index(x1,y1,x2,y2): 
+  print(x1,y1,x2,y2)
+
+index(111,222,y2=333,x2=444)
+# 这一步 x2 = 44 ,y2 = 333 覆盖了原先的顺序赋值
+
+&gt;&gt;&gt; 111 222 444 333</code></pre><p><strong>下面程序出错：</strong></p><pre><code class="python">def index(x1,y1,x2,y2): 
+  print(x1,y1,x2,y2)
+
+index(111,222,y2=333,444)
+# 这一步 x2 = 44 ,y2 = 333 覆盖了原先的顺序赋值
+
+&gt;&gt;&gt; File &quot;&lt;input&gt;&quot;, line 1 SyntaxError: positional argument follows keyword argument</code></pre><h3 id="默认值参数"><a href="#默认值参数" class="headerlink" title="默认值参数"></a>默认值参数</h3><p>当调用方没有提供对应形式参数的值时，你可以指定默认形式参数值。如果你供 实参， 在调用时会代替默认值</p><pre><code class="python">def register(name, sex=&#39;male&#39;):
+    print(name, sex)
+
+register(&#39;EmptinessBoy&#39;)  # 用默认的参数
+register(&#39;XiaoHong&#39;, &#39;female&#39;)  # 传递参数覆盖默认参数
+
+
+&gt;&gt;&gt; EmptinessBoy male
+XiaoHong female</code></pre><p><strong>默认参数值在函数对象被创建时计算：</strong></p><pre><code class="python">def init(arg, result=[]):
+    result.append(arg)
+    print(result)
+
+
+init(&quot;a&quot;)
+init(&quot;b&quot;)
+init(&quot;c&quot;)
+init(1, [2])
+
+# 因为函数对象只创建一次，所以后两次用的形参 result 值没有被改变
+
+&gt;&gt;&gt; [&#39;a&#39;]
+[&#39;a&#39;, &#39;b&#39;]
+[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]
+[2, 1]</code></pre><h3 id="数量可变参数"><a href="#数量可变参数" class="headerlink" title="数量可变参数"></a>数量可变参数</h3><p><strong>参数值的元组 <code>*</code></strong></p><p>当函数参数数目不确定时 星号将一组可变数量的位置参数集合成参数值的元组 <code>*</code> 号会接受多余的位置参数 组织成元组的形式赋值给 <code>*</code> 号后面的变量名</p><p><strong>收集参数到字典 ```</strong>```**</p><p><code>**</code> 号会接受多余的关键字参数 组织成字典的形式赋值给 <code>**</code> 号后面的变量名</p><pre><code class="python">def index(x, y, *a, **k):
+    print(a, end=&quot; &quot;)
+    print(k)
+
+
+index(111, 222)
+index(111, 222, 333, 444)  # a = (333, 444)
+index(111, 222, n=1, m=2, o=3)  # k = {&#39;n&#39;: 1, &#39;m&#39;: 2, &#39;o&#39;: 3}
+index(111, 222, 333, 444, n=1, m=2, o=3)  # a = (333, 444)  # k = {&#39;n&#39;: 1, &#39;m&#39;: 2, &#39;o&#39;: 3}
+
+
+&gt;&gt;&gt; () {}
+(333, 444) {}
+() {&#39;n&#39;: 1, &#39;m&#39;: 2, &#39;o&#39;: 3}
+(333, 444) {&#39;n&#39;: 1, &#39;m&#39;: 2, &#39;o&#39;: 3}</code></pre><p>函数在定义阶段 针对可变长的形参 推荐按照以下命名方式:</p><pre><code class="python">def index(*args,**kwargs):
+    pass</code></pre><h3 id="实参拆包"><a href="#实参拆包" class="headerlink" title="实参拆包"></a>实参拆包</h3><p><strong>在实参中的作用：</strong></p><p><code>*</code> 号会将列表打散成位置参数的形式 <code>**</code> 号会将字典打散成关键字参数的形式</p><pre><code class="python">l = [1,2,3,4,5,6,7,8]
+index(*l)
+# 或者
+index(*[1,2,3,4,5,6,7,8])
+
+# 等价于 index(1,2,3,4,5,6,7,8)
+
+
+
+k = {&#39;username&#39;:&#39;jason&#39;,&#39;password&#39;:&#39;123&#39;}
+index(**k)
+# 或者
+index(**{&#39;username&#39;:&#39;jason&#39;,&#39;password&#39;:&#39;123&#39;})
+
+# 等价于 index(username=&#39;jason&#39;,password=&#39;123&#39;)</code></pre><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>可变对象和不可变对象当参数：(可变对象和不可变对象当参数，效果可能是不同的）</p><blockquote><p>当实参是不可变对象时，形参值改变 会影响实参！</p><p>当实参是可变对象时，形参值改变可能会影响实参！</p></blockquote><h2 id="名称空间与作用域"><a href="#名称空间与作用域" class="headerlink" title="名称空间与作用域"></a>名称空间与作用域</h2><h3 id="名称空间"><a href="#名称空间" class="headerlink" title="名称空间"></a>名称空间</h3><ol><li><p>变量可被访问范围称为变量的作用域，也称为变量命名空间或变量名字空间。 Python 程序用命名空间区分不同空间的相同名字。</p></li><li><p>Python 解释器启动时建立一个全局命名空间，全局变量就放在这个空间,还建立内置命名空间 (built-in namespace)，记录所有标准常量名、标准函数名等。在全局命名空间中定义的变量是全局变量。</p></li><li><p>每一个函数定义自己的命名空间，函数内部定义的变量是局部变量。如果在一个函数中定义一个变量 x，在另外一个函数中也定义 x 变量，因为是在不同的命名空间，所以两者指代的是不同的变量。可以通过多种方式获取其他命名空间的变量。</p></li></ol><blockquote><p>内置名称空间：</p><p>伴随着 python 解释器的启动(创建)，结束(销毁)，因为是第一个被加载的名称空间，该名称空间中存放了很多提前给你写好的名字，比如内置函数/方法 max min len</p></blockquote><blockquote><p>全局名称空间：</p><p>伴随着 py 文件的执行(创建),结束(销毁)，是第二个被加载的名称空间，文件执行过程中产生的名字会存放于该名称空间内</p></blockquote><pre><code class="python">import datetime  # 模块名
+
+name = &#39;jason&#39;  # 变量名
+
+
+if name == &#39;jason&#39;:
+    x = 1  # 变量名
+
+def index():  # 函数名
+    pass
+
+class MyClass:  # 类名
+    pass</code></pre><h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><h4 id="对象的查找顺序"><a href="#对象的查找顺序" class="headerlink" title="对象的查找顺序"></a>对象的查找顺序</h4><p><strong>局部名称空间 &gt;&gt;&gt; 全局名称空间 &gt;&gt;&gt; 内置名称空间</strong></p><ul><li><p>在局部名称空间</p><ol><li>先在局部名称空间中找</li><li>再去全局名称空间中找</li><li>再去内置名称空间中找</li></ol></li><li><p>在全局名称空间</p><ol><li>现在全局名称空间中找</li><li>内置名称空间中找</li></ol></li></ul><pre><code class="python">x = 100
+def index():
+    x = 300
+    print(x)  # 300
+    print(locals())  # 查看局部作用域中的名字
+
+index()
+print(x)  # 100
+print(globals())  # 查看全局作用域中的名字
+
+
+&gt;&gt;&gt; 300
+{&#39;x&#39;: 300}
+100
+{&#39;__name__&#39;: &#39;__main__&#39;, &#39;__doc__&#39;: None, &#39;__package__&#39;: None, &#39;__loader__&#39;: &lt;_frozen_importlib_external.SourceFileLoader object at 0x000001F7E6F40940&gt;, &#39;__spec__&#39;: None, &#39;__annotations__&#39;: {}, &#39;__builtins__&#39;: &lt;module &#39;builtins&#39; (built-in)&gt;, &#39;__file__&#39;: &#39;G:/NextCloud/Documents/代码操练/Python/01/eg6.py&#39;, &#39;__cached__&#39;: None, &#39;x&#39;: 100, &#39;index&#39;: &lt;function index at 0x000001F7E6F251F0&gt;}</code></pre><h3 id="通过关键字互相访问"><a href="#通过关键字互相访问" class="headerlink" title="通过关键字互相访问"></a>通过关键字互相访问</h3><h4 id="global-关键字"><a href="#global-关键字" class="headerlink" title="global 关键字"></a>global 关键字</h4><p>如希望在函数中使用全局变量，而不是创建局部变量，需要用 global 关键字声明</p><pre><code class="python">x = 100
+def index():
+    # 修改全局的x
+    global x
+    x = 300
+    print(x)  # 300
+
+&gt;&gt;&gt; 300</code></pre><h4 id="nonlocal-关键字"><a href="#nonlocal-关键字" class="headerlink" title="nonlocal 关键字"></a>nonlocal 关键字</h4><p>python 支持函数的嵌套，在嵌套的函数内查找名字时， 会优先查找自己局部作用域的名字然后由内而外一层层查找外部嵌套函数定义的作用域，没有找到则去找全局</p><p>nonlocal 声明的变量不是局部变量,也不是全局变量,而是外部嵌套函数内的变量。</p><pre><code class="python">def outer():
+    x = 1
+    def inner():
+        nonlocal x
+        x = 2
+        # 在inner的局部修改outer的局部
+        print(&#39;inner&#39;,x)  # inner 2
+    inner()
+    print(&#39;outer&#39;,x)  # outer 2
+outer()
+
+&gt;&gt;&gt; inner 2
+outer 2</code></pre><h3 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h3><h4 id="sorted-函数"><a href="#sorted-函数" class="headerlink" title="sorted 函数"></a>sorted 函数</h4><p>sorted 函数对字符串，列表，元组，字典等对象进行排序操作。</p><p>.sort 是应用在 list 上的方法，sorted 可以对更多的数据类<br>型进行排序操作。</p><blockquote><p>即便都是对列表操作，list 的 sort 方法返回的是对已经存在的列表进行操作，而内建函数 sorted 返回的是一个新的 list，而不是在原来的基础上进行的操作。</p></blockquote><p>sorted (iterable, key, reverse)</p><table><thead><tr><th>参数</th><th>内容</th></tr></thead><tbody><tr><td>iterable</td><td>– 序列，如字符串，列表，元组等。</td></tr><tr><td>key</td><td>– 函数，缺省为空</td></tr><tr><td>reverse</td><td>– 排序规则</td></tr><tr><td>reverse</td><td>= True 降序 ， reverse = False 升序（默认）。</td></tr></tbody></table><p><strong>例子（多元列表排序）：</strong></p><p><a href="https://up.media.everdo.cn/image/7r5n" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/07/08/python-sorted.jpg" alt="python-sorted.jpg"></a></p><pre><code class="python">students = [(&#39;江幸&#39;, 89, 15), (&#39; 方鹏&#39;, 80, 14), (&#39;陈可&#39;, 85, 14)]
+# 第二个分量是成绩，第三个分量是年龄
+
+print(sorted(students, key=lambda s: s[2]))  # 按年龄从小到大排序
+# [(&#39; 方鹏&#39;, 80, 14), (&#39;陈可&#39;, 85, 14), (&#39;江幸&#39;,89, 15)]
+
+print(sorted(students, key=lambda s: s[1], reverse=True))  # 按成绩从大到小降序
+# [(&#39;江幸&#39;, 89, 15), (&#39;陈可&#39;, 85, 14), (&#39; 方鹏&#39;,80, 14)]
+
+
+&gt;&gt;&gt; [(&#39; 方鹏&#39;, 80, 14), (&#39;陈可&#39;, 85, 14), (&#39;江幸&#39;, 89, 15)]
+[(&#39;江幸&#39;, 89, 15), (&#39;陈可&#39;, 85, 14), (&#39; 方鹏&#39;, 80, 14)]</code></pre><h4 id="map函数"><a href="#map函数" class="headerlink" title="map函数"></a>map函数</h4><ul><li>map 会根据提供的函数对指定序列做映射。</li><li>map 函数语法：map(function, iterable, …)</li><li>第一个参数 function 是对参数序列中的每一个元素调用 function 函数，iterable 是序列，</li><li>返回值的新列表或迭代器，每个元素是调用 function 函数的返回值</li></ul><h4 id="zip函数"><a href="#zip函数" class="headerlink" title="zip函数"></a>zip函数</h4><ul><li>zip() 函数用于将可迭代的对象作为参数，将对象中对应的元素打包成一个个元组，然后返回由这些元组组成的列表或迭代器 。</li><li>如果各个迭代器的元素个数不一致，则返回列表长度与最短的对象相同。</li><li>zip 语法：zip([iterable, …])</li></ul><p>参数说明：iterable,… –两个或多个序列返回值：返回元组列表</p><p><strong>例子：</strong></p><pre><code class="python">a = [1, 2, 3]
+b = [4, 5, 6]
+c = [4, 5, 6, 7, 8]
+print(list(zip(a, b)))
+# [(1, 4), (2, 5), (3, 6)]
+print(list(zip(a, c)))  # 元素个数与最短的列表一致
+# [(1, 4), (2, 5), (3, 6)]
+
+
+&gt;&gt;&gt;[(1, 4), (2, 5), (3, 6)]
+[(1, 4), (2, 5), (3, 6)]</code></pre><h4 id="eval-和-exec函数"><a href="#eval-和-exec函数" class="headerlink" title="eval 和 exec函数"></a>eval 和 exec函数</h4><p>Python 是一种动态语言，它包含很多含义。Python 变量类型，操作的合法性检查都在动态运行中检查；运算的代码需要到运行时才能动态确定；程序结构也可以动态变化，容许动态加载新模块等。这两个函数就体现了这个特点。</p><ul><li>eval 是计算表达式,返回表达式的值。</li><li>exec 可运行Python的程序,返回程序运行结果。</li></ul><pre><code class="python">x, y = 3, 7
+eval(&#39;x+3*y-4&#39;)
+# 20
+
+exec(&#39;print(&quot;hello world&quot;)&#39;)
+# Hello world
+
+
+&gt;&gt;&gt; hello world</code></pre><h4 id="all-和-any-函数"><a href="#all-和-any-函数" class="headerlink" title="all 和 any 函数"></a>all 和 any 函数</h4><p>all() 和 any() 函数将可迭代的对象作为参数 。</p><p>all 函数参数都是 True 时 ，才返回 True 否则返回 False<br>any 函数参数只要有一个为 True ，就返回 True, 参数全部是 False 时，返回 False.</p><h2 id="函数对象"><a href="#函数对象" class="headerlink" title="函数对象"></a>函数对象</h2><p>函数名可以被当作“数据”来处理，具体的可以分为以下四个应用：（函数名加括号执行优先级最高）</p><h3 id="四种函数对象特性"><a href="#四种函数对象特性" class="headerlink" title="四种函数对象特性"></a>四种函数对象特性</h3><h4 id="函数名被引用"><a href="#函数名被引用" class="headerlink" title="函数名被引用"></a>函数名被引用</h4><p>让一个变量等于函数名后，这个变量对应的地址和函数对应的地址一致，可以直接调用新定义的变量加括号来执行函数体内容</p><pre><code class="python">def index():
+    print(&#39;from index&#39;)
+
+print(index)  # &lt;function index at 0x000001B260AE51F0&gt;
+
+x = index
+print(x)  # &lt;function index at 0x000001B260AE51F0&gt;
+
+# 运行 x
+x()  # from index
+
+
+&gt;&gt;&gt; &lt;function index at 0x00000289BDDA51F0&gt;
+&lt;function index at 0x00000289BDDA51F0&gt;
+from index</code></pre><h4 id="函数名作为容器类型的元素"><a href="#函数名作为容器类型的元素" class="headerlink" title="函数名作为容器类型的元素"></a>函数名作为容器类型的元素</h4><p>可以将函数名存放到列表，元组，字典，集合等数据容器中并进行调用</p><pre><code class="python">def index():
+    print(&#39;from index&#39;)
+
+d = {&#39;username&#39;:&#39;apple&#39;,&#39;func&#39;:index}
+print(d)  # {&#39;username&#39;: &#39;jason&#39;, &#39;func&#39;: &lt;function index at 0x0000025C266251F0&gt;}
+d.get(&#39;func&#39;)()  # from index
+d[&#39;func&#39;]()
+
+
+&gt;&gt;&gt; {&#39;username&#39;: &#39;apple&#39;, &#39;func&#39;: &lt;function index at 0x0000017B4EFD51F0&gt;}
+from index
+from index</code></pre><h4 id="函数名还当作函数的参数"><a href="#函数名还当作函数的参数" class="headerlink" title="函数名还当作函数的参数"></a>函数名还当作函数的参数</h4><pre><code class="python">def index():
+    print(&#39;from index&#39;)
+
+def foo(a,b):
+    print(a)
+    b()
+
+foo(1,index)
+
+
+&gt;&gt;&gt; 1
+from index</code></pre><h4 id="函数名当作函数的返回值"><a href="#函数名当作函数的返回值" class="headerlink" title="函数名当作函数的返回值"></a>函数名当作函数的返回值</h4><pre><code class="python">def index():
+    print(&#39;from index&#39;)
+
+def foo():
+    print(&#39;from foo&#39;)
+    return index
+
+res = foo()
+res()
+
+
+&gt;&gt;&gt; from foo
+from index</code></pre><h3 id="闭包函数"><a href="#闭包函数" class="headerlink" title="闭包函数"></a>闭包函数</h3><p>根据上述函数对象的特性，我们可以用来组装闭包函数。那么闭包函数的定义如下：</p><ol><li>必须是定义在函数内部的函数</li><li>内部函数必须使用了外部函数名称空间/作用域的名字</li></ol><pre><code class="python">def index():
+    name = &#39;emptinessboy&#39;
+    def inner():  # 闭包函数
+        print(name)</code></pre><p>闭包函数的出现给我们提供了另外一种给函数体传参的方式</p><pre><code class="python">#闭包函数，其中 exponent 称为自由变量
+def nth_power(exponent):
+    def exponent_of(base):
+        return base ** exponent
+    return exponent_of # 返回值是 exponent_of 函数
+square = nth_power(2) # 计算一个数的平方
+cube = nth_power(3) # 计算一个数的立方
+
+print(square(2))  # 计算 2 的平方
+print(cube(2)) # 计算 2 的立方</code></pre><p>在python中，函数也是一种对象（万物皆对象！）</p><ul><li>函数可以赋值给一个变量</li><li>函数可以定义在另一个函数内部</li></ul><p><strong>这也意味着一个函数可以返回另一个函数</strong></p><h3 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h3><blockquote><p>这里结合上课老师讲的，并参考了一篇文章：<a href="https://www.jianshu.com/p/fd746acbdf1e" target="_blank" rel="noopener">https://www.jianshu.com/p/fd746acbdf1e</a></p></blockquote><p>装饰器在不改变被装饰对象 (函数…) 原来的调用方式和内部原代码的情况下给该对象 (函数…) 添加新的功能</p><pre><code class="python"># 知识点
+import time  # 操作时间的模块
+
+# 1.获取1970 到执行代码的那一刻所经历的秒数  时间戳
+print(time.time())  # 1593501513.9230678
+
+# 2.让程序原地阻塞
+time.sleep(2)  # 让程序阻塞2秒之后再运行</code></pre><h4 id="装饰器推导流程"><a href="#装饰器推导流程" class="headerlink" title="装饰器推导流程"></a>装饰器推导流程</h4><h5 id="A-封装成函数："><a href="#A-封装成函数：" class="headerlink" title="A 封装成函数："></a>A 封装成函数：</h5><p>此方法把目标函数作为参数传入父函数，改变了原函数的调用方式，不符合装饰器定义。</p><pre><code class="python">def get_time(func):
+    start_time = time.time()
+    func()
+    end_time = time.time()
+    print(&#39;耗时:%s&#39;%(end_time-start_time))
+
+get_time(home)
+get_time(index)</code></pre><p>测试代码：</p><pre><code class="python">def home():
+    for i in range(10):
+        time.sleep(1)
+        print(i,end=&quot; &quot;)
+    print(&quot;\n%d from home&quot; %(i))
+
+a = get_time(home)
+print(a)
+
+
+&gt;&gt;&gt; 0 1 2 3 4 5 6 7 8 9 
+9 from home
+耗时:10.111440420150757
+None #可以看到 a 是空</code></pre><h5 id="B-利用闭包函数给函数传参-装饰器雏形："><a href="#B-利用闭包函数给函数传参-装饰器雏形：" class="headerlink" title="B 利用闭包函数给函数传参 装饰器雏形："></a>B 利用闭包函数给函数传参 <strong><em>装饰器雏形</em></strong>：</h5><pre><code class="python">def outer(func):  # 传入参数为函数
+    def get_time():
+        start_time = time.time()
+        func()  # 执行传入的函数体
+        end_time = time.time()
+        print(&#39;耗时:%s&#39;%(end_time-start_time))
+    return get_time</code></pre><p>测试代码：</p><pre><code class="python">def home():
+    for i in range(10):
+        time.sleep(1)
+        print(i,end=&quot; &quot;)
+    print(&quot;\n%d from home&quot; %(i))
+
+home = outer(home)  # 普通的变量名 home = outer(真正的函数名home)
+home()  # 现在的 home 已经不是原来的 home 了，变为包装后的，加入了计时的新函数
+
+
+&gt;&gt;&gt; 0 1 2 3 4 5 6 7 8 9 
+9 from home
+耗时:10.079336404800415</code></pre><p>这一句代码中，将 home 函数作为变量传入 outer 装饰器中，然后 home 方法在 outer 中的函数 get_time() 函数实现，同时包装新的计算时间的功能，将新的函数 get_time() 作为变量返回 ，所以 home 现在已经变成了由 outer 装饰的 get_time() 新方法。</p><h5 id="C-装饰的函数有参数（可变长参数）"><a href="#C-装饰的函数有参数（可变长参数）" class="headerlink" title="C 装饰的函数有参数（可变长参数）"></a>C 装饰的函数有参数（可变长参数）</h5><pre><code class="python">def outer(func):  # 外层函数用来返回内层函数
+    def get_time(*args, **kwargs):
+        start_time = time.time()
+        func(*args, **kwargs)  # 接收参数
+        end_time = time.time()
+        print(&#39;耗时:%s&#39; % (end_time - start_time))
+
+    return get_time</code></pre><p>测试代码：</p><pre><code class="python">def home(k):
+    for i in range(k):
+        time.sleep(1)
+        print(i,end=&quot; &quot;)
+    print(&quot;\n%d from home&quot; %(i))
+
+home(10)
+print()
+
+home = outer(home) # 普通的变量名home = outer(真正的函数名home)
+home(10) # 已经不是原来的 home 了，此处已经被装饰
+
+
+&gt;&gt;&gt; 0 1 2 3 4 5 6 7 8 9 # 被装饰前原函数运行效果
+9 from home
+
+0 1 2 3 4 5 6 7 8 9 # 被装饰后效果
+9 from home
+耗时:10.067564487457275</code></pre><p>所以，装饰器装饰函数的时候，将函数作为变量传入装饰器内部，实际调用的是装饰器内部的函数（添加新功能之后的函数）</p><h3 id="装饰器语法糖"><a href="#装饰器语法糖" class="headerlink" title="装饰器语法糖"></a>装饰器语法糖</h3><p>Python 中装饰器语法并不用每次都用赋值语句。<br>在函数定义的时候就加上 <strong>@+装饰器名字</strong> 即可</p><blockquote><p>这里，我们直接注释上面一个例子的运行代码，使用语法糖重写后运行，可以看到效果是一样的。</p></blockquote><pre><code class="python"># def home(k):
+#     for i in range(k):
+#         time.sleep(1)
+#         print(i,end=&quot; &quot;)
+#     print(&quot;\n%d from home&quot; %(i))
+#
+# home(10)
+# print()
+#
+# home = outer(home) # 普通的变量名home = outer(真正的函数名home)
+# home(10) # 已经不是原来的 home 了，此处已经被装饰
+
+# @outer 相当于执行 home = outer(home) 会将紧挨着语法糖下面的函数名自动当作第一个参数传递给@后面的函数调用执行
+
+@outer
+def home(k):
+    for i in range(k):
+        time.sleep(1)
+        print(i,end=&quot; &quot;)
+    print(&quot;\n%d from home&quot; %(i))
+
+home(10)
+
+
+&gt;&gt;&gt; 0 1 2 3 4 5 6 7 8 9 
+9 from home
+耗时:10.110907077789307</code></pre><h3 id="多层装饰器-装饰器顺序"><a href="#多层装饰器-装饰器顺序" class="headerlink" title="多层装饰器 装饰器顺序"></a>多层装饰器 <strong><em>装饰器顺序</em></strong></h3><p>比如我们有两个装饰器：</p><pre><code class="python">@decorator_one
+@decorator_two
+def hello()
+    pass</code></pre><p>这句代码实际上类似于：</p><pre><code class="python">hello = decorator_one(decorator_two(hello))</code></pre><p>语法糖在装饰的时候 如果有多个装饰器，那么顺序是 <strong>从下往上</strong> 的。两个装饰器是一层层地往外装饰的。</p><h4 id="补充例子"><a href="#补充例子" class="headerlink" title="补充例子"></a>补充例子</h4><pre><code class="python"># 带参数的装饰器
+def login_auth(db):
+    def outer(func):
+        def inner(*args,**kwargs):
+            if db == &#39;MySQL&#39;:
+                res = func(*args,**kwargs)
+            elif db == &#39;Oracle&#39;:
+                res = func(*args,**kwargs)
+            elif db == &#39;postgresql&#39;:
+                res = func(*args,**kwargs)
+            else:
+                res = func(*args,**kwargs)
+            return res
+        return inner
+    return outer
+
+# 下面的例子中：
+# 先执行login_auth(&#39;MySQL&#39;)  # 2.再执行语法糖句式 @outer
+@login_auth(&#39;MySQL&#39;)
+def index():
+    pass</code></pre><h3 id="装饰器模版"><a href="#装饰器模版" class="headerlink" title="装饰器模版"></a>装饰器模版</h3><h4 id="无参装饰器"><a href="#无参装饰器" class="headerlink" title="无参装饰器"></a>无参装饰器</h4><pre><code class="python">
+def outer(func):
+  def inner(*args,**kwargs):
+    print(&#39;执行被装饰对象之前你可以做的操作&#39;)
+    res = func(*args,**kwargs)
+    print(&#39;执行被装饰对象之后你可以做的操作&#39;)
+    return res
+     return inner</code></pre><h4 id="有参装饰器"><a href="#有参装饰器" class="headerlink" title="有参装饰器"></a>有参装饰器</h4><pre><code class="python">def login_auth(*args,**kwargs):
+    def outer(func):
+      def inner(*args,**kwargs):
+        print(&#39;执行被装饰对象之前你可以做的操作&#39;)
+        res = func(*args,**kwargs)
+        print(&#39;执行被装饰对象之后你可以做的操作&#39;)
+        return res
+         return inner
+     return outer</code></pre><h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><h3 id="import-模块名"><a href="#import-模块名" class="headerlink" title="import 模块名"></a>import 模块名</h3><p>模块名是另外一个 Python 文件的文件名,不包含扩展名,模块是可以运行的程序，“import 模块名” 就是执行文件名为模块名的程序</p><h3 id="from-…-import"><a href="#from-…-import" class="headerlink" title="from … import"></a>from … import</h3><p>from 模块名 import *</p><blockquote><p>这种方法引入模块中的所有函数，调用的时候不需要再加模块名</p></blockquote><p>from 模块名 import 函数名</p><blockquote><p>这种方法引入模块中的单个函数，调用的时候也不需要再加模块名</p></blockquote><img src="https://media.everdo.cn/tank/pic-bed/2021/04/09/4.png" alt="尾图4" style="zoom:33%"><blockquote style="margin:2em 0 0;padding:.5em 1em;border-left:3px solid #ebc43b;background-color:#191919;list-style:none"><p><strong>This blog is under a <a href="/creativecommons.html" target="_blank">CC BY-NC-ND 4.0 Unported License</a></strong><br><strong>本文链接：</strong><a href="https://coding.emptinessboy.com/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B004%EF%BC%88%E5%87%BD%E6%95%B0%EF%BC%89/">https://coding.emptinessboy.com/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B004%EF%BC%88%E5%87%BD%E6%95%B0%EF%BC%89/</a></p></blockquote></div><div id="comment" style="padding:10px" class="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js"></script><script>var GUEST_INFO=["nick","mail","link"],guest_info="nick,mail,link".split(",").filter(function(i){return GUEST_INFO.indexOf(i)>-1}),notify=!1,verify=!0;new Valine({el:".vcomment",notify:notify,verify:verify,appId:"91mhcw0WK44B90nptmxGcJol-gzGzoHsz",appKey:"Boi7za0ClwGyWRCYd8osdf5o",placeholder:"在这里写点什么吧！",pageSize:"10",avatar:"monsterid",lang:"zh-cn",guest_info:guest_info})</script></div><nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col"><a href="/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B005%EF%BC%88%E6%96%87%E4%BB%B6%E5%92%8C%E7%BC%96%E7%A0%81%EF%BC%89/" id="post_nav-newer" class="prev-content"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation"><i class="material-icons">arrow_back</i></button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 新篇</a><div class="section-spacer"></div><a href="/2020/06/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B003%EF%BC%88%E6%95%B0%E6%8D%AE-%E6%B5%81%E7%A8%8B%EF%BC%89%E4%B8%8B%20-%20%E5%89%AF%E6%9C%AC/" id="post_nav-older" class="next-content">旧篇 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation"><i class="material-icons">arrow_forward</i></button></a></nav></div></div><div class="sidebar-overlay"></div><aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation"><div id="sidebar-main"><div class="sidebar-header header-cover" style="background-image:url(/img/sidebar_header.jpg)"><div class="top-bar"></div><button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display:initial" data-upgraded=",MaterialButton,MaterialRipple"><i class="material-icons">clear_all</i> <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button><div class="sidebar-image"><img src="/img/fav_300.png" alt="EmptinessBoy's avatar"></div><a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">i@my.huxiaofan.com <b class="caret"></b></a></div><ul class="nav sidebar-nav"><li class="dropdown"><ul id="settings-dropdown" class="dropdown-menu"><li><a href="mailto:i@my.huxiaofan.com" target="_blank" title="Email 我"><i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i> Email 我</a></li></ul></li><li id="sidebar-first-li"><a href="/"><i class="material-icons sidebar-material-icons">home</i> 主页</a></li><li class="divider"></li><li class="dropdown"><a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown"><i class="material-icons sidebar-material-icons">inbox</i> 归档 <b class="caret"></b></a><ul class="dropdown-menu"><li><a class="sidebar_archives-link" href="/archives/2021/05/">五月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/04/">四月 2021<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/11/">十一月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/10/">十月 2020<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/09/">九月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/07/">七月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/06/">六月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/04/">四月 2020<span class="sidebar_archives-count">13</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/03/">三月 2020<span class="sidebar_archives-count">13</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/02/">二月 2020<span class="sidebar_archives-count">4</span></a></li></ul></li><li class="dropdown"><a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown"><i class="material-icons sidebar-material-icons">chrome_reader_mode</i> 分类 <b class="caret"></b></a><ul class="dropdown-menu"><li><a class="sidebar_archives-link" href="/categories/Android/">Android<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/CSS%E5%AD%A6%E4%B9%A0/">CSS学习<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/HTML%E5%AD%A6%E4%B9%A0/">HTML学习<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/Hadoop/">Hadoop<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/JAVAWEB/">JAVAWEB<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/JAVA%E5%AD%A6%E4%B9%A0/">JAVA学习<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/JS%E5%AD%A6%E4%B9%A0/">JS学习<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/Linux/">Linux<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/WEB%E6%A1%86%E6%9E%B6/">WEB框架<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/python%E5%85%A5%E9%97%A8/">python入门<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/">瞎折腾<span class="sidebar_archives-count">4</span></a></li></ul></li><li class="divider"></li><li><a href="https://huxiaofan.com" target="_blank" rel="noopener" title="生活博客"><i class="material-icons sidebar-material-icons">domain</i> 生活博客</a></li><li><a href="https://huxiaofan.com/about" target="_blank" rel="noopener" title="关于我"><i class="material-icons sidebar-material-icons">person</i> 关于我</a></li><li class="divider"></li><li><a href="/archives">文章总数 <span class="sidebar-badge">53</span></a></li></ul></div></aside><div id="back-to-top" class="toTop-wrap"><a href="#top" class="toTop"><i class="material-icons footer_top-i">expand_less</i></a></div><footer class="mdl-mini-footer" id="bottom"><div class="mdl-mini-footer--left-section sns-list"><a href="https://huxiaofan.com/go?url=https://twitter.com/huxiaofanhome/" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter"><span class="visuallyhidden">Twitter</span></button></a><a href="https://huxiaofan.com/go?url=https://www.facebook.com/profile.php?id=100013375578138" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook"><span class="visuallyhidden">Facebook</span></button></a><a href="https://git.huxiaofan.com/emptinessboy" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-github"><span class="visuallyhidden">Github</span></button></a><a href="https://huxiaofan.com/go/?url=aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL2F2NTc2MjgwMDQ=" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili"><span class="visuallyhidden">Bilibili</span></button></a><a href="https://huxiaofan.com/go/?url=https://t.me/emptinessboy" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-telegram"><span class="visuallyhidden">Telegram</span></button></a></div><div id="copyright">Copyright&nbsp;©&nbsp;<span year></span>&nbsp;帆的自留地<br><a href="http://huxiaofan.com" target="_blank" rel="noopener">晓帆</a>&nbsp;/&nbsp;<a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow"> 浙ICP备20004121号</a></div><div class="mdl-mini-footer--right-section"><div><div class="footer-develop-div">Hexo Theme - <span class="footer-develop-a">Material</span></div></div></div></footer><script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==",!0)</script><script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==",!0)</script><script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==",!0)</script><script type="text/ls-javascript" id="NProgress-script">NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#82bcff'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #82bcff, 0 0 15px #82bcff'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#82bcff',
+        'border-left-color': '#82bcff'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);</script><script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==",!0)</script><script type="text/ls-javascript" id="window-load">$(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })</script><script type="text/ls-javascript" id="lazy-load">// Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });</script><script>var copyrightNow=(new Date).getFullYear(),textContent=document.querySelector("span[year]");copyrightSince=2019,copyrightSince===copyrightNow||0===copyrightSince?textContent.textContent=copyrightNow:textContent.textContent=copyrightSince+" - "+copyrightNow,function(){for(var t=document.querySelectorAll('script[type="text/ls-javascript"]'),e=0;e<t.length;++e){var o=t[e];lsloader.runInlineScript(o.id,o.id)}}(),console.log("\n %c 帆's Life | https://huxiaofan.com | Theme Material %c \n","color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;","color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;")</script></main></div></body></html><!-- rebuild by neat -->

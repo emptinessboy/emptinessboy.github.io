@@ -1,0 +1,336 @@
+<!-- build time:Mon Mar 28 2022 11:43:47 GMT+0800 (中国标准时间) --><!DOCTYPE html><html style="display:none" lang="zh"><head><meta charset="utf-8"><script>window.materialVersion="1.5.6",window.oldVersion=["codestartv1","1.3.4","1.4.0","1.4.0b1","1.5.0","1.5.2","1.5.5"]</script><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn1.lncld.net"><link rel="dns-prefetch" href="https://cdn1.lncld.net"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta name="renderer" content="webkit"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><title>Android开发 Activity的详解（下） | 帆的自留地</title><link rel="icon shortcut" type="image/ico" href="/img/logo-32x32.jpg"><link rel="icon" href="/img/logo-192x192.jpg"><meta name="format-detection" content="telephone=no"><meta name="description" itemprop="description" content="晓帆的学习笔记"><meta name="keywords" content="博客,代码,学习,程序,大学,安卓学习"><meta name="theme-color" content="#1e69bf"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]--><script>!function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}},lsloader.removeLS=function(e){try{localStorage.removeItem(e)}catch(t){}},lsloader.setLS=function(e,t){try{localStorage.setItem(e,t)}catch(n){}},lsloader.getLS=function(e){var t="";try{t=localStorage.getItem(e)}catch(n){t=""}return t},versionString="/*"+(window.materialVersion||"unknownVersion")+"*/",lsloader.clean=function(){try{for(var e=[],t=0;t<localStorage.length;t++)e.push(localStorage.key(t));e.forEach(function(e){var t=lsloader.getLS(e);if(window.oldVersion){var n=window.oldVersion.reduce(function(e,n){return e||-1!==t.indexOf("/*"+n+"*/")},!1);n&&lsloader.removeLS(e)}})}catch(n){}},lsloader.clean(),lsloader.load=function(e,t,n,s){"boolean"==typeof n&&(s=n,n=void 0),s=s||!1,n=n||function(){};var a;if(a=this.getLS(e),a&&-1===a.indexOf(versionString))return this.removeLS(e),void this.requestResource(e,t,n,s);if(a){var o=a.split(versionString)[0];if(o!=t)return console.log("reload:"+t),this.removeLS(e),void this.requestResource(e,t,n,s);a=a.split(versionString)[1],s?(this.jsRunSequence.push({name:e,code:a}),this.runjs(t,e,a)):(document.getElementById(e).appendChild(document.createTextNode(a)),n())}else this.requestResource(e,t,n,s)},lsloader.requestResource=function(e,t,n,s){var a=this;s?this.iojs(t,e,function(e,t,n){a.setLS(t,e+versionString+n),a.runjs(e,t,n)}):this.iocss(t,e,function(n){document.getElementById(e).appendChild(document.createTextNode(n)),a.setLS(e,t+versionString+n)},n)},lsloader.iojs=function(e,t,n){var s=this;s.jsRunSequence.push({name:t,code:""});try{var a=new XMLHttpRequest;a.open("get",e,!0),a.onreadystatechange=function(){if(4==a.readyState){if((a.status>=200&&a.status<300||304==a.status)&&""!=a.response)return void n(e,t,a.response);s.jsfallback(e,t)}},a.send(null)}catch(o){s.jsfallback(e,t)}},lsloader.iocss=function(e,t,n,s){var a=this;try{var o=new XMLHttpRequest;o.open("get",e,!0),o.onreadystatechange=function(){if(4==o.readyState){if((o.status>=200&&o.status<300||304==o.status)&&""!=o.response)return n(o.response),void s();a.cssfallback(e,t,s)}},o.send(null)}catch(r){a.cssfallback(e,t,s)}},lsloader.iofonts=function(e,t,n,s){var a=this;try{var o=new XMLHttpRequest;o.open("get",e,!0),o.onreadystatechange=function(){if(4==o.readyState){if((o.status>=200&&o.status<300||304==o.status)&&""!=o.response)return n(o.response),void s();a.cssfallback(e,t,s)}},o.send(null)}catch(r){a.cssfallback(e,t,s)}},lsloader.runjs=function(e,t,n){if(t&&n)for(var s in this.jsRunSequence)this.jsRunSequence[s].name==t&&(this.jsRunSequence[s].code=n);if(this.jsRunSequence[0]&&this.jsRunSequence[0].code&&"failed"!=this.jsRunSequence[0].status){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code)),a.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(a),this.jsRunSequence.shift(),this.jsRunSequence.length>0&&this.runjs()}else if(this.jsRunSequence[0]&&"failed"==this.jsRunSequence[0].status){var o=this,a=document.createElement("script");a.src=this.jsRunSequence[0].path,a.type="text/javascript",this.jsRunSequence[0].status="loading",a.onload=function(){o.jsRunSequence.shift(),o.jsRunSequence.length>0&&o.runjs()},document.body.appendChild(a)}},lsloader.tagLoad=function(e,t){this.jsRunSequence.push({name:t,code:"",path:e,status:"failed"}),this.runjs()},lsloader.jsfallback=function(e,t){if(!this.jsnamemap[t]){this.jsnamemap[t]=t;for(var n in this.jsRunSequence)this.jsRunSequence[n].name==t&&(this.jsRunSequence[n].code="",this.jsRunSequence[n].status="failed",this.jsRunSequence[n].path=e);this.runjs()}},lsloader.cssfallback=function(e,t,n){if(!this.cssnamemap[t]){this.cssnamemap[t]=1;var s=document.createElement("link");s.type="text/css",s.href=e,s.rel="stylesheet",s.onload=s.onerror=n;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(s,a)}},lsloader.runInlineScript=function(e,t){var n=document.getElementById(t).innerText;this.jsRunSequence.push({name:e,code:n}),this.runjs()}}()</script><script>function Queue(){function e(e){this.debug&&console.log("Offered a Queued Function."),"function"==typeof e?this.dataStore.push(e):console.log("You must offer a function.")}function t(){return this.debug&&console.log("Polled a Queued Function."),this.dataStore.shift()}function o(){var e=this.poll();void 0!==e&&(this.debug&&console.log("Run a Queued Function."),e())}function u(){this.debug=!0}this.dataStore=[],this.offer=e,this.poll=t,this.execNext=o,this.debug=!1,this.startDebug=u}var queue=new Queue</script><style id="material_css"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("material_css","/css/material.min.css?lfwTSCk5dU0gSgC//hS81g==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style id="style_css"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("style_css","/css/style.min.css?vOFJu+pZl+0Eeqi7pGRHyw==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style id="prettify_css"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style id="prettify_theme"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("prettify_theme","/css/prettify/atelier-cave-dark.min.css?P8HZcYCbr9fq5dAvzZGnUQ==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style>body,html{font-family:Roboto,"Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;overflow-x:hidden!important}code{font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace}a{color:#0158bc}#scheme-Paradox .hot_tags-count,#scheme-Paradox .sidebar-colored .sidebar-badge,#scheme-Paradox .sidebar-colored .sidebar-header,#scheme-Paradox .sidebar_archives-count,#search-form-label:after,#search-label,.mdl-card__media{background-color:#1e69bf!important}#scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus,#scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover{color:#1e69bf!important}#ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a,#post_entry-right-info,.sidebar-colored .sidebar-nav li:hover>a,.sidebar-colored .sidebar-nav li:hover>a i,.sidebar-colored .sidebar-nav li>a:focus i,.sidebar-colored .sidebar-nav li>a:hover,.sidebar-colored .sidebar-nav li>a:hover i,.sidebar-colored .sidebar-nav>.open>a,.sidebar-colored .sidebar-nav>.open>a:focus,.sidebar-colored .sidebar-nav>.open>a:hover{color:#1e69bf!important}.toTop{background:#6baaf2!important}.material-layout .material-index>.material-nav,.material-layout .material-post>.material-nav,.material-nav a{color:#6baaf2}#scheme-Paradox .MD-burger-layer{background-color:#6baaf2}#scheme-Paradox #post-toc-trigger-btn{color:#6baaf2}.post-toc a:hover{color:#0158bc;text-decoration:underline}</style><style>body{background-image:url(/img/bg.jpg)}</style><style>.fade{transition:all .8s linear;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0);opacity:1}.fade.out{opacity:0}</style><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet"><style id="material_icons"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==",!0)</script><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="帆的自留地"><meta name="msapplication-starturl" content="https://coding.emptinessboy.com/2020/04/Android%E5%BC%80%E5%8F%91-Activity%E7%9A%84%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%8B%EF%BC%89/"><meta name="msapplication-navbutton-color" content="#1e69bf"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="帆的自留地"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="apple-touch-icon" href="/img/logo-180x180.jpg"><link rel="alternate" type="application/atom+xml" href="feed.xml"><meta property="og:url" content="https://coding.emptinessboy.com/2020/04/Android%E5%BC%80%E5%8F%91-Activity%E7%9A%84%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%8B%EF%BC%89/"><meta property="og:type" content="blog"><meta property="og:title" content="Android开发 Activity的详解（下） | 帆的自留地"><meta property="og:image" content="/img/logo-192x192.jpg"><meta property="og:description" content="晓帆的学习笔记"><meta property="og:article:tag" content="安卓学习"><meta property="article:published_time" content="Sun Apr 19 2020 12:46:09 GMT+0800"><meta property="article:modified_time" content="Sun May 23 2021 13:35:31 GMT+0800"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="https://coding.emptinessboy.com/2020/04/Android%E5%BC%80%E5%8F%91-Activity%E7%9A%84%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%8B%EF%BC%89/index.html"><script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://coding.emptinessboy.com/2020/04/Android%E5%BC%80%E5%8F%91-Activity%E7%9A%84%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%8B%EF%BC%89/index.html",
+    "headline": "Android开发 Activity的详解（下）",
+    "datePublished": "Sun Apr 19 2020 12:46:09 GMT+0800",
+    "dateModified": "Sun May 23 2021 13:35:31 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "EmptinessBoy",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/fav_300.png"
+        },
+        "description": "啥都不会，<br>专业制造BUG的<br>学渣一枚<br><br>"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "帆的自留地",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/logo-192x192.jpg"
+        }
+    },
+    "keywords": ",安卓学习博客,代码,学习,程序,大学",
+    "description": "晓帆的学习笔记",
+}</script><script>!function(e,t,a,n,c,s,o){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,s=t.createElement(a),o=t.getElementsByTagName(a)[0],s.async=1,s.src=n,o.parentNode.insertBefore(s,o)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-85449259-2","auto"),ga("send","pageview")</script><meta name="generator" content="Hexo 4.2.0"></head><body id="scheme-Paradox" class="lazy"><div class="material-layout mdl-js-layout has-drawer is-upgraded"><main class="material-layout__content" id="main"><div id="top"></div><button class="MD-burger-icon sidebar-toggle"><span id="MD-burger-id" class="MD-burger-layer"></span></button> <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons">format_list_numbered</i></button><ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh;overflow-y:scroll"><ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Activity-的启动模式"><span class="post-toc-number">1.</span> <span class="post-toc-text">Activity 的启动模式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Standard-默认模式"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Standard 默认模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#singleTop-栈顶模式"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">singleTop 栈顶模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#singleTask-单任务模式"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">singleTask 单任务模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#singleInstance-模式"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">singleInstance 模式</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#补充：extends-和-implements"><span class="post-toc-number">2.</span> <span class="post-toc-text">补充：extends 和 implements</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#完善-Demo"><span class="post-toc-number">3.</span> <span class="post-toc-text">完善 Demo</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#难点-使用另一个-Style"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">难点 使用另一个 Style</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#难点-返回时自动关闭弹窗"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">难点 返回时自动关闭弹窗</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#难点-通过非当前-View-查找-id"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">难点 通过非当前 View 查找 id</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#难点-倒计时关闭-Activity"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">难点 倒计时关闭 Activity</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#难点-自动关闭软键盘"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">难点 自动关闭软键盘</span></a></li></ol></li></ol></ul><div class="material-post_container"><div class="material-post mdl-grid"><div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col"><div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://media.everdo.cn/tank/pic-bed/2020/04/04/android.png)"><p class="article-headline-p">Android开发 Activity的详解（下）</p></div><div class="mdl-color-text--grey-700 mdl-card__supporting-text meta"><div id="author-avatar"><img src="/img/fav_300.png" width="44px" height="44px" alt="Author Avatar"></div><div><strong>EmptinessBoy</strong> <span>4月 19, 2020</span></div><div class="section-spacer"></div><button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">devices other</i> <span class="visuallyhidden">devices other</span></button><ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button"><li class="mdl-menu__item">在其它设备中阅读本文章</li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAAE+CAAAAAAxUyPsAAAE10lEQVR42u3ay27cMBAEwP3/n7avAQwp3TOUvU6KJ2Mfolg0sMMevT6MxXghwIcPHz4DHz58+Ax8+H4J3yseybf+fPfr31fvfv3M1eevZk/mvZ+9WDs+fPjw4cO35vvLT/Xtgu8n29xocv1kqxLuYvPw4cOHDx++Q3ybgmBPuX83KVnu15UQ48OHDx8+fO/JlxQET3AnWPjw4cOHD99v4UuwZsf4WZNgVjzhw4cPHz5878D3dKN6E/HnZdOsZf5NvQ58+PDhw4evLCD+vb8PPKCGDx8+fPjwxXzt2BcxbUzfhvL5o3VDAXz48OHDh2/B1x6b7/kS6FkBsWnD55TRpuLDhw8fPnwLvlPR+abFnrfS2yLmtRhF3YcPHz58+PCN+FYRdvl6G0bM2vDJ1err4MOHDx8+fAu+fNmbn/z8IbN89nx7knfzh9jw4cOHDx++DV97621A0JYdySzt9id3VbQc8OHDhw8fvgVf/pPfBuizYmUfDeRjFnPgw4cPHz58e75ZSZEsrw3uZ22AtvjIt61OXPDhw4cPH764TZ4/WNYev2cbcBbo8acM8OHDhw8fvlGbvAXKm+WbxvypFn6+usv7x4cPHz58+BZ8+RF6Vijk32o3ry252juMwnp8+PDhw4dvzZccttvQYRbB5/eQvJ6UL1Ghgw8fPnz48C34ZuXFpsm9uX47S16EJf8i+PDhw4cP354vOTDXcXZcRrTXbzlmG1k/ZYAPHz58+PAdesJqFny3DenkAbKzY7N2fPjw4cOHb8OXHKFnD3g9EpTHDYCkMMo/jw8fPnz48J3imzWek+P3gRIhRs9nzIOGYZscHz58+PDhCwqXvETYtJ9nh/ZNHLApaIq6Dx8+fPjw4VtEBrOCJo/yN+/elzL7dR0I6/Hhw4cPH764Td4WB7MbnbUHzrbh83VFiQs+fPjw4cN3iG8T4s+Wl7fbkwIouZMkIsGHDx8+fPhO8c1C8/ubSG43aQO0jfM2bkjI8OHDhw8fvrN8m8g7WUC7+FNN8dk9JBr48OHDhw/fhi+fsi0RZjc9u05epsxCf3z48OHDh+8sX8s0W/Dm6N6GFG0oX7Ql8OHDhw8fvgXfbPEfo5FH9m1MP9u2ISs+fPjw4cO34MsP2PkhPznqt3H8PhqYNRLqpwzw4cOHDx++Rdo8Y92E7G3DIOduy7LLb+HDhw8fPnxrvjwEz6ds6fOWeRthbGbHhw8fPnz4nuDLL7FpcueFzqwoacujWbMcHz58+PDhO8WXP6C2+uEvsfIQ/2xjHh8+fPjw4XuOLw/ffzYsyDds/+DdKnHBhw8fPnz4Ar72AN8GBHkQkAQWs+1sNwAfPnz48OE7y9dOkB/y8w2YlTs53NnZ8eHDhw8fvg1fO/KCo71mO9cT34o+iQ8fPnz48C34hj/eQdEwa3LnV968Pit98OHDhw8fvlN8m8KiDcc312+LjE25UxQu+PDhw4cP34hvFr7PFpwXT/t2fluo4cOHDx8+fO/G15YadSB+W4jMNqbdhstr4sOHDx8+fD/KlwfxbdBwfyebRngbE+DDhw8fPnxP8BU/3uUy2hIhb3LPNjsvyB5pk+PDhw8fvv+ebxZhtxF8yzS7n1kxVGwGPnz48OHDt+Az2oEPHz58+Ax8+PDhM/Dhe+PxCSPC7jS8QbEKAAAAAElFTkSuQmCC"></ul><button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">bookmark</i> <span class="visuallyhidden">bookmark</span></button><ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button"><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/%E5%AE%89%E5%8D%93%E5%AD%A6%E4%B9%A0/" rel="tag">安卓学习</a></li></ul><button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">share</i> <span class="visuallyhidden">share</span></button><ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button"><a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Android开发 Activity的详解（下）&url=https://coding.emptinessboy.com/2020/04/Android%E5%BC%80%E5%8F%91-Activity%E7%9A%84%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%8B%EF%BC%89/index.html&pic=https://coding.emptinessboy.com/img/logo-32x32.jpg&searchPic=false&style=simple" target="_blank"><li class="mdl-menu__item">分享到微博</li></a><a class="post_share-link" href="https://twitter.com/intent/tweet?text=Android开发 Activity的详解（下）&url=https://coding.emptinessboy.com/2020/04/Android%E5%BC%80%E5%8F%91-Activity%E7%9A%84%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%8B%EF%BC%89/index.html&via=EmptinessBoy" target="_blank"><li class="mdl-menu__item">分享到 Twitter</li></a><a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://coding.emptinessboy.com/2020/04/Android%E5%BC%80%E5%8F%91-Activity%E7%9A%84%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%8B%EF%BC%89/index.html" target="_blank"><li class="mdl-menu__item">分享到 Facebook</li></a><a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=帆的自留地&title=Android开发 Activity的详解（下）&summary=晓帆的学习笔记&pics=https://coding.emptinessboy.com/img/logo-32x32.jpg&url=https://coding.emptinessboy.com/2020/04/Android%E5%BC%80%E5%8F%91-Activity%E7%9A%84%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%8B%EF%BC%89/index.html" target="_blank"><li class="mdl-menu__item">分享到 QQ</li></a><a class="post_share-link" href="https://telegram.me/share/url?url=https://coding.emptinessboy.com/2020/04/Android%E5%BC%80%E5%8F%91-Activity%E7%9A%84%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%8B%EF%BC%89/index.html&text=Android开发 Activity的详解（下）" target="_blank"><li class="mdl-menu__item">分享到 Telegram</li></a></ul></div><div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out"><h2 id="Activity-的启动模式"><a href="#Activity-的启动模式" class="headerlink" title="Activity 的启动模式"></a>Activity 的启动模式</h2><p>在 Android 中每个界面都是一个 Activity，切换界面操作其实是多个不同 Activity 之间的实例化操作。在 Android 中 Activity 的启动模式决定了 Activity 的启动运行方式。</p><p>Activity启动模式设置（src/main/AndroidManifest.xml）：</p><pre><code class="xml">&lt;activity android:name=&quot;.MainActivity&quot; android:launchMode=&quot;standard&quot; /&gt;</code></pre><p>Activity 的四种启动模式：</p><p>1.Standard 2.singleTop 3.singleTask 4.singleInstance</p><h3 id="Standard-默认模式"><a href="#Standard-默认模式" class="headerlink" title="Standard 默认模式"></a>Standard 默认模式</h3><p>默认启动模式，每次激活 Activity 时都会创建 Activity，并放入任务栈中。</p><p><strong>实验：</strong></p><p>创建一个全新的应用程序，在 MainActivity 添加一个按钮，点击后的 Intent 为再启动一个 MainActivity。</p><pre><code class="java">public class MainActivity extends AppCompatActivity {
+
+    private static final String TAG = &quot;MainActivity&quot;;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Log.d(TAG, &quot;onCreate: &quot;+MainActivity.this.toString());
+
+        Button buttonGo = findViewById(R.id.buttonGo);
+        buttonGo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //点击按钮后再启动一个 MainActivity
+                Intent intent = new Intent(MainActivity.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+}</code></pre><p>运行后，不断点击按钮测试：</p><p><a href="https://up.media.everdo.cn/image/IPJ9" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/19/StandardMode.jpg" alt="StandardMode.jpg"></a></p><p>可以看到输出的日志中，每次启动的 MainActivity 的编号都不一样，意味着每次都有新的 MainActivity 被放入栈中。</p><h3 id="singleTop-栈顶模式"><a href="#singleTop-栈顶模式" class="headerlink" title="singleTop 栈顶模式"></a>singleTop 栈顶模式</h3><p>如果在任务的栈顶正好存在该 Activity 的实例， 就重用该实例，否者就会创建新的实例并放入栈顶（即使栈中已经存在该 Activity 实例，只要不在栈顶，都会创建实例）。</p><blockquote><p>singleTop模式分3种情况:</p><p>当前栈中已有该 Activity 的实例并且该实例位于栈顶时，不会新建实例，而是复用栈顶的实例，并且会将 Intent 对象传入，回调 onNewIntent 方法</p><p>当前栈中已有该 Activity 的实例但是该实例不在栈顶时，其行为和 standard 启动模式一样，依然会创建一个新的实例</p><p>当前栈中不存在该 Activity 的实例时，其行为同 standard 启动模式</p></blockquote><p><strong>实验：</strong></p><p>修改 Manifest：</p><pre><code class="xml">&lt;activity android:name=&quot;.MainActivity&quot; android:launchMode=&quot;singleTop&quot;&gt;</code></pre><p>重复之前的点击按钮，启动当前 Activity</p><p><a href="https://up.media.everdo.cn/image/IIej" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/19/SingleTop.jpg" alt="SingleTop.jpg"></a></p><p>这次并不会有 Activity 切换的动画，并且日志不再输出。</p><p>进一步试验，我们创建了 SecondActivity，在 SecondActivity 添加按钮，事件为打开 MainActivity。</p><p><a href="https://up.media.everdo.cn/image/Ih1O" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/19/SingleTop.gif" alt="SingleTop.gif"></a></p><p>可以看到，因为在启动 SecondActivity 后，处于栈顶端的就不是 MainActivity 了，因此当点击 SecondActivity 的按钮启动 MainActivity 的时候，就又被 onCreat 了一个新的 Activity。</p><h3 id="singleTask-单任务模式"><a href="#singleTask-单任务模式" class="headerlink" title="singleTask 单任务模式"></a>singleTask 单任务模式</h3><p>如果在栈中已经有该 Activity 的实例，就重用该实例。重用时，会让该实例回到栈顶，因此在<strong>它上面的实例将会被移除栈</strong>。如果栈中不存在该实例，将会创建新的实例放入栈中。</p><p><strong>实验：</strong></p><p>为 MainActivity 添加 onRestart 重写方法，打印日志。再为 SecondActivity 添加 onDestory 重写方法，打印被销毁日志，</p><p>在没有改变 Manifest 之前，还是和以前一样，只有 onCreat 信息被打印。</p><p>而在改变 MainActivity 为 singleTask 后，可以看到点击 SecondActivity 的按钮启动 MainActivity 时，因为之前有 MainActivity 在栈中，因此 SecondActivity 被挤出栈了。</p><p><a href="https://up.media.everdo.cn/image/Ina6" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/19/SingleTask.jpg" alt="SingleTask.jpg"></a></p><h3 id="singleInstance-模式"><a href="#singleInstance-模式" class="headerlink" title="singleInstance 模式"></a>singleInstance 模式</h3><p><strong>！！不同于前面的所有模式，但凡使用 singleInstance 模式的 Activity 在实例化的时候，安卓都会为其独立创建一个全新的栈。</strong></p><p>在一个新栈中创建 Activity 实例，并让多个应用共享栈中的唯一这个 Activity 实例。任何应用再激活该 Activity 时，都会重用该栈中的实例，其效果相当于多个应用程序共享一个Activity。</p><p>一旦此模式的 Activity 的实例存在于某个栈中，任何应用再激活改 Activity 时都会重用该栈中的实例，其效果相当于多个应用程序共享一个应用，不管谁激活该 Activity 都会进入同一个应用中。</p><p><strong>实验：</strong></p><p>我们创建 MainActivity SecondActivity ThirdActivity，然后将 SecondActivity 设置为 singleInstanse 模式。</p><pre><code class="xml">&lt;activity android:name=&quot;.ThirdActivity&quot; android:label=&quot;ThirdActivity&quot; /&gt;
+&lt;activity android:name=&quot;.SecondActivity&quot; android:label=&quot;SecondActivity&quot; android:launchMode=&quot;singleInstance&quot;/&gt;
+&lt;activity android:name=&quot;.MainActivity&quot; android:label=&quot;MainActivity&quot;&gt;
+    &lt;intent-filter&gt;
+        &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;
+        &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;
+    &lt;/intent-filter&gt;
+&lt;/activity&gt;</code></pre><p>最后设置在每个 APP 启动后，都使用 log 输出对应的 TaskID</p><pre><code class="java">Log.d(TAG, &quot;TaskID: &quot;+getTaskId());</code></pre><p>运行 APP 并点击按钮切换的效果如下图：</p><p><a href="https://up.media.everdo.cn/image/IBAn" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/19/SingleInstance.jpg" alt="SingleInstance.jpg"></a></p><p>可以看到，MainActivity 和 ThirdActivity 因为是默认启动模式，所以使用同一个栈。而 SecondActivity 使用了一个新的栈。</p><p>这里用一个动图完整呈现过程，在依次开启三个 Activity 后，点击返回键直到 APP 退出。</p><p><a href="https://up.media.everdo.cn/image/IRES" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/19/SingleInstance.gif" alt="SingleInstance.gif"></a></p><p>可以看到，出栈顺序是先 <strong>ThirdActivity –&gt; MainActivity –&gt; SecondActivity</strong></p><p>也就是说，主栈先全部出栈了，singleInstance 才进行出栈。</p><h2 id="补充：extends-和-implements"><a href="#补充：extends-和-implements" class="headerlink" title="补充：extends 和 implements"></a>补充：extends 和 implements</h2><blockquote><p>补充： implements 与 Extends 的不同在于，extends 可以实现父类，也可以调用父类初始化 this.parent()。而且会覆盖父类定义的变量或者函数。implements 实现父类，子类不可以覆盖父类的方法或者变量。即使子类定义与父类相同的变量或者函数，也会被父类取代掉。</p><p>这样的好处是：架构师定义好接口，让工程师实现就可以了。整个项目开发效率和开发成本大大降低。</p><p>若同时用到 extends 和 implements 的时候，extends 必须放在 implements 关键字之前。如： class A extends B implements C.</p></blockquote><h2 id="完善-Demo"><a href="#完善-Demo" class="headerlink" title="完善 Demo"></a>完善 Demo</h2><p>这里完善之前的登录界面 DEMO，用新学的 Activity 相关知识增加注册页面。此 demo 之前的部分参考我前面的文章。</p><p>先创建一个新的 RegActivity，修改其对应的布局文件。</p><p><a href="https://up.media.everdo.cn/image/IjZQ" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/20/e65a1f8ed51f9b9cdbbe96fe0d3a5992.jpg" alt="e65a1f8ed51f9b9cdbbe96fe0d3a5992.jpg"></a></p><h3 id="难点-使用另一个-Style"><a href="#难点-使用另一个-Style" class="headerlink" title="难点 使用另一个 Style"></a>难点 使用另一个 Style</h3><p>因为设计注册界面时，希望能够保留顶栏 ActionBar，因此与主界面在主题上需要做分离：(这里将首页的沉浸式布局独立出来)</p><p>Manifest 文件：</p><pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    package=&quot;com.emptinessboy.logindemo&quot;&gt;
+
+    &lt;application
+        android:allowBackup=&quot;true&quot;
+        android:icon=&quot;@mipmap/ic_launcher&quot;
+        android:label=&quot;@string/app_name&quot;
+        android:roundIcon=&quot;@mipmap/ic_launcher_round&quot;
+        android:supportsRtl=&quot;true&quot;
+        android:theme=&quot;@style/AppTheme&quot;&gt;
+        &lt;activity
+            android:name=&quot;.Register&quot;
+            android:label=&quot;用户注册&quot;/&gt;
+        &lt;activity android:name=&quot;.MainActivity&quot; android:theme=&quot;@style/FullPageTheme&quot;&gt;
+            &lt;intent-filter&gt;
+                &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;
+                &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;
+            &lt;/intent-filter&gt;
+        &lt;/activity&gt;
+    &lt;/application&gt;
+
+&lt;/manifest&gt;</code></pre><p>重写两个独立的 Style，AppTheme 为带 ActionBar 的，FullPageTheme 为不带 ActionBar 的。</p><pre><code class="xml">&lt;style name=&quot;AppTheme&quot; parent=&quot;Theme.AppCompat.Light.DarkActionBar&quot;&gt;
+    &lt;!-- 有ActionBar的主题--&gt;
+    &lt;!-- Customize your theme here. --&gt;
+    &lt;item name=&quot;colorPrimary&quot;&gt;@color/colorPrimaryNormal&lt;/item&gt;
+    &lt;item name=&quot;colorPrimaryDark&quot;&gt;@color/colorPrimaryDarkNormal&lt;/item&gt;
+    &lt;item name=&quot;colorAccent&quot;&gt;@color/colorAccentNormal&lt;/item&gt;
+&lt;/style&gt;
+
+&lt;style name=&quot;FullPageTheme&quot; parent=&quot;Theme.AppCompat.Light.NoActionBar&quot;&gt;
+    &lt;!-- Customize your theme here. --&gt;
+    &lt;item name=&quot;colorPrimary&quot;&gt;@color/colorPrimary&lt;/item&gt;
+    &lt;item name=&quot;colorPrimaryDark&quot;&gt;@color/colorPrimaryDark&lt;/item&gt;
+    &lt;item name=&quot;colorAccent&quot;&gt;@color/colorAccent&lt;/item&gt;
+
+    &lt;item name=&quot;windowActionBar&quot;&gt;false&lt;/item&gt;
+    &lt;item name=&quot;windowNoTitle&quot;&gt;true&lt;/item&gt;
+    &lt;item name=&quot;android:windowTranslucentStatus&quot;&gt;true&lt;/item&gt;
+    &lt;item name=&quot;android:windowDrawsSystemBarBackgrounds&quot;&gt;true&lt;/item&gt;
+    &lt;item name=&quot;android:statusBarColor&quot;&gt;@android:color/transparent&lt;/item&gt;
+&lt;/style&gt;</code></pre><p>完成后效果：</p><p><a href="https://up.media.everdo.cn/image/I2RJ" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/20/1.jpg" alt="1.jpg"></a></p><h3 id="难点-返回时自动关闭弹窗"><a href="#难点-返回时自动关闭弹窗" class="headerlink" title="难点 返回时自动关闭弹窗"></a>难点 返回时自动关闭弹窗</h3><p>接下来在 MainActivity 新建对象，实例化 customDialog 和 PopupWindow：</p><pre><code class="java">public class regdiaLog{
+    customDialog dialog;
+    PopupWindow regWindow;
+    int regCode;
+}</code></pre><p>之所以实例化的原因是为了在后面 Activity 返回的时候，自动关闭这些弹窗。关闭这两个弹窗的方法，这里采用了重写 onPause() 方法：</p><pre><code class="java">@Override
+protected void onPause() {
+    super.onPause();
+    regdialog.dialog.dismiss();
+    regdialog.regWindow.dismiss();
+}</code></pre><p>运行效果（进入下个 Activity 之前，弹窗已经自动关闭）：</p><p><a href="https://up.media.everdo.cn/image/IDJl" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/20/7598843e1898a6be52f51c069977c591.gif" alt="7598843e1898a6be52f51c069977c591.gif"></a></p><p>接下来，继续完善点击右上角注册按钮后的代码：</p><pre><code class="java">//注册按钮
+Button buttonReg = findViewById(R.id.buttonReg);
+buttonReg.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        View regView = LayoutInflater.from(MainActivity.this).inflate(R.layout.popup_content,null,false);
+        regdialog.regWindow = new PopupWindow(regView, LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT,true);
+        regdialog.regWindow.setTouchable(true);
+        regdialog.regWindow.setAnimationStyle(R.style.pop_anim);
+        regdialog.regWindow.showAtLocation(v, Gravity.BOTTOM,0, 0);
+        //绑定popupWindow的视图对象
+        Button buttonUseEmail = regView.findViewById(R.id.buttonUseEmail);
+        regdialog.dialog  = new customDialog(MainActivity.this, new tosConfirm());
+        buttonUseEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //调用customDialog
+                regdialog.regCode=1;//注册方式1
+                regdialog.dialog.show();
+            }
+        });
+        Button buttonUseName = regView.findViewById(R.id.buttonUseName);
+        buttonUseName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //调用customDialog
+                regdialog.regCode=2;//注册方式2
+                regdialog.dialog.show();
+            }
+        });
+    }
+});</code></pre><p>重点：regdialog.dialog.show(); 之后，当用户点击同意用户协议后，需要跳转到 Register 类：</p><p>这里使用 Intent 跳转，并携带整数（传递用户的注册方式，邮箱或用户名）</p><pre><code class="java">public class tosConfirm implements customDialog.onCustomDialogListener{
+    @Override
+    public void buttonConfirmTosClicked(boolean isRead) {
+        if(isRead){
+            Intent reg = new Intent(MainActivity.this,Register.class);
+            reg.putExtra(&quot;mode&quot;,regdialog.regCode); //传递注册方式
+            startActivity(reg);
+            //Toast.makeText(MainActivity.this,&quot;注册还没开放哦！&quot;,Toast.LENGTH_SHORT).show();
+        }
+        else{
+            Toast.makeText(MainActivity.this,&quot;需要先同意协议才能注册哦！&quot;,Toast.LENGTH_SHORT).show();
+        }
+    }
+}</code></pre><p>Registart.java 里面需要对注册进行处理，这里预先定义了存放用户名密码的类 USER_POOL.AddUser(u,p) 这里直接调用；此外，这之前还额外定义了 popUpWndow 的样式：</p><pre><code class="java">Button reg = findViewById(R.id.buttonReg);
+reg.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        EditText editTextEmail = findViewById(R.id.editTextEmail);
+        EditText editTextPassword = findViewById(R.id.editTextPassword);
+        try {
+            String u = editTextEmail.getText().toString();
+            String p = editTextPassword.getText().toString();
+            if (u.length()&lt;3||p.length()&lt;6){
+
+                View regView = LayoutInflater.from(Register.this).inflate(R.layout.popup_regfail,null,false);
+                TextView err = regView.findViewById(R.id.textViewReg);
+
+                //透过 popUpWindow 的样式文件进行查找 ID
+
+                err.setText(&quot;注册失败,用户名或密码太短&quot;);
+                final PopupWindow regResult = new PopupWindow(regView, LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT,true);
+                regResult.setTouchable(true);
+                regResult.setAnimationStyle(R.style.pop_anim);
+                regResult.showAtLocation(v, Gravity.BOTTOM,0, 0);
+
+            }else{
+                USER_POOL.AddUser(u,p); //新增用户名密码
+
+                View regView = LayoutInflater.from(Register.this).inflate(R.layout.popup_regsuccess,null,false);
+                final PopupWindow regResult = new PopupWindow(regView, LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT,true);
+                regResult.setTouchable(true);
+                regResult.setAnimationStyle(R.style.pop_anim);
+                regResult.showAtLocation(v, Gravity.BOTTOM,0, 0);
+
+                //倒计时函数
+                CountDownTimer timer = new CountDownTimer(2000, 10) {
+                    @Override
+                    public void onTick(long millisUntilFinished) {
+                    }
+                    @Override
+                    public void onFinish() {
+                        finish();   //自动回到登录界面
+                    }
+                };
+                timer.start();
+            }
+
+        } catch (Exception e) {
+            //此处省略
+                }
+            }
+        });
+    }</code></pre><p>简易的通过字符串数组存放密码的用户类，临时存放用户名密码（测试用途，数据不能持久化，正常使用应该用数据库，或者将请求发送到服务器）</p><pre><code class="java">public final class UserPool {
+    private static final String[][] UserPass = new String[100][2];
+
+    private int index = -1;
+    UserPool(){
+        AddUser(&quot;hxf&quot;,&quot;123456&quot;);
+    }
+    void AddUser(String u,String p){    //增加用户函数
+        index++;
+        UserPass[index][0]=u;
+        UserPass[index][1]=p;
+    }
+    boolean Login(String u,String p){ //登录函数
+        for(int i=0;i&lt;=index;i++){
+            if( u.equals(UserPass[i][0]) &amp;&amp; p.equals(UserPass[i][1]) ){
+                return true;
+            }
+        }
+        return false;
+    }
+}</code></pre><h3 id="难点-通过非当前-View-查找-id"><a href="#难点-通过非当前-View-查找-id" class="headerlink" title="难点 通过非当前 View 查找 id"></a>难点 通过非当前 View 查找 id</h3><p>透过 popUpWindow 的样式文件进行查找 ID</p><p>此举主要是动态修改（通过外挂布局定义的 popUpWindow）注册成功或失败弹出的提示文字而不需要重写创建布局文件。</p><pre><code class="java">View regView = LayoutInflater.from(Register.this).inflate(R.layout.popup_regfail,null,false);
+TextView err = regView.findViewById(R.id.textViewReg);
+//透过 popUpWindow 的样式文件进行查找 ID
+err.setText(&quot;注册失败,用户名或密码太短&quot;);</code></pre><p>当然，基础的布局还是要定义的</p><p><a href="https://up.media.everdo.cn/image/IFWy" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/20/e8540353413f94020ef3f8a27f717747.jpg" alt="e8540353413f94020ef3f8a27f717747.jpg"></a></p><p>这一步实现效果：</p><p><a href="https://up.media.everdo.cn/image/I3Sd" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/20/1068a93b8d1db89f0c135d09886fccc2.jpg" alt="1068a93b8d1db89f0c135d09886fccc2.jpg"></a></p><h3 id="难点-倒计时关闭-Activity"><a href="#难点-倒计时关闭-Activity" class="headerlink" title="难点 倒计时关闭 Activity"></a>难点 倒计时关闭 Activity</h3><p>此举主要是实现注册成功后自动返回主界面以增强用户体验，注册失败则留在原地不动。</p><pre><code class="java">//倒计时函数
+CountDownTimer timer = new CountDownTimer(2000, 10) {
+    @Override
+    public void onTick(long millisUntilFinished) {
+    }
+    @Override
+    public void onFinish() {
+        finish();   //自动回到登录界面(倒计时结束执行的代码)
+    }
+};
+timer.start();</code></pre><p>实现效果：</p><p><a href="https://up.media.everdo.cn/image/IVe0" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/20/db9d73168a853f2ffd38fa82025f3aff.gif" alt="db9d73168a853f2ffd38fa82025f3aff.gif"></a></p><h3 id="难点-自动关闭软键盘"><a href="#难点-自动关闭软键盘" class="headerlink" title="难点 自动关闭软键盘"></a>难点 自动关闭软键盘</h3><p>这里我搬运了网上 dalao 的代码，自己水平不够，暂时先不自己造轮子了：</p><pre><code class="java">package com.emptinessboy.logindemo;
+
+import android.app.Activity;
+import android.content.Context;
+import android.os.IBinder;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
+
+public class HideKeyBroadUtils {
+
+    private HideKeyBroadUtils(){
+
+    }
+
+    /**
+     * 隐藏软键盘
+     * @param activity
+     * @param ev
+     */
+    public static void hide(Activity activity, MotionEvent ev){
+        if (ev.getAction() == MotionEvent.ACTION_DOWN) {
+            View view = activity.getCurrentFocus();
+            if (isHideInput(view, ev)) {
+                HideSoftInput(activity,view.getWindowToken());
+            }
+        }
+    }
+
+    // 判定是否需要隐藏
+    private static boolean isHideInput(View v, MotionEvent ev) {
+        if (v != null &amp;&amp; (v instanceof EditText)) {
+            int[] l = { 0, 0 };
+            v.getLocationInWindow(l);
+            int left = l[0], top = l[1], bottom = top + v.getHeight(), right = left
+                    + v.getWidth();
+            if (ev.getX() &gt; left &amp;&amp; ev.getX() &lt; right &amp;&amp; ev.getY() &gt; top
+                    &amp;&amp; ev.getY() &lt; bottom) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+        return false;
+    }
+    // 隐藏软键盘
+    private static void HideSoftInput(Activity activity, IBinder token) {
+        if (token != null) {
+            InputMethodManager manager = (InputMethodManager)
+                    activity.getSystemService(Context.INPUT_METHOD_SERVICE);
+            manager.hideSoftInputFromWindow(token,
+                    InputMethodManager.HIDE_NOT_ALWAYS);
+        }
+    }
+}</code></pre><p>使用这个类的方法很简单：</p><pre><code class="java">只需重写 activity 里的 dispatchTouchEvent 方法，然后调用如下
+@Override
+public boolean dispatchTouchEvent(MotionEvent ev){
+        HideKeyBroadUtils.hide(this,ev);
+        return super.dispatchTouchEvent(ev);
+}</code></pre><p>实现效果：</p><p><a href="https://up.media.everdo.cn/image/IYMD" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/04/20/b3f81e805d8d2ed98cd95b625b21510b.gif" alt="b3f81e805d8d2ed98cd95b625b21510b.gif"></a></p><img src="https://media.everdo.cn/tank/pic-bed/2021/04/09/4.png" alt="尾图4" style="zoom:33%"><blockquote style="margin:2em 0 0;padding:.5em 1em;border-left:3px solid #ebc43b;background-color:#191919;list-style:none"><p><strong>This blog is under a <a href="/creativecommons.html" target="_blank">CC BY-NC-ND 4.0 Unported License</a></strong><br><strong>本文链接：</strong><a href="https://coding.emptinessboy.com/2020/04/Android%E5%BC%80%E5%8F%91-Activity%E7%9A%84%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%8B%EF%BC%89/">https://coding.emptinessboy.com/2020/04/Android%E5%BC%80%E5%8F%91-Activity%E7%9A%84%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%8B%EF%BC%89/</a></p></blockquote></div><div id="comment" style="padding:10px" class="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js"></script><script>var GUEST_INFO=["nick","mail","link"],guest_info="nick,mail,link".split(",").filter(function(i){return GUEST_INFO.indexOf(i)>-1}),notify=!1,verify=!0;new Valine({el:".vcomment",notify:notify,verify:verify,appId:"91mhcw0WK44B90nptmxGcJol-gzGzoHsz",appKey:"Boi7za0ClwGyWRCYd8osdf5o",placeholder:"在这里写点什么吧！",pageSize:"10",avatar:"monsterid",lang:"zh-cn",guest_info:guest_info})</script></div><nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col"><a href="/2020/04/Java-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%EF%BC%88%E8%BD%AC%EF%BC%89/" id="post_nav-newer" class="prev-content"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation"><i class="material-icons">arrow_back</i></button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 新篇</a><div class="section-spacer"></div><a href="/2020/04/Android%E5%BC%80%E5%8F%91-Activity%E7%9A%84%E8%AF%A6%E8%A7%A3%EF%BC%88%E4%B8%8A%EF%BC%89/" id="post_nav-older" class="next-content">旧篇 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation"><i class="material-icons">arrow_forward</i></button></a></nav></div></div><div class="sidebar-overlay"></div><aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation"><div id="sidebar-main"><div class="sidebar-header header-cover" style="background-image:url(/img/sidebar_header.jpg)"><div class="top-bar"></div><button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display:initial" data-upgraded=",MaterialButton,MaterialRipple"><i class="material-icons">clear_all</i> <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button><div class="sidebar-image"><img src="/img/fav_300.png" alt="EmptinessBoy's avatar"></div><a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">i@my.huxiaofan.com <b class="caret"></b></a></div><ul class="nav sidebar-nav"><li class="dropdown"><ul id="settings-dropdown" class="dropdown-menu"><li><a href="mailto:i@my.huxiaofan.com" target="_blank" title="Email 我"><i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i> Email 我</a></li></ul></li><li id="sidebar-first-li"><a href="/"><i class="material-icons sidebar-material-icons">home</i> 主页</a></li><li class="divider"></li><li class="dropdown"><a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown"><i class="material-icons sidebar-material-icons">inbox</i> 归档 <b class="caret"></b></a><ul class="dropdown-menu"><li><a class="sidebar_archives-link" href="/archives/2021/05/">五月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/04/">四月 2021<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/11/">十一月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/10/">十月 2020<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/09/">九月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/07/">七月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/06/">六月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/04/">四月 2020<span class="sidebar_archives-count">13</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/03/">三月 2020<span class="sidebar_archives-count">13</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/02/">二月 2020<span class="sidebar_archives-count">4</span></a></li></ul></li><li class="dropdown"><a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown"><i class="material-icons sidebar-material-icons">chrome_reader_mode</i> 分类 <b class="caret"></b></a><ul class="dropdown-menu"><li><a class="sidebar_archives-link" href="/categories/Android/">Android<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/CSS%E5%AD%A6%E4%B9%A0/">CSS学习<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/HTML%E5%AD%A6%E4%B9%A0/">HTML学习<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/Hadoop/">Hadoop<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/JAVAWEB/">JAVAWEB<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/JAVA%E5%AD%A6%E4%B9%A0/">JAVA学习<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/JS%E5%AD%A6%E4%B9%A0/">JS学习<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/Linux/">Linux<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/WEB%E6%A1%86%E6%9E%B6/">WEB框架<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/python%E5%85%A5%E9%97%A8/">python入门<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/">瞎折腾<span class="sidebar_archives-count">4</span></a></li></ul></li><li class="divider"></li><li><a href="https://huxiaofan.com" target="_blank" rel="noopener" title="生活博客"><i class="material-icons sidebar-material-icons">domain</i> 生活博客</a></li><li><a href="https://huxiaofan.com/about" target="_blank" rel="noopener" title="关于我"><i class="material-icons sidebar-material-icons">person</i> 关于我</a></li><li class="divider"></li><li><a href="/archives">文章总数 <span class="sidebar-badge">53</span></a></li></ul></div></aside><div id="back-to-top" class="toTop-wrap"><a href="#top" class="toTop"><i class="material-icons footer_top-i">expand_less</i></a></div><footer class="mdl-mini-footer" id="bottom"><div class="mdl-mini-footer--left-section sns-list"><a href="https://huxiaofan.com/go?url=https://twitter.com/huxiaofanhome/" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter"><span class="visuallyhidden">Twitter</span></button></a><a href="https://huxiaofan.com/go?url=https://www.facebook.com/profile.php?id=100013375578138" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook"><span class="visuallyhidden">Facebook</span></button></a><a href="https://git.huxiaofan.com/emptinessboy" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-github"><span class="visuallyhidden">Github</span></button></a><a href="https://huxiaofan.com/go/?url=aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL2F2NTc2MjgwMDQ=" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili"><span class="visuallyhidden">Bilibili</span></button></a><a href="https://huxiaofan.com/go/?url=https://t.me/emptinessboy" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-telegram"><span class="visuallyhidden">Telegram</span></button></a></div><div id="copyright">Copyright&nbsp;©&nbsp;<span year></span>&nbsp;帆的自留地<br><a href="http://huxiaofan.com" target="_blank" rel="noopener">晓帆</a>&nbsp;/&nbsp;<a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow"> 浙ICP备20004121号</a></div><div class="mdl-mini-footer--right-section"><div><div class="footer-develop-div">Hexo Theme - <span class="footer-develop-a">Material</span></div></div></div></footer><script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==",!0)</script><script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==",!0)</script><script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==",!0)</script><script type="text/ls-javascript" id="NProgress-script">NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#82bcff'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #82bcff, 0 0 15px #82bcff'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#82bcff',
+        'border-left-color': '#82bcff'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);</script><script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==",!0)</script><script type="text/ls-javascript" id="window-load">$(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })</script><script type="text/ls-javascript" id="lazy-load">// Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });</script><script>var copyrightNow=(new Date).getFullYear(),textContent=document.querySelector("span[year]");copyrightSince=2019,copyrightSince===copyrightNow||0===copyrightSince?textContent.textContent=copyrightNow:textContent.textContent=copyrightSince+" - "+copyrightNow,function(){for(var t=document.querySelectorAll('script[type="text/ls-javascript"]'),e=0;e<t.length;++e){var o=t[e];lsloader.runInlineScript(o.id,o.id)}}(),console.log("\n %c 帆's Life | https://huxiaofan.com | Theme Material %c \n","color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;","color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;")</script></main></div></body></html><!-- rebuild by neat -->

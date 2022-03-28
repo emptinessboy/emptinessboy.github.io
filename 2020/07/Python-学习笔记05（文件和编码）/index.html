@@ -1,0 +1,270 @@
+<!-- build time:Mon Mar 28 2022 11:43:47 GMT+0800 (中国标准时间) --><!DOCTYPE html><html style="display:none" lang="zh"><head><meta charset="utf-8"><script>window.materialVersion="1.5.6",window.oldVersion=["codestartv1","1.3.4","1.4.0","1.4.0b1","1.5.0","1.5.2","1.5.5"]</script><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn1.lncld.net"><link rel="dns-prefetch" href="https://cdn1.lncld.net"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="dns-prefetch" href="https://fonts.googleapis.com"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><meta name="renderer" content="webkit"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><title>Python-学习笔记05（文件和编码） | 帆的自留地</title><link rel="icon shortcut" type="image/ico" href="/img/logo-32x32.jpg"><link rel="icon" href="/img/logo-192x192.jpg"><meta name="format-detection" content="telephone=no"><meta name="description" itemprop="description" content="晓帆的学习笔记"><meta name="keywords" content="博客,代码,学习,程序,大学,python"><meta name="theme-color" content="#1e69bf"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]--><script>!function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}},lsloader.removeLS=function(e){try{localStorage.removeItem(e)}catch(t){}},lsloader.setLS=function(e,t){try{localStorage.setItem(e,t)}catch(n){}},lsloader.getLS=function(e){var t="";try{t=localStorage.getItem(e)}catch(n){t=""}return t},versionString="/*"+(window.materialVersion||"unknownVersion")+"*/",lsloader.clean=function(){try{for(var e=[],t=0;t<localStorage.length;t++)e.push(localStorage.key(t));e.forEach(function(e){var t=lsloader.getLS(e);if(window.oldVersion){var n=window.oldVersion.reduce(function(e,n){return e||-1!==t.indexOf("/*"+n+"*/")},!1);n&&lsloader.removeLS(e)}})}catch(n){}},lsloader.clean(),lsloader.load=function(e,t,n,s){"boolean"==typeof n&&(s=n,n=void 0),s=s||!1,n=n||function(){};var a;if(a=this.getLS(e),a&&-1===a.indexOf(versionString))return this.removeLS(e),void this.requestResource(e,t,n,s);if(a){var o=a.split(versionString)[0];if(o!=t)return console.log("reload:"+t),this.removeLS(e),void this.requestResource(e,t,n,s);a=a.split(versionString)[1],s?(this.jsRunSequence.push({name:e,code:a}),this.runjs(t,e,a)):(document.getElementById(e).appendChild(document.createTextNode(a)),n())}else this.requestResource(e,t,n,s)},lsloader.requestResource=function(e,t,n,s){var a=this;s?this.iojs(t,e,function(e,t,n){a.setLS(t,e+versionString+n),a.runjs(e,t,n)}):this.iocss(t,e,function(n){document.getElementById(e).appendChild(document.createTextNode(n)),a.setLS(e,t+versionString+n)},n)},lsloader.iojs=function(e,t,n){var s=this;s.jsRunSequence.push({name:t,code:""});try{var a=new XMLHttpRequest;a.open("get",e,!0),a.onreadystatechange=function(){if(4==a.readyState){if((a.status>=200&&a.status<300||304==a.status)&&""!=a.response)return void n(e,t,a.response);s.jsfallback(e,t)}},a.send(null)}catch(o){s.jsfallback(e,t)}},lsloader.iocss=function(e,t,n,s){var a=this;try{var o=new XMLHttpRequest;o.open("get",e,!0),o.onreadystatechange=function(){if(4==o.readyState){if((o.status>=200&&o.status<300||304==o.status)&&""!=o.response)return n(o.response),void s();a.cssfallback(e,t,s)}},o.send(null)}catch(r){a.cssfallback(e,t,s)}},lsloader.iofonts=function(e,t,n,s){var a=this;try{var o=new XMLHttpRequest;o.open("get",e,!0),o.onreadystatechange=function(){if(4==o.readyState){if((o.status>=200&&o.status<300||304==o.status)&&""!=o.response)return n(o.response),void s();a.cssfallback(e,t,s)}},o.send(null)}catch(r){a.cssfallback(e,t,s)}},lsloader.runjs=function(e,t,n){if(t&&n)for(var s in this.jsRunSequence)this.jsRunSequence[s].name==t&&(this.jsRunSequence[s].code=n);if(this.jsRunSequence[0]&&this.jsRunSequence[0].code&&"failed"!=this.jsRunSequence[0].status){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code)),a.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(a),this.jsRunSequence.shift(),this.jsRunSequence.length>0&&this.runjs()}else if(this.jsRunSequence[0]&&"failed"==this.jsRunSequence[0].status){var o=this,a=document.createElement("script");a.src=this.jsRunSequence[0].path,a.type="text/javascript",this.jsRunSequence[0].status="loading",a.onload=function(){o.jsRunSequence.shift(),o.jsRunSequence.length>0&&o.runjs()},document.body.appendChild(a)}},lsloader.tagLoad=function(e,t){this.jsRunSequence.push({name:t,code:"",path:e,status:"failed"}),this.runjs()},lsloader.jsfallback=function(e,t){if(!this.jsnamemap[t]){this.jsnamemap[t]=t;for(var n in this.jsRunSequence)this.jsRunSequence[n].name==t&&(this.jsRunSequence[n].code="",this.jsRunSequence[n].status="failed",this.jsRunSequence[n].path=e);this.runjs()}},lsloader.cssfallback=function(e,t,n){if(!this.cssnamemap[t]){this.cssnamemap[t]=1;var s=document.createElement("link");s.type="text/css",s.href=e,s.rel="stylesheet",s.onload=s.onerror=n;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(s,a)}},lsloader.runInlineScript=function(e,t){var n=document.getElementById(t).innerText;this.jsRunSequence.push({name:e,code:n}),this.runjs()}}()</script><script>function Queue(){function e(e){this.debug&&console.log("Offered a Queued Function."),"function"==typeof e?this.dataStore.push(e):console.log("You must offer a function.")}function t(){return this.debug&&console.log("Polled a Queued Function."),this.dataStore.shift()}function o(){var e=this.poll();void 0!==e&&(this.debug&&console.log("Run a Queued Function."),e())}function u(){this.debug=!0}this.dataStore=[],this.offer=e,this.poll=t,this.execNext=o,this.debug=!1,this.startDebug=u}var queue=new Queue</script><style id="material_css"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("material_css","/css/material.min.css?lfwTSCk5dU0gSgC//hS81g==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style id="style_css"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("style_css","/css/style.min.css?vOFJu+pZl+0Eeqi7pGRHyw==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style id="prettify_css"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style id="prettify_theme"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("prettify_theme","/css/prettify/atelier-cave-dark.min.css?P8HZcYCbr9fq5dAvzZGnUQ==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><style>body,html{font-family:Roboto,"Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;overflow-x:hidden!important}code{font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace}a{color:#0158bc}#scheme-Paradox .hot_tags-count,#scheme-Paradox .sidebar-colored .sidebar-badge,#scheme-Paradox .sidebar-colored .sidebar-header,#scheme-Paradox .sidebar_archives-count,#search-form-label:after,#search-label,.mdl-card__media{background-color:#1e69bf!important}#scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus,#scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover{color:#1e69bf!important}#ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a,#post_entry-right-info,.sidebar-colored .sidebar-nav li:hover>a,.sidebar-colored .sidebar-nav li:hover>a i,.sidebar-colored .sidebar-nav li>a:focus i,.sidebar-colored .sidebar-nav li>a:hover,.sidebar-colored .sidebar-nav li>a:hover i,.sidebar-colored .sidebar-nav>.open>a,.sidebar-colored .sidebar-nav>.open>a:focus,.sidebar-colored .sidebar-nav>.open>a:hover{color:#1e69bf!important}.toTop{background:#6baaf2!important}.material-layout .material-index>.material-nav,.material-layout .material-post>.material-nav,.material-nav a{color:#6baaf2}#scheme-Paradox .MD-burger-layer{background-color:#6baaf2}#scheme-Paradox #post-toc-trigger-btn{color:#6baaf2}.post-toc a:hover{color:#0158bc;text-decoration:underline}</style><style>body{background-image:url(/img/bg.jpg)}</style><style>.fade{transition:all .8s linear;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0);opacity:1}.fade.out{opacity:0}</style><link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet"><style id="material_icons"></style><script>"undefined"==typeof window.lsLoadCSSMaxNums&&(window.lsLoadCSSMaxNums=0),window.lsLoadCSSMaxNums++,lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){"undefined"==typeof window.lsLoadCSSNums&&(window.lsLoadCSSNums=0),window.lsLoadCSSNums++,window.lsLoadCSSNums==window.lsLoadCSSMaxNums&&(document.documentElement.style.display="")},!1)</script><script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==",!0)</script><meta name="mobile-web-app-capable" content="yes"><meta name="application-name" content="帆的自留地"><meta name="msapplication-starturl" content="https://coding.emptinessboy.com/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B005%EF%BC%88%E6%96%87%E4%BB%B6%E5%92%8C%E7%BC%96%E7%A0%81%EF%BC%89/"><meta name="msapplication-navbutton-color" content="#1e69bf"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="帆的自留地"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="apple-touch-icon" href="/img/logo-180x180.jpg"><link rel="alternate" type="application/atom+xml" href="feed.xml"><meta property="og:url" content="https://coding.emptinessboy.com/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B005%EF%BC%88%E6%96%87%E4%BB%B6%E5%92%8C%E7%BC%96%E7%A0%81%EF%BC%89/"><meta property="og:type" content="blog"><meta property="og:title" content="Python-学习笔记05（文件和编码） | 帆的自留地"><meta property="og:image" content="/img/logo-192x192.jpg"><meta property="og:description" content="晓帆的学习笔记"><meta property="og:article:tag" content="python"><meta property="article:published_time" content="Tue Jul 07 2020 23:56:16 GMT+0800"><meta property="article:modified_time" content="Sun May 23 2021 13:28:44 GMT+0800"><meta name="twitter:card" content="summary_large_image"><link rel="canonical" href="https://coding.emptinessboy.com/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B005%EF%BC%88%E6%96%87%E4%BB%B6%E5%92%8C%E7%BC%96%E7%A0%81%EF%BC%89/index.html"><script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://coding.emptinessboy.com/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B005%EF%BC%88%E6%96%87%E4%BB%B6%E5%92%8C%E7%BC%96%E7%A0%81%EF%BC%89/index.html",
+    "headline": "Python-学习笔记05（文件和编码）",
+    "datePublished": "Tue Jul 07 2020 23:56:16 GMT+0800",
+    "dateModified": "Sun May 23 2021 13:28:44 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "EmptinessBoy",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/fav_300.png"
+        },
+        "description": "啥都不会，<br>专业制造BUG的<br>学渣一枚<br><br>"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "帆的自留地",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/logo-192x192.jpg"
+        }
+    },
+    "keywords": ",python博客,代码,学习,程序,大学",
+    "description": "晓帆的学习笔记",
+}</script><script>!function(e,t,a,n,c,s,o){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,s=t.createElement(a),o=t.getElementsByTagName(a)[0],s.async=1,s.src=n,o.parentNode.insertBefore(s,o)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-85449259-2","auto"),ga("send","pageview")</script><meta name="generator" content="Hexo 4.2.0"></head><body id="scheme-Paradox" class="lazy"><div class="material-layout mdl-js-layout has-drawer is-upgraded"><main class="material-layout__content" id="main"><div id="top"></div><button class="MD-burger-icon sidebar-toggle"><span id="MD-burger-id" class="MD-burger-layer"></span></button> <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons">format_list_numbered</i></button><ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh;overflow-y:scroll"><ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#文件编码解码"><span class="post-toc-number">1.</span> <span class="post-toc-text">文件编码解码</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#字符编码"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">字符编码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#python-字符编码"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">python 字符编码</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#文件"><span class="post-toc-number">2.</span> <span class="post-toc-text">文件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文件读写步骤"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">文件读写步骤</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#open-函数"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">open 函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#文件打开模式"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">文件打开模式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#文件读写函数"><span class="post-toc-number">2.2.2.</span> <span class="post-toc-text">文件读写函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#读取文本文件"><span class="post-toc-number">2.2.3.</span> <span class="post-toc-text">读取文本文件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#文件复制-demo"><span class="post-toc-number">2.2.3.1.</span> <span class="post-toc-text">文件复制 demo</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#多行文件读写"><span class="post-toc-number">2.2.4.</span> <span class="post-toc-text">多行文件读写</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#多行文本读取-demo"><span class="post-toc-number">2.2.4.1.</span> <span class="post-toc-text">多行文本读取 demo</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#文件操作拆解"><span class="post-toc-number">2.2.5.</span> <span class="post-toc-text">文件操作拆解</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#with-open-取代-open"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">with open 取代 open</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#文件的操作模式"><span class="post-toc-number">2.3.1.</span> <span class="post-toc-text">文件的操作模式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#r-模式（read）"><span class="post-toc-number">2.3.1.1.</span> <span class="post-toc-text">r 模式（read）</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#w-模式（write）"><span class="post-toc-number">2.3.1.2.</span> <span class="post-toc-text">w 模式（write）</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#a-模式（append）"><span class="post-toc-number">2.3.1.3.</span> <span class="post-toc-text">a 模式（append）</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#模式"><span class="post-toc-number">2.3.1.4.</span> <span class="post-toc-text">+ 模式</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#规范"><span class="post-toc-number">2.3.2.</span> <span class="post-toc-text">规范</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#读写操作"><span class="post-toc-number">2.3.3.</span> <span class="post-toc-text">读写操作</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#修改文件"><span class="post-toc-number">2.3.4.</span> <span class="post-toc-text">修改文件</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#主动控制文件内指针移动"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">主动控制文件内指针移动</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#用-seek-控制指针"><span class="post-toc-number">2.4.1.</span> <span class="post-toc-text">用 seek 控制指针</span></a></li></ol></li></ol></li></ol></ul><div class="material-post_container"><div class="material-post mdl-grid"><div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col"><div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://media.everdo.cn/tank/pic-bed/2020/04/24/python-pic.jpg)"><p class="article-headline-p">Python-学习笔记05（文件和编码）</p></div><div class="mdl-color-text--grey-700 mdl-card__supporting-text meta"><div id="author-avatar"><img src="/img/fav_300.png" width="44px" height="44px" alt="Author Avatar"></div><div><strong>EmptinessBoy</strong> <span>7月 07, 2020</span></div><div class="section-spacer"></div><button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">devices other</i> <span class="visuallyhidden">devices other</span></button><ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button"><li class="mdl-menu__item">在其它设备中阅读本文章</li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVYAAAFWCAAAAAAXxOpfAAAFfUlEQVR42u3aQXLjMAwEQP//09kHbFmZAZSKqTRPqV1bpJo+TAF4fVk/sF4IsGLFamHFitXCihWrhfUo1le83n3rm83K715//vpU7Qmvz1CbYMWKFStWrMeytjR3cfz/9/Vn3pFtdnn3/Pp9sWLFihUr1sNZ22O9+99NWLl+yWvQ5C0SxOFlY8WKFStWrH+SNQ8l7TXkJ8zLJe2PAytWrFixYsU6C0B7ggQlD1L5xWDFihUrVqx/kzWPRJvIMmvwtOMUbYHml3tZWLFixYoV66+yzpoiz/47N8GKFStWrFjPZW3XrDyRFzhmJZK8eZPHrFoGK1asWLFiPZB11jJpsTZ89zZj2kJM0TrCihUrVqxYH8Gab5YHslkAyts5bUhKglreUsKKFStWrFifwdo+rm3StGMWs93b4Y9cYBiwsGLFihUr1g9mnYWn/VhGfoYo3MQFnc0FfPODwIoVK1asWA9k3Y8yDOPIgm/WCsqfPBsiwYoVK1asWJ/BmgSLHK59paQ0c29Bpy3BYMWKFStWrM9mnTUh8le96zo3u88C5Y+UWrBixYoVK9ZfZZ296iZOzVoaeWyalU7y4PX2MrBixYoVK9YDWe+NSveOZs6KL3nhJgEtnokVK1asWLEeyDrjmA065OFmRtY+f1agwYoVK1asWJ/H2rY3NmMTm3GK/MntedqfC1asWLFixfoM1uuwkkSx/MXaa8uHIdpQlRd6kjINVqxYsWLFei7rZqxhH3HuavzkrZr2+cV7YcWKFStWrAeyvoKVvHze3siLL230aQNTPqIRPQ0rVqxYsWI9nLUNIptQ1b5qG+mSgNX+OIrxC6xYsWLFivVw1rZU0RZN2mJHPo45a7e0z8eKFStWrFifwZo/OiFrr+T6YvJiR1sWycc4cmKsWLFixYr1RNbZUTalmYRyRpB8a7Zv9BZYsWLFihXrgazJNi1NG2vaBs8+tM0aS0XTBStWrFixYn0Qa46SN2nywYs2VLXX3wZKrFixYsWK9XmsbfuhHaTYRKV2GCKPifu2E1asWLFixXo662xwIQ9bbWFlVu5pL3sT+OpeFlasWLFixfrxrG3IaOk3ISnZZf8Tuf7RRJ/HihUrVqxYj2VtyyUJQTuKsYlB7cW04Sw6OVasWLFixXosax6J7ipqzIYm82DUPiFvL2HFihUrVqxPYt2Ej9ngxaaUk7RAZiGpHToZTrVgxYoVK1asH8k6G5Vomy6zkJSc595wNmu9YMWKFStWrOeyzsjaA+UQbYBLmjr7stE3l4oVK1asWLEeyJqML9w7SJHEoPbf98EuP1VUasGKFStWrFgPYW2PtRlTSILU7DJmJZL8M6umC1asWLFixfrBrLMBi9ngwqZEsinf5KfatHCwYsWKFSvW01mHjytjUxJu9vv+RKMFK1asWLFifTZrQrAviOzHKWYFoK9y1cOjWLFixYoV64NYfyLibEBn9HnIa0c5i0FMrFixYsWK9eNZ2ybKBmVWTMlj36zNsw9eWLFixYoV64ms9265D09txGmbRkkbJkK8DlhYsWLFihXrUaw5SjvUOCu17Icp29bLfl+sWLFixYr1GayzuJN/9xq6bX60BZo8qF3vVQcsrFixYsWK9SNZV5FiXci4/kwy2JGUSDZRrCi+YMWKFStWrMey3hWq9kMbs9g0G+KcBax6vhUrVqxYsWI9hDVpkLQFkXaU4bVY7YXdtRdWrFixYsWKNW+9tMGl/da+cDOMblixYsWKFeufYW1bJneFnuSc7cXfVjbCihUrVqxYD2dNmi4tRx5ZWoi84DJr29TXgxUrVqxYsR7LmoeJTfza47ZjFglZG+CKUgtWrFixYsX68azWXQsrVqxYLaxYsVpYsWK1sH78+gfM4ah0LJt6wQAAAABJRU5ErkJggg=="></ul><button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">bookmark</i> <span class="visuallyhidden">bookmark</span></button><ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button"><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/python/" rel="tag">python</a></li></ul><button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">share</i> <span class="visuallyhidden">share</span></button><ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button"><a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Python-学习笔记05（文件和编码）&url=https://coding.emptinessboy.com/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B005%EF%BC%88%E6%96%87%E4%BB%B6%E5%92%8C%E7%BC%96%E7%A0%81%EF%BC%89/index.html&pic=https://coding.emptinessboy.com/img/logo-32x32.jpg&searchPic=false&style=simple" target="_blank"><li class="mdl-menu__item">分享到微博</li></a><a class="post_share-link" href="https://twitter.com/intent/tweet?text=Python-学习笔记05（文件和编码）&url=https://coding.emptinessboy.com/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B005%EF%BC%88%E6%96%87%E4%BB%B6%E5%92%8C%E7%BC%96%E7%A0%81%EF%BC%89/index.html&via=EmptinessBoy" target="_blank"><li class="mdl-menu__item">分享到 Twitter</li></a><a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://coding.emptinessboy.com/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B005%EF%BC%88%E6%96%87%E4%BB%B6%E5%92%8C%E7%BC%96%E7%A0%81%EF%BC%89/index.html" target="_blank"><li class="mdl-menu__item">分享到 Facebook</li></a><a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=帆的自留地&title=Python-学习笔记05（文件和编码）&summary=晓帆的学习笔记&pics=https://coding.emptinessboy.com/img/logo-32x32.jpg&url=https://coding.emptinessboy.com/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B005%EF%BC%88%E6%96%87%E4%BB%B6%E5%92%8C%E7%BC%96%E7%A0%81%EF%BC%89/index.html" target="_blank"><li class="mdl-menu__item">分享到 QQ</li></a><a class="post_share-link" href="https://telegram.me/share/url?url=https://coding.emptinessboy.com/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B005%EF%BC%88%E6%96%87%E4%BB%B6%E5%92%8C%E7%BC%96%E7%A0%81%EF%BC%89/index.html&text=Python-学习笔记05（文件和编码）" target="_blank"><li class="mdl-menu__item">分享到 Telegram</li></a></ul></div><div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out"><h2 id="文件编码解码"><a href="#文件编码解码" class="headerlink" title="文件编码解码"></a>文件编码解码</h2><h3 id="字符编码"><a href="#字符编码" class="headerlink" title="字符编码"></a>字符编码</h3><blockquote><p><strong>Unicode</strong> 是 <strong>「字符集」</strong> ， <strong>UTF-8</strong> 是 <strong>「编码规则」</strong><br><br><br>字符集：为每一个「字符」分配一个唯一的 ID（学名为码位 / 码点 / Code Point）<br>编码规则：将「码位」转换为字节序列的规则（编码/解码 可以理解为 加密/解密 的过程）</p></blockquote><p>计算机内存里面使用的是 unicode，硬盘里面使用的是 utf-8。因为存储 utf-8 更加节约空间。</p><p>utf-8 是变长的也就意味着用户输入字符 “你好ab” 的时候，如果内存也用 utf-8 则需要经历一个计算的过程，然后才能存储，这个时候计算消耗的时间会非常的多（总时间 = 计算机时间 + 存储时间）但如果内存里面的编码采用 unicode 则不需要计算</p><p>我们现在使用的编辑器默认都是 utf-8</p><h3 id="python-字符编码"><a href="#python-字符编码" class="headerlink" title="python 字符编码"></a>python 字符编码</h3><p>python3 内部默认使用的是 unicode 码</p><pre><code class="python"># 编码与解码
+s = &#39;hello world 你好&#39;
+
+# 编码:将人看的变成计算机能够看的懂的
+res = s.encode(&#39;utf-8&#39;)
+print(res)  # b&#39;hello world \xe4\xbd\xa0\xe5\xa5\xbd&#39;
+&quot;&quot;&quot;在python中的bytes类型你可以直接看成二进制格式&quot;&quot;&quot;
+
+# 解码:将计算机看到懂的变成人能看的懂
+print(res.decode(&#39;gbk&#39;))
+print(res.decode(&#39;utf-8&#39;))
+print(res.decode())
+
+
+&gt;&gt;&gt; b&#39;hello world \xe4\xbd\xa0\xe5\xa5\xbd&#39;
+hello world 浣犲ソ
+hello world 你好
+hello world 你好</code></pre><h2 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h2><p>计算机文件，是存储在某种<strong>长期储存</strong>设备上的一段数据流。其特点是所存信息可以长期、多次使用，不会因为断电而消失。</p><p>计算机文件可分为二种： <strong>二进制文件和文本文件</strong></p><ul><li>图形文件及文字处理程序等计算机程序都属于二进制文件。</li><li>文本文件则是可以用文字处理程序阅读的简单文本文件。</li></ul><h3 id="文件读写步骤"><a href="#文件读写步骤" class="headerlink" title="文件读写步骤"></a>文件读写步骤</h3><ol><li>打开文件</li><li>处理数据</li><li>关闭文件</li></ol><h3 id="open-函数"><a href="#open-函数" class="headerlink" title="open 函数"></a>open 函数</h3><pre><code class="python">fileobj = open(filename, mode)</code></pre><p>fileobj 是 open() 返回的文件对象，filename 是该文件的文件名。</p><p>mode 是指明文件类型和操作的字符串。</p><ul><li>mode 的第一个字母表明对其的操作。</li><li>mode 的第二个字母是文件类型：<ul><li>t（可省略）代表文本类型文件；</li><li>b 代表二进制类型文件。</li></ul></li></ul><h4 id="文件打开模式"><a href="#文件打开模式" class="headerlink" title="文件打开模式"></a>文件打开模式</h4><table><thead><tr><th>文件打开模式</th><th>含义</th></tr></thead><tbody><tr><td>“r”</td><td>只读模式 (默认)</td></tr><tr><td>“w”</td><td>覆盖写模式 (不存在则新创建；存在则重写新内容)</td></tr><tr><td>“a”</td><td>追加模式 (不存在则新创建；存在则只追加内容)</td></tr><tr><td>“x”</td><td>创建写模式 (不存在则新创建；存在则出错)</td></tr><tr><td>“+”</td><td>与 r/w/a/x 一起使用，增加读写功能</td></tr><tr><td>“t”</td><td>文本类型</td></tr><tr><td>“b”</td><td>二进制类型</td></tr></tbody></table><h4 id="文件读写函数"><a href="#文件读写函数" class="headerlink" title="文件读写函数"></a>文件读写函数</h4><table><thead><tr><th>名称</th><th>含义</th></tr></thead><tbody><tr><td>open()</td><td>打开文件</td></tr><tr><td>read(size)</td><td>从文件读取长度为size的字符串，如果未给定或为负则读取所有内容</td></tr><tr><td>readline()</td><td>读取整行，<strong>返回字符串</strong></td></tr><tr><td>readlines()</td><td>读取所有行并 <strong>返回列表</strong></td></tr><tr><td>write(s)</td><td>把字符串 s 的内容写入文件</td></tr><tr><td>writelines(s)</td><td>向文件写入一个元素为字符串的列表，如果需要换行则要自己加入每行的换行符。</td></tr><tr><td>seek(off, whence=0)</td><td>设置文件当前位置</td></tr><tr><td>tell()</td><td>返回文件读写的当前位置</td></tr><tr><td>close()</td><td>关闭文件。关闭后文件不能再进行读写操作。</td></tr></tbody></table><h4 id="读取文本文件"><a href="#读取文本文件" class="headerlink" title="读取文本文件"></a>读取文本文件</h4><blockquote><p><strong>文本文件内容（hello.txt）：</strong></p><p>Hello, I am emptinessboy! 你好，我是 emptinessboy!</p></blockquote><p><strong>文本方式打开：</strong></p><pre><code class="python">textfile1 = open(&quot;hello.txt&quot;,&quot;rt&quot;,encoding=&quot;utf-8&quot;)  # 打开文件（文本方式）
+t = textfile1.readline() # 读取文件
+print(t)    # 处理数据（打印文件）
+textfile1.close()   # 关闭文件
+
+&gt;&gt;&gt; Hello, I am emptinessboy!   你好，我是 emptinessboy!</code></pre><p><strong>二进制方式打开：</strong></p><pre><code class="python">textfile2 = open(&quot;hello.txt&quot;,&quot;rb&quot;)  # 打开文件（二进制方式）
+t = textfile2.readline() # 读取文件
+print(t)    # 处理数据（打印文件）
+textfile2.close()   # 关闭文件
+
+
+&gt;&gt;&gt; b&#39;Hello, I am emptinessboy!   \xe4\xbd\xa0\xe5\xa5\xbd\xef\xbc\x8c\xe6\x88\x91\xe6\x98\xaf emptinessboy!\r\n&#39;</code></pre><p><a href="https://up.media.everdo.cn/image/R8Aj" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/10/17/python-read-file.png" alt="python-read-file.png"></a></p><h5 id="文件复制-demo"><a href="#文件复制-demo" class="headerlink" title="文件复制 demo"></a>文件复制 demo</h5><p>复制文件不需要考虑行结构，用 read 函数就可以了。这里将 hello.txt 复制为 hello_copy.txt</p><pre><code class="python">source1 = open(&quot;hello.txt&quot;,&quot;r&quot;,encoding=&quot;utf-8&quot;) # UTF-8模式读取原始文件并，赋给对象source1
+source2 = open(&quot;hello_copy.txt&quot;,&quot;w&quot;,encoding=&quot;utf-8&quot;) # UTF-8模式读创建待写入文件并，赋给对象source2
+s1 = source1.read() # 从文件1读取所有内容
+source2.write(s1) # 写入内容
+source2.close() # 关闭文件流
+source1.close()</code></pre><p><a href="https://up.media.everdo.cn/image/RaEO" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/10/17/python-filecp.png" alt="python-filecp.png"></a></p><p>从复制后的文件可以看到，复制后的行结构没用改变</p><h4 id="多行文件读写"><a href="#多行文件读写" class="headerlink" title="多行文件读写"></a>多行文件读写</h4><p>多行文件读写</p><p>用 readlines() 读写多行文件，用嵌套列表存放多行内容</p><pre><code class="python">f=open(&quot;score.txt&quot;,&quot;r&quot;)
+    for line in f.readlines():
+        print(line) #处理行
+f.close()</code></pre><h5 id="多行文本读取-demo"><a href="#多行文本读取-demo" class="headerlink" title="多行文本读取 demo"></a>多行文本读取 demo</h5><p>我们尝试读取下刚才的 hello_copy.txt</p><pre><code class="python">f1 = open(&quot;hello_copy.txt&quot;, &quot;r&quot;, encoding=&quot;utf-8&quot;)  # utf-8模式打开文件
+f2 = f1.readlines()  # 将多行变成列表（数组）
+
+print(f2)
+for l in f2:
+    print(l, end=&quot;&quot;)
+
+f1.close()
+
+
+&gt;&gt;&gt; [&#39;Hello, I am emptinessboy!   你好，我是 emptinessboy!\n&#39;, &#39;Hello, I am emptinessboy!   你好，我是 emptinessboy!\n&#39;, &#39;Hello, I am emptinessboy!   你好，我是 emptinessboy!&#39;]
+Hello, I am emptinessboy!   你好，我是 emptinessboy!
+Hello, I am emptinessboy!   你好，我是 emptinessboy!
+Hello, I am emptinessboy!   你好，我是 emptinessboy!</code></pre><p><strong>实际应用：计算总评分：</strong></p><p>这里先建一个如下格式的文本，用来存放测试信息：</p><p><a href="https://up.media.everdo.cn/image/RuRn" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/10/17/python-read-lines-demo.png" alt="python-read-lines-demo.png"></a></p><p>这个案例中，我们使用嵌套列表来存放多行内容：我们计算每一个学生的总评</p><blockquote><p>总评 = 笔试 * 50% + 平时 * 25% + 实验 * 25%</p></blockquote><pre><code class="python">f = open(&quot;score&quot;, &quot;r&quot;,encoding=&quot;utf-8&quot;)
+head = f.readline()  # 读表头行
+newhead = head[:-1] + &#39;\t总评成绩&#39;
+print(newhead)
+for line in f.readlines(): # 这一步python会从我们刚才读取文件的位置继续往下读取，而不会从头开始
+    l = line.split() # 将读取的一行字符串继续按空格拆分为嵌套列表
+    # 例如第一行会变成 [&#39;2050921018&#39;, &#39;詹延峰&#39;, &#39;计算数学&#39;, &#39;65&#39;, &#39;85&#39;, &#39;76&#39;]
+    s = round(int(l[3]) * 0.5 + int(l[4]) * 0.25 + int(l[5]) * 0.25, 2)  # 求总评分
+    print(&#39; &#39;.join(l) + &#39; &#39; + str(s))  # 加空格对齐
+f.close()</code></pre><p><strong>运行效果：</strong></p><p><a href="https://up.media.everdo.cn/image/j4WS" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/10/17/python-read-lines-result.png" alt="python-read-lines-result.png"></a></p><h4 id="文件操作拆解"><a href="#文件操作拆解" class="headerlink" title="文件操作拆解"></a>文件操作拆解</h4><pre><code class="python">f = open(&#39;a.txt&#39;,&#39;r&#39;,encoding=&#39;utf-8&#39;)  # 默认就是r模式 read模式 只读模式
+
+&quot;&quot;&quot;
+在打开文本文件的时候如果你不指定编码，那么编码就依据当前操作系统的默认编码
+windows     GBK
+linux       utf8
+Mac         ASCII
+&quot;&quot;&quot;
+
+# f是一个文件对象 调用文件对象的一些方法就能够操作该文件
+data = f.read()
+f.close()  # 向操作系统发起关闭文件的请求 回收资源
+
+&quot;&quot;&quot;
+打开一个文件包含两部分资源，应用程序的变量 f 和操作系统打开的文件。在操作完毕一个文件之后必须把与该文件的这两部分资源回收
+
+变量 f 是python程序里面不需要你回收（python有自动的垃圾回收机制）
+open 打开的资源存在与操作系统中（需要手工回收）
+&quot;&quot;&quot;</code></pre><h3 id="with-open-取代-open"><a href="#with-open-取代-open" class="headerlink" title="with open 取代 open"></a>with open 取代 open</h3><p>with 用来创建临时运行环境</p><p>作用：with用于创建一个临时的运行环境，运行环境中的代码执行完后自动安全退出环境。</p><p>文件操作：使用 ope n进行文件操作使建议使用 with 创建运行环境，可以不用 close() 方法关闭文件，无论在文件使用中遇到什么问题都能安全的退出，即使发生错误，退出运行时环境时也能安全退出文件并给出报错信息。</p><p><strong>关键字 with 用于上下文管理（推荐使用）</strong></p><pre><code class="python">with open(&#39;a.txt&#39;,&#39;r&#39;,encoding=&#39;utf-8&#39;) as f:
+    data = f.read()
+
+&quot;&quot;&quot;在执行完with代码块之后 with会自动帮你调用close方法&quot;&quot;&quot;
+
+# with一次性打开多个文件
+
+with open(&#39;a.txt&#39;,&#39;r&#39;,encoding=&#39;utf-8&#39;) as f1,\
+        open(&#39;b.txt&#39;,&#39;r&#39;) as f2:
+    pass</code></pre><h4 id="文件的操作模式"><a href="#文件的操作模式" class="headerlink" title="文件的操作模式"></a>文件的操作模式</h4><h5 id="r-模式（read）"><a href="#r-模式（read）" class="headerlink" title="r 模式（read）"></a>r 模式（read）</h5><p>r 模式打开文件 文件必须存在否则直接报错。基本格式如下：</p><pre><code class="python">with open(&#39;a.txt&#39;,&#39;r&#39;,encoding=&#39;utf-8&#39;) as f:
+    pass
+
+# 例如：    
+with open(&#39;a.txt&#39;,&#39;r&#39;,encoding=&#39;utf-8&#39;) as f:
+    data = f.read()  # 读取文件内所有的内容
+    print(data)</code></pre><p>基于 r 模式，实现用户认证功能，文件作为数据库：</p><pre><code class="python">username = input(&#39;&gt;&gt;&gt;:&#39;).strip()
+password = input(&#39;&gt;&gt;&gt;:&#39;).strip()
+with open(&#39;userinfo&#39;,&#39;r&#39;,encoding=&#39;utf-8&#39;) as f:
+    for line in f:  # f文件对象可以被for循环 类似于一行行的读取文件内容
+        # 切割字符串
+        usr, pwd = line.strip(&#39;\n&#39;).split(&#39;|&#39;)
+        if username == usr and password == pwd:
+            print(&#39;登陆成功&#39;)
+            # 只要验证成功了 for循环就没有必要再执行了
+            break
+    else:
+        print(&#39;用户名或密码错误&#39;)</code></pre><p>运行效果：</p><p><a href="https://up.media.everdo.cn/image/jHSQ" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/10/17/python-file-r.png" alt="python-file-r.png"></a></p><h5 id="w-模式（write）"><a href="#w-模式（write）" class="headerlink" title="w 模式（write）"></a>w 模式（write）</h5><p>w 模式下文件不存在，也不会报错，反而会自动创建该文件。因此 w 模式一定要慎用，文件路径前面最好加一个 r 取消转义</p><ol><li>先清空目标文件</li><li>才是写入内容</li></ol><p>基本格式如下：</p><pre><code class="python">with open(r&#39;b.txt&#39;,&#39;w&#39;,encoding=&#39;utf-8&#39;) as f:
+    pass
+
+# 文件路径取消转义
+with open(r&#39;b.txt&#39;,&#39;w&#39;,encoding=&#39;utf-8&#39;) as f:
+    pass</code></pre><p><strong>简单写入案例：</strong></p><pre><code class="python">with open(&#39;filew&#39;,&#39;w&#39;,encoding=&#39;utf-8&#39;) as f:
+    f.write(&#39;你追我...\n&#39;)
+    f.write(&#39;你追我...\n&#39;)
+    f.write(&#39;你追我...\n&#39;)
+    f.write(&#39;heiheihei 666\n&#39;)
+# f.close 在 with 模式下可以不写</code></pre><p><strong>运行效果：</strong></p><p><a href="https://up.media.everdo.cn/image/jIey" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/10/17/python-file-w-1.png" alt="python-file-w-1.png"></a></p><p>1.在文件不关闭的情况下 连续的写入，后写的内容一定跟在前写的内容后面</p><p>2.如果重新以w模式打开文件，则会先清空该文件</p><h5 id="a-模式（append）"><a href="#a-模式（append）" class="headerlink" title="a 模式（append）"></a>a 模式（append）</h5><p>a 模式下文件不存在，也会自动创建该文件。文件存在的情况下 a 模式打开之后文件指针会直接移动到文件末尾。</p><pre><code class="python">with open(&#39;c.txt&#39;,&#39;a&#39;,encoding=&#39;utf-8&#39;) as f:
+    pass
+
+with open(&#39;c.txt&#39;,&#39;a&#39;,encoding=&#39;utf-8&#39;) as f:
+    f.write(&#39;11111\n&#39;)
+    f.write(&#39;22222\n&#39;)</code></pre><p>基于 a 模式实现用户的注册功能：</p><pre><code class="python">username = input(&#39;&gt;&gt;&gt;:&#39;).strip()
+password = input(&#39;&gt;&gt;&gt;:&#39;).strip()
+with open(&#39;userinfo.txt&#39;,&#39;a&#39;,encoding=&#39;utf-8&#39;) as f:
+    res = &#39;%s|%s\n&#39;%(username,password)
+    f.write(res)</code></pre><p><strong>运行效果：</strong></p><p><a href="https://up.media.everdo.cn/image/jhMd" target="_blank" rel="noopener"><img src="https://media.everdo.cn/tank/pic-bed/2020/10/17/python-file-a.png" alt="python-file-a.png"></a></p><h5 id="模式"><a href="#模式" class="headerlink" title="+ 模式"></a>+ 模式</h5><p><strong>Python 读写文件模式</strong>：在生产环境中我们只单纯的使用 r/w/a 读写分离，一般不用 +</p><ol><li><strong>r</strong> 打开只读文件，该文件必须存在。</li><li><strong>r+</strong> 打开可读写的文件，该文件必须存在。</li><li><strong>w</strong> 打开只写文件，若文件存在则文件长度清为0，即该文件内容会消失。若文件不存在则建立该文件。</li><li><strong>w+</strong> 打开可读写文件，若文件存在则文件长度清为零，即该文件内容会消失。若文件不存在则建立该文件。</li><li><strong>a</strong> 以附加的方式打开只写文件。若文件不存在，则会建立该文件，如果文件存在，写入的数据会被加到文件尾，即文件原先的内容会被保留。</li><li><strong>a+</strong> 以附加方式打开可读写的文件。若文件不存在，则会建立该文件，如果文件存在，写入的数据会被加到文件尾后，即文件原先的内容会被保留。</li><li>上述的形态字符串都可以再加一个 b 字符，如 rb、w+b 或 ab+ 等组合，加入 b 字符用来告诉函数库打开的文件为二进制文件，而非纯文字文件。不过在 POSIX 系统，Linux 都会忽略该字符。</li></ol><h4 id="规范"><a href="#规范" class="headerlink" title="规范"></a>规范</h4><h4 id="读写操作"><a href="#读写操作" class="headerlink" title="读写操作"></a>读写操作</h4><p><strong>最好先判断是否可读写：</strong></p><pre><code class="python">print(f.readable())  # 判断当前是否可读
+print(f.writable())  # 判断当前是否可写</code></pre><p>读取文本文件的几种方法：</p><pre><code class="python">with open(&#39;a.txt&#39;,&#39;rt&#39;,encoding=&#39;utf-8&#39;) as f:
+    # 法一：
+    # 全部读取  当文件内容过大的时候 该方法可能会导致内存溢出
+    # 该方法执行完毕之后文件的指针会移动到文件末尾
+    data = f.read()
+
+    # 法二：
+    # 读取一行内容 指针会移动到第二行的首部
+    data = f.readline()
+
+    # 法三：
+    # 读取每一行内容 存放于列表中 当文件过大的情况下也不推荐使用
+    data = f.readlines()
+
+    # 法四（推荐）：
+    # 我们在读取文件内容的时候 一般都是用for循环
+    for line in f:
+        print(line)</code></pre><p>写入文本文件的推荐方法：</p><p>Python_write和writelines的区别</p><ol><li>write()需要传入一个字符串做为参数,否则会报错</li><li>writelines()既可以传入字符串又可以传入一个字符序列,并将该字符序列写入文件<ul><li>注意 ：writelines必须传入的是字符序列,不能是数字序列。</li><li>错误写法如：list_1023 = [1,2,3,4,5]</li></ul></li></ol><pre><code class="python">with open(&#39;b.txt&#39;,&#39;wt&#39;,encoding=&#39;utf-8&#39;) as f:
+    f.write(&#39;111&#39;)
+    f.writelines([&#39;aaa\n&#39;,&#39;bbb\n&#39;,&#39;ccc\n&#39;])
+
+    # 立刻将内存数据刷到硬盘 类似于ctrl+s
+    f.flush()</code></pre><h4 id="修改文件"><a href="#修改文件" class="headerlink" title="修改文件"></a>修改文件</h4><p>有两种方法可以实现文件修改：</p><ol><li>将文件内容全部读取到内存 在内存中修改完毕之后覆盖原来的内容</li><li>重新创建一个新文件 然后将老文件内容一行行读取到内存修改之后写入新文件<br>之后将老文件删除 将新文件名修改为老文件名 完成替换</li></ol><p><strong>适用于小文件：</strong></p><pre><code class="python">with open(&#39;a.txt&#39;,&#39;r&#39;,encoding=&#39;utf-8&#39;) as f:
+    data = f.read()
+with open(&#39;a.txt&#39;,&#39;w&#39;,encoding=&#39;utf-8&#39;) as f:
+    f.write(data.replace(&#39;tony&#39;,&#39;jason&#39;)) #替换</code></pre><p>上面的方法在文件修改过程中同一份数据只有一份。文件过大的时候比较吃资源。</p><p><strong>适用于大文件：</strong></p><pre><code class="python">import os
+
+with open(&#39;a.txt&#39;,&#39;r&#39;,encoding=&#39;utf-8&#39;) as read_f,\
+    open(&#39;a.backend.txt&#39;,&#39;w&#39;,encoding=&#39;utf-8&#39;) as write_f:
+    for line in read_f:
+        write_f.write(line.replace(&#39;tony&#39;,&#39;jason&#39;)) #替换
+
+os.remove(&#39;a.txt&#39;)
+os.rename(&#39;a.backend.txt&#39;,&#39;b.txt&#39;)</code></pre><p>这种方法不会占用太多的内存，不过在文件修改的时候同一份数据存了两份 比较消耗硬盘空间</p><h3 id="主动控制文件内指针移动"><a href="#主动控制文件内指针移动" class="headerlink" title="主动控制文件内指针移动"></a>主动控制文件内指针移动</h3><p>大前提：文件内指针的移动都是 bytes 为单位，唯一列外的是 t 模式下的 read(n)，n 是以字符串为单位。</p><pre><code class="python"># 字符模式
+with open(&#39;a.txt&#39;,&#39;rt&#39;,encoding=&#39;utf-8&#39;) as f:
+    data = f.read(3)  # 读取三个字符
+    print(data)
+
+# 字节模式
+with open(&#39;a.txt&#39;,&#39;rb&#39;) as f:
+    data = f.read(3)  # 读取三个字节
+    print(data)</code></pre><h4 id="用-seek-控制指针"><a href="#用-seek-控制指针" class="headerlink" title="用 seek 控制指针"></a>用 seek 控制指针</h4><p>控制指针移动有三种模式，语法如下：</p><pre><code class="python">seek(指针移动的字节数，模式)</code></pre><ul><li>0 模式：以文件开头作为移动的参照</li><li>1 模式：以指针当前位置作为移动的参照</li><li>2 模式：以文件末尾作为移动的参照</li></ul><blockquote><p>其中 0 模式以在 t 和 b 下使用，而 1 和 2 模式只能在b模式下使用</p></blockquote><p>测试文件如下：</p><pre><code class="python"># a.txt
+哈哈哈1234567890
+abcdefghijk
+lmnopqrstuv
+wxyz
+吼</code></pre><p><strong>读取三个字符：</strong></p><pre><code class="python">with open(&#39;a.txt&#39;,&#39;rt&#39;,encoding=&#39;utf-8&#39;) as f:
+    data = f.read(3)  # 读取三个字符
+    print(data)
+
+
+&gt;&gt;&gt; 哈哈哈</code></pre><p><strong>读取三个字节：</strong></p><pre><code class="python">with open(&#39;a.txt&#39;,&#39;rb&#39;) as f:
+    data = f.read(3)  # 读取三个字节
+    print(data)
+
+
+&gt;&gt;&gt; b&#39;\xe5\x93\x88&#39;</code></pre><p><strong>光标向后移动三个字节：（t模式）</strong></p><pre><code class="python">with open(&#39;a.txt&#39;,&#39;rt&#39;,encoding=&#39;utf-8&#39;) as f:
+    f.seek(3,0)  # utf8用一个 bytes 表示英文 3个 bytes 表示中文
+    print(f.tell())  # 查看当前文件指针距离文件开头的位置 结果是3
+    print(f.read())
+
+
+&gt;&gt;&gt; 3
+哈哈1234567890
+abcdefghijk
+lmnopqrstuv
+wxyz
+吼</code></pre><p><strong>光标向后移动六个字节：（b模式）</strong></p><pre><code class="python">with open(&#39;a.txt&#39;,&#39;rb&#39;) as f:
+    f.seek(6,0)
+    print(f.read().decode(&#39;utf-8&#39;))
+
+
+&gt;&gt;&gt; 哈1234567890
+abcdefghijk
+lmnopqrstuv
+wxyz
+吼</code></pre><img src="https://media.everdo.cn/tank/pic-bed/2021/04/09/4.png" alt="尾图4" style="zoom:33%"><blockquote style="margin:2em 0 0;padding:.5em 1em;border-left:3px solid #ebc43b;background-color:#191919;list-style:none"><p><strong>This blog is under a <a href="/creativecommons.html" target="_blank">CC BY-NC-ND 4.0 Unported License</a></strong><br><strong>本文链接：</strong><a href="https://coding.emptinessboy.com/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B005%EF%BC%88%E6%96%87%E4%BB%B6%E5%92%8C%E7%BC%96%E7%A0%81%EF%BC%89/">https://coding.emptinessboy.com/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B005%EF%BC%88%E6%96%87%E4%BB%B6%E5%92%8C%E7%BC%96%E7%A0%81%EF%BC%89/</a></p></blockquote></div><div id="comment" style="padding:10px" class="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js"></script><script>var GUEST_INFO=["nick","mail","link"],guest_info="nick,mail,link".split(",").filter(function(i){return GUEST_INFO.indexOf(i)>-1}),notify=!1,verify=!0;new Valine({el:".vcomment",notify:notify,verify:verify,appId:"91mhcw0WK44B90nptmxGcJol-gzGzoHsz",appKey:"Boi7za0ClwGyWRCYd8osdf5o",placeholder:"在这里写点什么吧！",pageSize:"10",avatar:"monsterid",lang:"zh-cn",guest_info:guest_info})</script></div><nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col"><a href="/2020/09/%E6%87%92%E5%BE%97%E8%B7%91%E5%8C%BB%E9%99%A2%EF%BC%81%E4%BB%8E%E4%BA%91%E4%B8%8B%E8%BD%BDMR%E6%BA%90%E6%96%87%E4%BB%B6DICOM/" id="post_nav-newer" class="prev-content"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation"><i class="material-icons">arrow_back</i></button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 新篇</a><div class="section-spacer"></div><a href="/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B004%EF%BC%88%E5%87%BD%E6%95%B0%EF%BC%89/" id="post_nav-older" class="next-content">旧篇 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation"><i class="material-icons">arrow_forward</i></button></a></nav></div></div><div class="sidebar-overlay"></div><aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation"><div id="sidebar-main"><div class="sidebar-header header-cover" style="background-image:url(/img/sidebar_header.jpg)"><div class="top-bar"></div><button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display:initial" data-upgraded=",MaterialButton,MaterialRipple"><i class="material-icons">clear_all</i> <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button><div class="sidebar-image"><img src="/img/fav_300.png" alt="EmptinessBoy's avatar"></div><a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">i@my.huxiaofan.com <b class="caret"></b></a></div><ul class="nav sidebar-nav"><li class="dropdown"><ul id="settings-dropdown" class="dropdown-menu"><li><a href="mailto:i@my.huxiaofan.com" target="_blank" title="Email 我"><i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i> Email 我</a></li></ul></li><li id="sidebar-first-li"><a href="/"><i class="material-icons sidebar-material-icons">home</i> 主页</a></li><li class="divider"></li><li class="dropdown"><a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown"><i class="material-icons sidebar-material-icons">inbox</i> 归档 <b class="caret"></b></a><ul class="dropdown-menu"><li><a class="sidebar_archives-link" href="/archives/2021/05/">五月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/04/">四月 2021<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/11/">十一月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/10/">十月 2020<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/09/">九月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/07/">七月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/06/">六月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/04/">四月 2020<span class="sidebar_archives-count">13</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/03/">三月 2020<span class="sidebar_archives-count">13</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/02/">二月 2020<span class="sidebar_archives-count">4</span></a></li></ul></li><li class="dropdown"><a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown"><i class="material-icons sidebar-material-icons">chrome_reader_mode</i> 分类 <b class="caret"></b></a><ul class="dropdown-menu"><li><a class="sidebar_archives-link" href="/categories/Android/">Android<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/CSS%E5%AD%A6%E4%B9%A0/">CSS学习<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/HTML%E5%AD%A6%E4%B9%A0/">HTML学习<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/Hadoop/">Hadoop<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/JAVAWEB/">JAVAWEB<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/JAVA%E5%AD%A6%E4%B9%A0/">JAVA学习<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/JS%E5%AD%A6%E4%B9%A0/">JS学习<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/Linux/">Linux<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/WEB%E6%A1%86%E6%9E%B6/">WEB框架<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/python%E5%85%A5%E9%97%A8/">python入门<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/">瞎折腾<span class="sidebar_archives-count">4</span></a></li></ul></li><li class="divider"></li><li><a href="https://huxiaofan.com" target="_blank" rel="noopener" title="生活博客"><i class="material-icons sidebar-material-icons">domain</i> 生活博客</a></li><li><a href="https://huxiaofan.com/about" target="_blank" rel="noopener" title="关于我"><i class="material-icons sidebar-material-icons">person</i> 关于我</a></li><li class="divider"></li><li><a href="/archives">文章总数 <span class="sidebar-badge">53</span></a></li></ul></div></aside><div id="back-to-top" class="toTop-wrap"><a href="#top" class="toTop"><i class="material-icons footer_top-i">expand_less</i></a></div><footer class="mdl-mini-footer" id="bottom"><div class="mdl-mini-footer--left-section sns-list"><a href="https://huxiaofan.com/go?url=https://twitter.com/huxiaofanhome/" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter"><span class="visuallyhidden">Twitter</span></button></a><a href="https://huxiaofan.com/go?url=https://www.facebook.com/profile.php?id=100013375578138" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook"><span class="visuallyhidden">Facebook</span></button></a><a href="https://git.huxiaofan.com/emptinessboy" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-github"><span class="visuallyhidden">Github</span></button></a><a href="https://huxiaofan.com/go/?url=aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL2F2NTc2MjgwMDQ=" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili"><span class="visuallyhidden">Bilibili</span></button></a><a href="https://huxiaofan.com/go/?url=https://t.me/emptinessboy" target="_blank"><button class="mdl-mini-footer--social-btn social-btn footer-sns-telegram"><span class="visuallyhidden">Telegram</span></button></a></div><div id="copyright">Copyright&nbsp;©&nbsp;<span year></span>&nbsp;帆的自留地<br><a href="http://huxiaofan.com" target="_blank" rel="noopener">晓帆</a>&nbsp;/&nbsp;<a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow"> 浙ICP备20004121号</a></div><div class="mdl-mini-footer--right-section"><div><div class="footer-develop-div">Hexo Theme - <span class="footer-develop-a">Material</span></div></div></div></footer><script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==",!0)</script><script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==",!0)</script><script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==",!0)</script><script type="text/ls-javascript" id="NProgress-script">NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#82bcff'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #82bcff, 0 0 15px #82bcff'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#82bcff',
+        'border-left-color': '#82bcff'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);</script><script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==",!0)</script><script type="text/ls-javascript" id="window-load">$(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })</script><script type="text/ls-javascript" id="lazy-load">// Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });</script><script>var copyrightNow=(new Date).getFullYear(),textContent=document.querySelector("span[year]");copyrightSince=2019,copyrightSince===copyrightNow||0===copyrightSince?textContent.textContent=copyrightNow:textContent.textContent=copyrightSince+" - "+copyrightNow,function(){for(var t=document.querySelectorAll('script[type="text/ls-javascript"]'),e=0;e<t.length;++e){var o=t[e];lsloader.runInlineScript(o.id,o.id)}}(),console.log("\n %c 帆's Life | https://huxiaofan.com | Theme Material %c \n","color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;","color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;")</script></main></div></body></html><!-- rebuild by neat -->

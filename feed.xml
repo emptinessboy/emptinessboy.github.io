@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>帆的自留地</title>
+  <icon>https://coding.emptinessboy.com/img/logo.png</icon>
+  <subtitle>Coding EmptinessBoy</subtitle>
+  <link href="/feed.xml" rel="self"/>
+  
+  <link href="https://coding.emptinessboy.com/"/>
+  <updated>2021-05-26T04:37:32.000Z</updated>
+  <id>https://coding.emptinessboy.com/</id>
+  
+  <author>
+    <name>EmptinessBoy</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端面试之浅拷贝和深拷贝？</title>
+    <link href="https://coding.emptinessboy.com/2021/05/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E4%B9%8B%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/"/>
+    <id>https://coding.emptinessboy.com/2021/05/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E4%B9%8B%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/</id>
+    <published>2021-05-26T04:54:14.000Z</published>
+    <updated>2021-05-26T04:37:32.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- build time:Mon Mar 28 2022 11:43:41 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;这是昨天在 Boss 上随手刷到的一个看起来非常简单的面试题，也就是 JS 的深浅拷贝，（翻译成人话的化就是&lt;strong&gt;&lt;em&gt;如何将 JS
+        
+      
+    
+    </summary>
+    
+    
+      <category term="WEB框架" scheme="https://coding.emptinessboy.com/categories/WEB%E6%A1%86%E6%9E%B6/"/>
+    
+    
+      <category term="vuejs,javascript" scheme="https://coding.emptinessboy.com/tags/vuejs-javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端面试之排序和VUE死循环</title>
+    <link href="https://coding.emptinessboy.com/2021/05/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E4%B9%8B%E6%8E%92%E5%BA%8F%E5%92%8CVUE%E6%AD%BB%E5%BE%AA%E7%8E%AF/"/>
+    <id>https://coding.emptinessboy.com/2021/05/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E4%B9%8B%E6%8E%92%E5%BA%8F%E5%92%8CVUE%E6%AD%BB%E5%BE%AA%E7%8E%AF/</id>
+    <published>2021-05-23T04:54:14.000Z</published>
+    <updated>2021-05-23T05:24:54.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- build time:Mon Mar 28 2022 11:43:41 GMT+0800 (中国标准时间)
+        
+      
+    
+    </summary>
+    
+    
+      <category term="WEB框架" scheme="https://coding.emptinessboy.com/categories/WEB%E6%A1%86%E6%9E%B6/"/>
+    
+    
+      <category term="vuejs" scheme="https://coding.emptinessboy.com/tags/vuejs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搬砖小记：一个简单的加载中效果</title>
+    <link href="https://coding.emptinessboy.com/2021/04/%E6%90%AC%E7%A0%96%E5%B0%8F%E8%AE%B0%EF%BC%9A%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%8A%A0%E8%BD%BD%E4%B8%AD%E6%95%88%E6%9E%9C/"/>
+    <id>https://coding.emptinessboy.com/2021/04/%E6%90%AC%E7%A0%96%E5%B0%8F%E8%AE%B0%EF%BC%9A%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%8A%A0%E8%BD%BD%E4%B8%AD%E6%95%88%E6%9E%9C/</id>
+    <published>2021-04-26T03:11:10.000Z</published>
+    <updated>2021-04-26T03:21:06.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- build time:Mon Mar 28 2022 11:43:41 GMT+0800 (中国标准时间)
+        
+      
+    
+    </summary>
+    
+    
+      <category term="CSS学习" scheme="https://coding.emptinessboy.com/categories/CSS%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="CSS3" scheme="https://coding.emptinessboy.com/tags/CSS3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VUE的生命周期是啥？</title>
+    <link href="https://coding.emptinessboy.com/2021/04/VUE%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%98%AF%E5%95%A5%EF%BC%9F/"/>
+    <id>https://coding.emptinessboy.com/2021/04/VUE%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%98%AF%E5%95%A5%EF%BC%9F/</id>
+    <published>2021-04-20T02:54:14.000Z</published>
+    <updated>2021-04-20T03:03:30.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- build time:Mon Mar 28 2022 11:43:41 GMT+0800 (中国标准时间) --&gt;&lt;blockquote&gt;&lt;p&gt;对于 VUE.js 的生命周期，VUE
+        
+      
+    
+    </summary>
+    
+    
+      <category term="WEB框架" scheme="https://coding.emptinessboy.com/categories/WEB%E6%A1%86%E6%9E%B6/"/>
+    
+    
+      <category term="vuejs" scheme="https://coding.emptinessboy.com/tags/vuejs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS居中傻傻搞不懂？教你！</title>
+    <link href="https://coding.emptinessboy.com/2021/04/CSS%E5%B1%85%E4%B8%AD%E5%82%BB%E5%82%BB%E6%90%9E%E4%B8%8D%E6%87%82%EF%BC%9F%E6%95%99%E4%BD%A0%EF%BC%81/"/>
+    <id>https://coding.emptinessboy.com/2021/04/CSS%E5%B1%85%E4%B8%AD%E5%82%BB%E5%82%BB%E6%90%9E%E4%B8%8D%E6%87%82%EF%BC%9F%E6%95%99%E4%BD%A0%EF%BC%81/</id>
+    <published>2021-04-12T14:12:13.000Z</published>
+    <updated>2021-04-12T14:21:03.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- build time:Mon Mar 28 2022 11:43:41 GMT+0800 (中国标准时间) --&gt;&lt;blockquote&gt;&lt;p&gt;不会吧，不会吧，不会有人 2021 年还在用百分比写 div 居中吧？&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;每每说到
+        
+      
+    
+    </summary>
+    
+    
+      <category term="CSS学习" scheme="https://coding.emptinessboy.com/categories/CSS%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="CSS3" scheme="https://coding.emptinessboy.com/tags/CSS3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一个 TodoList 让你上手VUE</title>
+    <link href="https://coding.emptinessboy.com/2021/04/%E4%B8%80%E4%B8%AATodoList%E8%AE%A9%E4%BD%A0%E4%B8%8A%E6%89%8BVUE/"/>
+    <id>https://coding.emptinessboy.com/2021/04/%E4%B8%80%E4%B8%AATodoList%E8%AE%A9%E4%BD%A0%E4%B8%8A%E6%89%8BVUE/</id>
+    <published>2021-04-09T15:40:16.000Z</published>
+    <updated>2021-04-10T03:53:30.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- build time:Mon Mar 28 2022 11:43:41 GMT+0800 (中国标准时间) --&gt;&lt;blockquote&gt;&lt;p&gt;想当初，自己自学 VUE.js 的时候，很简单的看了官网的入门教程就直接上手写项目了。从自己最初接触 VUE.js
+        
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="https://coding.emptinessboy.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="vue,前端,demo" scheme="https://coding.emptinessboy.com/tags/vue-%E5%89%8D%E7%AB%AF-demo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WebStrom 构建 Vue 并与 bootstrap 集成</title>
+    <link href="https://coding.emptinessboy.com/2020/11/%E4%BD%BF%E7%94%A8-WebStrom-%E6%9E%84%E5%BB%BA-Vue3-x-%E9%A1%B9%E7%9B%AE/"/>
+    <id>https://coding.emptinessboy.com/2020/11/%E4%BD%BF%E7%94%A8-WebStrom-%E6%9E%84%E5%BB%BA-Vue3-x-%E9%A1%B9%E7%9B%AE/</id>
+    <published>2020-11-04T11:47:36.000Z</published>
+    <updated>2021-05-23T05:28:44.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- build time:Mon Mar 28 2022 11:43:41 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;最近因为一个项目需要使用 vue.js ，所以特地上来学习一波。&lt;/p&gt;&lt;p&gt;因为看到官方 vue,js 已经更行到了 3.x
+        
+      
+    
+    </summary>
+    
+    
+      <category term="WEB框架" scheme="https://coding.emptinessboy.com/categories/WEB%E6%A1%86%E6%9E%B6/"/>
+    
+    
+      <category term="vuejs" scheme="https://coding.emptinessboy.com/tags/vuejs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 的输入输出重定向（转）</title>
+    <link href="https://coding.emptinessboy.com/2020/10/Linux-%E7%9A%84%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E9%87%8D%E5%AE%9A%E5%90%91%EF%BC%88%E8%BD%AC%EF%BC%89/"/>
+    <id>https://coding.emptinessboy.com/2020/10/Linux-%E7%9A%84%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E9%87%8D%E5%AE%9A%E5%90%91%EF%BC%88%E8%BD%AC%EF%BC%89/</id>
+    <published>2020-10-15T08:12:11.000Z</published>
+    <updated>2021-05-23T05:28:44.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Mon Mar 28 2022 11:43:41 GMT+0800 (中国标准时间) --&gt;&lt;blockquote&gt;&lt;p&gt;本文 &lt;strong&gt;转载&lt;/strong&gt; 编辑自大佬 &lt;a href=&quot;https://aimuke.github.io/linux/2019/05/29/redirect/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://aimuke.github.io/linux/2019/05/29/redirect/&lt;/a&gt; 的文章&lt;/p&gt;&lt;p&gt;因为这两天我按照学校课程进行 Linux 实验的时候，发现教科书上说的 Linux 输入输出重定向好像根本行不通。看了各种资料，越看越稀里糊涂。直到看到这一篇，秒懂（奥力给！！）&lt;/p&gt;&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="https://coding.emptinessboy.com/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="https://coding.emptinessboy.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于 Hadoop 伪分布式搭建 Hbase</title>
+    <link href="https://coding.emptinessboy.com/2020/10/%E5%9F%BA%E4%BA%8E-Hadoop-%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E6%90%AD%E5%BB%BA-Hbase/"/>
+    <id>https://coding.emptinessboy.com/2020/10/%E5%9F%BA%E4%BA%8E-Hadoop-%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E6%90%AD%E5%BB%BA-Hbase/</id>
+    <published>2020-10-13T03:56:33.000Z</published>
+    <updated>2021-05-23T05:28:44.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- build time:Mon Mar 28 2022 11:43:41 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;上面我们已经完成了在Hyper-V中运行Ubuntu以及安装Hadoop，可以看我前面两篇文章：&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Hadoop" scheme="https://coding.emptinessboy.com/categories/Hadoop/"/>
+    
+    
+      <category term="Linux,Hadoop" scheme="https://coding.emptinessboy.com/tags/Linux-Hadoop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在Hyper-V中运行Ubuntu以及安装Hadoop（下）</title>
+    <link href="https://coding.emptinessboy.com/2020/10/%E5%9C%A8Hyper-V%E4%B8%AD%E8%BF%90%E8%A1%8CUbuntu%E4%BB%A5%E5%8F%8A%E5%AE%89%E8%A3%85Hadoop%EF%BC%88%E4%B8%8B%EF%BC%89/"/>
+    <id>https://coding.emptinessboy.com/2020/10/%E5%9C%A8Hyper-V%E4%B8%AD%E8%BF%90%E8%A1%8CUbuntu%E4%BB%A5%E5%8F%8A%E5%AE%89%E8%A3%85Hadoop%EF%BC%88%E4%B8%8B%EF%BC%89/</id>
+    <published>2020-10-09T12:55:29.000Z</published>
+    <updated>2021-05-23T05:28:44.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- build time:Mon Mar 28 2022 11:43:41 GMT+0800 (中国标准时间) --&gt;&lt;h1 id=&quot;安装并运行-Hadoop&quot;&gt;&lt;a href=&quot;#安装并运行-Hadoop&quot; class=&quot;headerlink&quot; title=&quot;安装并运行
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Hadoop" scheme="https://coding.emptinessboy.com/categories/Hadoop/"/>
+    
+    
+      <category term="Linux,Hadoop" scheme="https://coding.emptinessboy.com/tags/Linux-Hadoop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在Hyper-V中运行Ubuntu以及安装Hadoop（上）</title>
+    <link href="https://coding.emptinessboy.com/2020/10/%E5%9C%A8Hyper-V%E4%B8%AD%E8%BF%90%E8%A1%8CUbuntu%E4%BB%A5%E5%8F%8A%E5%AE%89%E8%A3%85Hadoop%EF%BC%88%E4%B8%8A%EF%BC%89/"/>
+    <id>https://coding.emptinessboy.com/2020/10/%E5%9C%A8Hyper-V%E4%B8%AD%E8%BF%90%E8%A1%8CUbuntu%E4%BB%A5%E5%8F%8A%E5%AE%89%E8%A3%85Hadoop%EF%BC%88%E4%B8%8A%EF%BC%89/</id>
+    <published>2020-10-08T13:54:54.000Z</published>
+    <updated>2021-05-23T05:28:44.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- build time:Mon Mar 28 2022 11:43:41 GMT+0800 (中国标准时间) --&gt;&lt;h1 id=&quot;安装虚拟机&quot;&gt;&lt;a href=&quot;#安装虚拟机&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Hadoop" scheme="https://coding.emptinessboy.com/categories/Hadoop/"/>
+    
+    
+      <category term="Linux,Hadoop" scheme="https://coding.emptinessboy.com/tags/Linux-Hadoop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaWeb初试 使用IDEA平台</title>
+    <link href="https://coding.emptinessboy.com/2020/09/JavaWeb%E5%88%9D%E8%AF%95-%E4%BD%BF%E7%94%A8IDEA%E5%B9%B3%E5%8F%B0/"/>
+    <id>https://coding.emptinessboy.com/2020/09/JavaWeb%E5%88%9D%E8%AF%95-%E4%BD%BF%E7%94%A8IDEA%E5%B9%B3%E5%8F%B0/</id>
+    <published>2020-09-16T11:42:33.000Z</published>
+    <updated>2021-05-23T05:28:44.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- build time:Mon Mar 28 2022 11:43:41 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;不知道为啥自己选了这门课，好像 JSP
+        
+      
+    
+    </summary>
+    
+    
+      <category term="JAVAWEB" scheme="https://coding.emptinessboy.com/categories/JAVAWEB/"/>
+    
+    
+      <category term="JAVA,WEB" scheme="https://coding.emptinessboy.com/tags/JAVA-WEB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>拍片不用买胶片！从云下载MR源文件DICOM</title>
+    <link href="https://coding.emptinessboy.com/2020/09/%E6%87%92%E5%BE%97%E8%B7%91%E5%8C%BB%E9%99%A2%EF%BC%81%E4%BB%8E%E4%BA%91%E4%B8%8B%E8%BD%BDMR%E6%BA%90%E6%96%87%E4%BB%B6DICOM/"/>
+    <id>https://coding.emptinessboy.com/2020/09/%E6%87%92%E5%BE%97%E8%B7%91%E5%8C%BB%E9%99%A2%EF%BC%81%E4%BB%8E%E4%BA%91%E4%B8%8B%E8%BD%BDMR%E6%BA%90%E6%96%87%E4%BB%B6DICOM/</id>
+    <published>2020-09-10T09:52:19.000Z</published>
+    <updated>2021-05-23T05:28:44.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- build time:Mon Mar 28 2022 11:43:41 GMT+0800 (中国标准时间) --&gt;&lt;blockquote&gt;&lt;p&gt;这是一个因 阑尾炎？ 泡在医院的暑假&lt;/p&gt;&lt;/blockquote&gt;&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="瞎折腾" scheme="https://coding.emptinessboy.com/categories/%E7%9E%8E%E6%8A%98%E8%85%BE/"/>
+    
+    
+      <category term="医学 网页" scheme="https://coding.emptinessboy.com/tags/%E5%8C%BB%E5%AD%A6-%E7%BD%91%E9%A1%B5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python-学习笔记05（文件和编码）</title>
+    <link href="https://coding.emptinessboy.com/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B005%EF%BC%88%E6%96%87%E4%BB%B6%E5%92%8C%E7%BC%96%E7%A0%81%EF%BC%89/"/>
+    <id>https://coding.emptinessboy.com/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B005%EF%BC%88%E6%96%87%E4%BB%B6%E5%92%8C%E7%BC%96%E7%A0%81%EF%BC%89/</id>
+    <published>2020-07-07T15:56:16.000Z</published>
+    <updated>2021-05-23T05:28:44.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- build time:Mon Mar 28 2022 11:43:41 GMT+0800 (中国标准时间) --&gt;&lt;h2 id=&quot;文件编码解码&quot;&gt;&lt;a href=&quot;#文件编码解码&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="python入门" scheme="https://coding.emptinessboy.com/categories/python%E5%85%A5%E9%97%A8/"/>
+    
+    
+      <category term="python" scheme="https://coding.emptinessboy.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python 学习笔记04（函数）</title>
+    <link href="https://coding.emptinessboy.com/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B004%EF%BC%88%E5%87%BD%E6%95%B0%EF%BC%89/"/>
+    <id>https://coding.emptinessboy.com/2020/07/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B004%EF%BC%88%E5%87%BD%E6%95%B0%EF%BC%89/</id>
+    <published>2020-07-06T15:56:16.000Z</published>
+    <updated>2021-05-23T05:28:44.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- build time:Mon Mar 28 2022 11:43:41 GMT+0800 (中国标准时间)
+        
+      
+    
+    </summary>
+    
+    
+      <category term="python入门" scheme="https://coding.emptinessboy.com/categories/python%E5%85%A5%E9%97%A8/"/>
+    
+    
+      <category term="python" scheme="https://coding.emptinessboy.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python 学习笔记03（数据/流程）下</title>
+    <link href="https://coding.emptinessboy.com/2020/06/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B003%EF%BC%88%E6%95%B0%E6%8D%AE-%E6%B5%81%E7%A8%8B%EF%BC%89%E4%B8%8B%20-%20%E5%89%AF%E6%9C%AC/"/>
+    <id>https://coding.emptinessboy.com/2020/06/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B003%EF%BC%88%E6%95%B0%E6%8D%AE-%E6%B5%81%E7%A8%8B%EF%BC%89%E4%B8%8B%20-%20%E5%89%AF%E6%9C%AC/</id>
+    <published>2020-06-25T07:52:15.000Z</published>
+    <updated>2021-05-23T05:28:44.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Mon Mar 28 2022 11:43:41 GMT+0800 (中国标准时间) --&gt;&lt;h2 id=&quot;序列&quot;&gt;&lt;a href=&quot;#序列&quot; class=&quot;headerlink&quot; title=&quot;序列&quot;&gt;&lt;/a&gt;序列&lt;/h2&gt;&lt;h3 id=&quot;列表-list&quot;&gt;&lt;a href=&quot;#列表-list&quot; class=&quot;headerlink&quot; title=&quot;列表 [] list&quot;&gt;&lt;/a&gt;列表 [] list&lt;/h3&gt;&lt;p&gt;列表内部可以存储多个元素，元素与元素之间逗号隔开，元素可以是任意数据类型&lt;/p&gt;&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;name_list = [111,11.11,&amp;#39;jason&amp;#39;,[12,3,4,5,6]]
+name_list = [&amp;#39;jason&amp;#39;, &amp;#39;egon&amp;#39;, &amp;#39;tank&amp;#39;, &amp;#39;sean&amp;#39;, &amp;#39;oscar&amp;#39;]
+print(name_list[2])  # 索引取值  索引0开始&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+    
+      <category term="python入门" scheme="https://coding.emptinessboy.com/categories/python%E5%85%A5%E9%97%A8/"/>
+    
+    
+      <category term="python" scheme="https://coding.emptinessboy.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python 学习笔记02（数据/流程）上</title>
+    <link href="https://coding.emptinessboy.com/2020/06/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B002%EF%BC%88%E6%95%B0%E6%8D%AE-%E6%B5%81%E7%A8%8B%EF%BC%89%E4%B8%8A/"/>
+    <id>https://coding.emptinessboy.com/2020/06/Python-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B002%EF%BC%88%E6%95%B0%E6%8D%AE-%E6%B5%81%E7%A8%8B%EF%BC%89%E4%B8%8A/</id>
+    <published>2020-06-23T07:52:15.000Z</published>
+    <updated>2021-05-23T05:28:44.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!-- build time:Mon Mar 28 2022 11:43:41 GMT+0800 (中国标准时间) --&gt;&lt;h2 id=&quot;数据类型&quot;&gt;&lt;a href=&quot;#数据类型&quot; class=&quot;headerlink&quot; title=&quot;数据类型&quot;&gt;&lt;/a&gt;数据类型&lt;/h2&gt;&lt;h3 id=&quot;整数（int）&quot;&gt;&lt;a href=&quot;#整数（int）&quot; class=&quot;headerlink&quot; title=&quot;整数（int）&quot;&gt;&lt;/a&gt;整数（int）&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;与数学中整数概念一致&lt;/li&gt;&lt;li&gt;整数可正可负&lt;/li&gt;&lt;li&gt;默认情况下，整数采用十进制。其它进制需要&lt;/li&gt;&lt;li&gt;增加相应的引导符号&lt;/li&gt;&lt;/ul&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;进制&lt;/th&gt;&lt;th&gt;符号&lt;/th&gt;&lt;th&gt;示例&lt;/th&gt;&lt;th&gt;十进制&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;二进制 ：&lt;/td&gt;&lt;td&gt;0b或0B&lt;/td&gt;&lt;td&gt;0b10&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;八进制：&lt;/td&gt;&lt;td&gt;0o或0O&lt;/td&gt;&lt;td&gt;0o10&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;十六进制：&lt;/td&gt;&lt;td&gt;0x 或0X&lt;/td&gt;&lt;td&gt;0x10&lt;/td&gt;&lt;td&gt;16&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+    
+    </summary>
+    
+    
+      <category term="python入门" scheme="https://coding.emptinessboy.com/categories/python%E5%85%A5%E9%97%A8/"/>
+    
+    
+      <category term="python" scheme="https://coding.emptinessboy.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java IO和网络（下</title>
+    <link href="https://coding.emptinessboy.com/2020/06/Java-IO%E5%92%8C%E7%BD%91%E7%BB%9C%EF%BC%88%E4%B8%8B/"/>
+    <id>https://coding.emptinessboy.com/2020/06/Java-IO%E5%92%8C%E7%BD%91%E7%BB%9C%EF%BC%88%E4%B8%8B/</id>
+    <published>2020-06-01T15:25:35.000Z</published>
+    <updated>2021-05-23T05:28:44.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- build time:Mon Mar 28 2022 11:43:41 GMT+0800 (中国标准时间) --&gt;&lt;h2 id=&quot;过滤器流&quot;&gt;&lt;a href=&quot;#过滤器流&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="JAVA学习" scheme="https://coding.emptinessboy.com/categories/JAVA%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="java" scheme="https://coding.emptinessboy.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java IO处理（上</title>
+    <link href="https://coding.emptinessboy.com/2020/05/Java-IO%E5%A4%84%E7%90%86/"/>
+    <id>https://coding.emptinessboy.com/2020/05/Java-IO%E5%A4%84%E7%90%86/</id>
+    <published>2020-05-26T10:09:22.000Z</published>
+    <updated>2021-05-23T05:28:44.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- build time:Mon Mar 28 2022 11:43:41 GMT+0800 (中国标准时间) --&gt;&lt;p&gt;在 Java
+        
+      
+    
+    </summary>
+    
+    
+      <category term="JAVA学习" scheme="https://coding.emptinessboy.com/categories/JAVA%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="java" scheme="https://coding.emptinessboy.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java 多线程学习</title>
+    <link href="https://coding.emptinessboy.com/2020/05/Java-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%AD%A6%E4%B9%A0/"/>
+    <id>https://coding.emptinessboy.com/2020/05/Java-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%AD%A6%E4%B9%A0/</id>
+    <published>2020-05-25T06:23:44.000Z</published>
+    <updated>2021-05-23T05:25:36.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!-- build time:Mon Mar 28 2022 11:43:41 GMT+0800 (中国标准时间)
+        
+      
+    
+    </summary>
+    
+    
+      <category term="JAVA学习" scheme="https://coding.emptinessboy.com/categories/JAVA%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="java" scheme="https://coding.emptinessboy.com/tags/java/"/>
+    
+  </entry>
+  
+</feed>
